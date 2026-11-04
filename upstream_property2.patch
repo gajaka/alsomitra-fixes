@@ -1,0 +1,26 @@
+--- a/src/property_driven_ml/constraints/constraints.py
++++ b/src/property_driven_ml/constraints/constraints.py
+@@ -397,7 +397,10 @@
+         """
+         super().__init__(device)
+         self.precondition = AlsomitraProperty2(
+-            device, y_threshold, v_y_threshold, omega_threshold
++            device,
++            v_y_threshold=v_y_threshold,
++            y_threshold=y_threshold,
++            omega_threshold=omega_threshold,
+         )
+         self.postcondition = AlsomitraOutputPostcondition(
+             device, lo=bounds_output[0], hi=bounds_output[1]
+--- a/src/property_driven_ml/constraints/preconditions.py
++++ b/src/property_driven_ml/constraints/preconditions.py
+@@ -340,9 +340,6 @@
+         lo[:, self.omega] = np.nan  # No lower bound for omega
+         hi[:, self.omega] = self.omega_threshold
+ 
+-        lo = self.normalize(lo)
+-        hi = self.normalize(hi)
+-
+         return self.apply_domain_bounds(lo, hi)
+ 
+ 

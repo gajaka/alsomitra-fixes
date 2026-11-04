@@ -1,0 +1,28 @@
+key,value
+timestamp_utc,2026-11-04T09:18:27+00:00
+platform,macOS-26.6.2-arm64-arm-64bit
+python,3.11.18
+torch,2.15.0
+numpy,2.4.6
+pandas,3.1.0
+pytest,9.2.0
+upstream_revision,616df1e5baaabf7b42dc26320c00fb297903c87a
+upstream_revision_expected,616df1e5baaabf7b42dc26320c00fb297903c87a
+upstream_revision_matches,True
+upstream_git_root,/Users/gajaka/projects/ppg-lab/external/property-driven-ml
+upstream_preflight_ok,True
+upstream_tracked_clean_before,True
+upstream_added_python_sources_before,[]
+upstream_imports_verified_before,True
+upstream_imports_before,"{""property_driven_ml"": {""path"": ""/Users/gajaka/projects/ppg-lab/external/property-driven-ml/src/property_driven_ml/__init__.py"", ""sha256"": ""6d049c889a7220a132cc258efb8f7a5e417f306c92b68e096f8ca119869f22a0""}, ""property_driven_ml.constraints.constraints"": {""path"": ""/Users/gajaka/projects/ppg-lab/external/property-driven-ml/src/property_driven_ml/constraints/constraints.py"", ""sha256"": ""6fc157ca493a5a2eba34ab8f3faf8d2c1f596a0cf038cee2cc472e116accc404""}, ""property_driven_ml.constraints.postconditions"": {""path"": ""/Users/gajaka/projects/ppg-lab/external/property-driven-ml/src/property_driven_ml/constraints/postconditions.py"", ""sha256"": ""93d5a98fd466a1601a5e8ac6cf10412ff815cdf738c2d1c4d1b79914d3a6e73f""}, ""property_driven_ml.constraints.preconditions"": {""path"": ""/Users/gajaka/projects/ppg-lab/external/property-driven-ml/src/property_driven_ml/constraints/preconditions.py"", ""sha256"": ""d24432d037daa6fe91538f8c105de08e297abbfed331e9fc2d3cc94114173cc9""}, ""property_driven_ml.training.attacks"": {""path"": ""/Users/gajaka/projects/ppg-lab/external/property-driven-ml/src/property_driven_ml/training/attacks.py"", ""sha256"": ""cf5e3a11f68617291cb4a72edfe8a7c5c6503c97afe6cb11770b9299f7ad9425""}}"
+upstream_postflight_ok,True
+upstream_revision_after,616df1e5baaabf7b42dc26320c00fb297903c87a
+upstream_tracked_clean_after,True
+upstream_added_python_sources_after,[]
+upstream_imports_verified_after,True
+upstream_imports_after,"{""property_driven_ml"": {""path"": ""/Users/gajaka/projects/ppg-lab/external/property-driven-ml/src/property_driven_ml/__init__.py"", ""sha256"": ""6d049c889a7220a132cc258efb8f7a5e417f306c92b68e096f8ca119869f22a0""}, ""property_driven_ml.constraints.constraints"": {""path"": ""/Users/gajaka/projects/ppg-lab/external/property-driven-ml/src/property_driven_ml/constraints/constraints.py"", ""sha256"": ""6fc157ca493a5a2eba34ab8f3faf8d2c1f596a0cf038cee2cc472e116accc404""}, ""property_driven_ml.constraints.postconditions"": {""path"": ""/Users/gajaka/projects/ppg-lab/external/property-driven-ml/src/property_driven_ml/constraints/postconditions.py"", ""sha256"": ""93d5a98fd466a1601a5e8ac6cf10412ff815cdf738c2d1c4d1b79914d3a6e73f""}, ""property_driven_ml.constraints.preconditions"": {""path"": ""/Users/gajaka/projects/ppg-lab/external/property-driven-ml/src/property_driven_ml/constraints/preconditions.py"", ""sha256"": ""d24432d037daa6fe91538f8c105de08e297abbfed331e9fc2d3cc94114173cc9""}, ""property_driven_ml.training.attacks"": {""path"": ""/Users/gajaka/projects/ppg-lab/external/property-driven-ml/src/property_driven_ml/training/attacks.py"", ""sha256"": ""cf5e3a11f68617291cb4a72edfe8a7c5c6503c97afe6cb11770b9299f7ad9425""}}"
+upstream_imports_unchanged,True
+upstream_provenance_error,
+pytest_exit_code,0
+tests_passed,127/127
+run_status,PASS

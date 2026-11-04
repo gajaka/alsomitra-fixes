@@ -1,0 +1,23 @@
+key,value
+timestamp_utc,2026-11-04T09:19:00+00:00
+platform,macOS-26.6.2-arm64-arm-64bit
+lean,"Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)"
+version_ok,True
+version_exit_code,0
+build_ok,True
+build_exit_code,0
+build_warnings,0
+build_errors,0
+files_with_sorry,none
+audit_requests_match_expected,True
+audit_ok,True
+audit_exit_code,0
+audit_warnings,0
+audit_errors,0
+theorems_expected,12
+theorems_audited,12
+audit_coverage_complete,True
+missing_theorems,none
+unexpected_theorems,none
+duplicate_theorems,none
+theorems_with_nonstandard_axioms,0

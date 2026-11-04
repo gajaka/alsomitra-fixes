@@ -1,0 +1,13 @@
+theorem,axioms,only_standard_axioms
+AlsomitraFixes.upstream_defaults_swapped,propext Classical.choice Quot.sound,True
+AlsomitraFixes.defect1_y_interval_empty,propext Classical.choice Quot.sound,True
+AlsomitraFixes.defect2_hi_agrees_iff,propext Classical.choice Quot.sound,True
+AlsomitraFixes.exceptional_anchor_in_domain,propext Classical.choice Quot.sound,True
+AlsomitraFixes.defect2_wrong_at_xMin,propext Classical.choice Quot.sound,True
+AlsomitraFixes.upstream_box_escapes_band,propext Classical.choice Quot.sound,True
+AlsomitraFixes.Coupled.decode_sound,propext Classical.choice Quot.sound,True
+AlsomitraFixes.Coupled.decode_complete,propext Classical.choice Quot.sound,True
+AlsomitraFixes.region1_wellFormed,propext Classical.choice Quot.sound,True
+AlsomitraFixes.region2_wellFormed,propext Classical.choice Quot.sound,True
+AlsomitraFixes.fixed_property1_candidates_in_band,propext Classical.choice Quot.sound,True
+AlsomitraFixes.paper_theta_strictly_inside_upstream,propext Classical.choice Quot.sound,True
