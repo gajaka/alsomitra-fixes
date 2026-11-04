@@ -2,3 +2,4 @@ __pycache__/
 .pytest_cache/
 lean/.lake/
 .vscode/
+/results/python_run_info.csv

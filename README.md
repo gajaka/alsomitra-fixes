@@ -188,8 +188,9 @@ The runner exits nonzero for a failed provenance check, a failed/empty test
 run, or any non-passing test. It writes fresh CSV files:
 
 - `results/python_tests.csv`: individual test outcomes and timings.
-- `results/python_run_info.csv`: environment, pre/post provenance, imported
-  source paths and SHA-256 hashes, totals, and final `run_status`.
+- `results/python_run_info.csv`: generated local log, excluded from Git. It
+  records environment, pre/post provenance, imported source paths and SHA-256
+  hashes, totals, and final `run_status`. Each run recreates it on that machine.
 
 | Test file | What it checks |
 | --- | --- |
