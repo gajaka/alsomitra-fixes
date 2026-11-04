@@ -86,8 +86,8 @@ Derived source retains the upstream MIT notice in
 Here an **anchor** is the original input around which the framework defines a
 local region. A **candidate** is an input sampled or searched inside that region.
 
-For corrected Property2, with a physical anchor `x0`, the framework rectangle
-requires:
+For corrected Property2, with a physical anchor `x0` and the upstream code's
+`v_y` coordinate choice, the anchor-relative rectangle requires:
 
 ```text
 0 <= x0 + y_candidate <= 2
@@ -98,7 +98,8 @@ omega_candidate <= -0.12
 The candidate's `x` coordinate can vary independently. This matches the local
 region approach in the framework paper, Section 4.2 and Appendix A.3,
 Equations (23) and (25). Section 5.2 explicitly discusses the limitation of
-hyperrectangles for coupled input conditions.
+hyperrectangles for coupled input conditions. The velocity-coordinate notation
+in Equation (27) differs from the code; see Section 3 below.
 
 The separate gliding-drone case study uses the candidate's own coordinates:
 
@@ -150,7 +151,9 @@ dataset and contract hashes. It is not required by the minimal two-bug patch.
 It is not a general dataset loader: its shape, split, domain, and expected
 output extrema are deliberately fixed and validated.
 
-## 3. A separate question about Property1's theta bound
+## 3. Questions about paper/code agreement
+
+### Property1's theta bound
 
 Upstream defaults to `theta_threshold = (-0.786, +0.747)`. After domain
 clipping, its effective upper bound is about `-0.068003`. The framework paper's
@@ -161,6 +164,28 @@ This is documented as a specification discrepancy for the authors to clarify,
 not a third confirmed implementation bug. The minimal patch does not change
 it. The optional coupled Property1 variant explicitly selects the paper's
 negative upper bound; callers can choose the interval explicitly.
+
+### Property2's velocity coordinate
+
+The framework paper's Appendix A.3, Equation (27), writes `movingFast` as
+`v_x' <= -0.3`, while the
+[pinned precondition code](https://github.com/tflinkow/property-driven-ml/blob/616df1e5baaabf7b42dc26320c00fb297903c87a/src/property_driven_ml/constraints/preconditions.py#L338-L339)
+constrains `v_y`. The paper's input-domain table gives a strictly positive
+range for `v_x'` (approximately `0.967568` to `3.489893`), so the printed
+inequality cannot hold within that domain. This discrepancy appears in the
+[PDF, page 18](https://arxiv.org/pdf/2505.00466v2#page=18), as well as the
+[HTML appendix](https://arxiv.org/html/2505.00466v2).
+
+The separate [drone case study](https://arxiv.org/html/2505.00622v1),
+Equation (24), uses `x_2 <= -0.3`, the second input component (local
+`y`-velocity). This supports the code's `v_y` choice. A typographical error in
+the framework equation is a plausible explanation, but author intent has not
+been confirmed.
+
+The minimal patch preserves the upstream code's `v_y` coordinate and fixes
+argument binding and normalization. It does not change the velocity coordinate
+to match Equation (27) literally, or classify this paper/code discrepancy as
+another confirmed implementation bug.
 
 ## 4. Run the Python checks
 
