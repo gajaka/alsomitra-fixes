@@ -1,0 +1,45 @@
+import RegionExamples
+import RegionAlsomitra
+
+#print axioms Contribution.RegionCompiler.Alsomitra.agrees_with_existing_compiler
+#print axioms Contribution.RegionCompiler.Alsomitra.conjunction_correct
+#print axioms Contribution.RegionCompiler.Alsomitra.domain_correct
+#print axioms Contribution.RegionCompiler.Alsomitra.property2_pipeline
+#print axioms Contribution.RegionCompiler.Alsomitra.property_formula_correct
+#print axioms Contribution.RegionCompiler.Examples.closing_boundary_changes_membership
+#print axioms Contribution.RegionCompiler.Examples.double_normalization_changes_membership
+#print axioms Contribution.RegionCompiler.Examples.dropping_component_changes_membership
+#print axioms Contribution.RegionCompiler.Examples.empty_region_rejects_all
+#print axioms Contribution.RegionCompiler.Examples.excludes_gap
+#print axioms Contribution.RegionCompiler.Examples.excludes_open_boundary
+#print axioms Contribution.RegionCompiler.Examples.hull_changes_membership
+#print axioms Contribution.RegionCompiler.Examples.includes_closed_boundaries
+#print axioms Contribution.RegionCompiler.Examples.retains_second_component
+#print axioms Contribution.RegionCompiler.Examples.strict_hinge_is_not_exact
+#print axioms Contribution.RegionCompiler.accept_iff
+#print axioms Contribution.RegionCompiler.atomCheck_correct
+#print axioms Contribution.RegionCompiler.atom_flip_correct
+#print axioms Contribution.RegionCompiler.cell_append
+#print axioms Contribution.RegionCompiler.checkNormalized_correct
+#print axioms Contribution.RegionCompiler.checkRegion_correct
+#print axioms Contribution.RegionCompiler.compile_correct
+#print axioms Contribution.RegionCompiler.execution_transport
+#print axioms Contribution.RegionCompiler.flip_correct
+#print axioms Contribution.RegionCompiler.loss_continuous
+#print axioms Contribution.RegionCompiler.loss_nonnegative
+#print axioms Contribution.RegionCompiler.loss_zero_correct
+#print axioms Contribution.RegionCompiler.lower_correct
+#print axioms Contribution.RegionCompiler.meet_correct
+#print axioms Contribution.RegionCompiler.normalization_compilation_commute
+#print axioms Contribution.RegionCompiler.normalized_atom
+#print axioms Contribution.RegionCompiler.normalized_closed_embed
+#print axioms Contribution.RegionCompiler.normalized_formula
+#print axioms Contribution.RegionCompiler.normalized_loss_checker_agree
+#print axioms Contribution.RegionCompiler.normalized_loss_correct
+#print axioms Contribution.RegionCompiler.normalized_region
+#print axioms Contribution.RegionCompiler.normalized_roundtrip
+#print axioms Contribution.RegionCompiler.pipeline_correct
+#print axioms Contribution.RegionCompiler.point_roundtrip
+#print axioms Contribution.RegionCompiler.strict_boundary_obstruction
+#print axioms Contribution.RegionCompiler.union_correct
+#print axioms Contribution.RegionCompiler.universal_transport

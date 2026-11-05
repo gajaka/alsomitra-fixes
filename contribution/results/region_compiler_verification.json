@@ -1,0 +1,291 @@
+{
+  "artifacts_sha256": {
+    ".build/RegionAlsomitra.olean": "d9459924e89fe937337df8a4586bde12edb41b741a9460ed88c144d902f94890",
+    ".build/RegionCheck.olean": "02d650e2871eaa1d1b4b6721af235692243249a82a6607c66e475b27a5510aa1",
+    ".build/RegionExamples.olean": "3a7b9017b17ce23a10123320d1b0791eda477001f6445e80907e4f769ff5281d",
+    ".build/RegionLoss.olean": "71a318cc07941bc9e35e9cd208f4de86fada54263e72391a5c8e60a983f61152",
+    ".build/RegionNormalization.olean": "ed96c0ae9d523d37e73fc6d3c9dab0f62587e97e0b58bc70fa98bad43107c2df",
+    ".build/RegionSyntax.olean": "2bf3f2fae6827386bf80eece352402000d5f550ccad279c2f363f85e5288063d"
+  },
+  "audit_negative_controls": 4,
+  "dependencies_sha256": {
+    ".build/Property2.olean": "1a9314515fcdfefe69929c6e26d1591847050ca9e68afa6f53b12bc6ea57fa1f",
+    "Property2.lean": "8617a9b81142a29c43ec32e4e191fbf1448761fa9873c6eace94de8e999e98f0"
+  },
+  "elapsed_seconds": 63.033,
+  "lean_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "mathlib_manifest_sha256": "0f6a2f189439a5b6ac9653168b0e513c8129ec88af04f771b6a926773bab3420",
+  "network_property_proved": false,
+  "novelty": "NOT_ESTABLISHED; core methodology overlaps Vehicle/LDL",
+  "runtime": {
+    "comparisons": 21931,
+    "example": {
+      "checks": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true
+      ],
+      "formula": [
+        "or",
+        [
+          "and",
+          [
+            "ge",
+            "10"
+          ],
+          [
+            "le",
+            "12"
+          ]
+        ],
+        [
+          "and",
+          [
+            "not",
+            [
+              "le",
+              "18"
+            ]
+          ],
+          [
+            "le",
+            "20"
+          ]
+        ]
+      ],
+      "kind": "disconnected",
+      "probes": [
+        "0",
+        "1/10",
+        "1/5",
+        "1/2",
+        "4/5",
+        "9/10",
+        "1"
+      ]
+    },
+    "normalizers": 3,
+    "oracle": "independent Python Fraction source-predicate evaluation",
+    "raw_sha256": "b09df95f0ac174514a8951fa02a68f4392dce0a511931ea63cb55a0ea62a7677",
+    "source_formulas": 812,
+    "status": "PASS"
+  },
+  "scope": "Exact Boolean region compilation and positive affine normalization over ordered fields",
+  "sources_sha256": {
+    "spec_compiler/RegionAlsomitra.lean": "32e5f1bb78cf521b6962bc0d804ef42bcd6f7166d5490831737b41276e5b0b5a",
+    "spec_compiler/RegionAudit.lean": "e5156dd66eeccc693d6856a8d8f69573ca90425f95b54cd41f5e4c8de29cd2b0",
+    "spec_compiler/RegionCheck.lean": "6996649aa248204b2e8a9d6ccfd5361ddde3b455c32932a997d5595ae92f7e8c",
+    "spec_compiler/RegionExamples.lean": "5980a2c9e8c5a94ee29e1f452b44945f84c806ce151d221694470d36cfedb3a2",
+    "spec_compiler/RegionLoss.lean": "2bd0b6b48841c4d584413e723413ad801a3efefbce2b210ae171520361332fbb",
+    "spec_compiler/RegionMain.lean": "4696b0a4516a5565605194f1df17482426b4495e628b54d49b5f938d8d66eeb1",
+    "spec_compiler/RegionNormalization.lean": "e6adecedc94a106706c1a6c5f04ae262c8d552497a2c60f08087c447be5a8324",
+    "spec_compiler/RegionSyntax.lean": "a7760ce348be5d893a80f280a4b4cee72e728143bd82d5d01c27d033f9ead5c0",
+    "spec_compiler/verify.py": "6389f2b4931f859ceae024110580490d237a0fc20133cefdf969e7f8689bed78"
+  },
+  "status": "PASS",
+  "theorems": {
+    "Contribution.RegionCompiler.Alsomitra.agrees_with_existing_compiler": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Alsomitra.conjunction_correct": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Alsomitra.domain_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Alsomitra.property2_pipeline": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Alsomitra.property_formula_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Examples.closing_boundary_changes_membership": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Examples.double_normalization_changes_membership": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Examples.dropping_component_changes_membership": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Examples.empty_region_rejects_all": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Examples.excludes_gap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Examples.excludes_open_boundary": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Examples.hull_changes_membership": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Examples.includes_closed_boundaries": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Examples.retains_second_component": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Examples.strict_hinge_is_not_exact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.accept_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.atomCheck_correct": [
+      "propext"
+    ],
+    "Contribution.RegionCompiler.atom_flip_correct": [
+      "propext"
+    ],
+    "Contribution.RegionCompiler.cell_append": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.checkNormalized_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.checkRegion_correct": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.compile_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.execution_transport": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.flip_correct": [
+      "propext"
+    ],
+    "Contribution.RegionCompiler.loss_continuous": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.loss_nonnegative": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.loss_zero_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.lower_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.meet_correct": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.normalization_compilation_commute": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.normalized_atom": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.normalized_closed_embed": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.normalized_formula": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.normalized_loss_checker_agree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.normalized_loss_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.normalized_region": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.normalized_roundtrip": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.pipeline_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.point_roundtrip": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.strict_boundary_obstruction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.union_correct": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.universal_transport": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "timestamp_utc": "2026-11-05T07:45:44.360915+00:00"
+}

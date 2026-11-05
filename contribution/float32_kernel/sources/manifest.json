@@ -1,0 +1,22 @@
+{
+  "aten/src/ATen/native/Linear.cpp": {
+    "url": "https://raw.githubusercontent.com/pytorch/pytorch/d0f2af8b66b20da4baa50644c0cd3f887a2eae2e/aten/src/ATen/native/Linear.cpp",
+    "sha256": "d51d3d1c97ca51a792a404b59b2cc30a6d5c8d8acb1c710434cc110da3949607"
+  },
+  "aten/src/ATen/native/LinearAlgebra.cpp": {
+    "url": "https://raw.githubusercontent.com/pytorch/pytorch/d0f2af8b66b20da4baa50644c0cd3f887a2eae2e/aten/src/ATen/native/LinearAlgebra.cpp",
+    "sha256": "6d0fa4ddefa4fa893ee001a6fbd050f55f52db1482d6f71ced625cd9ad5687c1"
+  },
+  "aten/src/ATen/native/CPUBlas.cpp": {
+    "url": "https://raw.githubusercontent.com/pytorch/pytorch/d0f2af8b66b20da4baa50644c0cd3f887a2eae2e/aten/src/ATen/native/CPUBlas.cpp",
+    "sha256": "df0bcf479a2c2819bdf3478e69352bc1fb7ebfec07df8b0cff891962cc6c6e57"
+  },
+  "aten/src/ATen/native/cpu/BlasKernel.cpp": {
+    "url": "https://raw.githubusercontent.com/pytorch/pytorch/d0f2af8b66b20da4baa50644c0cd3f887a2eae2e/aten/src/ATen/native/cpu/BlasKernel.cpp",
+    "sha256": "5f55b3a7c17c724e1b5e963f37f248fff1857867faff36d58d3b24da9cdc8363"
+  },
+  "LICENSE": {
+    "url": "https://raw.githubusercontent.com/pytorch/pytorch/d0f2af8b66b20da4baa50644c0cd3f887a2eae2e/LICENSE",
+    "sha256": "bd018feef8825e88181c84eb7e3aa4eafb8f08a20d9fd6ef948569610c4a3e43"
+  }
+}

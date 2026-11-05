@@ -1,0 +1,8 @@
+<contribution>/.build/DoubleNormalization.lean:4:37: error: Application type mismatch: The argument
+  Contribution.Property2.normalize n p
+has type
+  Normalized
+but is expected to have type
+  Physical
+in the application
+  Contribution.Property2.normalize n (Contribution.Property2.normalize n p)

@@ -1,0 +1,64 @@
+'Contribution.RegionCompiler.Alsomitra.agrees_with_existing_compiler' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Contribution.RegionCompiler.Alsomitra.conjunction_correct' depends on axioms: [propext, Quot.sound]
+'Contribution.RegionCompiler.Alsomitra.domain_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.Alsomitra.property2_pipeline' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.Alsomitra.property_formula_correct' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Contribution.RegionCompiler.Examples.closing_boundary_changes_membership' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Contribution.RegionCompiler.Examples.double_normalization_changes_membership' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Contribution.RegionCompiler.Examples.dropping_component_changes_membership' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Contribution.RegionCompiler.Examples.empty_region_rejects_all' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Contribution.RegionCompiler.Examples.excludes_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.Examples.excludes_open_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.Examples.hull_changes_membership' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Contribution.RegionCompiler.Examples.includes_closed_boundaries' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Contribution.RegionCompiler.Examples.retains_second_component' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Contribution.RegionCompiler.Examples.strict_hinge_is_not_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Contribution.RegionCompiler.accept_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.atomCheck_correct' depends on axioms: [propext]
+'Contribution.RegionCompiler.atom_flip_correct' depends on axioms: [propext]
+'Contribution.RegionCompiler.cell_append' depends on axioms: [propext, Quot.sound]
+'Contribution.RegionCompiler.checkNormalized_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.checkRegion_correct' depends on axioms: [propext, Quot.sound]
+'Contribution.RegionCompiler.compile_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.execution_transport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.flip_correct' depends on axioms: [propext]
+'Contribution.RegionCompiler.loss_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.loss_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.loss_zero_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.lower_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.meet_correct' depends on axioms: [propext, Quot.sound]
+'Contribution.RegionCompiler.normalization_compilation_commute' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Contribution.RegionCompiler.normalized_atom' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.normalized_closed_embed' depends on axioms: [propext, Quot.sound]
+'Contribution.RegionCompiler.normalized_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.normalized_loss_checker_agree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.normalized_loss_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.normalized_region' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.normalized_roundtrip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.pipeline_correct' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.point_roundtrip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.strict_boundary_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Contribution.RegionCompiler.union_correct' depends on axioms: [propext, Quot.sound]
+'Contribution.RegionCompiler.universal_transport' depends on axioms: [propext, Classical.choice, Quot.sound]

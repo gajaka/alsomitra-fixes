@@ -18,6 +18,10 @@ model are included separately. The coupled region changes the specification;
 it is **not a third implementation bug** in the framework. No PPG code or
 formal dependency is included.
 
+Additional [formalization experiments](contribution/README.md) include an
+executable exact-rational Property2 contract and proofs. They are separate
+from the minimal upstream patch.
+
 ## 1. The two confirmed implementation bugs
 
 ### Swapped threshold arguments
@@ -237,11 +241,15 @@ scope, and the independent build command. The model proves real-arithmetic
 facts about the argument swap, double normalization, the two region
 specifications, and the theta interval discrepancy.
 
-Lean proves statements about that model. The package does not provide a
-formally verified Python-to-Lean translation, floating-point semantics,
+Lean proves statements about that model. This original bug-fix formalization
+does not provide a formally verified Python-to-Lean translation, floating-point semantics,
 end-to-end training correctness, trained-network guarantees, or evidence of
 an effect on the paper's experimental results. No independent second-kernel
 proof replay is included.
+
+The separate [formalization experiments](contribution/README.md) cover bit
+observation and a universal frozen-network proof under an explicit rounding
+semantics. They do not prove the actual PyTorch/Apple Accelerate backend correct.
 
 ## 6. References and property numbering
 

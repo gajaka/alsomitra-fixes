@@ -1,0 +1,162 @@
+{
+  "arithmetic": "exact rational",
+  "audit_negative_controls": 5,
+  "elapsed_seconds": 58.761,
+  "lean_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "mathlib_revision": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "runtime": {
+    "assertions": 3332,
+    "default_anchor_10_bounds": {
+      "normalized_hi": [
+        "1/1",
+        "307397/564376",
+        "21543/36923",
+        "1/1",
+        "1/1",
+        "33681405/45878639"
+      ],
+      "normalized_lo": [
+        "0/1",
+        "0/1",
+        "0/1",
+        "0/1",
+        "0/1",
+        "31681405/45878639"
+      ],
+      "physical_hi": [
+        "3489893/1000000",
+        "-3/10",
+        "-3/25",
+        "-68003/1000000",
+        "41714717/1000000",
+        "-8/1"
+      ],
+      "physical_lo": [
+        "60473/62500",
+        "-607397/1000000",
+        "-356973/1000000",
+        "-968479/1000000",
+        "482421/1000000",
+        "-10/1"
+      ],
+      "status": "nonempty"
+    },
+    "double_normalization_witness": "31681405/45878639",
+    "exact_roundtrips": 329,
+    "monitor_boundary_cases": 14,
+    "parser_error_cases": 13,
+    "rejected_cases": 8,
+    "requests": 1024,
+    "sampled_points": 329,
+    "transcript_sha256": "8f5fd484a5b27f50f875d23bd2f5ba0933ea2463662554a4cb5acb151d65df34"
+  },
+  "scope": "Executable Lean core; parser tested; no PyTorch/float32/network guarantee",
+  "sources_sha256": {
+    "Audit.lean": "b8693567da791c80bd4df3f952d63d3fe86de23b305540a08d7b329fab25f3d5",
+    "Main.lean": "381214c9b0945cf0396a8bd45bca307ad1b9c14139b6d65e4f1b8dcd5ba85eb0",
+    "Property2.lean": "8617a9b81142a29c43ec32e4e191fbf1448761fa9873c6eace94de8e999e98f0",
+    "Protocol.lean": "5dfc77dfccf2cbb7b3a77ed1d17f1fc22edeac6695510403d3006f8dfb5c4f78",
+    "check_runtime.py": "9dfe58c6cb8652aa685156ed9d1402b0645a6dd87bf23c8d9d08c3761d20dea1",
+    "verify.py": "772d06371a582e45aa61d29a5e0fbe7d7dfb1c308f94e93108e49c988151382a"
+  },
+  "status": "PASS",
+  "theorems": {
+    "Contribution.Property2.compile_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.compile_nonempty_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.denormalize_normalize": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.encodeUnit_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.interpolate_encodeUnit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.interpolate_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.loss_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.monitor_outside_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.monitor_satisfied_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.monitor_violated_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.normalizeBox_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.normalize_denormalize": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.normalized_compile_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.normalized_order": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.ordered_iff_exists": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.output_threshold_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.sample_complete": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.sample_none_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Property2.sample_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "timestamp_utc": "2026-11-04T23:27:20.868882+00:00",
+  "typed_double_normalization_rejected": true
+}
