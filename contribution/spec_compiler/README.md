@@ -8,6 +8,17 @@ Detailed reference-checker guide with the worked example:
 [editable source](docs/REFERENCE_CHECKER.md),
 [runnable Lean example](docs/Example.lean).
 
+An example taken directly from the paper is available in
+[ACAS Xu input-region checking](acas/README.md)
+([PDF guide](acas/ACAS_CHECKER.pdf)). It compares Equations (7)
+and (8), exhibits two counterexamples, and proves that corrected bounds
+agree with the source predicate for every rational input. Its standalone
+runner needs only the pinned Lean/Mathlib setup and Python's standard library:
+
+```sh
+python3 -B contribution/spec_compiler/acas/verify.py
+```
+
 **Technical result:** an executable rational compiler/checker with general
 Lean proofs of semantic preservation. **Research result:** methodology strongly
 overlaps Vehicle/LDL; novelty remains unestablished. Read

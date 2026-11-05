@@ -12,6 +12,11 @@ with an executable rational checker and a bridge to the existing Alsomitra
 contract. It also distinguishes exact membership from the supported
 continuous zero-loss semantics.
 
+The [ACAS Xu example](spec_compiler/acas/README.md)
+([PDF guide](spec_compiler/acas/ACAS_CHECKER.pdf)) applies the checker to
+Equations (7) and (8) in the paper, with explicit states, counterexamples,
+and a proof that corrected bounds preserve the source input condition.
+
 The [research assessment](spec_compiler/RESEARCH_ASSESSMENT.md) records strong
 overlap with Vehicle/LDL: technical feasibility is established by the checked
 artifact; a novel standalone research contribution is not established.

@@ -1,0 +1,439 @@
+{
+  "artifacts_sha256": {
+    ".build/acas/AcasExample.olean": "9b0f45eb28d93c68f58aa532f71d219a260c3b6518d4dfd4c353769f2a642f2d",
+    ".build/acas/RegionCheck.olean": "02d650e2871eaa1d1b4b6721af235692243249a82a6607c66e475b27a5510aa1",
+    ".build/acas/RegionNormalization.olean": "ed96c0ae9d523d37e73fc6d3c9dab0f62587e97e0b58bc70fa98bad43107c2df",
+    ".build/acas/RegionSyntax.olean": "2bf3f2fae6827386bf80eece352402000d5f550ccad279c2f363f85e5288063d"
+  },
+  "audit_negative_controls": 4,
+  "custom": {
+    "case": "custom",
+    "corrected": true,
+    "normalized": [
+      "1",
+      "1/2",
+      "1/2",
+      "1",
+      "1/24"
+    ],
+    "physical": [
+      "60000",
+      "0",
+      "0",
+      "1200",
+      "50"
+    ],
+    "printed": false,
+    "reference": true
+  },
+  "domain": {
+    "lower": [
+      "0",
+      "-1",
+      "-1",
+      "0",
+      "0"
+    ],
+    "upper": [
+      "60000",
+      "1",
+      "1",
+      "1200",
+      "1200"
+    ]
+  },
+  "elapsed_seconds": 47.453,
+  "input_negative_controls": 3,
+  "lean_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "mathlib_manifest_sha256": "0f6a2f189439a5b6ac9653168b0e513c8129ec88af04f771b6a926773bab3420",
+  "network_property_proved": false,
+  "runtime": {
+    "cases": 14,
+    "decisions": 42,
+    "examples": [
+      {
+        "case": "valid_50",
+        "corrected": true,
+        "normalized": [
+          "1",
+          "1/2",
+          "1/2",
+          "1",
+          "1/24"
+        ],
+        "physical": [
+          "60000",
+          "0",
+          "0",
+          "1200",
+          "50"
+        ],
+        "printed": false,
+        "reference": true
+      },
+      {
+        "case": "invalid_100",
+        "corrected": false,
+        "normalized": [
+          "1",
+          "1/2",
+          "1/2",
+          "1",
+          "1/12"
+        ],
+        "physical": [
+          "60000",
+          "0",
+          "0",
+          "1200",
+          "100"
+        ],
+        "printed": true,
+        "reference": false
+      },
+      {
+        "case": "boundary_60",
+        "corrected": true,
+        "normalized": [
+          "1",
+          "1/2",
+          "1/2",
+          "1",
+          "1/20"
+        ],
+        "physical": [
+          "60000",
+          "0",
+          "0",
+          "1200",
+          "60"
+        ],
+        "printed": true,
+        "reference": true
+      },
+      {
+        "case": "zero_speed",
+        "corrected": true,
+        "normalized": [
+          "1",
+          "1/2",
+          "1/2",
+          "1",
+          "0"
+        ],
+        "physical": [
+          "60000",
+          "0",
+          "0",
+          "1200",
+          "0"
+        ],
+        "printed": false,
+        "reference": true
+      },
+      {
+        "case": "just_below_60",
+        "corrected": true,
+        "normalized": [
+          "1",
+          "1/2",
+          "1/2",
+          "1",
+          "59999/1200000"
+        ],
+        "physical": [
+          "60000",
+          "0",
+          "0",
+          "1200",
+          "59999/1000"
+        ],
+        "printed": false,
+        "reference": true
+      },
+      {
+        "case": "just_above_60",
+        "corrected": false,
+        "normalized": [
+          "1",
+          "1/2",
+          "1/2",
+          "1",
+          "60001/1200000"
+        ],
+        "physical": [
+          "60000",
+          "0",
+          "0",
+          "1200",
+          "60001/1000"
+        ],
+        "printed": true,
+        "reference": false
+      },
+      {
+        "case": "maximum_speed",
+        "corrected": false,
+        "normalized": [
+          "1",
+          "1/2",
+          "1/2",
+          "1",
+          "1"
+        ],
+        "physical": [
+          "60000",
+          "0",
+          "0",
+          "1200",
+          "1200"
+        ],
+        "printed": true,
+        "reference": false
+      },
+      {
+        "case": "negative_speed",
+        "corrected": false,
+        "normalized": [
+          "1",
+          "1/2",
+          "1/2",
+          "1",
+          "-1/1200"
+        ],
+        "physical": [
+          "60000",
+          "0",
+          "0",
+          "1200",
+          "-1"
+        ],
+        "printed": false,
+        "reference": false
+      },
+      {
+        "case": "above_domain",
+        "corrected": false,
+        "normalized": [
+          "1",
+          "1/2",
+          "1/2",
+          "1",
+          "1201/1200"
+        ],
+        "physical": [
+          "60000",
+          "0",
+          "0",
+          "1200",
+          "1201"
+        ],
+        "printed": false,
+        "reference": false
+      },
+      {
+        "case": "exact_thresholds",
+        "corrected": true,
+        "normalized": [
+          "55947691/60000000",
+          "1/2",
+          "1/2",
+          "229/240",
+          "1/20"
+        ],
+        "physical": [
+          "55947691/1000",
+          "0",
+          "0",
+          "1145",
+          "60"
+        ],
+        "printed": true,
+        "reference": true
+      },
+      {
+        "case": "distance_too_low",
+        "corrected": false,
+        "normalized": [
+          "1864923/2000000",
+          "1/2",
+          "1/2",
+          "1",
+          "1/24"
+        ],
+        "physical": [
+          "5594769/100",
+          "0",
+          "0",
+          "1200",
+          "50"
+        ],
+        "printed": false,
+        "reference": false
+      },
+      {
+        "case": "own_speed_too_low",
+        "corrected": false,
+        "normalized": [
+          "1",
+          "1/2",
+          "1/2",
+          "143/150",
+          "1/24"
+        ],
+        "physical": [
+          "60000",
+          "0",
+          "0",
+          "1144",
+          "50"
+        ],
+        "printed": false,
+        "reference": false
+      },
+      {
+        "case": "angle_outside",
+        "corrected": false,
+        "normalized": [
+          "1",
+          "3/2",
+          "1/2",
+          "1",
+          "1/24"
+        ],
+        "physical": [
+          "60000",
+          "2",
+          "0",
+          "1200",
+          "50"
+        ],
+        "printed": false,
+        "reference": false
+      },
+      {
+        "case": "distance_outside",
+        "corrected": false,
+        "normalized": [
+          "60001/60000",
+          "1/2",
+          "1/2",
+          "1",
+          "1/24"
+        ],
+        "physical": [
+          "60001",
+          "0",
+          "0",
+          "1200",
+          "50"
+        ],
+        "printed": false,
+        "reference": false
+      }
+    ],
+    "oracle": "Independent direct Python Fraction predicates"
+  },
+  "scope": "Input-region translation of Equations (7) and (8), with an explicit demonstration domain",
+  "source": "https://arxiv.org/pdf/2505.00466v2#page=8",
+  "sources_sha256": {
+    "spec_compiler/RegionCheck.lean": "6996649aa248204b2e8a9d6ccfd5361ddde3b455c32932a997d5595ae92f7e8c",
+    "spec_compiler/RegionNormalization.lean": "e6adecedc94a106706c1a6c5f04ae262c8d552497a2c60f08087c447be5a8324",
+    "spec_compiler/RegionSyntax.lean": "a7760ce348be5d893a80f280a4b4cee72e728143bd82d5d01c27d033f9ead5c0",
+    "spec_compiler/acas/AcasExample.lean": "5a9953e825212fafa5eb84d9dad5f83b398e231b598a279c925b3fce4d1f2a50",
+    "spec_compiler/acas/AcasMain.lean": "5131ca7c94e2aa79457a71d9ca0998ce6187c1a95e6a231ac297cac0f30038b5",
+    "spec_compiler/acas/Audit.lean": "473c34ac644886e764ffff2c06d439f69893129a9cf45d3293985b7da48f0942",
+    "spec_compiler/acas/verify.py": "d0306ce022af60c9d6e5c933542650596b5c84948a71bb6e27c9e26f9ab2d81e"
+  },
+  "status": "PASS",
+  "theorems": {
+    "Contribution.RegionCompiler.Acas.admits_invalid_input": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Acas.boundary_agrees": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Acas.box_cell_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Acas.conjunction_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Acas.corrected_agrees_everywhere": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Acas.corrected_check_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Acas.corrected_region_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Acas.forall_coord": [],
+    "Contribution.RegionCompiler.Acas.loses_valid_input": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Acas.outer_domain_retained": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Acas.printed_check_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Acas.printed_not_equivalent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Acas.printed_region_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Acas.reference_check_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.Acas.source_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.checkNormalized_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.compile_correct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.RegionCompiler.normalized_formula": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "timestamp_utc": "2026-11-05T08:57:30.633649+00:00",
+  "upstream_execution_reproduced": false
+}

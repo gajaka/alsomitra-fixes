@@ -3,6 +3,7 @@
 Requires reportlab and markdown-it-py. This renderer does not participate in
 the compiler's proof chain or change its checked source/artifacts.
 """
+import argparse
 from html import escape
 from pathlib import Path
 import re
@@ -69,7 +70,7 @@ def decoration(c,doc):
     c.saveState()
     c.setFont('Body',8)
     c.setFillColor(MUTED)
-    c.drawString(48,A4[1]-31,'A Reference Checker for Input Specifications')
+    c.drawString(48,A4[1]-31,doc.title)
     c.setStrokeColor(colors.HexColor('#d5dfe5'))
     c.line(48,A4[1]-38,A4[0]-48,A4[1]-38)
     c.line(48,37,A4[0]-48,37)
@@ -78,16 +79,16 @@ def decoration(c,doc):
     c.restoreState()
 
 
-def render():
-    source=HERE/'REFERENCE_CHECKER.md'
+def render(source=HERE/'REFERENCE_CHECKER.md', target=HERE/'REFERENCE_CHECKER.pdf',
+           title='A Reference Checker for Input Specifications'):
     tokens=MarkdownIt('commonmark').enable('table').parse(source.read_text())
     story=[];i=0;bullet=False
     while i<len(tokens):
         t=tokens[i]
         if t.type=='heading_open':
-            title=tokens[i+1];level=int(t.tag[1])-1
-            p=Paragraph(inline(title.children),styles['title' if level==0 else 'h2' if level==1 else 'h3'])
-            p.outline=(title.content,level,'section-'+str(i))
+            heading=tokens[i+1];level=int(t.tag[1])-1
+            p=Paragraph(inline(heading.children),styles['title' if level==0 else 'h2' if level==1 else 'h3'])
+            p.outline=(heading.content,level,'section-'+str(i))
             story.append(p);i+=3
         elif t.type=='paragraph_open':
             p=Paragraph(inline(tokens[i+1].children),styles['body'],bulletText='•' if bullet else None)
@@ -112,7 +113,7 @@ def render():
                 elif typ=='tr_close':rows.append(row)
                 i+=1
             i+=1
-            n=len(rows[0]);ratios={2:[.40,.60],3:[.25,.37,.38],4:[.26,.21,.18,.35]}[n]
+            n=len(rows[0]);ratios={2:[.40,.60],3:[.25,.37,.38],4:[.26,.21,.18,.35],5:[.20]*5}[n]
             tab=Table(rows,colWidths=[WIDTH*r for r in ratios],repeatRows=1,hAlign='LEFT')
             tab.setStyle(TableStyle([
                 ('BACKGROUND',(0,0),(-1,0),TEAL),('VALIGN',(0,0),(-1,-1),'TOP'),
@@ -124,12 +125,17 @@ def render():
         elif t.type=='list_item_open':bullet=True;i+=1
         elif t.type in {'bullet_list_open','bullet_list_close','list_item_close'}:i+=1
         else:raise ValueError('Unsupported token '+t.type)
-    target=HERE/'REFERENCE_CHECKER.pdf'
     doc=GuidePDF(str(target),pagesize=A4,leftMargin=48,rightMargin=48,topMargin=55,bottomMargin=52,
-        title='A Reference Checker for Input Specifications',author='',
+        title=title,author='',
         subject='Formal contract, Lean implementation, and worked example')
     doc.build(story,onFirstPage=decoration,onLaterPages=decoration)
     print(target)
 
 
-if __name__=='__main__':render()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--source',type=Path,default=HERE/'REFERENCE_CHECKER.md')
+    parser.add_argument('--output',type=Path,default=HERE/'REFERENCE_CHECKER.pdf')
+    parser.add_argument('--title',default='A Reference Checker for Input Specifications')
+    args=parser.parse_args()
+    render(args.source,args.output,args.title)
