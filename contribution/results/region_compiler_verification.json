@@ -9,10 +9,10 @@
   },
   "audit_negative_controls": 4,
   "dependencies_sha256": {
-    ".build/Property2.olean": "1a9314515fcdfefe69929c6e26d1591847050ca9e68afa6f53b12bc6ea57fa1f",
-    "Property2.lean": "8617a9b81142a29c43ec32e4e191fbf1448761fa9873c6eace94de8e999e98f0"
+    ".build/Property2.olean": "8dc4e9bd6d8b3b8efe5c1c227841acb4bf86e0efa9d1806df5d8cadb8f422d0e",
+    "Property2.lean": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982"
   },
-  "elapsed_seconds": 63.033,
+  "elapsed_seconds": 40.625,
   "lean_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
   "mathlib_manifest_sha256": "0f6a2f189439a5b6ac9653168b0e513c8129ec88af04f771b6a926773bab3420",
   "network_property_proved": false,
@@ -287,5 +287,5 @@
       "propext"
     ]
   },
-  "timestamp_utc": "2026-11-05T07:45:44.360915+00:00"
+  "timestamp_utc": "2026-11-05T08:34:35.438047+00:00"
 }

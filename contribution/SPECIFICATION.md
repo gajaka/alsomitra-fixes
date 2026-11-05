@@ -1,7 +1,5 @@
 # Executable Property2 contract: first specification
 
-Author: Dragan Stosic. Implementation and proofs developed with Codex assistance.
-
 ## 1. Objects and arithmetic
 
 The scalar domain is the exact rational numbers, `Q` / Lean `Rat`. Integers

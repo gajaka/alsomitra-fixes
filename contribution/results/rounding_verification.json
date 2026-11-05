@@ -17,18 +17,18 @@
     ".build/FrozenModel.olean": "32c0366e3695fec27ae89225f7f0817eb59c22a6c2880d4fb2929eb6ac89173f",
     ".build/IntervalNetwork.olean": "54d432269129a847106c29fff29344e328b8398241d32da0a21adff1f958b245",
     ".build/NegativeControls.olean": "711a38f7a63751cc191039daa1fbf97f978e5032fe198c97faf13997075fc855",
-    ".build/Property2.olean": "1a9314515fcdfefe69929c6e26d1591847050ca9e68afa6f53b12bc6ea57fa1f",
+    ".build/Property2.olean": "8dc4e9bd6d8b3b8efe5c1c227841acb4bf86e0efa9d1806df5d8cadb8f422d0e",
     ".build/Property2Network.olean": "f79bc99a5407b249be30de602e5cf06f6ae8048722e299a1efb52248be5b5d3a",
     ".build/Protocol.olean": "60e8db2e250ec7938c9bdb54f7fbfceeff583c2b586d4d998931068a0eb4cf76",
     "Float32.lean": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
     "Float32Audit.lean": "e460939ac8da4244dfb0ecd804962df5f0d3d7a74171bef9a54dffe19ebab669",
     "Float32Main.lean": "715fc7fb9727004522e7387ec657937105df1ad0c93ca7efffd9922750eb69f0",
-    "Property2.lean": "8617a9b81142a29c43ec32e4e191fbf1448761fa9873c6eace94de8e999e98f0",
+    "Property2.lean": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
     "Protocol.lean": "5dfc77dfccf2cbb7b3a77ed1d17f1fc22edeac6695510403d3006f8dfb5c4f78",
     "check_float32.py": "2f0f2bc6d0c66ba5cdb25c879fa278380a1c8870c9d3f4f792d9a659863fe212",
     "check_upstream_float32.py": "059dbec812a5beb55d385f1a11f739ad321d09747d37ef30f2ae7d86cdb4d1c3",
-    "results/float32_verification.json": "183229ca949dfddc6b81591b4eb3ac5dc43825122200e160298448eed6bd61b4",
-    "results/universal_verification.json": "e95a72546869c88c62d3486d85ee1364f2c7f572c3794e7b69ca51f95845ae21",
+    "results/float32_verification.json": "f314986cd3113723b34f79f392520dc7c26da37ad191583d550169d936ddce79",
+    "results/universal_verification.json": "506bf32853508ab0794623ea5889c03a48ac79285cbfe779e643d3f826fab60c",
     "torch_bridge.py": "3901057995bcd73cac22951ca83d69291c4c2678c0f7a055bb00a4d91cb7a168",
     "universal/Audit.lean": "a735c137edd7a19e26566591c3ca3757779466ed276541e74d7aecd016b440ce",
     "universal/FrozenCertificate.lean": "0ec978688df8a79eb60bd16c7f76df44350bb9b31d9f8a70b1248e6be2d0a818",
@@ -43,7 +43,7 @@
     "universal/verify.py": "eb2b1028c965a020bc4444669b75d8e339ed95801551d99b6e21ddb4aacca153",
     "verify_float32.py": "428a212960eb38adc6e665175a9efeb379aa1917d36d5ea396a32c00b62c2df5"
   },
-  "elapsed_seconds": 39.629,
+  "elapsed_seconds": 41.358,
   "invalid_claims_rejected": [
     "reject_bad_rounding",
     "reject_duplicated_terms",
@@ -295,6 +295,6 @@
       "propext"
     ]
   },
-  "timestamp_utc": "2026-11-05T00:24:46.081732+00:00",
+  "timestamp_utc": "2026-11-05T08:33:53.892968+00:00",
   "trained": false
 }

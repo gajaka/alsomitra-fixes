@@ -2,7 +2,6 @@
 
 Formal contract, implementation, and worked example
 
-**Research author:** Dragan Stosic, with Codex assistance in implementation and documentation.\
 **Date:** 5 November 2026.\
 **Project:** `alsomitra-fixes/contribution/spec_compiler`
 

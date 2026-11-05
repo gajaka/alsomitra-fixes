@@ -1,7 +1,7 @@
 import Mathlib
 
 /-!
-Executable, exact-rational Property2 contract by Dragan Stosic.
+Executable, exact-rational Property2 contract.
 
 The definitions in this file are both executed and proved about. This is a
 new reference implementation, not a formal verification of upstream PyTorch.

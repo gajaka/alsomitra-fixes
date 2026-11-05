@@ -1,7 +1,5 @@
 # Property2: connecting the contract to PyTorch float32 observations
 
-Research contribution by Dragan Stosic, with Codex assistance.
-
 This implementation checks **actual observed CPU float32 input/output bits**
 with the executable Lean contract. It also runs the original `AlsomitraNet`
 class in an optional integration check. It does not prove a trained network

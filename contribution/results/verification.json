@@ -1,7 +1,7 @@
 {
   "arithmetic": "exact rational",
   "audit_negative_controls": 5,
-  "elapsed_seconds": 58.761,
+  "elapsed_seconds": 75.785,
   "lean_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
   "mathlib_revision": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "runtime": {
@@ -54,7 +54,7 @@
   "sources_sha256": {
     "Audit.lean": "b8693567da791c80bd4df3f952d63d3fe86de23b305540a08d7b329fab25f3d5",
     "Main.lean": "381214c9b0945cf0396a8bd45bca307ad1b9c14139b6d65e4f1b8dcd5ba85eb0",
-    "Property2.lean": "8617a9b81142a29c43ec32e4e191fbf1448761fa9873c6eace94de8e999e98f0",
+    "Property2.lean": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
     "Protocol.lean": "5dfc77dfccf2cbb7b3a77ed1d17f1fc22edeac6695510403d3006f8dfb5c4f78",
     "check_runtime.py": "9dfe58c6cb8652aa685156ed9d1402b0645a6dd87bf23c8d9d08c3761d20dea1",
     "verify.py": "772d06371a582e45aa61d29a5e0fbe7d7dfb1c308f94e93108e49c988151382a"
@@ -157,6 +157,6 @@
       "propext"
     ]
   },
-  "timestamp_utc": "2026-11-04T23:27:20.868882+00:00",
+  "timestamp_utc": "2026-11-05T08:27:09.717413+00:00",
   "typed_double_normalization_rejected": true
 }

@@ -1,7 +1,5 @@
 # Feasibility and novelty gate — 2026-11-05
 
-Research author: Dragan Stosic, with Codex assistance.
-
 **Decision: the narrow verified component is technically feasible and useful
 as a local contribution; a standalone novel research contribution is NOT
 ESTABLISHED.** This experiment does not justify starting a large new framework.

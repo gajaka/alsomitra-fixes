@@ -1,6 +1,6 @@
 # Research direction after the first executable contract
 
-Research author: Dragan Stosic. This is a working plan, not a claim that the
+This is a working plan, not a claim that the
 following stages have been implemented or proved.
 
 ## Current direction — 2026-11-05

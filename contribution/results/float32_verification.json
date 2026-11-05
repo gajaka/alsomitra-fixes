@@ -2,17 +2,17 @@
   "artifacts_sha256": {
     ".build/Float32.olean": "b51207c64e661a1ec742f77b2a7f207e3763fb6b5f5494664c3dfd977dec77c6",
     ".build/Float32Main.olean": "6d6419e378fe0bdf3e2428ee58dff382f747b0870783494c1b43d92b5533f01b",
-    ".build/Property2.olean": "1a9314515fcdfefe69929c6e26d1591847050ca9e68afa6f53b12bc6ea57fa1f",
+    ".build/Property2.olean": "8dc4e9bd6d8b3b8efe5c1c227841acb4bf86e0efa9d1806df5d8cadb8f422d0e",
     ".build/Protocol.olean": "60e8db2e250ec7938c9bdb54f7fbfceeff583c2b586d4d998931068a0eb4cf76"
   },
   "audit_negative_controls": 4,
-  "elapsed_seconds": 77.013,
+  "elapsed_seconds": 92.768,
   "machine": "arm64",
   "platform": "macOS-26.6.2-arm64-arm-64bit",
   "python": "3.11.18 (main, Oct 26 2026, 13:58:42) [Clang 23.1.3 ]",
   "rational_baseline": {
     "assertions": 3332,
-    "report_sha256": "d738f6d8c9973fecb7ca6f019882df173347efb347b992aad547b65fbfc24efe",
+    "report_sha256": "765257ea8dda456a05e75f09f6e628159959019c3a832f8ab18a43aee6f66790",
     "theorem_roots": 19
   },
   "runtime": {
@@ -32,7 +32,7 @@
         "binding": {
           "contract_sources": {
             "Float32.lean": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
-            "Property2.lean": "8617a9b81142a29c43ec32e4e191fbf1448761fa9873c6eace94de8e999e98f0",
+            "Property2.lean": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
             "torch_bridge.py": "3901057995bcd73cac22951ca83d69291c4c2678c0f7a055bb00a4d91cb7a168"
           },
           "device": "cpu",
@@ -407,7 +407,7 @@
           }
         ]
       },
-      "sha256": "c542f005393acc23fb882ff630c9c20eb8386d0df86f05281be59cc30e6d04f1"
+      "sha256": "487c01abc76c66f9e53413428a5c21026d06a35bd21042c5d7b9b23aa57b3c0e"
     },
     "expected_python_rejections": 16,
     "guarded_samples": 194,
@@ -421,7 +421,7 @@
     "Float32.lean": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
     "Float32Audit.lean": "e460939ac8da4244dfb0ecd804962df5f0d3d7a74171bef9a54dffe19ebab669",
     "Float32Main.lean": "715fc7fb9727004522e7387ec657937105df1ad0c93ca7efffd9922750eb69f0",
-    "Property2.lean": "8617a9b81142a29c43ec32e4e191fbf1448761fa9873c6eace94de8e999e98f0",
+    "Property2.lean": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
     "Protocol.lean": "5dfc77dfccf2cbb7b3a77ed1d17f1fc22edeac6695510403d3006f8dfb5c4f78",
     "check_float32.py": "2f0f2bc6d0c66ba5cdb25c879fa278380a1c8870c9d3f4f792d9a659863fe212",
     "check_upstream_float32.py": "059dbec812a5beb55d385f1a11f739ad321d09747d37ef30f2ae7d86cdb4d1c3",
@@ -471,7 +471,7 @@
       "propext"
     ]
   },
-  "timestamp_utc": "2026-11-04T23:27:20.825549+00:00",
+  "timestamp_utc": "2026-11-05T08:27:09.678565+00:00",
   "torch_config": "PyTorch built with:\n  - GCC 4.2\n  - C++ Version: 202002\n  - clang 21.0.0\n  - OpenMP 202011\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: DEFAULT\n  - Build settings: BLAS_INFO=accelerate, BUILD_TYPE=Release, COMMIT_SHA=d0f2af8b66b20da4baa50644c0cd3f887a2eae2e, CUDA_FLAGS= -DLIBCUDACXX_ENABLE_SIMPLIFIED_COMPLEX_OPERATIONS -Xfatbin -compress-all  -Wno-deprecated-gpu-targets --expt-extended-lambda -DCUB_WRAPPED_NAMESPACE=at_cuda_detail -DDISABLE_CUSPARSE_DEPRECATED -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -DC10_NODEPRECATED, CXX_COMPILER=/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DUSE_PYTORCH_QNNPACK -DAT_BUILD_ARM_VEC256_WITH_SLEEF -DUSE_PYTORCH_METAL_EXPORT -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DUSE_COREML_DELEGATE -O2 -fPIC -DC10_NODEPRECATED -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=braced-scalar-init -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wvla-extension -Wsuggest-override -Wnewline-eof -Winconsistent-missing-override -Winconsistent-missing-destructor-override -Wno-pass-failed -Wno-error=old-style-cast -Wconstant-conversion -Qunused-arguments -faligned-new -fno-math-errno -fno-trapping-math -Werror=format -fclang-abi-compat=17 -DUSE_MPS -Wno-missing-braces, LAPACK_INFO=accelerate, TORCH_VERSION=2.15.0, USE_CUDA=OFF, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_EIGEN_FOR_BLAS=ON, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_HIPSPARSELT=OFF, USE_MKL=OFF, USE_MKLDNN=OFF, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n",
   "torch_version": "2.15.0",
   "upstream_integration": {

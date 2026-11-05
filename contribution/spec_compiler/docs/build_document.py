@@ -69,7 +69,7 @@ def decoration(c,doc):
     c.saveState()
     c.setFont('Body',8)
     c.setFillColor(MUTED)
-    c.drawString(48,A4[1]-31,'Dragan Stosic  |  A Reference Checker for Input Specifications')
+    c.drawString(48,A4[1]-31,'A Reference Checker for Input Specifications')
     c.setStrokeColor(colors.HexColor('#d5dfe5'))
     c.line(48,A4[1]-38,A4[0]-48,A4[1]-38)
     c.line(48,37,A4[0]-48,37)
@@ -126,7 +126,7 @@ def render():
         else:raise ValueError('Unsupported token '+t.type)
     target=HERE/'REFERENCE_CHECKER.pdf'
     doc=GuidePDF(str(target),pagesize=A4,leftMargin=48,rightMargin=48,topMargin=55,bottomMargin=52,
-        title='A Reference Checker for Input Specifications',author='Dragan Stosic',
+        title='A Reference Checker for Input Specifications',author='',
         subject='Formal contract, Lean implementation, and worked example')
     doc.build(story,onFirstPage=decoration,onLaterPages=decoration)
     print(target)

@@ -9,14 +9,14 @@
   },
   "audit_negative_controls": 4,
   "builds": {
-    "FrozenCertificate": "matched prior checked build",
-    "FrozenLeaves": "matched prior checked build",
-    "FrozenModel": "matched prior checked build",
-    "IntervalNetwork": "matched prior checked build",
+    "FrozenCertificate": "fresh kernel check",
+    "FrozenLeaves": "fresh kernel check",
+    "FrozenModel": "fresh kernel check",
+    "IntervalNetwork": "fresh kernel check",
     "NegativeControls": "fresh kernel check",
-    "Property2Network": "matched prior checked build"
+    "Property2Network": "fresh kernel check"
   },
-  "elapsed_seconds": 45.204,
+  "elapsed_seconds": 309.954,
   "execution_replay": {
     "affine_error_samples": 12416,
     "assertions": 12419,
@@ -70,7 +70,7 @@
       ]
     ],
     "epsilon": "1/1024",
-    "generation_seconds": 1.596,
+    "generation_seconds": 1.349,
     "input_box": [
       [
         "5167/661212375000",
@@ -114,7 +114,7 @@
   "scope": "All real inputs in fixed Property2 anchor=10 region; exact model and explicit bounded-error traces",
   "sources_sha256": {
     "Float32.lean": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
-    "Property2.lean": "8617a9b81142a29c43ec32e4e191fbf1448761fa9873c6eace94de8e999e98f0",
+    "Property2.lean": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
     "universal/Audit.lean": "a735c137edd7a19e26566591c3ca3757779466ed276541e74d7aecd016b440ce",
     "universal/FrozenCertificate.lean": "0ec978688df8a79eb60bd16c7f76df44350bb9b31d9f8a70b1248e6be2d0a818",
     "universal/FrozenLeaves.lean": "fadeb265c5893b7bb5145aabe8f521359a9dd4d9bab99d29dd36d248c13fcf7e",
@@ -776,6 +776,6 @@
       "propext"
     ]
   },
-  "timestamp_utc": "2026-11-05T00:04:04.362723+00:00",
+  "timestamp_utc": "2026-11-05T08:28:43.175145+00:00",
   "trained": false
 }
