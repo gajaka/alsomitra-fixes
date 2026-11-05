@@ -67,6 +67,8 @@ class GuidePDF(SimpleDocTemplate):
 
 
 def decoration(c,doc):
+    c.setAuthor('')
+    c.setCreator('')
     c.saveState()
     c.setFont('Body',8)
     c.setFillColor(MUTED)

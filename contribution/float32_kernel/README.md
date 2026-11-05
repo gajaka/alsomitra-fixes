@@ -119,8 +119,8 @@ this arithmetic-model theorem.
 From the repository root, after the existing bridge and universal verifications:
 
 ```sh
-/Users/gajaka/projects/ppg-lab/.venv/bin/python -B contribution/float32_kernel/verify.py
-/Users/gajaka/projects/ppg-lab/.venv/bin/python -B contribution/float32_kernel/inspect_backend.py
+python -B contribution/float32_kernel/verify.py
+python -B contribution/float32_kernel/inspect_backend.py
 ```
 
 The proof verifier checks prerequisite source/artifact hashes, regenerates the

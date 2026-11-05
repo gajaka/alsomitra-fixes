@@ -275,7 +275,7 @@ The general checker therefore handles strict boundaries exactly, while the theor
 
 ### 10.1. Prepare a fresh checkout
 
-Use a checkout containing `contribution/spec_compiler`. The commands below assume a macOS or Linux shell, Python 3.11 or newer with virtual-environment support, Git, and an installed Lean toolchain manager (`elan`) with `lake` on `PATH`. Run them from the repository root: the directory containing `README.md`, `lean/`, and `contribution/`. No path specific to the author's machine is required.
+Use a checkout containing `contribution/spec_compiler`. The commands below assume a macOS or Linux shell, Python 3.11 or newer with virtual-environment support, Git, and an installed Lean toolchain manager (`elan`) with `lake` on `PATH`. Run them from the repository root: the directory containing `README.md`, `lean/`, and `contribution/`. The commands use repository-relative paths.
 
 The repository selects Lean 4.35.0 through `lean/lean-toolchain` and pins Mathlib through `lean/lake-manifest.json`. Prepare its dependencies and a Python environment:
 

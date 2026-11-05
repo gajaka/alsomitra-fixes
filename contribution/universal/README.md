@@ -120,8 +120,8 @@ and the Python environment used for the float32 bridge:
 
 ```sh
 # From the repository root; run the bridge verification first if absent/stale.
-/Users/gajaka/projects/ppg-lab/.venv/bin/python -B contribution/universal/verify.py \
-  --upstream /Users/gajaka/projects/ppg-lab/external/property-driven-ml
+python -B contribution/universal/verify.py \
+  --upstream /path/to/property-driven-ml
 ```
 
 The checker regenerates the certificate from the frozen bits, rebuilds the

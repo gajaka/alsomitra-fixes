@@ -1,5 +1,7 @@
 # ACAS Xu input-region checker example
 
+Input specification, counterexamples, and a verified correction
+
 This example compares the input condition in Equation (7) with the bounds
 printed in Equation (8) of [A General Framework for Property-Driven Machine
 Learning, version 2, Section 3.2](https://arxiv.org/pdf/2505.00466v2#page=8).

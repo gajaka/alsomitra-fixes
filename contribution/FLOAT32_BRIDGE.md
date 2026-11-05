@@ -215,9 +215,8 @@ python -B contribution/verify_float32.py --upstream /path/to/property-driven-ml
 
 The checkout must be at `616df1e5baaabf7b42dc26320c00fb297903c87a`, with the
 three exercised source files unchanged, and its Python dependencies available.
-Locally, the verified invocation uses
-`/Users/gajaka/projects/ppg-lab/.venv/bin/python` and upstream checkout
-`/Users/gajaka/projects/ppg-lab/external/property-driven-ml`.
+Activate the Python environment containing PyTorch before running these
+commands, and replace `/path/to/property-driven-ml` with the pinned checkout.
 
 Inspect [results/float32_verification.json](results/float32_verification.json)
 for status, source/artifact hashes, environment, counts, boundary witness and
