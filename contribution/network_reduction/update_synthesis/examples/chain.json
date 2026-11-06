@@ -1,0 +1,12 @@
+{
+  "coordinates": ["a0", "a1", "a2", "a3", "bias"],
+  "seed": ["a0", "a2", "bias"],
+  "operations": [
+    {"name": "couple_a1_into_a0", "updates": {
+      "a0": {"terms": {"a0": "1", "a1": "1"}}
+    }},
+    {"name": "couple_a3_into_a1", "updates": {
+      "a1": {"terms": {"a1": "1", "a3": "1"}}
+    }}
+  ]
+}

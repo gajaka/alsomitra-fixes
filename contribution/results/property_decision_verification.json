@@ -1,0 +1,976 @@
+{
+  "status": "PASS",
+  "attempt": "contribution/.build/property_decision/attempt-001",
+  "timestamp_utc": "2026-11-06T06:53:28.639813+00:00",
+  "scope": "Exact real counterexamples to Above(2)/Below(2), two original trained checkpoints and certified reductions",
+  "fresh_proof_run": true,
+  "second_kernel_run": false,
+  "lean_build": {
+    "Property2": {
+      "returncode": 0,
+      "seconds": 4.793102332856506,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/Property2.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/Property2.lean"
+      ],
+      "source_sha256": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "8dc4e9bd6d8b3b8efe5c1c227841acb4bf86e0efa9d1806df5d8cadb8f422d0e"
+    },
+    "Float32": {
+      "returncode": 0,
+      "seconds": 4.3989279579836875,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/Float32.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/Float32.lean"
+      ],
+      "source_sha256": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "b51207c64e661a1ec742f77b2a7f207e3763fb6b5f5494664c3dfd977dec77c6"
+    },
+    "IntervalNetwork": {
+      "returncode": 0,
+      "seconds": 4.799236790975556,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/universal",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/IntervalNetwork.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/universal/IntervalNetwork.lean"
+      ],
+      "source_sha256": "be336900a150eeffb9feb49992f1a788dedea56a80319b05fc0c27536febd04e",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "54d432269129a847106c29fff29344e328b8398241d32da0a21adff1f958b245"
+    },
+    "Pruning": {
+      "returncode": 0,
+      "seconds": 4.497960125096142,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/Pruning.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/Pruning.lean"
+      ],
+      "source_sha256": "622185c41b15df39ede096071f85deea4b3099246117665832500bb5e6467364",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "55ef6450ebfaf47891937343f6d338ad673d5e88de7dfee3b995957e88ea5107"
+    },
+    "Baseline": {
+      "returncode": 0,
+      "seconds": 4.621245624963194,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/Baseline.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/Baseline.lean"
+      ],
+      "source_sha256": "52b014b27ebce87dbb8625a7bbcfc91c66f1ebcb91f94b7079f7be79be9bd501",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "56a9201e900257fba78b26f5f3ad8cc5eaa9135e12dc327670c05bf11431b25c"
+    },
+    "Adversarial": {
+      "returncode": 0,
+      "seconds": 4.5131108751520514,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/Adversarial.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/Adversarial.lean"
+      ],
+      "source_sha256": "1e9a96b5c7245895a11306e0602536299090c308bad347e6068d176c48e3e3a6",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "00705946a02ebebe27f07f54b8f3ca22ac161a6e39585fd285e638e6e3da14ca"
+    },
+    "OutputUpdates": {
+      "returncode": 0,
+      "seconds": 4.540149667067453,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/output_updates",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/OutputUpdates.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/output_updates/OutputUpdates.lean"
+      ],
+      "source_sha256": "e3622f975ff63d568933381ffab108181b9149259c78612386e3affcc480ed05",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "2a96316dcd66a5a5d5bf2327e832338f640f700ece2c2d4e32d7fde1479c0480"
+    },
+    "AffineRetention": {
+      "returncode": 0,
+      "seconds": 4.413734166882932,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/update_synthesis",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/AffineRetention.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/update_synthesis/AffineRetention.lean"
+      ],
+      "source_sha256": "d79c53e212bd14b12c75438fa123e27d130f8832b53a5753f419dcdd8193e7c7",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "c7157eb6e3b9d8f4182657c0acd6f2c63df4edfb885abce2578843dd3410dbc5"
+    },
+    "NetworkRetention": {
+      "returncode": 0,
+      "seconds": 4.412714499980211,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/update_synthesis",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/NetworkRetention.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/update_synthesis/NetworkRetention.lean"
+      ],
+      "source_sha256": "fc4efc05bd12bc465d6e14736749eb6ccb4f4093d0690758e671493824a97229",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "a1d598b838a6abaa959073c5b755377f2b242c8c99ade6937576ae1b1952b9f9"
+    },
+    "MomentumQuotient": {
+      "returncode": 0,
+      "seconds": 36.98318237508647,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/linear_observations",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/MomentumQuotient.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/linear_observations/MomentumQuotient.lean"
+      ],
+      "source_sha256": "669129977abc022669946fda9e35089ee922e8c45d6b3b522abf014fbd192267",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "50a822cce8c6bd30c4d6a08e09d9e2abe440e08f7b742afe206f61d1d881fb8b"
+    },
+    "PropertyTransfer": {
+      "returncode": 0,
+      "seconds": 4.36153162503615,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/property_transfer",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/PropertyTransfer.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/property_transfer/PropertyTransfer.lean"
+      ],
+      "source_sha256": "964ffb0469e971ba396eb12d365ce342e13a0279420d4a65816d5437e02b31dc",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "9d67ae9eb04fc21ba513a2d6f1cbe8762d930e8e8c925745ea832b6dce317324"
+    },
+    "RationalFeatures": {
+      "returncode": 0,
+      "seconds": 4.3050664169713855,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/update_synthesis",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/RationalFeatures.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/update_synthesis/RationalFeatures.lean"
+      ],
+      "source_sha256": "3c46b9bf84e6455b00dc2e8b5e59929e2fad80c98fad3ad25889859e1b1acee2",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "e310c052abbba879d6a93b2ff7df40a32a37cd9ed079c7e8b66e33590a54b67f"
+    },
+    "ExactEvaluation": {
+      "returncode": 0,
+      "seconds": 4.109074749983847,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/property_decision",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/ExactEvaluation.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/property_decision/ExactEvaluation.lean"
+      ],
+      "source_sha256": "21d95d7f4d5c28809edbf622536bcb234ec2d7563fa5e87dea17d2c8074c203f",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "c6153466552544d8c1fc6f7b73cb55d6d1051acccbd101c306214888adcc99d5"
+    },
+    "Witnesses": {
+      "returncode": 0,
+      "seconds": 4.7482459580060095,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/property_decision",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/Witnesses.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/sources/contribution/network_reduction/property_decision/Witnesses.lean"
+      ],
+      "source_sha256": "d251f5ec9605f5e6ac0fc22f419768db0ac10ccd9c87ceb61aa04bb3ba655288",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "5b416ed992b1e6ff1527449c10aeb4f3cccbae34300d1f478dd0332eb2703be6"
+    },
+    "SearchBinding": {
+      "returncode": 0,
+      "seconds": 4.121058417018503,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/generated",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/SearchBinding.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/generated/SearchBinding.lean"
+      ],
+      "source_sha256": "602d8eeb76fa6ec73e35d9076bfde71b44cc7a933a87a13737969f72ef981b22",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "397ebe54169ab21664863ffe58710e4ac3ecc635af15706b138c926b58b646d6"
+    },
+    "Audit": {
+      "returncode": 0,
+      "seconds": 4.1067913342267275,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/generated",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/Audit.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/generated/Audit.lean"
+      ],
+      "source_sha256": "29e42af5f2706dde1ec85f16a5413bf5fa1680bc949e750acdb5111ab0978151",
+      "log_sha256": "69cdf1610520c6606b62dd44a9f9908db5a95c801f0baa745a0dba930c938cfa",
+      "olean_sha256": "2c4911f963784abbccfe79282fa9ec233798bf26cd65445cc427939e55354b53"
+    }
+  },
+  "negative_controls": {
+    "BadOutput": {
+      "returncode": 1,
+      "seconds": 4.110570499906316,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/generated",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/BadOutput.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/generated/BadOutput.lean"
+      ],
+      "source_sha256": "f3027eaf2b452eb2b4b4741d79c1633390da7290bf201e23b5aaf6d4d5b1a6b3",
+      "log_sha256": "afee9d119ab7b1167dae629efd0f9827a06232a1177fc195e760f111d4ea0082",
+      "status": "REJECTED"
+    },
+    "BadRegion": {
+      "returncode": 1,
+      "seconds": 4.227528708055615,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/generated",
+        "-o",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/BadRegion.olean",
+        "<CHECKOUT>/contribution/.build/property_decision/attempt-001/generated/BadRegion.lean"
+      ],
+      "source_sha256": "e2fc61545b8a3fd101e01d7847324af05b3ac5ed40997f95965ec3ac676effd7",
+      "log_sha256": "6231be2adb8d2d06254d59959655a21f18e7c9129deb4eb1b8bdf55e03c6e3dc",
+      "status": "REJECTED"
+    }
+  },
+  "sources_sha256": {
+    "contribution/Float32.lean": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
+    "contribution/Property2.lean": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
+    "contribution/network_reduction/Adversarial.lean": "1e9a96b5c7245895a11306e0602536299090c308bad347e6068d176c48e3e3a6",
+    "contribution/network_reduction/Baseline.lean": "52b014b27ebce87dbb8625a7bbcfc91c66f1ebcb91f94b7079f7be79be9bd501",
+    "contribution/network_reduction/Pruning.lean": "622185c41b15df39ede096071f85deea4b3099246117665832500bb5e6467364",
+    "contribution/network_reduction/linear_observations/MomentumQuotient.lean": "669129977abc022669946fda9e35089ee922e8c45d6b3b522abf014fbd192267",
+    "contribution/network_reduction/output_updates/OutputUpdates.lean": "e3622f975ff63d568933381ffab108181b9149259c78612386e3affcc480ed05",
+    "contribution/network_reduction/output_updates/verify.py": "f95e854699e770da114beec3c1ecb9c4ab26f06911b767cfdfb24ffea1a6aec2",
+    "contribution/network_reduction/property_decision/ExactEvaluation.lean": "21d95d7f4d5c28809edbf622536bcb234ec2d7563fa5e87dea17d2c8074c203f",
+    "contribution/network_reduction/property_decision/README.md": "f61763f102e9cc16849768698d95c79efe28a72b4a6e9f1ac478d9cf728a72c9",
+    "contribution/network_reduction/property_decision/Witnesses.lean": "d251f5ec9605f5e6ac0fc22f419768db0ac10ccd9c87ceb61aa04bb3ba655288",
+    "contribution/network_reduction/property_decision/runtime.py": "8b22a9f11d8a1180415721afeceec33539fbfe4a4b09975142074dd789946f6f",
+    "contribution/network_reduction/property_decision/search.py": "56700bb539dbe2f822191c35a5bc1f62de1fe5ccc60a07f89f1467dd06554568",
+    "contribution/network_reduction/property_decision/verify.py": "6c14232f3a0eb71e9729829125cf0b622dd5c61d6d9517bf2246e8baac05d4ff",
+    "contribution/network_reduction/property_transfer/PropertyTransfer.lean": "964ffb0469e971ba396eb12d365ce342e13a0279420d4a65816d5437e02b31dc",
+    "contribution/network_reduction/update_synthesis/AffineRetention.lean": "d79c53e212bd14b12c75438fa123e27d130f8832b53a5753f419dcdd8193e7c7",
+    "contribution/network_reduction/update_synthesis/NetworkRetention.lean": "fc4efc05bd12bc465d6e14736749eb6ccb4f4093d0690758e671493824a97229",
+    "contribution/network_reduction/update_synthesis/RationalFeatures.lean": "3c46b9bf84e6455b00dc2e8b5e59929e2fad80c98fad3ad25889859e1b1acee2",
+    "contribution/results/linear_observations_verification.json": "6bc621c724bc4e9004d4415021a4ae70ac1910c03847b1277e7257de963ab3cf",
+    "contribution/results/network_reduction_verification.json": "8cca1d09fdf019e1a418ef2dffc297cbdea8b4a64fc5de73626d9fb103ccd74a",
+    "contribution/results/output_update_verification.json": "6aa4cba939acaecc2ed19d30eb2d2331c6225c2bba32cf67b4923e21e76f2df7",
+    "contribution/results/rmsprop_and_property_transfer_verification.json": "a1fea911bf512865bc2f54494cd739cb7dacbeba5451b6238370777e1daaefe8",
+    "contribution/results/update_synthesis_verification.json": "689ced086c9b93f77b2069c41cc6e027718b146c1202fb172a299b7a1dbb06b4",
+    "contribution/universal/IntervalNetwork.lean": "be336900a150eeffb9feb49992f1a788dedea56a80319b05fc0c27536febd04e",
+    "lean/lake-manifest.json": "0f6a2f189439a5b6ac9653168b0e513c8129ec88af04f771b6a926773bab3420",
+    "lean/lakefile.lean": "d8e1d78b26d3253c33757657aa3c5986113271300a7fa4e34a3b7b08673606f8",
+    "lean/lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+  },
+  "historical_receipts_sha256": {
+    "contribution/results/network_reduction_verification.json": "8cca1d09fdf019e1a418ef2dffc297cbdea8b4a64fc5de73626d9fb103ccd74a",
+    "contribution/results/output_update_verification.json": "6aa4cba939acaecc2ed19d30eb2d2331c6225c2bba32cf67b4923e21e76f2df7",
+    "contribution/results/update_synthesis_verification.json": "689ced086c9b93f77b2069c41cc6e027718b146c1202fb172a299b7a1dbb06b4",
+    "contribution/results/linear_observations_verification.json": "6bc621c724bc4e9004d4415021a4ae70ac1910c03847b1277e7257de963ab3cf",
+    "contribution/results/rmsprop_and_property_transfer_verification.json": "a1fea911bf512865bc2f54494cd739cb7dacbeba5451b6238370777e1daaefe8"
+  },
+  "search": {
+    "scope": "Finite exact search, not universal verification",
+    "margin": "2",
+    "models": {
+      "Baseline": {
+        "candidates_evaluated": 111,
+        "witnesses": {
+          "Below": {
+            "input": [
+              "1/4",
+              "1/4",
+              "1/4",
+              "1/4",
+              "1/4",
+              "1/4"
+            ],
+            "output_exact": "14786350527961685237583/18889465931478580854784",
+            "output_approx": 0.7827828791771604,
+            "displacement_exact": "-310740011735873/16000000000000",
+            "displacement_approx": -19.421250733492062,
+            "threshold_gap_exact": "5341617562222394810191/18889465931478580854784"
+          },
+          "Above": {
+            "input": [
+              "1/4",
+              "1/2",
+              "1/2",
+              "1/4",
+              "1/4",
+              "3/4"
+            ],
+            "output_exact": "7539692050513325688975/18889465931478580854784",
+            "output_approx": 0.3991479736835076,
+            "displacement_exact": "1407227465521889/400000000000000",
+            "displacement_approx": 3.5180686638047227,
+            "threshold_gap_exact": "1905040915225964738417/18889465931478580854784"
+          }
+        }
+      },
+      "Adversarial": {
+        "candidates_evaluated": 739,
+        "witnesses": {
+          "Below": {
+            "input": [
+              "1/4",
+              "1/4",
+              "1/4",
+              "1/4",
+              "1/4",
+              "1/4"
+            ],
+            "output_exact": "5436513554077876856478061/4835703278458516698824704",
+            "output_approx": 1.124244652953744,
+            "displacement_exact": "-310740011735873/16000000000000",
+            "displacement_approx": -19.421250733492062,
+            "threshold_gap_exact": "3018661914848618507065709/4835703278458516698824704"
+          },
+          "Above": {
+            "input": [
+              "1/8",
+              "1/8",
+              "7/8",
+              "1/8",
+              "1/8",
+              "7/8"
+            ],
+            "output_exact": "2662054634994919894468397/9671406556917033397649408",
+            "output_approx": 0.2752499979530905,
+            "displacement_exact": "16395445941148373/4000000000000000",
+            "displacement_approx": 4.0988614852870935,
+            "threshold_gap_exact": "2173648643463596804356307/9671406556917033397649408"
+          }
+        }
+      }
+    }
+  },
+  "expected_roots": [
+    "Contribution.Reduction.Adversarial.all_real_inputs",
+    "Contribution.Reduction.Adversarial.original_decoded",
+    "Contribution.Reduction.Adversarial.original_parameters",
+    "Contribution.Reduction.Baseline.all_real_inputs",
+    "Contribution.Reduction.Baseline.original_decoded",
+    "Contribution.Reduction.Baseline.original_parameters",
+    "Contribution.Reduction.PropertyDecision.adversarial_above_computed",
+    "Contribution.Reduction.PropertyDecision.adversarial_above_displacement",
+    "Contribution.Reduction.PropertyDecision.adversarial_above_interior",
+    "Contribution.Reduction.PropertyDecision.adversarial_above_output",
+    "Contribution.Reduction.PropertyDecision.adversarial_above_pre",
+    "Contribution.Reduction.PropertyDecision.adversarial_above_reduced_refuted",
+    "Contribution.Reduction.PropertyDecision.adversarial_above_reduced_violation",
+    "Contribution.Reduction.PropertyDecision.adversarial_above_refuted",
+    "Contribution.Reduction.PropertyDecision.adversarial_above_search_binding",
+    "Contribution.Reduction.PropertyDecision.adversarial_above_violation",
+    "Contribution.Reduction.PropertyDecision.adversarial_below_computed",
+    "Contribution.Reduction.PropertyDecision.adversarial_below_output",
+    "Contribution.Reduction.PropertyDecision.adversarial_below_reduced_refuted",
+    "Contribution.Reduction.PropertyDecision.adversarial_below_reduced_violation",
+    "Contribution.Reduction.PropertyDecision.adversarial_below_refuted",
+    "Contribution.Reduction.PropertyDecision.adversarial_below_search_binding",
+    "Contribution.Reduction.PropertyDecision.adversarial_below_violation",
+    "Contribution.Reduction.PropertyDecision.baseline_above_computed",
+    "Contribution.Reduction.PropertyDecision.baseline_above_displacement",
+    "Contribution.Reduction.PropertyDecision.baseline_above_interior",
+    "Contribution.Reduction.PropertyDecision.baseline_above_output",
+    "Contribution.Reduction.PropertyDecision.baseline_above_pre",
+    "Contribution.Reduction.PropertyDecision.baseline_above_reduced_refuted",
+    "Contribution.Reduction.PropertyDecision.baseline_above_reduced_violation",
+    "Contribution.Reduction.PropertyDecision.baseline_above_refuted",
+    "Contribution.Reduction.PropertyDecision.baseline_above_search_binding",
+    "Contribution.Reduction.PropertyDecision.baseline_above_violation",
+    "Contribution.Reduction.PropertyDecision.baseline_below_computed",
+    "Contribution.Reduction.PropertyDecision.baseline_below_output",
+    "Contribution.Reduction.PropertyDecision.baseline_below_reduced_refuted",
+    "Contribution.Reduction.PropertyDecision.baseline_below_reduced_violation",
+    "Contribution.Reduction.PropertyDecision.baseline_below_refuted",
+    "Contribution.Reduction.PropertyDecision.baseline_below_search_binding",
+    "Contribution.Reduction.PropertyDecision.baseline_below_violation",
+    "Contribution.Reduction.PropertyDecision.below_displacement",
+    "Contribution.Reduction.PropertyDecision.below_interior",
+    "Contribution.Reduction.PropertyDecision.below_pre",
+    "Contribution.Reduction.PropertyDecision.evalQ_cast",
+    "Contribution.Reduction.PropertyDecision.exact_output",
+    "Contribution.Reduction.PropertyDecision.refutes",
+    "Contribution.Reduction.PropertyTransfer.adversarial_counterexample",
+    "Contribution.Reduction.PropertyTransfer.baseline_counterexample"
+  ],
+  "reader_controls": {
+    "scope": "Synthetic reader controls, not compiler mutation experiments",
+    "positive_complete_audit": "ACCEPTED",
+    "positive_multiline_audit": "ACCEPTED",
+    "missing_root": "REJECTED",
+    "duplicate_root": "REJECTED",
+    "unexpected_root": "REJECTED",
+    "foreign_axiom": "REJECTED",
+    "sorry_axiom": "REJECTED",
+    "native_trust_axiom": "REJECTED",
+    "malformed_axiom_list": "REJECTED",
+    "truncated_multiline_list": "REJECTED",
+    "missing_continuation_comma": "REJECTED",
+    "empty_continuation_item": "REJECTED",
+    "embedded_root_in_unclosed_list": "REJECTED",
+    "foreign_multiline_axiom": "REJECTED",
+    "trailing_unchecked_text": "REJECTED",
+    "wrapped_trailing_garbage": "REJECTED",
+    "stray_continuation_after_list": "REJECTED",
+    "leading_unchecked_text": "REJECTED",
+    "warning_diagnostic": "REJECTED",
+    "error_diagnostic": "REJECTED",
+    "compiler_warning_detected": true,
+    "compiler_error_detected": true
+  },
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "axiom_audit": {
+    "Contribution.Reduction.PropertyDecision.evalQ_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.exact_output": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.refutes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.below_interior": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.baseline_above_interior": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.adversarial_above_interior": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.below_displacement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.baseline_above_displacement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.adversarial_above_displacement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.below_pre": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.baseline_above_pre": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.adversarial_above_pre": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.baseline_below_computed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.baseline_above_computed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.adversarial_below_computed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.adversarial_above_computed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.baseline_below_output": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.baseline_above_output": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.adversarial_below_output": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.adversarial_above_output": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.baseline_below_violation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.baseline_above_violation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.adversarial_below_violation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.adversarial_above_violation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.baseline_below_reduced_violation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.baseline_above_reduced_violation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.adversarial_below_reduced_violation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.adversarial_above_reduced_violation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.baseline_below_refuted": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.baseline_above_refuted": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.adversarial_below_refuted": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.adversarial_above_refuted": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.baseline_below_reduced_refuted": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.baseline_above_reduced_refuted": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.adversarial_below_reduced_refuted": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.adversarial_above_reduced_refuted": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.baseline_below_search_binding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.baseline_above_search_binding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.adversarial_below_search_binding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyDecision.adversarial_above_search_binding": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.original_decoded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.original_parameters": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.all_real_inputs": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.original_decoded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.original_parameters": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.all_real_inputs": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.baseline_counterexample": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.adversarial_counterexample": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "audited_roots": 48,
+  "generated_sha256": {
+    "contribution/.build/property_decision/attempt-001/generated/BadRegion.lean": "e2fc61545b8a3fd101e01d7847324af05b3ac5ed40997f95965ec3ac676effd7",
+    "contribution/.build/property_decision/attempt-001/generated/Audit.lean": "29e42af5f2706dde1ec85f16a5413bf5fa1680bc949e750acdb5111ab0978151",
+    "contribution/.build/property_decision/attempt-001/generated/SearchBinding.lean": "602d8eeb76fa6ec73e35d9076bfde71b44cc7a933a87a13737969f72ef981b22",
+    "contribution/.build/property_decision/attempt-001/generated/BadOutput.lean": "f3027eaf2b452eb2b4b4741d79c1633390da7290bf201e23b5aaf6d4d5b1a6b3"
+  },
+  "runtime": {
+    "status": "PASS",
+    "scope": "Eight finite executions, not universal float32 refinement",
+    "versions": {
+      "numpy": "2.4.6",
+      "onnx": "1.23.2",
+      "onnxruntime": "1.31.1",
+      "platform": "macOS-26.6.2-arm64-arm-64bit"
+    },
+    "search_sha256": "1a456cab013fdfc4934dd4a95d96214e63dd4b648d24bb54842c4755560fb1d8",
+    "models": {
+      "Baseline": {
+        "original": {
+          "path": "<UPSTREAM>/python_training/models/final_base_model_norm.onnx",
+          "sha256": "35c0654a5916b859e3d3bd8fa127f4555ee7ba52f8a47e03610371af0f25645b",
+          "parameter_bits_match": true,
+          "observations": {
+            "Below": {
+              "input_words": [
+                1048576000,
+                1048576000,
+                1048576000,
+                1048576000,
+                1048576000,
+                1048576000
+              ],
+              "output": 0.7827828526496887,
+              "output_word": 1061708917,
+              "violation_observed": true,
+              "absolute_difference_from_real": "501089772183375/18889465931478580854784"
+            },
+            "Above": {
+              "input_words": [
+                1048576000,
+                1056964608,
+                1056964608,
+                1048576000,
+                1048576000,
+                1061158912
+              ],
+              "output": 0.3991479277610779,
+              "output_word": 1053580574,
+              "violation_observed": true,
+              "absolute_difference_from_real": "867450171394191/18889465931478580854784"
+            }
+          }
+        },
+        "reduced": {
+          "path": "<CHECKOUT>/contribution/.build/network_reduction/Baseline.onnx",
+          "sha256": "15f7385600cf7b847203772421c4baa53e03c959d27bd58e1e84717c8ec13be1",
+          "parameter_bits_match": true,
+          "observations": {
+            "Below": {
+              "input_words": [
+                1048576000,
+                1048576000,
+                1048576000,
+                1048576000,
+                1048576000,
+                1048576000
+              ],
+              "output": 0.7827828526496887,
+              "output_word": 1061708917,
+              "violation_observed": true,
+              "absolute_difference_from_real": "501089772183375/18889465931478580854784"
+            },
+            "Above": {
+              "input_words": [
+                1048576000,
+                1056964608,
+                1056964608,
+                1048576000,
+                1048576000,
+                1061158912
+              ],
+              "output": 0.3991479277610779,
+              "output_word": 1053580574,
+              "violation_observed": true,
+              "absolute_difference_from_real": "867450171394191/18889465931478580854784"
+            }
+          }
+        }
+      },
+      "Adversarial": {
+        "original": {
+          "path": "<UPSTREAM>/python_training/models/final_adversarial_model_0.005.onnx",
+          "sha256": "1154145b50c6eb0d1f4b41f7725aed19ca8ac1fe256536c3b27ac696501aaa6e",
+          "parameter_bits_match": true,
+          "observations": {
+            "Below": {
+              "input_words": [
+                1048576000,
+                1048576000,
+                1048576000,
+                1048576000,
+                1048576000,
+                1048576000
+              ],
+              "output": 1.1242446899414062,
+              "output_word": 1066395456,
+              "violation_observed": true,
+              "absolute_difference_from_real": "178861359938479763/4835703278458516698824704"
+            },
+            "Above": {
+              "input_words": [
+                1040187392,
+                1040187392,
+                1063256064,
+                1040187392,
+                1040187392,
+                1063256064
+              ],
+              "output": 0.2752498686313629,
+              "output_word": 1049423245,
+              "violation_observed": true,
+              "absolute_difference_from_real": "1250723004528510765/9671406556917033397649408"
+            }
+          }
+        },
+        "reduced": {
+          "path": "<CHECKOUT>/contribution/.build/network_reduction/Adversarial.onnx",
+          "sha256": "754838eaa998990044f57bf5be5ae8f12a12342c2fb8436d267279937bd6de30",
+          "parameter_bits_match": true,
+          "observations": {
+            "Below": {
+              "input_words": [
+                1048576000,
+                1048576000,
+                1048576000,
+                1048576000,
+                1048576000,
+                1048576000
+              ],
+              "output": 1.1242446899414062,
+              "output_word": 1066395456,
+              "violation_observed": true,
+              "absolute_difference_from_real": "178861359938479763/4835703278458516698824704"
+            },
+            "Above": {
+              "input_words": [
+                1040187392,
+                1040187392,
+                1063256064,
+                1040187392,
+                1040187392,
+                1063256064
+              ],
+              "output": 0.2752498686313629,
+              "output_word": 1049423245,
+              "violation_observed": true,
+              "absolute_difference_from_real": "1250723004528510765/9671406556917033397649408"
+            }
+          }
+        }
+      }
+    },
+    "execution_count": 8
+  },
+  "runtime_command": [
+    "<HOME>/projects/ppg-lab/.venv/bin/python",
+    "-B",
+    "<CHECKOUT>/contribution/network_reduction/property_decision/runtime.py",
+    "--search",
+    "<CHECKOUT>/contribution/.build/property_decision/attempt-001/SEARCH.json",
+    "--output",
+    "<CHECKOUT>/contribution/.build/property_decision/attempt-001/RUNTIME.json",
+    "--upstream",
+    "<UPSTREAM>"
+  ],
+  "runtime_sha256": "86fa566d13a66247312784f2b856bb5bcbf17461837f44e30ca8e440f8ed3df5",
+  "inputs_unchanged": true,
+  "seconds": 112.4235608750023,
+  "finished_utc": "2026-11-06T06:55:21.064364+00:00",
+  "export_metadata": {
+    "kind": "Path-normalized copy of an actual completed isolated-checkout replay",
+    "raw_receipt_sha256": "33e8b4ba4e0920ee75410a10854988648df069ef6c52bbf984f30b35e33c93e0",
+    "normalized_path_prefixes": [
+      "<CHECKOUT>",
+      "<UPSTREAM>",
+      "<HOME>"
+    ],
+    "unchanged_evidence": "Proof/source/checkpoint/log digests, audit results, exit codes and measured values are unchanged.",
+    "raw_record_location": "Retained with the local replay artifacts; raw machine paths are not included in the shared snapshot.",
+    "predecessor_policy": "Each stage ran after predecessor records had been normalized; its recorded predecessor hashes bind those exact shared bytes."
+  }
+}

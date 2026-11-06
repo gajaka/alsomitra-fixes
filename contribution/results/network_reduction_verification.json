@@ -1,0 +1,1193 @@
+{
+  "status": "PASS",
+  "timestamp_utc": "2026-11-06T06:45:42.029516+00:00",
+  "scope": "Exact real network equality on the raw SAIV unit cube; separate float32 replay",
+  "generation": {
+    "upstream_commit": "e9f6f1c52e0e5349455d2b4f69c2015567d3037f",
+    "domain": "[0,1]^6 in raw SAIV model coordinates",
+    "models": {
+      "Baseline": {
+        "original_sha256": "35c0654a5916b859e3d3bd8fa127f4555ee7ba52f8a47e03610371af0f25645b",
+        "reduced_sha256": "15f7385600cf7b847203772421c4baa53e03c959d27bd58e1e84717c8ec13be1",
+        "original": {
+          "widths": [
+            6,
+            6,
+            4,
+            1
+          ],
+          "parameters": 75,
+          "dense_multiplications": 64
+        },
+        "reduced": {
+          "widths": [
+            6,
+            5,
+            4,
+            1
+          ],
+          "parameters": 64,
+          "dense_multiplications": 54
+        },
+        "removed": [
+          {
+            "layer": 1,
+            "neuron": 5,
+            "upper_exact": "-2750849/8388608",
+            "upper": -0.32792675495147705
+          }
+        ],
+        "original_parameter_bits": [
+          1054920693,
+          3215284158,
+          1057061852,
+          1083544415,
+          1065679170,
+          3218960486,
+          1066281173,
+          3215642714,
+          3224006402,
+          3230583911,
+          3200568081,
+          1076239675,
+          1049468321,
+          3215267460,
+          3223185248,
+          3223321906,
+          3202196865,
+          1078740123,
+          3211356806,
+          3210584128,
+          1042734157,
+          1010639112,
+          1040830223,
+          1049685920,
+          3211821166,
+          1051886475,
+          3196157269,
+          1031407059,
+          3210063836,
+          3204076760,
+          3190497277,
+          3208156710,
+          3209729585,
+          3195338868,
+          3192056961,
+          3182652462,
+          1058464299,
+          1066180530,
+          1046029538,
+          3188714851,
+          3195082370,
+          3198674436,
+          3198980666,
+          3207012368,
+          3205709834,
+          3171844752,
+          1030371280,
+          3208137816,
+          1068051317,
+          3223307384,
+          3221442447,
+          3200845690,
+          3204670384,
+          3197403147,
+          1066711733,
+          1074699327,
+          3214719247,
+          1049700890,
+          3194616409,
+          1051549060,
+          3208530150,
+          3204553404,
+          3201682769,
+          1054174056,
+          3203268716,
+          1035844224,
+          0,
+          3218216074,
+          3165512909,
+          0,
+          3203665266,
+          3203344692,
+          1057153401,
+          3213266232,
+          1031639510
+        ],
+        "reduced_parameter_bits": [
+          1054920693,
+          3215284158,
+          1057061852,
+          1083544415,
+          1065679170,
+          3218960486,
+          1066281173,
+          3215642714,
+          3224006402,
+          3230583911,
+          3200568081,
+          1076239675,
+          1049468321,
+          3215267460,
+          3223185248,
+          3223321906,
+          3202196865,
+          1078740123,
+          3211356806,
+          3210584128,
+          1042734157,
+          1010639112,
+          1040830223,
+          1049685920,
+          3211821166,
+          1051886475,
+          3196157269,
+          1031407059,
+          3210063836,
+          3204076760,
+          1058464299,
+          1066180530,
+          1046029538,
+          3188714851,
+          3195082370,
+          3198980666,
+          3207012368,
+          3205709834,
+          3171844752,
+          1030371280,
+          1068051317,
+          3223307384,
+          3221442447,
+          3200845690,
+          3204670384,
+          1066711733,
+          1074699327,
+          3214719247,
+          1049700890,
+          3194616409,
+          3208530150,
+          3204553404,
+          3201682769,
+          1054174056,
+          3203268716,
+          0,
+          3218216074,
+          3165512909,
+          0,
+          3203665266,
+          3203344692,
+          1057153401,
+          3213266232,
+          1031639510
+        ]
+      },
+      "Adversarial": {
+        "original_sha256": "1154145b50c6eb0d1f4b41f7725aed19ca8ac1fe256536c3b27ac696501aaa6e",
+        "reduced_sha256": "754838eaa998990044f57bf5be5ae8f12a12342c2fb8436d267279937bd6de30",
+        "original": {
+          "widths": [
+            6,
+            6,
+            4,
+            1
+          ],
+          "parameters": 75,
+          "dense_multiplications": 64
+        },
+        "reduced": {
+          "widths": [
+            6,
+            4,
+            2,
+            1
+          ],
+          "parameters": 41,
+          "dense_multiplications": 34
+        },
+        "removed": [
+          {
+            "layer": 1,
+            "neuron": 3,
+            "upper_exact": "-169149103/536870912",
+            "upper": -0.3150647561997175
+          },
+          {
+            "layer": 1,
+            "neuron": 5,
+            "upper_exact": "-11703883/33554432",
+            "upper": -0.3488028943538666
+          },
+          {
+            "layer": 2,
+            "neuron": 1,
+            "upper_exact": "-8393689/16777216",
+            "upper": -0.5003028512001038
+          },
+          {
+            "layer": 2,
+            "neuron": 3,
+            "upper_exact": "-6045025/16777216",
+            "upper": -0.3603115677833557
+          }
+        ],
+        "original_parameter_bits": [
+          3123006826,
+          1002795241,
+          3222030633,
+          1086669647,
+          1047226703,
+          1020274576,
+          1055862867,
+          1023677798,
+          3228994612,
+          3225228899,
+          1059776930,
+          1077996551,
+          1056550852,
+          1052172374,
+          3231962429,
+          1072017246,
+          1062814816,
+          1077747439,
+          3213155725,
+          3212709061,
+          1017898587,
+          3206545633,
+          1015262528,
+          1006981580,
+          3211415055,
+          1053850763,
+          3191331446,
+          1008460109,
+          3210403419,
+          3203126131,
+          3191101191,
+          3208395913,
+          3209724168,
+          3196475985,
+          3193445582,
+          3185511010,
+          1068951676,
+          1064182508,
+          1056606920,
+          3199759347,
+          3193200538,
+          3199374923,
+          3198980666,
+          3207012368,
+          3205709834,
+          3171844752,
+          1030371280,
+          3208137816,
+          3139484416,
+          3196089445,
+          3211168639,
+          3200845690,
+          3204670384,
+          3197403147,
+          1069891518,
+          1074671579,
+          3222338678,
+          1060435255,
+          3181651698,
+          1051456955,
+          3208530150,
+          3210587736,
+          3209101705,
+          1030355578,
+          3203268716,
+          3196650426,
+          0,
+          3204453337,
+          3146536648,
+          3199761090,
+          3203665266,
+          3186261335,
+          1053949757,
+          3207718165,
+          1032323223
+        ],
+        "reduced_parameter_bits": [
+          3123006826,
+          1002795241,
+          3222030633,
+          1086669647,
+          1047226703,
+          1020274576,
+          1055862867,
+          1023677798,
+          3228994612,
+          3225228899,
+          1059776930,
+          1077996551,
+          1056550852,
+          1052172374,
+          3231962429,
+          1072017246,
+          1062814816,
+          1077747439,
+          3211415055,
+          1053850763,
+          3191331446,
+          1008460109,
+          3210403419,
+          3203126131,
+          1068951676,
+          1064182508,
+          1056606920,
+          3193200538,
+          3198980666,
+          3207012368,
+          3205709834,
+          1030371280,
+          1069891518,
+          1074671579,
+          3222338678,
+          3181651698,
+          0,
+          3146536648,
+          3203665266,
+          1053949757,
+          1032323223
+        ]
+      }
+    }
+  },
+  "sources_sha256": {
+    "contribution/Float32.lean": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
+    "contribution/Property2.lean": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
+    "contribution/anchor_view/trained/onnx_model.py": "3255b4fa2a15ace4b37e748ae1dc58890e0c9540801f0f3eda7f5845cd3d581d",
+    "contribution/network_reduction/Adversarial.lean": "1e9a96b5c7245895a11306e0602536299090c308bad347e6068d176c48e3e3a6",
+    "contribution/network_reduction/Audit.lean": "3c277e601d0a5eab73628bf288cf23c6975a05eaa0f318f1743feb37fabe3cb0",
+    "contribution/network_reduction/Baseline.lean": "52b014b27ebce87dbb8625a7bbcfc91c66f1ebcb91f94b7079f7be79be9bd501",
+    "contribution/network_reduction/Pruning.lean": "622185c41b15df39ede096071f85deea4b3099246117665832500bb5e6467364",
+    "contribution/network_reduction/build_report.py": "5824fd4d67c53b594b6c4d826608bffbfb1c6327385e8400245022ea4666d32d",
+    "contribution/network_reduction/study.py": "9dbd308114dae6480de564deac1260960417245ec95655ecf2144556ebf2a9d2",
+    "contribution/network_reduction/verify.py": "08b50c44c2410dd820f76526f5a0d79ea1a737073930052449a51ec74c5aaf5a",
+    "contribution/universal/IntervalNetwork.lean": "be336900a150eeffb9feb49992f1a788dedea56a80319b05fc0c27536febd04e",
+    "lean/lake-manifest.json": "0f6a2f189439a5b6ac9653168b0e513c8129ec88af04f771b6a926773bab3420",
+    "lean/lakefile.lean": "d8e1d78b26d3253c33757657aa3c5986113271300a7fa4e34a3b7b08673606f8",
+    "lean/lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+  },
+  "lean_build": {
+    "Property2": {
+      "seconds": 28.103156042052433,
+      "olean_sha256": "8dc4e9bd6d8b3b8efe5c1c227841acb4bf86e0efa9d1806df5d8cadb8f422d0e",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Float32": {
+      "seconds": 4.2289699169341475,
+      "olean_sha256": "b51207c64e661a1ec742f77b2a7f207e3763fb6b5f5494664c3dfd977dec77c6",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "IntervalNetwork": {
+      "seconds": 4.576524958014488,
+      "olean_sha256": "54d432269129a847106c29fff29344e328b8398241d32da0a21adff1f958b245",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Pruning": {
+      "seconds": 4.196412124903873,
+      "olean_sha256": "55ef6450ebfaf47891937343f6d338ad673d5e88de7dfee3b995957e88ea5107",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Baseline": {
+      "seconds": 4.351454624906182,
+      "olean_sha256": "56a9201e900257fba78b26f5f3ad8cc5eaa9135e12dc327670c05bf11431b25c",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Adversarial": {
+      "seconds": 4.3145208328496665,
+      "olean_sha256": "00705946a02ebebe27f07f54b8f3ca22ac161a6e39585fd285e638e6e3da14ca",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Audit": {
+      "seconds": 4.0187711250036955,
+      "olean_sha256": "8dc158ed18ffe4fc32d1baff4d04e05862b4cb518d9b72954678e3b4941aa4d2",
+      "log_sha256": "8b9354ac6ee6881798499aebf83ebbf0d5194172d3f01734661cad3c29515749"
+    }
+  },
+  "axiom_audit": {
+    "Contribution.Reduction.Adversarial.all_real_inputs": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.checked": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.domain_nonempty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.equivalent_on_cube": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.export_matches_prune": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.original_decoded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.original_parameters": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.original_shape": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.output_predicate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.reduced_decoded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.reduced_parameters": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.reduced_shape": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.reject_active_neuron": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.reject_bad_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.reject_short_mask": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.all_real_inputs": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.checked": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.domain_nonempty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.equivalent_on_cube": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.export_matches_prune": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.original_decoded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.original_parameters": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.original_shape": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.output_predicate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.reduced_decoded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.reduced_parameters": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.reduced_shape": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.reject_active_neuron": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.reject_bad_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.reject_short_mask": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.certified_equivalent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.certified_prune": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.dot_select": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.layer_trim": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.networkSetoid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.predicate_transfer": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.prune_exact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.select_map": [
+      "propext"
+    ],
+    "Contribution.Reduction.zeros_of_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Universal.dot_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Universal.exact_layer_trace": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Universal.layer_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Universal.relu_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "audited_roots": 43,
+  "runtime": {
+    "status": "PASS",
+    "universal_float32_equivalence": "NOT_PROVED",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.15.0",
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.1",
+    "threads": 1,
+    "data_sha256": "d0b84c0e372a25f7934953ae8adac8db08b7a3b241892a1aa697834f583acbf7",
+    "dataset_rows": 360,
+    "corners": 64,
+    "random": 8192,
+    "seed": 20261105,
+    "models": {
+      "Baseline": {
+        "comparisons": {
+          "pytorch_reduction": {
+            "points": 8616,
+            "bitwise_equal": 8616,
+            "max_abs": 0.0,
+            "max_ulp": 0,
+            "first_difference": null,
+            "tolerance": {
+              "rtol": 2e-05,
+              "atol": 2e-06
+            }
+          },
+          "onnx_reduction": {
+            "points": 8616,
+            "bitwise_equal": 8616,
+            "max_abs": 0.0,
+            "max_ulp": 0,
+            "first_difference": null,
+            "tolerance": {
+              "rtol": 2e-05,
+              "atol": 2e-06
+            }
+          },
+          "original_import": {
+            "points": 8616,
+            "bitwise_equal": 5222,
+            "max_abs": 1.7881393432617188e-07,
+            "max_ulp": 3,
+            "first_difference": {
+              "index": 25,
+              "original": [
+                0.78667151927948
+              ],
+              "reduced": [
+                0.7866714596748352
+              ],
+              "original_bits": [
+                1061774158
+              ],
+              "reduced_bits": [
+                1061774157
+              ],
+              "input": [
+                0.886050283908844,
+                0.952596127986908,
+                0.8623532056808472,
+                0.2376672327518463,
+                0.6125152111053467,
+                0.3466838002204895
+              ]
+            },
+            "tolerance": {
+              "rtol": 2e-05,
+              "atol": 2e-06
+            }
+          },
+          "reduced_import": {
+            "points": 8616,
+            "bitwise_equal": 5222,
+            "max_abs": 1.7881393432617188e-07,
+            "max_ulp": 3,
+            "first_difference": {
+              "index": 25,
+              "original": [
+                0.78667151927948
+              ],
+              "reduced": [
+                0.7866714596748352
+              ],
+              "original_bits": [
+                1061774158
+              ],
+              "reduced_bits": [
+                1061774157
+              ],
+              "input": [
+                0.886050283908844,
+                0.952596127986908,
+                0.8623532056808472,
+                0.2376672327518463,
+                0.6125152111053467,
+                0.3466838002204895
+              ]
+            },
+            "tolerance": {
+              "rtol": 2e-05,
+              "atol": 2e-06
+            }
+          },
+          "pytorch_batch1_reduction": {
+            "points": 8616,
+            "bitwise_equal": 8279,
+            "max_abs": 4.76837158203125e-07,
+            "max_ulp": 4,
+            "first_difference": {
+              "index": 3,
+              "original": [
+                0.9654448628425598
+              ],
+              "reduced": [
+                0.965444803237915
+              ],
+              "original_bits": [
+                1064773477
+              ],
+              "reduced_bits": [
+                1064773476
+              ],
+              "input": [
+                0.42239952087402344,
+                0.38187476992607117,
+                0.08920209854841232,
+                0.5550547242164612,
+                0.043541014194488525,
+                0.907623827457428
+              ]
+            },
+            "tolerance": {
+              "rtol": 2e-05,
+              "atol": 2e-06
+            }
+          }
+        },
+        "benchmark": {
+          "pytorch_batch1": {
+            "original_us": 7.862705,
+            "reduced_us": 8.01625,
+            "ratio_original_over_reduced": 0.9808457820053018,
+            "samples_us": [
+              [
+                7.967295,
+                7.80396,
+                7.743335,
+                7.9177100000000005,
+                7.59354,
+                7.873545,
+                7.48083,
+                7.542705,
+                7.80854,
+                7.897915,
+                7.89771,
+                8.00458,
+                7.862705,
+                7.95479,
+                7.54021
+              ],
+              [
+                8.044375,
+                8.102915,
+                8.147705,
+                8.03604,
+                8.019375,
+                7.87375,
+                7.878125,
+                7.90125,
+                8.03479,
+                7.619585,
+                8.01625,
+                7.9725,
+                7.934585,
+                8.016875,
+                7.92125
+              ]
+            ],
+            "repeats": 15,
+            "iterations_per_repeat": 200
+          },
+          "pytorch_batch64": {
+            "original_us": 9.134375,
+            "reduced_us": 8.847085,
+            "ratio_original_over_reduced": 1.0324728427499001,
+            "samples_us": [
+              [
+                9.001045,
+                9.11354,
+                9.326455,
+                9.51958,
+                9.530209999999999,
+                9.134375,
+                8.770625,
+                9.244584999999999,
+                8.725,
+                8.75146,
+                9.20646,
+                8.936875,
+                9.19521,
+                8.949165,
+                9.34979
+              ],
+              [
+                8.789579999999999,
+                9.151665000000001,
+                9.40417,
+                8.842709999999999,
+                9.350209999999999,
+                10.129375,
+                8.510834999999998,
+                9.027705,
+                8.452705,
+                8.816875,
+                8.847085,
+                8.7525,
+                8.69625,
+                9.16479,
+                8.99479
+              ]
+            ],
+            "repeats": 15,
+            "iterations_per_repeat": 200
+          },
+          "pytorch_batch1024": {
+            "original_us": 26.18729,
+            "reduced_us": 25.915625,
+            "ratio_original_over_reduced": 1.0104826721331244,
+            "samples_us": [
+              [
+                26.080415000000002,
+                26.0425,
+                26.163125,
+                26.403125,
+                26.05146,
+                26.18729,
+                26.201040000000003,
+                26.64458,
+                26.233125,
+                26.127705000000002,
+                26.033334999999997,
+                26.24,
+                26.316665,
+                26.094794999999998,
+                26.519585
+              ],
+              [
+                25.915625,
+                25.873125,
+                26.368335,
+                25.887085,
+                25.73729,
+                25.8425,
+                26.43354,
+                26.0175,
+                25.860205,
+                26.17625,
+                25.941875,
+                25.85979,
+                26.00854,
+                26.07354,
+                25.86104
+              ]
+            ],
+            "repeats": 15,
+            "iterations_per_repeat": 200
+          },
+          "onnx_batch1": {
+            "original_us": 3.48271,
+            "reduced_us": 3.46146,
+            "ratio_original_over_reduced": 1.0061390280401912,
+            "samples_us": [
+              [
+                3.296045,
+                3.44708,
+                3.435415,
+                3.448125,
+                3.5275,
+                3.55021,
+                3.724165,
+                3.47167,
+                3.45729,
+                3.65896,
+                3.4975,
+                3.468125,
+                3.48271,
+                3.505,
+                3.654375
+              ],
+              [
+                3.439585,
+                3.415,
+                3.609585,
+                3.407915,
+                3.40146,
+                3.35396,
+                3.5241700000000002,
+                3.43729,
+                3.56167,
+                3.574165,
+                3.47542,
+                3.55396,
+                3.46146,
+                3.405625,
+                3.495
+              ]
+            ],
+            "repeats": 15,
+            "iterations_per_repeat": 200
+          }
+        },
+        "exact_rational_replay_points": 96,
+        "original_bytes": 1829,
+        "reduced_bytes": 1784
+      },
+      "Adversarial": {
+        "comparisons": {
+          "pytorch_reduction": {
+            "points": 8616,
+            "bitwise_equal": 8616,
+            "max_abs": 0.0,
+            "max_ulp": 0,
+            "first_difference": null,
+            "tolerance": {
+              "rtol": 2e-05,
+              "atol": 2e-06
+            }
+          },
+          "onnx_reduction": {
+            "points": 8616,
+            "bitwise_equal": 8616,
+            "max_abs": 0.0,
+            "max_ulp": 0,
+            "first_difference": null,
+            "tolerance": {
+              "rtol": 2e-05,
+              "atol": 2e-06
+            }
+          },
+          "original_import": {
+            "points": 8616,
+            "bitwise_equal": 8616,
+            "max_abs": 0.0,
+            "max_ulp": 0,
+            "first_difference": null,
+            "tolerance": {
+              "rtol": 2e-05,
+              "atol": 2e-06
+            }
+          },
+          "reduced_import": {
+            "points": 8616,
+            "bitwise_equal": 8616,
+            "max_abs": 0.0,
+            "max_ulp": 0,
+            "first_difference": null,
+            "tolerance": {
+              "rtol": 2e-05,
+              "atol": 2e-06
+            }
+          },
+          "pytorch_batch1_reduction": {
+            "points": 8616,
+            "bitwise_equal": 8616,
+            "max_abs": 0.0,
+            "max_ulp": 0,
+            "first_difference": null,
+            "tolerance": {
+              "rtol": 2e-05,
+              "atol": 2e-06
+            }
+          }
+        },
+        "benchmark": {
+          "pytorch_batch1": {
+            "original_us": 7.69771,
+            "reduced_us": 7.689375,
+            "ratio_original_over_reduced": 1.0010839632609931,
+            "samples_us": [
+              [
+                7.5875,
+                7.711045,
+                7.69771,
+                7.72,
+                8.222705,
+                7.969795,
+                7.86229,
+                7.61021,
+                7.72771,
+                7.62167,
+                7.590835,
+                7.60854,
+                7.6575,
+                7.62646,
+                7.730415
+              ],
+              [
+                7.69396,
+                7.72792,
+                7.91896,
+                7.80229,
+                7.52417,
+                7.745,
+                7.742295,
+                7.689375,
+                7.672295,
+                7.68875,
+                7.757705,
+                7.64125,
+                7.649585,
+                7.675625,
+                7.67771
+              ]
+            ],
+            "repeats": 15,
+            "iterations_per_repeat": 200
+          },
+          "pytorch_batch64": {
+            "original_us": 9.075415000000001,
+            "reduced_us": 8.92146,
+            "ratio_original_over_reduced": 1.017256704620096,
+            "samples_us": [
+              [
+                9.310415,
+                8.736045,
+                8.925835,
+                9.05792,
+                9.11521,
+                8.86375,
+                9.20875,
+                8.938334999999999,
+                9.16292,
+                8.945834999999999,
+                9.444790000000001,
+                9.235835,
+                8.875834999999999,
+                9.075415000000001,
+                9.216875
+              ],
+              [
+                8.759795,
+                8.86417,
+                8.71458,
+                9.014790000000001,
+                8.568545,
+                8.959375,
+                8.932084999999999,
+                8.8075,
+                9.0675,
+                9.065205,
+                8.574795,
+                8.92146,
+                8.858955,
+                8.921875,
+                8.9825
+              ]
+            ],
+            "repeats": 15,
+            "iterations_per_repeat": 200
+          },
+          "pytorch_batch1024": {
+            "original_us": 25.99208,
+            "reduced_us": 22.009375,
+            "ratio_original_over_reduced": 1.1809549339769987,
+            "samples_us": [
+              [
+                26.084375,
+                25.915625,
+                25.848955,
+                25.956875,
+                26.009375,
+                26.558125,
+                25.93771,
+                26.175205000000002,
+                26.503125,
+                25.99208,
+                26.381044999999997,
+                26.22167,
+                25.803335,
+                25.849790000000002,
+                25.838125
+              ],
+              [
+                22.306455000000003,
+                22.337705000000003,
+                21.88,
+                22.009375,
+                23.287080000000003,
+                22.009375,
+                21.983125,
+                22.06896,
+                21.92042,
+                23.43667,
+                21.935625,
+                21.70625,
+                22.664375,
+                21.787084999999998,
+                21.77104
+              ]
+            ],
+            "repeats": 15,
+            "iterations_per_repeat": 200
+          },
+          "onnx_batch1": {
+            "original_us": 3.421875,
+            "reduced_us": 3.484165,
+            "ratio_original_over_reduced": 0.9821219718354326,
+            "samples_us": [
+              [
+                3.501455,
+                3.590835,
+                3.548955,
+                3.408545,
+                3.365625,
+                3.387915,
+                3.38125,
+                3.630415,
+                3.534375,
+                3.375,
+                3.38042,
+                3.421875,
+                3.400835,
+                3.682705,
+                3.506455
+              ],
+              [
+                3.51771,
+                3.415,
+                3.469375,
+                3.62875,
+                3.37521,
+                3.389795,
+                3.51083,
+                3.751455,
+                3.484165,
+                3.4925,
+                3.43146,
+                3.38854,
+                3.48875,
+                3.56604,
+                3.39396
+              ]
+            ],
+            "repeats": 15,
+            "iterations_per_repeat": 200
+          }
+        },
+        "exact_rational_replay_points": 96,
+        "original_bytes": 1829,
+        "reduced_bytes": 1691
+      }
+    }
+  },
+  "seconds": 55.04080658289604,
+  "export_metadata": {
+    "kind": "Path-normalized copy of an actual completed isolated-checkout replay",
+    "raw_receipt_sha256": "8e96e6bae9b9404bed8704d63f5d8d339cef7c2ed63220de88675e047eb3ffb3",
+    "normalized_path_prefixes": [
+      "<CHECKOUT>",
+      "<UPSTREAM>",
+      "<HOME>"
+    ],
+    "unchanged_evidence": "Proof/source/checkpoint/log digests, audit results, exit codes and measured values are unchanged.",
+    "raw_record_location": "Retained with the local replay artifacts; raw machine paths are not included in the shared snapshot.",
+    "predecessor_policy": "Each stage ran after predecessor records had been normalized; its recorded predecessor hashes bind those exact shared bytes."
+  }
+}

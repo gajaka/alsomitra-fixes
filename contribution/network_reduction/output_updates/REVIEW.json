@@ -1,0 +1,114 @@
+{
+  "status": "PASS_WITH_DECLARED_SCOPE",
+  "reviewed_utc": "2026-11-05T21:28:12.714745+00:00",
+  "scope": "Independent source, documentation and retained fresh-build artifact review; no additional Lean process, Nanoda replay or runtime experiment started by this reviewer",
+  "accepted_attempt": "contribution/.build/output_updates/attempt-002",
+  "checks": {
+    "fresh_stage_count": 7,
+    "all_stage_exit_codes_zero": true,
+    "all_stage_stderr_empty": true,
+    "no_warning_or_error_diagnostics": true,
+    "stage_log_and_olean_hashes_match": true,
+    "source_and_snapshot_hash_bindings_match": 18,
+    "new_public_theorems": 31,
+    "new_setoid": 1,
+    "existing_audited_roots": 4,
+    "audited_roots": 36,
+    "all_new_public_theorems_are_audited": true,
+    "independent_multiline_audit_record_reconstruction_matches_summary": true,
+    "axiom_union": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "reader_positive_controls": 2,
+    "reader_negative_controls": 18,
+    "original_source_bindings_unchanged": 13,
+    "original_receipt_unchanged_from_pre_extension_review": true,
+    "original_pdf_unchanged": true,
+    "initial_reader_failure_preserved": true,
+    "proof_and_audit_sources_identical_in_failed_and_accepted_fresh_attempts": true,
+    "fresh_build_seconds": 29.765061208
+  },
+  "semantic_review": [
+    "Input is the subtype of real lists satisfying InBox Adversarial.domain; List.Forall2 enforces exactly six coordinates in the unit cube. zeroInput proves the type is inhabited.",
+    "FullHead has five rational fields; ReducedHead retains a0,a2,bias. view preserves the entire typed input and drops only a1,a3. RR is equality of views, with an actual Setoid.",
+    "fullNetwork and reducedNetwork replace only the output head in the existing actual Adversarial.original/reduced definitions. head_pruning uses the unchanged export_matches_prune theorem to bind them.",
+    "check_with_head_iff, head_certificate and all_output_heads reuse the original Check/certified_prune. This makes the existing arbitrary-rational-head corollary explicit; it is not a new pruning algorithm.",
+    "The five operation constructors add externally supplied rational values. Reduced operations discard a1/a3 updates and implement corresponding retained updates. operation_factors is proved for all constructors.",
+    "compatible_run_factors proves the finite-word statement for every operation family with an explicit factorization hypothesis. Concrete sequence_agreement and RR_preserved discharge this hypothesis for the implemented operations.",
+    "viewAlgebra is an actual Mathlib Subalgebra of real-valued state functions, defined as the range of composition with view. compatible_stable, view_algebra_stable and run_algebra_stable establish closure under pullback.",
+    "witness0/witness1 have the same typed input and retained head, differing in a1. erased_not_in_algebra proves properness; output_in_algebra puts actual model evaluation in the algebra.",
+    "badStep changes a0 using forgotten a1. The two witnesses have equal old views and unequal new views, establishing no exact reduced transformer and failure of subalgebra stability.",
+    "bad_preserves_certificate explicitly proves that this nonfactorable operation still leaves the hidden-neuron certificate valid. It does not assert that manually synchronized full/reduced heads lose static functional equality.",
+    "view_algebra_not_fixed distinguishes stable from fixed observables. erased_updates_fixed covers ignored-coordinate changes; zero_head_output/output_can_change prove actual model output can change from zero to one after an allowed bias shift.",
+    "README distinguishes supplied finite words from an adaptive policy that reads erased coordinates and accurately limits the claim to rational parameters, real model semantics and the certified raw cube."
+  ],
+  "reader_correction_review": {
+    "initial_fresh_attempt": "contribution/.build/output_updates/attempt-001",
+    "initial_status": "FAIL",
+    "initial_reason": "Every Lean compilation succeeded; the original strict per-line axiom reader rejected legitimate wrapped axiom lists.",
+    "correction": "The revised scanner consumes complete records across wrapped list whitespace, requires all nonwhitespace output to be accounted for, checks comma-separated identifier grammar, exact root multiplicities and the permitted axiom subset.",
+    "source_math_unchanged": true
+  },
+  "boundaries": [
+    "This is a standalone instance of the composition/range observable-subalgebra construction; no PPGraph package dependency or full graph-controller implementation is added.",
+    "The theorem concerns the actual Lean real-arithmetic network definitions with rational parameters. No verified ONNX compiler, universal float32/backend equality, training or optimizer equivalence is proved.",
+    "Equality of full and reduced outputs after matched updates does not preserve an earlier safety predicate or an earlier output value.",
+    "The nonfactorability result is relative to this retained view and operation, not a proof that no richer view can execute the operation.",
+    "No MT process, Theta runtime transfer, practical superiority or scientific priority is established.",
+    "The reviewer validated existing fresh-build evidence rather than rerunning the kernel; no independent second-kernel check is claimed."
+  ],
+  "bindings": [
+    {
+      "path": "contribution/network_reduction/output_updates/OutputUpdates.lean",
+      "bytes": 9888,
+      "sha256": "e3622f975ff63d568933381ffab108181b9149259c78612386e3affcc480ed05"
+    },
+    {
+      "path": "contribution/network_reduction/output_updates/Audit.lean",
+      "bytes": 2488,
+      "sha256": "4203a7e19f86eaab76819bc9fd8075b2ddfe5e4460730a9db9d15cc5306fd474"
+    },
+    {
+      "path": "contribution/network_reduction/output_updates/verify.py",
+      "bytes": 15141,
+      "sha256": "f95e854699e770da114beec3c1ecb9c4ab26f06911b767cfdfb24ffea1a6aec2"
+    },
+    {
+      "path": "contribution/network_reduction/output_updates/README.md",
+      "bytes": 8204,
+      "sha256": "0e353ac16094dca62ca2f25172e5b177d129c3046eb6eaa96ed2ed27d6c2ed02"
+    },
+    {
+      "path": "contribution/results/output_update_verification.json",
+      "bytes": 20428,
+      "sha256": "b030ec9d44f1bcae7fb6f3bd751a65bb26bc093527d5d558845dfd9248328617"
+    },
+    {
+      "path": "contribution/results/network_reduction_verification.json",
+      "bytes": 31802,
+      "sha256": "57c32b59f67374811d430e7701e51bae855316463a970fd74f8a72ceeaeab086"
+    },
+    {
+      "path": "contribution/network_reduction/NETWORK_REDUCTION.pdf",
+      "bytes": 120638,
+      "sha256": "9126f0bb170622443ae3846c7d2b5ab249e386fb167076115084fd0778ad1bf2"
+    },
+    {
+      "path": "contribution/.build/output_updates/attempt-002/RESULT.json",
+      "bytes": 20428,
+      "sha256": "b030ec9d44f1bcae7fb6f3bd751a65bb26bc093527d5d558845dfd9248328617"
+    },
+    {
+      "path": "contribution/.build/output_updates/attempt-002/Audit.log",
+      "bytes": 4134,
+      "sha256": "acc602e6217fc69145cbe27140e9860359fc89d1e82a5fda39228c86f06e4578"
+    },
+    {
+      "path": "contribution/.build/output_updates/attempt-001/RESULT.json",
+      "bytes": 15419,
+      "sha256": "0985aae5f5681b4dfe7f45ffbac569120647f279355ac761b8193d739d2a7bb2"
+    }
+  ]
+}

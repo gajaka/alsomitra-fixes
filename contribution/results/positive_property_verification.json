@@ -1,0 +1,845 @@
+{
+  "status": "PASS",
+  "attempt": "contribution/.build/positive_property/attempt-001",
+  "timestamp_utc": "2026-11-06T06:55:21.211630+00:00",
+  "scope": "Global real sensitivity, all-anchor Property5 on the cube, exact neuron deletion, and transfer for two pinned published DL2/Godel checkpoints",
+  "fresh_proof_run": true,
+  "second_kernel_run": false,
+  "lean_build": {
+    "Property2": {
+      "returncode": 0,
+      "seconds": 4.766228416934609,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/sources/contribution",
+        "-o",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/Property2.olean",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/sources/contribution/Property2.lean"
+      ],
+      "source_sha256": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "8dc4e9bd6d8b3b8efe5c1c227841acb4bf86e0efa9d1806df5d8cadb8f422d0e"
+    },
+    "Float32": {
+      "returncode": 0,
+      "seconds": 4.3589672080706805,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/sources/contribution",
+        "-o",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/Float32.olean",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/sources/contribution/Float32.lean"
+      ],
+      "source_sha256": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "b51207c64e661a1ec742f77b2a7f207e3763fb6b5f5494664c3dfd977dec77c6"
+    },
+    "IntervalNetwork": {
+      "returncode": 0,
+      "seconds": 4.755305041093379,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/sources/contribution/universal",
+        "-o",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/IntervalNetwork.olean",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/sources/contribution/universal/IntervalNetwork.lean"
+      ],
+      "source_sha256": "be336900a150eeffb9feb49992f1a788dedea56a80319b05fc0c27536febd04e",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "54d432269129a847106c29fff29344e328b8398241d32da0a21adff1f958b245"
+    },
+    "Pruning": {
+      "returncode": 0,
+      "seconds": 4.474870332982391,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/sources/contribution/network_reduction",
+        "-o",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/Pruning.olean",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/sources/contribution/network_reduction/Pruning.lean"
+      ],
+      "source_sha256": "622185c41b15df39ede096071f85deea4b3099246117665832500bb5e6467364",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "55ef6450ebfaf47891937343f6d338ad673d5e88de7dfee3b995957e88ea5107"
+    },
+    "Lipschitz": {
+      "returncode": 0,
+      "seconds": 4.586515333969146,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/sources/contribution/network_reduction/positive_property",
+        "-o",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/Lipschitz.olean",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/sources/contribution/network_reduction/positive_property/Lipschitz.lean"
+      ],
+      "source_sha256": "08f45d32eb6b28966e8510395f654985dc752de5ff5a6eef0f3159c959016a59",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "d9b5b0a71b88e7f4c5b8ec1eb1d89b0d86ac21c61827aedb60097021552fe215"
+    },
+    "LinearPruning": {
+      "returncode": 0,
+      "seconds": 4.149042916018516,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/sources/contribution/network_reduction/positive_property",
+        "-o",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/LinearPruning.olean",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/sources/contribution/network_reduction/positive_property/LinearPruning.lean"
+      ],
+      "source_sha256": "f47e83846edde9884db90c785328e962002537ec019895d30ee3099b35ad1cd9",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "4fdc0eeda7165752f5ea77361808c94feb1aca61d0a02dd77559a5d5f2138de9"
+    },
+    "DL2Checkpoint": {
+      "returncode": 0,
+      "seconds": 19.11951966607012,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/sources/contribution/network_reduction/positive_property",
+        "-o",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/DL2Checkpoint.olean",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/sources/contribution/network_reduction/positive_property/DL2Checkpoint.lean"
+      ],
+      "source_sha256": "378cc9e1bcd4e18d1dc83457007d659fc9c8f5ecd13f47041cd01bec514b1a8e",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "c0111cf166cf25d907d33b36aa6c11e2313ae1a9c72784e7fd7471b6d260b207"
+    },
+    "GodelCheckpoint": {
+      "returncode": 0,
+      "seconds": 19.28450004104525,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/sources/contribution/network_reduction/positive_property",
+        "-o",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/GodelCheckpoint.olean",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/sources/contribution/network_reduction/positive_property/GodelCheckpoint.lean"
+      ],
+      "source_sha256": "8c128d2f72f67a3fbb4835efe4d0965b617edd92e9098b4f0b7c72c4cb5aa25f",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "d030fb87b649b32a9a4bedeb85a847daa586fcbc4dee64ba919117156925a03f"
+    },
+    "Audit": {
+      "returncode": 0,
+      "seconds": 4.210786541923881,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/generated",
+        "-o",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/Audit.olean",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/generated/Audit.lean"
+      ],
+      "source_sha256": "78d3941217fca840f8998f08aa6194a1c45f7d0c73460dc05a09356424ef83d8",
+      "log_sha256": "1a64e596e38d998298e514c3d49cf0ed6ba626e5c5738bc9a44fa6db084581f6",
+      "olean_sha256": "951c9282f2ceee5438780b42e2f5733c02457ab8823f6f453f1d35b414424caf"
+    }
+  },
+  "negative_controls": {
+    "BadBound": {
+      "returncode": 1,
+      "seconds": 5.51831058296375,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/generated",
+        "-o",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/BadBound.olean",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/generated/BadBound.lean"
+      ],
+      "source_sha256": "19f1d822bf477ee3ddc2f34ad375b83e79c1714ef3e283335528f0ca54db42c0",
+      "log_sha256": "0c566500d52c42cdeadfb8462c8fd2f03b605f198d080e61e3452f5430cbd102",
+      "status": "REJECTED"
+    },
+    "BadPrune": {
+      "returncode": 1,
+      "seconds": 6.5158571670763195,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/generated",
+        "-o",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/BadPrune.olean",
+        "<CHECKOUT>/contribution/.build/positive_property/attempt-001/generated/BadPrune.lean"
+      ],
+      "source_sha256": "3178fa26903820547211d322f385422ccba3dd85512a56a0a8e7c76e5627f94f",
+      "log_sha256": "2ca99e654e29967f81dc5ee0283ebab639c0bee354b9c61af15bee3005d9d64d",
+      "status": "REJECTED"
+    },
+    "WrongTranspose": {
+      "status": "REJECTED",
+      "reason": "[ShapeInferenceError] Inference error(s): (op_type:Gemm, node name: /fc1/Gemm): [ShapeInferenceError] Dimension mismatch in unification between 64 and 6\n(op_type:Relu, node name: /Relu): [TypeInferenceError] Input 0 expected to have type but instead is null\n(op_type:Gemm, node name: /fc2/Gemm): [TypeInferenceError] Input 0 expected to have type but instead is null\n(op_type:Relu, node name: /Relu_1): [TypeInferenceError] Input 0 expected to have type but instead is null\n(op_type:Gemm, node name: /fc3/Gemm): [TypeInferenceError] Input 0 expected to have type but instead is null\n"
+    }
+  },
+  "sources_sha256": {
+    "contribution/Float32.lean": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
+    "contribution/Property2.lean": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
+    "contribution/network_reduction/Pruning.lean": "622185c41b15df39ede096071f85deea4b3099246117665832500bb5e6467364",
+    "contribution/network_reduction/output_updates/verify.py": "f95e854699e770da114beec3c1ecb9c4ab26f06911b767cfdfb24ffea1a6aec2",
+    "contribution/network_reduction/positive_property/DL2Checkpoint.lean": "378cc9e1bcd4e18d1dc83457007d659fc9c8f5ecd13f47041cd01bec514b1a8e",
+    "contribution/network_reduction/positive_property/GodelCheckpoint.lean": "8c128d2f72f67a3fbb4835efe4d0965b617edd92e9098b4f0b7c72c4cb5aa25f",
+    "contribution/network_reduction/positive_property/LinearPruning.lean": "f47e83846edde9884db90c785328e962002537ec019895d30ee3099b35ad1cd9",
+    "contribution/network_reduction/positive_property/Lipschitz.lean": "08f45d32eb6b28966e8510395f654985dc752de5ff5a6eef0f3159c959016a59",
+    "contribution/network_reduction/positive_property/README.md": "89addccb548a654868e0488f364478b695425f6494de6d54ee8999c991cc1761",
+    "contribution/network_reduction/positive_property/extract.py": "dff63595b6e67bae2ec6b8f1f1e10ee4c1cbbd3f49cc750c3ddabde23c81da25",
+    "contribution/network_reduction/positive_property/runtime.py": "09f0044d6395077f9df1027a386fd42d224985a4342ab83412e9bcb50bb9d00b",
+    "contribution/network_reduction/positive_property/verify.py": "2d82cdd5b896986d9fd33849653ba01d08dd72b645f1d729979edf7e203ba678",
+    "contribution/results/linear_observations_verification.json": "6bc621c724bc4e9004d4415021a4ae70ac1910c03847b1277e7257de963ab3cf",
+    "contribution/results/network_reduction_verification.json": "8cca1d09fdf019e1a418ef2dffc297cbdea8b4a64fc5de73626d9fb103ccd74a",
+    "contribution/results/output_update_verification.json": "6aa4cba939acaecc2ed19d30eb2d2331c6225c2bba32cf67b4923e21e76f2df7",
+    "contribution/results/property_decision_verification.json": "3cf5f6047cd60c872cc48227eb41860c3a6083f9fd2535ee06e6789a3e4ebb60",
+    "contribution/results/rmsprop_and_property_transfer_verification.json": "a1fea911bf512865bc2f54494cd739cb7dacbeba5451b6238370777e1daaefe8",
+    "contribution/results/update_synthesis_verification.json": "689ced086c9b93f77b2069c41cc6e027718b146c1202fb172a299b7a1dbb06b4",
+    "contribution/universal/IntervalNetwork.lean": "be336900a150eeffb9feb49992f1a788dedea56a80319b05fc0c27536febd04e",
+    "lean/lake-manifest.json": "0f6a2f189439a5b6ac9653168b0e513c8129ec88af04f771b6a926773bab3420",
+    "lean/lakefile.lean": "d8e1d78b26d3253c33757657aa3c5986113271300a7fa4e34a3b7b08673606f8",
+    "lean/lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+  },
+  "historical_receipts_sha256": {
+    "contribution/results/network_reduction_verification.json": "8cca1d09fdf019e1a418ef2dffc297cbdea8b4a64fc5de73626d9fb103ccd74a",
+    "contribution/results/output_update_verification.json": "6aa4cba939acaecc2ed19d30eb2d2331c6225c2bba32cf67b4923e21e76f2df7",
+    "contribution/results/update_synthesis_verification.json": "689ced086c9b93f77b2069c41cc6e027718b146c1202fb172a299b7a1dbb06b4",
+    "contribution/results/linear_observations_verification.json": "6bc621c724bc4e9004d4415021a4ae70ac1910c03847b1277e7257de963ab3cf",
+    "contribution/results/rmsprop_and_property_transfer_verification.json": "a1fea911bf512865bc2f54494cd739cb7dacbeba5451b6238370777e1daaefe8",
+    "contribution/results/property_decision_verification.json": "3cf5f6047cd60c872cc48227eb41860c3a6083f9fd2535ee06e6789a3e4ebb60"
+  },
+  "extraction": {
+    "upstream_commit": "e9f6f1c52e0e5349455d2b4f69c2015567d3037f",
+    "sources": [
+      {
+        "path": "python_training/data/Training_Data_Normalised.csv",
+        "sha256": "d0b84c0e372a25f7934953ae8adac8db08b7a3b241892a1aa697834f583acbf7"
+      },
+      {
+        "path": "docs/paper/Paper_Arxiv.md",
+        "sha256": "9e3bfbe19b72ff6d017c732ccfed35190748d9e6acf19f599ab5a01b470ed981"
+      },
+      {
+        "path": "vehicle_verification/property_verification/Alsomitra_Robustness.vcl",
+        "sha256": "aa912c8cc856580b5450710edf940e7aebe643cea0514b2c0483d6219729ba70"
+      }
+    ],
+    "models": {
+      "DL2": {
+        "path": "vehicle_verification/property_verification_2/DL2_Lipschitz.onnx",
+        "sha256": "64ed1bd8e69061357866879731a9aed301d11ce7db2aecf0fb531ab0af59032a",
+        "path_cost_exact": "37550379332252704178888564435/1237940039285380274899124224",
+        "path_cost_approx": 30.332954860987638,
+        "certified_cap": 31,
+        "removed_first_layer_indices": [
+          58
+        ],
+        "original_parameters": 2561,
+        "reduced_parameters": 2522,
+        "lean_sha256": "378cc9e1bcd4e18d1dc83457007d659fc9c8f5ecd13f47041cd01bec514b1a8e",
+        "reduced_onnx_sha256": "4d53f820d1df5fe4d8235e54796a29605449c1ce4514ea306bc34f2a5dc3b62e"
+      },
+      "Godel": {
+        "path": "vehicle_verification/property_verification_2/GD_Lipschitz.onnx",
+        "sha256": "5569b9931ee6774521bc2a7f2d2c99eba1873b39f1de7fc8a76f2f6e18b73ef1",
+        "path_cost_exact": "251406133326676584074673508091/9903520314283042199192993792",
+        "path_cost_approx": 25.38553214901715,
+        "certified_cap": 26,
+        "removed_first_layer_indices": [
+          58
+        ],
+        "original_parameters": 2561,
+        "reduced_parameters": 2522,
+        "lean_sha256": "8c128d2f72f67a3fbb4835efe4d0965b617edd92e9098b4f0b7c72c4cb5aa25f",
+        "reduced_onnx_sha256": "7a7543f9a26a855e19cb4f0b78d49ca10373bdfc5cb39c391588a6d50245cb62"
+      }
+    }
+  },
+  "expected_roots": [
+    "Contribution.Float32.decode_none_iff",
+    "Contribution.PositiveProperty.DL2.checked",
+    "Contribution.PositiveProperty.DL2.decoded",
+    "Contribution.PositiveProperty.DL2.exact_path_cost",
+    "Contribution.PositiveProperty.DL2.global_bound",
+    "Contribution.PositiveProperty.DL2.parameter_count",
+    "Contribution.PositiveProperty.DL2.perturbation_bound",
+    "Contribution.PositiveProperty.DL2.property5",
+    "Contribution.PositiveProperty.DL2.pruning_checked",
+    "Contribution.PositiveProperty.DL2.reduced_decoded",
+    "Contribution.PositiveProperty.DL2.reduced_parameter_count",
+    "Contribution.PositiveProperty.DL2.reduced_perturbation_bound",
+    "Contribution.PositiveProperty.DL2.reduced_property5",
+    "Contribution.PositiveProperty.DL2.reduced_shape",
+    "Contribution.PositiveProperty.DL2.reject_zero_bound",
+    "Contribution.PositiveProperty.DL2.same_output",
+    "Contribution.PositiveProperty.DL2.shape",
+    "Contribution.PositiveProperty.Godel.checked",
+    "Contribution.PositiveProperty.Godel.decoded",
+    "Contribution.PositiveProperty.Godel.exact_path_cost",
+    "Contribution.PositiveProperty.Godel.global_bound",
+    "Contribution.PositiveProperty.Godel.parameter_count",
+    "Contribution.PositiveProperty.Godel.perturbation_bound",
+    "Contribution.PositiveProperty.Godel.property5",
+    "Contribution.PositiveProperty.Godel.pruning_checked",
+    "Contribution.PositiveProperty.Godel.reduced_decoded",
+    "Contribution.PositiveProperty.Godel.reduced_parameter_count",
+    "Contribution.PositiveProperty.Godel.reduced_perturbation_bound",
+    "Contribution.PositiveProperty.Godel.reduced_property5",
+    "Contribution.PositiveProperty.Godel.reduced_shape",
+    "Contribution.PositiveProperty.Godel.reject_zero_bound",
+    "Contribution.PositiveProperty.Godel.same_output",
+    "Contribution.PositiveProperty.Godel.shape",
+    "Contribution.PositiveProperty.certified_linear_prune",
+    "Contribution.PositiveProperty.checked_global",
+    "Contribution.PositiveProperty.dot_delta",
+    "Contribution.PositiveProperty.head_delta",
+    "Contribution.PositiveProperty.inputs_within",
+    "Contribution.PositiveProperty.layer_within",
+    "Contribution.PositiveProperty.linear_prune_exact",
+    "Contribution.PositiveProperty.network_within",
+    "Contribution.PositiveProperty.nonvacuous",
+    "Contribution.PositiveProperty.property5_of_check",
+    "Contribution.PositiveProperty.property5_transfer",
+    "Contribution.PositiveProperty.property5_two_sided",
+    "Contribution.PositiveProperty.pruned_output",
+    "Contribution.PositiveProperty.relu_delta",
+    "Contribution.PositiveProperty.relu_within",
+    "Contribution.PositiveProperty.valid_in_cube",
+    "Contribution.Reduction.dot_select",
+    "Contribution.Reduction.layer_trim",
+    "Contribution.Reduction.zeros_of_bounds",
+    "Contribution.Universal.layer_sound"
+  ],
+  "reader_controls": {
+    "scope": "Synthetic reader controls, not compiler mutation experiments",
+    "positive_complete_audit": "ACCEPTED",
+    "positive_multiline_audit": "ACCEPTED",
+    "missing_root": "REJECTED",
+    "duplicate_root": "REJECTED",
+    "unexpected_root": "REJECTED",
+    "foreign_axiom": "REJECTED",
+    "sorry_axiom": "REJECTED",
+    "native_trust_axiom": "REJECTED",
+    "malformed_axiom_list": "REJECTED",
+    "truncated_multiline_list": "REJECTED",
+    "missing_continuation_comma": "REJECTED",
+    "empty_continuation_item": "REJECTED",
+    "embedded_root_in_unclosed_list": "REJECTED",
+    "foreign_multiline_axiom": "REJECTED",
+    "trailing_unchecked_text": "REJECTED",
+    "wrapped_trailing_garbage": "REJECTED",
+    "stray_continuation_after_list": "REJECTED",
+    "leading_unchecked_text": "REJECTED",
+    "warning_diagnostic": "REJECTED",
+    "error_diagnostic": "REJECTED",
+    "compiler_warning_detected": true,
+    "compiler_error_detected": true
+  },
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "axiom_audit": {
+    "Contribution.PositiveProperty.dot_delta": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.relu_delta": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.relu_within": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.layer_within": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.network_within": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.inputs_within": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.head_delta": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.checked_global": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.property5_two_sided": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.property5_of_check": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.nonvacuous": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.property5_transfer": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.linear_prune_exact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.certified_linear_prune": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.valid_in_cube": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.pruned_output": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.DL2.decoded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.DL2.shape": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.DL2.parameter_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.DL2.exact_path_cost": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.DL2.checked": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.DL2.global_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.DL2.perturbation_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.DL2.property5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.DL2.pruning_checked": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.DL2.reduced_shape": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.DL2.reduced_parameter_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.DL2.reduced_decoded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.DL2.same_output": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.DL2.reduced_perturbation_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.DL2.reduced_property5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.DL2.reject_zero_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.Godel.decoded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.Godel.shape": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.Godel.parameter_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.Godel.exact_path_cost": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.Godel.checked": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.Godel.global_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.Godel.perturbation_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.Godel.property5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.Godel.pruning_checked": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.Godel.reduced_shape": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.Godel.reduced_parameter_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.Godel.reduced_decoded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.Godel.same_output": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.Godel.reduced_perturbation_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.Godel.reduced_property5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.PositiveProperty.Godel.reject_zero_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.dot_select": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.layer_trim": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.zeros_of_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Universal.layer_sound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Float32.decode_none_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "audited_roots": 53,
+  "runtime": {
+    "status": "PASS",
+    "scope": "Finite CPU float32 execution and descriptive error on 360 published rows; no held-out/generalization or universal float32 claim",
+    "versions": {
+      "numpy": "2.4.6",
+      "onnx": "1.23.2",
+      "onnxruntime": "1.31.1",
+      "platform": "macOS-26.6.2-arm64-arm-64bit"
+    },
+    "dataset": {
+      "path": "python_training/data/Training_Data_Normalised.csv",
+      "sha256": "d0b84c0e372a25f7934953ae8adac8db08b7a3b241892a1aa697834f583acbf7",
+      "rows": 360,
+      "columns": 7,
+      "holdout_status": "Unknown for these checkpoints; no train/test split is asserted",
+      "normalization": "As stored: six inputs and target in [0,1]; no additional normalization",
+      "best_constant_mse_on_same_rows": 0.0812126010738476
+    },
+    "points_per_variant": 4520,
+    "paired_perturbations": 2048,
+    "models": {
+      "DL2": {
+        "original_sha256": "64ed1bd8e69061357866879731a9aed301d11ce7db2aecf0fb531ab0af59032a",
+        "reduced_sha256": "4d53f820d1df5fe4d8235e54796a29605449c1ce4514ea306bc34f2a5dc3b62e",
+        "mse_360": 0.025109539818329106,
+        "mae_360": 0.11339132384809088,
+        "prediction_range_360": [
+          0.3746411204338074,
+          0.9505288004875183
+        ],
+        "finite_original_reduced_comparison": {
+          "batched": {
+            "bitwise_different_outputs": 0,
+            "maximum_absolute_difference": 0.0
+          },
+          "single": {
+            "bitwise_different_outputs": 0,
+            "maximum_absolute_difference": 0.0
+          }
+        },
+        "finite_robustness": {
+          "original": {
+            "maximum_output_change_batched": 0.0013984441757202148,
+            "threshold": 0.1
+          },
+          "reduced": {
+            "maximum_output_change_batched": 0.0013984441757202148,
+            "threshold": 0.1
+          }
+        },
+        "exact_spot_checks": [
+          {
+            "input": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "real_output": "50643681310506453933699853/77371252455336267181195264",
+            "float32_output": 0.6545541286468506,
+            "absolute_error_exact": "8577288324636685069/77371252455336267181195264"
+          },
+          {
+            "input": [
+              "1/2",
+              "1/2",
+              "1/2",
+              "1/2",
+              "1/2",
+              "1/2"
+            ],
+            "real_output": "702142396079685578864687021/1237940039285380274899124224",
+            "float32_output": 0.5671861171722412,
+            "absolute_error_exact": "8094641005558270035/1237940039285380274899124224"
+          },
+          {
+            "input": [
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "1"
+            ],
+            "real_output": "392588001400007290697790597/618970019642690137449562112",
+            "float32_output": 0.6342601180076599,
+            "absolute_error_exact": "3698231070332793989/618970019642690137449562112"
+          }
+        ]
+      },
+      "Godel": {
+        "original_sha256": "5569b9931ee6774521bc2a7f2d2c99eba1873b39f1de7fc8a76f2f6e18b73ef1",
+        "reduced_sha256": "7a7543f9a26a855e19cb4f0b78d49ca10373bdfc5cb39c391588a6d50245cb62",
+        "mse_360": 0.03389804875928234,
+        "mae_360": 0.12949466551433614,
+        "prediction_range_360": [
+          0.4276494085788727,
+          0.9150007963180542
+        ],
+        "finite_original_reduced_comparison": {
+          "batched": {
+            "bitwise_different_outputs": 0,
+            "maximum_absolute_difference": 0.0
+          },
+          "single": {
+            "bitwise_different_outputs": 0,
+            "maximum_absolute_difference": 0.0
+          }
+        },
+        "finite_robustness": {
+          "original": {
+            "maximum_output_change_batched": 0.0011265277862548828,
+            "threshold": 0.1
+          },
+          "reduced": {
+            "maximum_output_change_batched": 0.0011265277862548828,
+            "threshold": 0.1
+          }
+        },
+        "exact_spot_checks": [
+          {
+            "input": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            "real_output": "450730952412023264930321007/618970019642690137449562112",
+            "float32_output": 0.7281951308250427,
+            "absolute_error_exact": "2018464744717004177/618970019642690137449562112"
+          },
+          {
+            "input": [
+              "1/2",
+              "1/2",
+              "1/2",
+              "1/2",
+              "1/2",
+              "1/2"
+            ],
+            "real_output": "3227964233804951962235874851/4951760157141521099596496896",
+            "float32_output": 0.6518822312355042,
+            "absolute_error_exact": "225975533463648424413/4951760157141521099596496896"
+          },
+          {
+            "input": [
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "1"
+            ],
+            "real_output": "1495049994692749555941382347/2475880078570760549798248448",
+            "float32_output": 0.60384601354599,
+            "absolute_error_exact": "320770136680352311093/2475880078570760549798248448"
+          }
+        ]
+      }
+    }
+  },
+  "runtime_sha256": "f996d5e27c7d73e4988efbad06722512a54095067fc616536faa873a268366b8",
+  "generated_sha256": {
+    "contribution/.build/positive_property/attempt-001/generated/Godel_reduced.onnx": "7a7543f9a26a855e19cb4f0b78d49ca10373bdfc5cb39c391588a6d50245cb62",
+    "contribution/.build/positive_property/attempt-001/generated/DL2Checkpoint.lean": "378cc9e1bcd4e18d1dc83457007d659fc9c8f5ecd13f47041cd01bec514b1a8e",
+    "contribution/.build/positive_property/attempt-001/generated/WrongTranspose.onnx": "c88b37b5155042f8d9a568f06202d92e3fb7b8dd34594ac0e522a9a83bb9200a",
+    "contribution/.build/positive_property/attempt-001/generated/Audit.lean": "78d3941217fca840f8998f08aa6194a1c45f7d0c73460dc05a09356424ef83d8",
+    "contribution/.build/positive_property/attempt-001/generated/BadPrune.lean": "3178fa26903820547211d322f385422ccba3dd85512a56a0a8e7c76e5627f94f",
+    "contribution/.build/positive_property/attempt-001/generated/GodelCheckpoint.lean": "8c128d2f72f67a3fbb4835efe4d0965b617edd92e9098b4f0b7c72c4cb5aa25f",
+    "contribution/.build/positive_property/attempt-001/generated/EXTRACTION.json": "0dc2efa069ac1de13bad586845d625b97c051beaf8a04205f2de2a6948d5651b",
+    "contribution/.build/positive_property/attempt-001/generated/DL2_reduced.onnx": "4d53f820d1df5fe4d8235e54796a29605449c1ce4514ea306bc34f2a5dc3b62e",
+    "contribution/.build/positive_property/attempt-001/generated/BadBound.lean": "19f1d822bf477ee3ddc2f34ad375b83e79c1714ef3e283335528f0ca54db42c0"
+  },
+  "inputs_unchanged": true,
+  "seconds": 82.03596862498671,
+  "finished_utc": "2026-11-06T06:56:43.248234+00:00",
+  "export_metadata": {
+    "kind": "Path-normalized copy of an actual completed isolated-checkout replay",
+    "raw_receipt_sha256": "000912954668082dc3cdee045171beab8787944aae4e98d1c5f7815ef3cd47e9",
+    "normalized_path_prefixes": [
+      "<CHECKOUT>",
+      "<UPSTREAM>",
+      "<HOME>"
+    ],
+    "unchanged_evidence": "Proof/source/checkpoint/log digests, audit results, exit codes and measured values are unchanged.",
+    "raw_record_location": "Retained with the local replay artifacts; raw machine paths are not included in the shared snapshot.",
+    "predecessor_policy": "Each stage ran after predecessor records had been normalized; its recorded predecessor hashes bind those exact shared bytes."
+  }
+}

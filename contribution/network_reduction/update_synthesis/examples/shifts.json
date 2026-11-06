@@ -1,0 +1,13 @@
+{
+  "coordinates": ["a0", "a1", "a2", "a3", "bias"],
+  "seed": ["a0", "a2", "bias"],
+  "operations": [
+    {"name": "shift_all", "updates": {
+      "a0": {"terms": {"a0": "1"}, "constant": "1/10"},
+      "a1": {"terms": {"a1": "1"}, "constant": "2/10"},
+      "a2": {"terms": {"a2": "1"}, "constant": "3/10"},
+      "a3": {"terms": {"a3": "1"}, "constant": "4/10"},
+      "bias": {"terms": {"bias": "1"}, "constant": "5/10"}
+    }}
+  ]
+}

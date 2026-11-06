@@ -1,0 +1,46 @@
+import Baseline
+import Adversarial
+
+#print axioms Contribution.Reduction.Adversarial.all_real_inputs
+#print axioms Contribution.Reduction.Adversarial.checked
+#print axioms Contribution.Reduction.Adversarial.domain_nonempty
+#print axioms Contribution.Reduction.Adversarial.equivalent_on_cube
+#print axioms Contribution.Reduction.Adversarial.export_matches_prune
+#print axioms Contribution.Reduction.Adversarial.original_decoded
+#print axioms Contribution.Reduction.Adversarial.original_parameters
+#print axioms Contribution.Reduction.Adversarial.original_shape
+#print axioms Contribution.Reduction.Adversarial.output_predicate
+#print axioms Contribution.Reduction.Adversarial.reduced_decoded
+#print axioms Contribution.Reduction.Adversarial.reduced_parameters
+#print axioms Contribution.Reduction.Adversarial.reduced_shape
+#print axioms Contribution.Reduction.Adversarial.reject_active_neuron
+#print axioms Contribution.Reduction.Adversarial.reject_bad_bound
+#print axioms Contribution.Reduction.Adversarial.reject_short_mask
+#print axioms Contribution.Reduction.Baseline.all_real_inputs
+#print axioms Contribution.Reduction.Baseline.checked
+#print axioms Contribution.Reduction.Baseline.domain_nonempty
+#print axioms Contribution.Reduction.Baseline.equivalent_on_cube
+#print axioms Contribution.Reduction.Baseline.export_matches_prune
+#print axioms Contribution.Reduction.Baseline.original_decoded
+#print axioms Contribution.Reduction.Baseline.original_parameters
+#print axioms Contribution.Reduction.Baseline.original_shape
+#print axioms Contribution.Reduction.Baseline.output_predicate
+#print axioms Contribution.Reduction.Baseline.reduced_decoded
+#print axioms Contribution.Reduction.Baseline.reduced_parameters
+#print axioms Contribution.Reduction.Baseline.reduced_shape
+#print axioms Contribution.Reduction.Baseline.reject_active_neuron
+#print axioms Contribution.Reduction.Baseline.reject_bad_bound
+#print axioms Contribution.Reduction.Baseline.reject_short_mask
+#print axioms Contribution.Reduction.certified_equivalent
+#print axioms Contribution.Reduction.certified_prune
+#print axioms Contribution.Reduction.dot_select
+#print axioms Contribution.Reduction.layer_trim
+#print axioms Contribution.Reduction.networkSetoid
+#print axioms Contribution.Reduction.predicate_transfer
+#print axioms Contribution.Reduction.prune_exact
+#print axioms Contribution.Reduction.select_map
+#print axioms Contribution.Reduction.zeros_of_bounds
+#print axioms Contribution.Universal.dot_bounds
+#print axioms Contribution.Universal.exact_layer_trace
+#print axioms Contribution.Universal.layer_sound
+#print axioms Contribution.Universal.relu_sound

@@ -1,0 +1,461 @@
+{
+  "status": "PASS",
+  "timestamp_utc": "2026-11-06T06:46:37.298479+00:00",
+  "scope": "Rational output-head updates with a domain-typed input; fresh Lean proofs and axiom audit, not new float32 or ONNX evidence",
+  "attempt": "contribution/.build/output_updates/attempt-001",
+  "lean_build": {
+    "Property2": {
+      "seconds": 4.649618958123028,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/sources/contribution",
+        "-o",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/Property2.olean",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/sources/contribution/Property2.lean"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "8dc4e9bd6d8b3b8efe5c1c227841acb4bf86e0efa9d1806df5d8cadb8f422d0e"
+    },
+    "Float32": {
+      "seconds": 4.297748082783073,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/sources/contribution",
+        "-o",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/Float32.olean",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/sources/contribution/Float32.lean"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "b51207c64e661a1ec742f77b2a7f207e3763fb6b5f5494664c3dfd977dec77c6"
+    },
+    "IntervalNetwork": {
+      "seconds": 4.620985666057095,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/sources/contribution/universal",
+        "-o",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/IntervalNetwork.olean",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/sources/contribution/universal/IntervalNetwork.lean"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "54d432269129a847106c29fff29344e328b8398241d32da0a21adff1f958b245"
+    },
+    "Pruning": {
+      "seconds": 4.368293999927118,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/sources/contribution/network_reduction",
+        "-o",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/Pruning.olean",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/sources/contribution/network_reduction/Pruning.lean"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "55ef6450ebfaf47891937343f6d338ad673d5e88de7dfee3b995957e88ea5107"
+    },
+    "Adversarial": {
+      "seconds": 4.331242791842669,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/sources/contribution/network_reduction",
+        "-o",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/Adversarial.olean",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/sources/contribution/network_reduction/Adversarial.lean"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "00705946a02ebebe27f07f54b8f3ca22ac161a6e39585fd285e638e6e3da14ca"
+    },
+    "OutputUpdates": {
+      "seconds": 4.2903407078702,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/sources/contribution/network_reduction/output_updates",
+        "-o",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/OutputUpdates.olean",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/sources/contribution/network_reduction/output_updates/OutputUpdates.lean"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "2a96316dcd66a5a5d5bf2327e832338f640f700ece2c2d4e32d7fde1479c0480"
+    },
+    "Audit": {
+      "seconds": 3.8807060411199927,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/sources/contribution/network_reduction/output_updates",
+        "-o",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/Audit.olean",
+        "<CHECKOUT>/contribution/.build/output_updates/attempt-001/sources/contribution/network_reduction/output_updates/Audit.lean"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "log_sha256": "acc602e6217fc69145cbe27140e9860359fc89d1e82a5fda39228c86f06e4578",
+      "stdout_sha256": "acc602e6217fc69145cbe27140e9860359fc89d1e82a5fda39228c86f06e4578",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "cfb085e99d5c9bb2b4008e9962fe595c45b9dd87b8e5beac7bef55d1a6ca3229"
+    }
+  },
+  "reader_controls": {
+    "scope": "Synthetic reader controls, not compiler mutation experiments",
+    "positive_complete_audit": "ACCEPTED",
+    "positive_multiline_audit": "ACCEPTED",
+    "missing_root": "REJECTED",
+    "duplicate_root": "REJECTED",
+    "unexpected_root": "REJECTED",
+    "foreign_axiom": "REJECTED",
+    "sorry_axiom": "REJECTED",
+    "native_trust_axiom": "REJECTED",
+    "malformed_axiom_list": "REJECTED",
+    "truncated_multiline_list": "REJECTED",
+    "missing_continuation_comma": "REJECTED",
+    "empty_continuation_item": "REJECTED",
+    "embedded_root_in_unclosed_list": "REJECTED",
+    "foreign_multiline_axiom": "REJECTED",
+    "trailing_unchecked_text": "REJECTED",
+    "wrapped_trailing_garbage": "REJECTED",
+    "stray_continuation_after_list": "REJECTED",
+    "leading_unchecked_text": "REJECTED",
+    "warning_diagnostic": "REJECTED",
+    "error_diagnostic": "REJECTED",
+    "compiler_warning_detected": true,
+    "compiler_error_detected": true
+  },
+  "sources_sha256": {
+    "contribution/Float32.lean": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
+    "contribution/Property2.lean": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
+    "contribution/anchor_view/trained/onnx_model.py": "3255b4fa2a15ace4b37e748ae1dc58890e0c9540801f0f3eda7f5845cd3d581d",
+    "contribution/network_reduction/Adversarial.lean": "1e9a96b5c7245895a11306e0602536299090c308bad347e6068d176c48e3e3a6",
+    "contribution/network_reduction/Audit.lean": "3c277e601d0a5eab73628bf288cf23c6975a05eaa0f318f1743feb37fabe3cb0",
+    "contribution/network_reduction/Baseline.lean": "52b014b27ebce87dbb8625a7bbcfc91c66f1ebcb91f94b7079f7be79be9bd501",
+    "contribution/network_reduction/NETWORK_REDUCTION.pdf": "9e08f90ef223a09eb93f679337c3cd1eee75a0ce7705c9d6793359953dc38f1b",
+    "contribution/network_reduction/Pruning.lean": "622185c41b15df39ede096071f85deea4b3099246117665832500bb5e6467364",
+    "contribution/network_reduction/build_report.py": "5824fd4d67c53b594b6c4d826608bffbfb1c6327385e8400245022ea4666d32d",
+    "contribution/network_reduction/output_updates/Audit.lean": "4203a7e19f86eaab76819bc9fd8075b2ddfe5e4460730a9db9d15cc5306fd474",
+    "contribution/network_reduction/output_updates/OutputUpdates.lean": "e3622f975ff63d568933381ffab108181b9149259c78612386e3affcc480ed05",
+    "contribution/network_reduction/output_updates/verify.py": "f95e854699e770da114beec3c1ecb9c4ab26f06911b767cfdfb24ffea1a6aec2",
+    "contribution/network_reduction/study.py": "9dbd308114dae6480de564deac1260960417245ec95655ecf2144556ebf2a9d2",
+    "contribution/network_reduction/verify.py": "08b50c44c2410dd820f76526f5a0d79ea1a737073930052449a51ec74c5aaf5a",
+    "contribution/results/network_reduction_verification.json": "8cca1d09fdf019e1a418ef2dffc297cbdea8b4a64fc5de73626d9fb103ccd74a",
+    "contribution/universal/IntervalNetwork.lean": "be336900a150eeffb9feb49992f1a788dedea56a80319b05fc0c27536febd04e",
+    "lean/lake-manifest.json": "0f6a2f189439a5b6ac9653168b0e513c8129ec88af04f771b6a926773bab3420",
+    "lean/lakefile.lean": "d8e1d78b26d3253c33757657aa3c5986113271300a7fa4e34a3b7b08673606f8",
+    "lean/lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+  },
+  "original_receipt_sha256": "8cca1d09fdf019e1a418ef2dffc297cbdea8b4a64fc5de73626d9fb103ccd74a",
+  "original_pdf_sha256": "9e08f90ef223a09eb93f679337c3cd1eee75a0ce7705c9d6793359953dc38f1b",
+  "original_bound_sources": 14,
+  "expected_roots": [
+    "Contribution.Reduction.Adversarial.checked",
+    "Contribution.Reduction.Adversarial.domain_nonempty",
+    "Contribution.Reduction.Adversarial.export_matches_prune",
+    "Contribution.Reduction.OutputUpdates.RR_preserved",
+    "Contribution.Reduction.OutputUpdates.all_output_heads",
+    "Contribution.Reduction.OutputUpdates.bad_no_reduced_step",
+    "Contribution.Reduction.OutputUpdates.bad_preserves_certificate",
+    "Contribution.Reduction.OutputUpdates.bad_same_view",
+    "Contribution.Reduction.OutputUpdates.bad_views_differ",
+    "Contribution.Reduction.OutputUpdates.check_with_head_iff",
+    "Contribution.Reduction.OutputUpdates.compatible_run_factors",
+    "Contribution.Reduction.OutputUpdates.compatible_sequence_agreement",
+    "Contribution.Reduction.OutputUpdates.compatible_stable",
+    "Contribution.Reduction.OutputUpdates.erased_not_in_algebra",
+    "Contribution.Reduction.OutputUpdates.erased_updates_fixed",
+    "Contribution.Reduction.OutputUpdates.head_certificate",
+    "Contribution.Reduction.OutputUpdates.head_pruning",
+    "Contribution.Reduction.OutputUpdates.input_nonempty",
+    "Contribution.Reduction.OutputUpdates.kept_in_algebra",
+    "Contribution.Reduction.OutputUpdates.members_agree",
+    "Contribution.Reduction.OutputUpdates.operation_factors",
+    "Contribution.Reduction.OutputUpdates.output_can_change",
+    "Contribution.Reduction.OutputUpdates.output_factors",
+    "Contribution.Reduction.OutputUpdates.output_in_algebra",
+    "Contribution.Reduction.OutputUpdates.prune_with_head",
+    "Contribution.Reduction.OutputUpdates.run_algebra_stable",
+    "Contribution.Reduction.OutputUpdates.run_factors",
+    "Contribution.Reduction.OutputUpdates.sequence_agreement",
+    "Contribution.Reduction.OutputUpdates.stateSetoid",
+    "Contribution.Reduction.OutputUpdates.view_algebra_not_fixed",
+    "Contribution.Reduction.OutputUpdates.view_algebra_not_stable_bad",
+    "Contribution.Reduction.OutputUpdates.view_algebra_proper",
+    "Contribution.Reduction.OutputUpdates.view_algebra_stable",
+    "Contribution.Reduction.OutputUpdates.witness_same_view",
+    "Contribution.Reduction.OutputUpdates.zero_head_output",
+    "Contribution.Reduction.certified_prune"
+  ],
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "lake": "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+  "axiom_audit": {
+    "Contribution.Reduction.OutputUpdates.input_nonempty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.check_with_head_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.prune_with_head": [
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.head_certificate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.head_pruning": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.all_output_heads": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.output_factors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.operation_factors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.compatible_run_factors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.run_factors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.RR_preserved": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.compatible_sequence_agreement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.sequence_agreement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.members_agree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.compatible_stable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.view_algebra_stable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.run_algebra_stable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.output_in_algebra": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.kept_in_algebra": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.witness_same_view": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.erased_not_in_algebra": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.view_algebra_proper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.bad_same_view": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.bad_views_differ": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.bad_no_reduced_step": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.view_algebra_not_stable_bad": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.view_algebra_not_fixed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.erased_updates_fixed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.bad_preserves_certificate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.zero_head_output": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.output_can_change": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.OutputUpdates.stateSetoid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.certified_prune": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.checked": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.export_matches_prune": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.domain_nonempty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "audited_roots": 36,
+  "sources_sha256_after": {
+    "contribution/Float32.lean": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
+    "contribution/Property2.lean": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
+    "contribution/anchor_view/trained/onnx_model.py": "3255b4fa2a15ace4b37e748ae1dc58890e0c9540801f0f3eda7f5845cd3d581d",
+    "contribution/network_reduction/Adversarial.lean": "1e9a96b5c7245895a11306e0602536299090c308bad347e6068d176c48e3e3a6",
+    "contribution/network_reduction/Audit.lean": "3c277e601d0a5eab73628bf288cf23c6975a05eaa0f318f1743feb37fabe3cb0",
+    "contribution/network_reduction/Baseline.lean": "52b014b27ebce87dbb8625a7bbcfc91c66f1ebcb91f94b7079f7be79be9bd501",
+    "contribution/network_reduction/NETWORK_REDUCTION.pdf": "9e08f90ef223a09eb93f679337c3cd1eee75a0ce7705c9d6793359953dc38f1b",
+    "contribution/network_reduction/Pruning.lean": "622185c41b15df39ede096071f85deea4b3099246117665832500bb5e6467364",
+    "contribution/network_reduction/build_report.py": "5824fd4d67c53b594b6c4d826608bffbfb1c6327385e8400245022ea4666d32d",
+    "contribution/network_reduction/output_updates/Audit.lean": "4203a7e19f86eaab76819bc9fd8075b2ddfe5e4460730a9db9d15cc5306fd474",
+    "contribution/network_reduction/output_updates/OutputUpdates.lean": "e3622f975ff63d568933381ffab108181b9149259c78612386e3affcc480ed05",
+    "contribution/network_reduction/output_updates/verify.py": "f95e854699e770da114beec3c1ecb9c4ab26f06911b767cfdfb24ffea1a6aec2",
+    "contribution/network_reduction/study.py": "9dbd308114dae6480de564deac1260960417245ec95655ecf2144556ebf2a9d2",
+    "contribution/network_reduction/verify.py": "08b50c44c2410dd820f76526f5a0d79ea1a737073930052449a51ec74c5aaf5a",
+    "contribution/results/network_reduction_verification.json": "8cca1d09fdf019e1a418ef2dffc297cbdea8b4a64fc5de73626d9fb103ccd74a",
+    "contribution/universal/IntervalNetwork.lean": "be336900a150eeffb9feb49992f1a788dedea56a80319b05fc0c27536febd04e",
+    "lean/lake-manifest.json": "0f6a2f189439a5b6ac9653168b0e513c8129ec88af04f771b6a926773bab3420",
+    "lean/lakefile.lean": "d8e1d78b26d3253c33757657aa3c5986113271300a7fa4e34a3b7b08673606f8",
+    "lean/lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+  },
+  "inputs_unchanged": true,
+  "seconds": 30.455990165937692,
+  "finished_utc": "2026-11-06T06:47:07.754712+00:00",
+  "export_metadata": {
+    "kind": "Path-normalized copy of an actual completed isolated-checkout replay",
+    "raw_receipt_sha256": "325f10316bf188c3fedeca1070d388b86d1bdf75975b209086b9cea69828afa8",
+    "normalized_path_prefixes": [
+      "<CHECKOUT>",
+      "<UPSTREAM>",
+      "<HOME>"
+    ],
+    "unchanged_evidence": "Proof/source/checkpoint/log digests, audit results, exit codes and measured values are unchanged.",
+    "raw_record_location": "Retained with the local replay artifacts; raw machine paths are not included in the shared snapshot.",
+    "predecessor_policy": "Each stage ran after predecessor records had been normalized; its recorded predecessor hashes bind those exact shared bytes."
+  }
+}

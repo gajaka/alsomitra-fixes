@@ -1,0 +1,675 @@
+{
+  "status": "PASS",
+  "attempt": "contribution/.build/rmsprop_symmetric/attempt-001",
+  "timestamp_utc": "2026-11-06T06:50:41.291054+00:00",
+  "scope": "Exact real equal-history RMSProp; separately, property transfer for trained checkpoint reductions and rational momentum",
+  "fresh_proof_run": true,
+  "second_kernel_run": false,
+  "new_float32_or_onnx_run": false,
+  "lean_build": {
+    "Property2": {
+      "returncode": 0,
+      "seconds": 4.77334383293055,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution",
+        "-o",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/Property2.olean",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/Property2.lean"
+      ],
+      "source_sha256": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "8dc4e9bd6d8b3b8efe5c1c227841acb4bf86e0efa9d1806df5d8cadb8f422d0e"
+    },
+    "Float32": {
+      "returncode": 0,
+      "seconds": 4.362837458960712,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution",
+        "-o",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/Float32.olean",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/Float32.lean"
+      ],
+      "source_sha256": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "b51207c64e661a1ec742f77b2a7f207e3763fb6b5f5494664c3dfd977dec77c6"
+    },
+    "IntervalNetwork": {
+      "returncode": 0,
+      "seconds": 4.711287416052073,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/universal",
+        "-o",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/IntervalNetwork.olean",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/universal/IntervalNetwork.lean"
+      ],
+      "source_sha256": "be336900a150eeffb9feb49992f1a788dedea56a80319b05fc0c27536febd04e",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "54d432269129a847106c29fff29344e328b8398241d32da0a21adff1f958b245"
+    },
+    "Pruning": {
+      "returncode": 0,
+      "seconds": 4.410623083822429,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction",
+        "-o",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/Pruning.olean",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction/Pruning.lean"
+      ],
+      "source_sha256": "622185c41b15df39ede096071f85deea4b3099246117665832500bb5e6467364",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "55ef6450ebfaf47891937343f6d338ad673d5e88de7dfee3b995957e88ea5107"
+    },
+    "Baseline": {
+      "returncode": 0,
+      "seconds": 4.548575832974166,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction",
+        "-o",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/Baseline.olean",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction/Baseline.lean"
+      ],
+      "source_sha256": "52b014b27ebce87dbb8625a7bbcfc91c66f1ebcb91f94b7079f7be79be9bd501",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "56a9201e900257fba78b26f5f3ad8cc5eaa9135e12dc327670c05bf11431b25c"
+    },
+    "Adversarial": {
+      "returncode": 0,
+      "seconds": 4.460931458044797,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction",
+        "-o",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/Adversarial.olean",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction/Adversarial.lean"
+      ],
+      "source_sha256": "1e9a96b5c7245895a11306e0602536299090c308bad347e6068d176c48e3e3a6",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "00705946a02ebebe27f07f54b8f3ca22ac161a6e39585fd285e638e6e3da14ca"
+    },
+    "OutputUpdates": {
+      "returncode": 0,
+      "seconds": 4.623844959074631,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction/output_updates",
+        "-o",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/OutputUpdates.olean",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction/output_updates/OutputUpdates.lean"
+      ],
+      "source_sha256": "e3622f975ff63d568933381ffab108181b9149259c78612386e3affcc480ed05",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "2a96316dcd66a5a5d5bf2327e832338f640f700ece2c2d4e32d7fde1479c0480"
+    },
+    "AffineRetention": {
+      "returncode": 0,
+      "seconds": 4.278467666124925,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction/update_synthesis",
+        "-o",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/AffineRetention.olean",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction/update_synthesis/AffineRetention.lean"
+      ],
+      "source_sha256": "d79c53e212bd14b12c75438fa123e27d130f8832b53a5753f419dcdd8193e7c7",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "c7157eb6e3b9d8f4182657c0acd6f2c63df4edfb885abce2578843dd3410dbc5"
+    },
+    "NetworkRetention": {
+      "returncode": 0,
+      "seconds": 4.32797837513499,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction/update_synthesis",
+        "-o",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/NetworkRetention.olean",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction/update_synthesis/NetworkRetention.lean"
+      ],
+      "source_sha256": "fc4efc05bd12bc465d6e14736749eb6ccb4f4093d0690758e671493824a97229",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "a1d598b838a6abaa959073c5b755377f2b242c8c99ade6937576ae1b1952b9f9"
+    },
+    "MomentumQuotient": {
+      "returncode": 0,
+      "seconds": 36.23498837486841,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction/linear_observations",
+        "-o",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/MomentumQuotient.olean",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction/linear_observations/MomentumQuotient.lean"
+      ],
+      "source_sha256": "669129977abc022669946fda9e35089ee922e8c45d6b3b522abf014fbd192267",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "50a822cce8c6bd30c4d6a08e09d9e2abe440e08f7b742afe206f61d1d881fb8b"
+    },
+    "AdaptiveBoundary": {
+      "returncode": 0,
+      "seconds": 4.296510125044733,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction/linear_observations",
+        "-o",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/AdaptiveBoundary.olean",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction/linear_observations/AdaptiveBoundary.lean"
+      ],
+      "source_sha256": "18b34bc72715bcca6115379875a6b2971e8e6cea483c98da5262ee470fd0130a",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "3f8cac8ba7d6bf7bdc203ea5301f530f772954388f6861c36c5972d32b8677f0"
+    },
+    "SymmetricRMSProp": {
+      "returncode": 0,
+      "seconds": 38.65824058302678,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction/rmsprop_symmetric",
+        "-o",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/SymmetricRMSProp.olean",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction/rmsprop_symmetric/SymmetricRMSProp.lean"
+      ],
+      "source_sha256": "383749276ecb0713d76b6929d0d78ddc14f7c1561fd22d6bd859a95d17766af1",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "4ce9c2089286ed8a84c739c2b43d56d840ebdf88c7a20c7ecf6dd95afaa90e7e"
+    },
+    "PropertyTransfer": {
+      "returncode": 0,
+      "seconds": 4.363004375016317,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction/property_transfer",
+        "-o",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/PropertyTransfer.olean",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/sources/contribution/network_reduction/property_transfer/PropertyTransfer.lean"
+      ],
+      "source_sha256": "964ffb0469e971ba396eb12d365ce342e13a0279420d4a65816d5437e02b31dc",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "9d67ae9eb04fc21ba513a2d6f1cbe8762d930e8e8c925745ea832b6dce317324"
+    },
+    "Audit": {
+      "returncode": 0,
+      "seconds": 4.133750916924328,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/generated",
+        "-o",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/Audit.olean",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/generated/Audit.lean"
+      ],
+      "source_sha256": "57e5ab4cb8d6d3322645cd7c3288a80019c43fac4f3e31532ee712c5227f23dc",
+      "log_sha256": "619b730a31c3031141364d27eb7d52bf5c61915fc698a765e2ed7da2841d8817",
+      "olean_sha256": "f75c7126388657118b574a95443ef58423f71e07fe28057088318ab881491d45"
+    }
+  },
+  "negative_controls": {
+    "BadAggregate": {
+      "returncode": 1,
+      "seconds": 39.05851799994707,
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/generated",
+        "-o",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/BadAggregate.olean",
+        "<CHECKOUT>/contribution/.build/rmsprop_symmetric/attempt-001/generated/BadAggregate.lean"
+      ],
+      "source_sha256": "11a62bf3ce258574c93850a4512f7c97e0c2430b277c618388528271afe73271",
+      "log_sha256": "554c2173f740fef7012f51e7adbbf36a2f54db42a1249a7a4b508ce17867f244",
+      "status": "REJECTED_UNSOLVED_EQUALITY"
+    }
+  },
+  "historical_proof_bindings": {
+    "contribution/Property2.lean": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
+    "contribution/Float32.lean": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
+    "contribution/universal/IntervalNetwork.lean": "be336900a150eeffb9feb49992f1a788dedea56a80319b05fc0c27536febd04e",
+    "contribution/network_reduction/Pruning.lean": "622185c41b15df39ede096071f85deea4b3099246117665832500bb5e6467364",
+    "contribution/network_reduction/Baseline.lean": "52b014b27ebce87dbb8625a7bbcfc91c66f1ebcb91f94b7079f7be79be9bd501",
+    "contribution/network_reduction/Adversarial.lean": "1e9a96b5c7245895a11306e0602536299090c308bad347e6068d176c48e3e3a6",
+    "contribution/network_reduction/output_updates/OutputUpdates.lean": "e3622f975ff63d568933381ffab108181b9149259c78612386e3affcc480ed05",
+    "contribution/network_reduction/update_synthesis/AffineRetention.lean": "d79c53e212bd14b12c75438fa123e27d130f8832b53a5753f419dcdd8193e7c7",
+    "contribution/network_reduction/update_synthesis/NetworkRetention.lean": "fc4efc05bd12bc465d6e14736749eb6ccb4f4093d0690758e671493824a97229",
+    "contribution/network_reduction/linear_observations/MomentumQuotient.lean": "669129977abc022669946fda9e35089ee922e8c45d6b3b522abf014fbd192267",
+    "contribution/network_reduction/linear_observations/AdaptiveBoundary.lean": "18b34bc72715bcca6115379875a6b2971e8e6cea483c98da5262ee470fd0130a"
+  },
+  "sources_sha256": {
+    "contribution/Float32.lean": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
+    "contribution/Property2.lean": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
+    "contribution/network_reduction/Adversarial.lean": "1e9a96b5c7245895a11306e0602536299090c308bad347e6068d176c48e3e3a6",
+    "contribution/network_reduction/Baseline.lean": "52b014b27ebce87dbb8625a7bbcfc91c66f1ebcb91f94b7079f7be79be9bd501",
+    "contribution/network_reduction/Pruning.lean": "622185c41b15df39ede096071f85deea4b3099246117665832500bb5e6467364",
+    "contribution/network_reduction/linear_observations/AdaptiveBoundary.lean": "18b34bc72715bcca6115379875a6b2971e8e6cea483c98da5262ee470fd0130a",
+    "contribution/network_reduction/linear_observations/MomentumQuotient.lean": "669129977abc022669946fda9e35089ee922e8c45d6b3b522abf014fbd192267",
+    "contribution/network_reduction/output_updates/OutputUpdates.lean": "e3622f975ff63d568933381ffab108181b9149259c78612386e3affcc480ed05",
+    "contribution/network_reduction/output_updates/verify.py": "f95e854699e770da114beec3c1ecb9c4ab26f06911b767cfdfb24ffea1a6aec2",
+    "contribution/network_reduction/property_transfer/PropertyTransfer.lean": "964ffb0469e971ba396eb12d365ce342e13a0279420d4a65816d5437e02b31dc",
+    "contribution/network_reduction/property_transfer/README.md": "5c0115e91a555b4403e4eba2685f0f19569cf82e8b0b25884bfbd5f48df28343",
+    "contribution/network_reduction/rmsprop_symmetric/README.md": "3fa7e3b6221c9c713859f86432cf4340d3044b826eba6e6859de30de8462385c",
+    "contribution/network_reduction/rmsprop_symmetric/SymmetricRMSProp.lean": "383749276ecb0713d76b6929d0d78ddc14f7c1561fd22d6bd859a95d17766af1",
+    "contribution/network_reduction/rmsprop_symmetric/verify.py": "216bf8d04e6fbaae6c46499b8900bee194521567e1419b40ccce4931f73a0399",
+    "contribution/network_reduction/update_synthesis/AffineRetention.lean": "d79c53e212bd14b12c75438fa123e27d130f8832b53a5753f419dcdd8193e7c7",
+    "contribution/network_reduction/update_synthesis/NetworkRetention.lean": "fc4efc05bd12bc465d6e14736749eb6ccb4f4093d0690758e671493824a97229",
+    "contribution/results/linear_observations_verification.json": "6bc621c724bc4e9004d4415021a4ae70ac1910c03847b1277e7257de963ab3cf",
+    "contribution/results/network_reduction_verification.json": "8cca1d09fdf019e1a418ef2dffc297cbdea8b4a64fc5de73626d9fb103ccd74a",
+    "contribution/results/output_update_verification.json": "6aa4cba939acaecc2ed19d30eb2d2331c6225c2bba32cf67b4923e21e76f2df7",
+    "contribution/results/update_synthesis_verification.json": "689ced086c9b93f77b2069c41cc6e027718b146c1202fb172a299b7a1dbb06b4",
+    "contribution/universal/IntervalNetwork.lean": "be336900a150eeffb9feb49992f1a788dedea56a80319b05fc0c27536febd04e",
+    "lean/lake-manifest.json": "0f6a2f189439a5b6ac9653168b0e513c8129ec88af04f771b6a926773bab3420",
+    "lean/lakefile.lean": "d8e1d78b26d3253c33757657aa3c5986113271300a7fa4e34a3b7b08673606f8",
+    "lean/lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+  },
+  "historical_receipts_sha256": {
+    "contribution/results/network_reduction_verification.json": "8cca1d09fdf019e1a418ef2dffc297cbdea8b4a64fc5de73626d9fb103ccd74a",
+    "contribution/results/output_update_verification.json": "6aa4cba939acaecc2ed19d30eb2d2331c6225c2bba32cf67b4923e21e76f2df7",
+    "contribution/results/update_synthesis_verification.json": "689ced086c9b93f77b2069c41cc6e027718b146c1202fb172a299b7a1dbb06b4",
+    "contribution/results/linear_observations_verification.json": "6bc621c724bc4e9004d4415021a4ae70ac1910c03847b1277e7257de963ab3cf"
+  },
+  "expected_roots": [
+    "Contribution.Reduction.AdaptiveBoundary.no_reduced_step",
+    "Contribution.Reduction.Adversarial.all_real_inputs",
+    "Contribution.Reduction.Baseline.all_real_inputs",
+    "Contribution.Reduction.MomentumQuotient.network_sequence",
+    "Contribution.Reduction.PropertyTransfer.above_region_nonempty",
+    "Contribution.Reduction.PropertyTransfer.adversarial_above",
+    "Contribution.Reduction.PropertyTransfer.adversarial_below",
+    "Contribution.Reduction.PropertyTransfer.adversarial_counterexample",
+    "Contribution.Reduction.PropertyTransfer.adversarial_outputs",
+    "Contribution.Reduction.PropertyTransfer.adversarial_specification",
+    "Contribution.Reduction.PropertyTransfer.baseline_above",
+    "Contribution.Reduction.PropertyTransfer.baseline_below",
+    "Contribution.Reduction.PropertyTransfer.baseline_counterexample",
+    "Contribution.Reduction.PropertyTransfer.baseline_outputs",
+    "Contribution.Reduction.PropertyTransfer.baseline_specification",
+    "Contribution.Reduction.PropertyTransfer.below_region_nonempty",
+    "Contribution.Reduction.PropertyTransfer.momentum_sequence_counterexample",
+    "Contribution.Reduction.PropertyTransfer.momentum_sequence_specification",
+    "Contribution.Reduction.PropertyTransfer.satisfies_transfer",
+    "Contribution.Reduction.PropertyTransfer.violation_transfer",
+    "Contribution.Reduction.SymmetricRMSProp.RR_preserved",
+    "Contribution.Reduction.SymmetricRMSProp.algebra_proper",
+    "Contribution.Reduction.SymmetricRMSProp.algebra_stable",
+    "Contribution.Reduction.SymmetricRMSProp.gradient_pair",
+    "Contribution.Reduction.SymmetricRMSProp.hidden_coordinate_not_observable",
+    "Contribution.Reduction.SymmetricRMSProp.hidden_difference_invisible",
+    "Contribution.Reduction.SymmetricRMSProp.history_difference",
+    "Contribution.Reduction.SymmetricRMSProp.initialize_symmetric",
+    "Contribution.Reduction.SymmetricRMSProp.initialize_valid",
+    "Contribution.Reduction.SymmetricRMSProp.initialized_run_factors",
+    "Contribution.Reduction.SymmetricRMSProp.left_not_symmetric",
+    "Contribution.Reduction.SymmetricRMSProp.left_unreachable_from_initialization",
+    "Contribution.Reduction.SymmetricRMSProp.lift_symmetric",
+    "Contribution.Reduction.SymmetricRMSProp.lift_valid",
+    "Contribution.Reduction.SymmetricRMSProp.restricted_run_factors",
+    "Contribution.Reduction.SymmetricRMSProp.right_symmetric",
+    "Contribution.Reduction.SymmetricRMSProp.run_factors",
+    "Contribution.Reduction.SymmetricRMSProp.smallRun_valid",
+    "Contribution.Reduction.SymmetricRMSProp.smallStep_valid",
+    "Contribution.Reduction.SymmetricRMSProp.stateSetoid",
+    "Contribution.Reduction.SymmetricRMSProp.step_factors",
+    "Contribution.Reduction.SymmetricRMSProp.symmetric_run",
+    "Contribution.Reduction.SymmetricRMSProp.symmetric_step",
+    "Contribution.Reduction.SymmetricRMSProp.valid_run",
+    "Contribution.Reduction.SymmetricRMSProp.valid_step",
+    "Contribution.Reduction.SymmetricRMSProp.view_lift",
+    "Contribution.Reduction.SymmetricRMSProp.view_valid"
+  ],
+  "reader_controls": {
+    "scope": "Synthetic reader controls, not compiler mutation experiments",
+    "positive_complete_audit": "ACCEPTED",
+    "positive_multiline_audit": "ACCEPTED",
+    "missing_root": "REJECTED",
+    "duplicate_root": "REJECTED",
+    "unexpected_root": "REJECTED",
+    "foreign_axiom": "REJECTED",
+    "sorry_axiom": "REJECTED",
+    "native_trust_axiom": "REJECTED",
+    "malformed_axiom_list": "REJECTED",
+    "truncated_multiline_list": "REJECTED",
+    "missing_continuation_comma": "REJECTED",
+    "empty_continuation_item": "REJECTED",
+    "embedded_root_in_unclosed_list": "REJECTED",
+    "foreign_multiline_axiom": "REJECTED",
+    "trailing_unchecked_text": "REJECTED",
+    "wrapped_trailing_garbage": "REJECTED",
+    "stray_continuation_after_list": "REJECTED",
+    "leading_unchecked_text": "REJECTED",
+    "warning_diagnostic": "REJECTED",
+    "error_diagnostic": "REJECTED",
+    "compiler_warning_detected": true,
+    "compiler_error_detected": true
+  },
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "axiom_audit": {
+    "Contribution.Reduction.SymmetricRMSProp.initialize_symmetric": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.initialize_valid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.gradient_pair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.history_difference": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.symmetric_step": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.valid_step": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.step_factors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.view_valid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.lift_symmetric": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.lift_valid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.view_lift": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.smallStep_valid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.symmetric_run": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.valid_run": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.run_factors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.initialized_run_factors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.smallRun_valid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.left_not_symmetric": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.right_symmetric": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.left_unreachable_from_initialization": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.restricted_run_factors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.RR_preserved": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.algebra_stable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.hidden_difference_invisible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.hidden_coordinate_not_observable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.algebra_proper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.satisfies_transfer": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.violation_transfer": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.baseline_outputs": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.adversarial_outputs": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.baseline_specification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.adversarial_specification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.baseline_counterexample": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.adversarial_counterexample": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.baseline_above": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.baseline_below": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.adversarial_above": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.adversarial_below": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.above_region_nonempty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.below_region_nonempty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.momentum_sequence_specification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.PropertyTransfer.momentum_sequence_counterexample": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.SymmetricRMSProp.stateSetoid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.AdaptiveBoundary.no_reduced_step": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Baseline.all_real_inputs": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.Adversarial.all_real_inputs": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.MomentumQuotient.network_sequence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "audited_roots": 47,
+  "generated_sha256": {
+    "contribution/.build/rmsprop_symmetric/attempt-001/generated/BadAggregate.lean": "11a62bf3ce258574c93850a4512f7c97e0c2430b277c618388528271afe73271",
+    "contribution/.build/rmsprop_symmetric/attempt-001/generated/Audit.lean": "57e5ab4cb8d6d3322645cd7c3288a80019c43fac4f3e31532ee712c5227f23dc"
+  },
+  "inputs_unchanged": true,
+  "seconds": 167.27568574994802,
+  "finished_utc": "2026-11-06T06:53:28.567116+00:00",
+  "export_metadata": {
+    "kind": "Path-normalized copy of an actual completed isolated-checkout replay",
+    "raw_receipt_sha256": "e70c17e855a2a5773d29bb18953dd17888ad456fb27f516a25fa4443814a5baf",
+    "normalized_path_prefixes": [
+      "<CHECKOUT>",
+      "<UPSTREAM>",
+      "<HOME>"
+    ],
+    "unchanged_evidence": "Proof/source/checkpoint/log digests, audit results, exit codes and measured values are unchanged.",
+    "raw_record_location": "Retained with the local replay artifacts; raw machine paths are not included in the shared snapshot.",
+    "predecessor_policy": "Each stage ran after predecessor records had been normalized; its recorded predecessor hashes bind those exact shared bytes."
+  }
+}

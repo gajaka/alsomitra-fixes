@@ -1,0 +1,1099 @@
+{
+  "status": "PASS",
+  "attempt": "contribution/.build/update_synthesis/attempt-001",
+  "timestamp_utc": "2026-11-06T06:47:07.803828+00:00",
+  "scope": "Exact rational affine updates; minimal coordinate retention relative to seed; fixed certified hidden layers",
+  "lean_build": {
+    "Property2": {
+      "returncode": 0,
+      "seconds": 4.484146500006318,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution",
+        "-o",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/Property2.olean",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution/Property2.lean"
+      ],
+      "olean_sha256": "8dc4e9bd6d8b3b8efe5c1c227841acb4bf86e0efa9d1806df5d8cadb8f422d0e"
+    },
+    "Float32": {
+      "returncode": 0,
+      "seconds": 4.167335541918874,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution",
+        "-o",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/Float32.olean",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution/Float32.lean"
+      ],
+      "olean_sha256": "b51207c64e661a1ec742f77b2a7f207e3763fb6b5f5494664c3dfd977dec77c6"
+    },
+    "IntervalNetwork": {
+      "returncode": 0,
+      "seconds": 4.52016512514092,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "be336900a150eeffb9feb49992f1a788dedea56a80319b05fc0c27536febd04e",
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution/universal",
+        "-o",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/IntervalNetwork.olean",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution/universal/IntervalNetwork.lean"
+      ],
+      "olean_sha256": "54d432269129a847106c29fff29344e328b8398241d32da0a21adff1f958b245"
+    },
+    "Pruning": {
+      "returncode": 0,
+      "seconds": 4.292701875092462,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "622185c41b15df39ede096071f85deea4b3099246117665832500bb5e6467364",
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution/network_reduction",
+        "-o",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/Pruning.olean",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution/network_reduction/Pruning.lean"
+      ],
+      "olean_sha256": "55ef6450ebfaf47891937343f6d338ad673d5e88de7dfee3b995957e88ea5107"
+    },
+    "Adversarial": {
+      "returncode": 0,
+      "seconds": 4.3099843331146985,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "1e9a96b5c7245895a11306e0602536299090c308bad347e6068d176c48e3e3a6",
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution/network_reduction",
+        "-o",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/Adversarial.olean",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution/network_reduction/Adversarial.lean"
+      ],
+      "olean_sha256": "00705946a02ebebe27f07f54b8f3ca22ac161a6e39585fd285e638e6e3da14ca"
+    },
+    "OutputUpdates": {
+      "returncode": 0,
+      "seconds": 4.376875292044133,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "e3622f975ff63d568933381ffab108181b9149259c78612386e3affcc480ed05",
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution/network_reduction/output_updates",
+        "-o",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/OutputUpdates.olean",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution/network_reduction/output_updates/OutputUpdates.lean"
+      ],
+      "olean_sha256": "2a96316dcd66a5a5d5bf2327e832338f640f700ece2c2d4e32d7fde1479c0480"
+    },
+    "AffineRetention": {
+      "returncode": 0,
+      "seconds": 4.273455459158868,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "d79c53e212bd14b12c75438fa123e27d130f8832b53a5753f419dcdd8193e7c7",
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution/network_reduction/update_synthesis",
+        "-o",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/AffineRetention.olean",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution/network_reduction/update_synthesis/AffineRetention.lean"
+      ],
+      "olean_sha256": "c7157eb6e3b9d8f4182657c0acd6f2c63df4edfb885abce2578843dd3410dbc5"
+    },
+    "NetworkRetention": {
+      "returncode": 0,
+      "seconds": 4.326677792007104,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "fc4efc05bd12bc465d6e14736749eb6ccb4f4093d0690758e671493824a97229",
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution/network_reduction/update_synthesis",
+        "-o",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/NetworkRetention.olean",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution/network_reduction/update_synthesis/NetworkRetention.lean"
+      ],
+      "olean_sha256": "a1d598b838a6abaa959073c5b755377f2b242c8c99ade6937576ae1b1952b9f9"
+    },
+    "RationalFeatures": {
+      "returncode": 0,
+      "seconds": 4.228252707980573,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "3c46b9bf84e6455b00dc2e8b5e59929e2fad80c98fad3ad25889859e1b1acee2",
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution/network_reduction/update_synthesis",
+        "-o",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/RationalFeatures.olean",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/sources/contribution/network_reduction/update_synthesis/RationalFeatures.lean"
+      ],
+      "olean_sha256": "e310c052abbba879d6a93b2ff7df40a32a37cd9ed079c7e8b66e33590a54b67f"
+    },
+    "Shifts": {
+      "returncode": 0,
+      "seconds": 4.282822874840349,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "f8e6960ca771c69f6a179d218c82f296b9077a138e6d73333cda54ed7b0de005",
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/generated",
+        "-o",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/Shifts.olean",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/generated/Shifts.lean"
+      ],
+      "olean_sha256": "9777c55c0c4afc2cbdc53e9f0778275cf3452701df77b50e52071ab1729e6bbe"
+    },
+    "Coupling": {
+      "returncode": 0,
+      "seconds": 4.277360583888367,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "0eb014aa807e46809515f2ea7815af4fb6ef7593d424da21beccc813d7baa17d",
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/generated",
+        "-o",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/Coupling.olean",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/generated/Coupling.lean"
+      ],
+      "olean_sha256": "1747000e9c52ab9838061789058e22f4abb208e212174bc0b9663ea67ae122a7"
+    },
+    "Chain": {
+      "returncode": 0,
+      "seconds": 4.544685875065625,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "c89b4eab52f2c11b5c7ea1459b511c0fc5c7c599487b0167fadc7af886d4809c",
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/generated",
+        "-o",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/Chain.olean",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/generated/Chain.lean"
+      ],
+      "olean_sha256": "38aa6dc23afbc411ba61ba921eb22c33621d8e8e90010166a160911980c44d1f"
+    },
+    "Calibration": {
+      "returncode": 0,
+      "seconds": 4.307457500137389,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "f1f580d4a2b8a0578fbd6f916dcb3d0dd9f82f5565cf017c6e19e4897d2cd524",
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/generated",
+        "-o",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/Calibration.olean",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/generated/Calibration.lean"
+      ],
+      "olean_sha256": "cd25638c1c1dcf9f0715e4686dc8a707e70590224ca15fb3a343dcf3a9b41a1a"
+    },
+    "CalibrationBinding": {
+      "returncode": 0,
+      "seconds": 4.225734666921198,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "7cd104894225f93239e3ae33dde04ea5e5e5204dbcac9704a54f879bf17e4723",
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/generated",
+        "-o",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/CalibrationBinding.olean",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/generated/CalibrationBinding.lean"
+      ],
+      "olean_sha256": "e8bbc6394f666d5f85315946c23583df5b1f1415d204945ef350f527dc97eb0a"
+    },
+    "Audit": {
+      "returncode": 0,
+      "seconds": 4.168937332928181,
+      "log_sha256": "064742a9ceea6b11b02c1904949a06b0e6fd97ed15c23ec5a02ebccfeff86c78",
+      "source_sha256": "b190d4ea76a34f53e58c845769dab5ca3839782732fca05e4c698768f1328501",
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/generated",
+        "-o",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/Audit.olean",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/generated/Audit.lean"
+      ],
+      "olean_sha256": "97ef8ef83350be9f29fd7061003883efddb39e683bc5d6823e6169d3ce42ce76"
+    }
+  },
+  "negative_compiler_controls": {
+    "BadMask": {
+      "returncode": 1,
+      "seconds": 4.43652308289893,
+      "log_sha256": "09a8c31207d6ccd3a5c8ef1a95a0af0c164661cae65e6ce6d5bcf9a78510f010",
+      "source_sha256": "5c3a8f3460dd6527950b9c364e6e4cba0e692a13d731a054179c8ab40167bc17",
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/generated",
+        "-o",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/BadMask.olean",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/generated/BadMask.lean"
+      ],
+      "status": "REJECTED"
+    },
+    "BadPacked": {
+      "returncode": 1,
+      "seconds": 4.377548375166953,
+      "log_sha256": "e7a68f655555387842778e4fbcba2a9f13d79a1083f377822ba777f94cf7f0ba",
+      "source_sha256": "f3448fce45bfd851c9c7f26ceb1a59a43f318526b2bbf33a3169b12f871394b0",
+      "command": [
+        "<HOME>/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/generated",
+        "-o",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/BadPacked.olean",
+        "<CHECKOUT>/contribution/.build/update_synthesis/attempt-001/generated/BadPacked.lean"
+      ],
+      "status": "REJECTED"
+    }
+  },
+  "fresh_proof_run": true,
+  "new_float32_or_onnx_run": false,
+  "second_kernel_run": false,
+  "audit_reader_controls": {
+    "scope": "Synthetic reader controls, not compiler mutation experiments",
+    "positive_complete_audit": "ACCEPTED",
+    "positive_multiline_audit": "ACCEPTED",
+    "missing_root": "REJECTED",
+    "duplicate_root": "REJECTED",
+    "unexpected_root": "REJECTED",
+    "foreign_axiom": "REJECTED",
+    "sorry_axiom": "REJECTED",
+    "native_trust_axiom": "REJECTED",
+    "malformed_axiom_list": "REJECTED",
+    "truncated_multiline_list": "REJECTED",
+    "missing_continuation_comma": "REJECTED",
+    "empty_continuation_item": "REJECTED",
+    "embedded_root_in_unclosed_list": "REJECTED",
+    "foreign_multiline_axiom": "REJECTED",
+    "trailing_unchecked_text": "REJECTED",
+    "wrapped_trailing_garbage": "REJECTED",
+    "stray_continuation_after_list": "REJECTED",
+    "leading_unchecked_text": "REJECTED",
+    "warning_diagnostic": "REJECTED",
+    "error_diagnostic": "REJECTED",
+    "compiler_warning_detected": true,
+    "compiler_error_detected": true
+  },
+  "sources_sha256": {
+    "contribution/Float32.lean": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
+    "contribution/Property2.lean": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
+    "contribution/anchor_view/trained/onnx_model.py": "3255b4fa2a15ace4b37e748ae1dc58890e0c9540801f0f3eda7f5845cd3d581d",
+    "contribution/network_reduction/Adversarial.lean": "1e9a96b5c7245895a11306e0602536299090c308bad347e6068d176c48e3e3a6",
+    "contribution/network_reduction/Audit.lean": "3c277e601d0a5eab73628bf288cf23c6975a05eaa0f318f1743feb37fabe3cb0",
+    "contribution/network_reduction/Baseline.lean": "52b014b27ebce87dbb8625a7bbcfc91c66f1ebcb91f94b7079f7be79be9bd501",
+    "contribution/network_reduction/NETWORK_REDUCTION.pdf": "9e08f90ef223a09eb93f679337c3cd1eee75a0ce7705c9d6793359953dc38f1b",
+    "contribution/network_reduction/Pruning.lean": "622185c41b15df39ede096071f85deea4b3099246117665832500bb5e6467364",
+    "contribution/network_reduction/REPORT.md": "8989d44086189575f2ac5680b6f1a4b6007a0893ed2814d6f0ee48e5f6a48391",
+    "contribution/network_reduction/build_report.py": "5824fd4d67c53b594b6c4d826608bffbfb1c6327385e8400245022ea4666d32d",
+    "contribution/network_reduction/output_updates/OutputUpdates.lean": "e3622f975ff63d568933381ffab108181b9149259c78612386e3affcc480ed05",
+    "contribution/network_reduction/output_updates/verify.py": "f95e854699e770da114beec3c1ecb9c4ab26f06911b767cfdfb24ffea1a6aec2",
+    "contribution/network_reduction/study.py": "9dbd308114dae6480de564deac1260960417245ec95655ecf2144556ebf2a9d2",
+    "contribution/network_reduction/update_synthesis/AffineRetention.lean": "d79c53e212bd14b12c75438fa123e27d130f8832b53a5753f419dcdd8193e7c7",
+    "contribution/network_reduction/update_synthesis/NetworkRetention.lean": "fc4efc05bd12bc465d6e14736749eb6ccb4f4093d0690758e671493824a97229",
+    "contribution/network_reduction/update_synthesis/PLAN.md": "e40f038ddc204b3819971662109da6cf219c95ad66f1b636dff9bdb9b23c06cb",
+    "contribution/network_reduction/update_synthesis/README.md": "8fd305a2bd66ebaa6dc5944f42b94d13d7c00684a95f73702ea5225fa38a0b3b",
+    "contribution/network_reduction/update_synthesis/RationalFeatures.lean": "3c46b9bf84e6455b00dc2e8b5e59929e2fad80c98fad3ad25889859e1b1acee2",
+    "contribution/network_reduction/update_synthesis/examples/chain.json": "9055268f2f6846e13a8328adfedbcbc00fa68b5093f01bcafe39e5410a7482af",
+    "contribution/network_reduction/update_synthesis/examples/coupling.json": "1222e70153de9ad5733409a1e0e9d2f9798d6ee24b2177ef85f9a17ecbf38939",
+    "contribution/network_reduction/update_synthesis/examples/shifts.json": "32b4f41f4de919c28f2d3e606a6f94a8fc9c5ac59d548f42eadad9685e50e3eb",
+    "contribution/network_reduction/update_synthesis/experiment.py": "933a19d00358506f9b5c39e254e513441d318e3c57e43ecd162f18163cd8c585",
+    "contribution/network_reduction/update_synthesis/synthesize.py": "4f7f5cf7544140ea2c25ef84cb8d0dff4fb35c4cae552c895ae1494486528510",
+    "contribution/network_reduction/update_synthesis/verify.py": "b47e2c1baaa0b3be290c36381ea011a2ddd9318874d130f18e194514430caf6a",
+    "contribution/network_reduction/verify.py": "08b50c44c2410dd820f76526f5a0d79ea1a737073930052449a51ec74c5aaf5a",
+    "contribution/results/network_reduction_verification.json": "8cca1d09fdf019e1a418ef2dffc297cbdea8b4a64fc5de73626d9fb103ccd74a",
+    "contribution/results/output_update_verification.json": "6aa4cba939acaecc2ed19d30eb2d2331c6225c2bba32cf67b4923e21e76f2df7",
+    "contribution/universal/IntervalNetwork.lean": "be336900a150eeffb9feb49992f1a788dedea56a80319b05fc0c27536febd04e",
+    "lean/lake-manifest.json": "0f6a2f189439a5b6ac9653168b0e513c8129ec88af04f771b6a926773bab3420",
+    "lean/lakefile.lean": "d8e1d78b26d3253c33757657aa3c5986113271300a7fa4e34a3b7b08673606f8",
+    "lean/lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+  },
+  "calibration_data_sha256": "d0b84c0e372a25f7934953ae8adac8db08b7a3b241892a1aa697834f583acbf7",
+  "experiment": {
+    "cases": {
+      "Shifts": {
+        "retained": [
+          "a0",
+          "a2",
+          "bias"
+        ],
+        "rounds": [
+          [
+            0,
+            2,
+            4
+          ]
+        ],
+        "states": 38,
+        "words": 5,
+        "exact_replays": 190,
+        "masks_enumerated": 32,
+        "closed_supersets_of_seed": 4
+      },
+      "Coupling": {
+        "retained": [
+          "a0",
+          "a1",
+          "a2",
+          "bias"
+        ],
+        "rounds": [
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            1,
+            2,
+            4
+          ]
+        ],
+        "states": 38,
+        "words": 5,
+        "exact_replays": 190,
+        "masks_enumerated": 32,
+        "closed_supersets_of_seed": 2
+      },
+      "Chain": {
+        "retained": [
+          "a0",
+          "a1",
+          "a2",
+          "a3",
+          "bias"
+        ],
+        "rounds": [
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            1,
+            2,
+            4
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        "states": 38,
+        "words": 31,
+        "exact_replays": 1178,
+        "masks_enumerated": 32,
+        "closed_supersets_of_seed": 1
+      },
+      "Calibration": {
+        "retained": [
+          "a0",
+          "a2",
+          "bias"
+        ],
+        "rounds": [
+          [
+            0,
+            2,
+            4
+          ]
+        ],
+        "states": 39,
+        "words": 5,
+        "exact_replays": 195,
+        "masks_enumerated": 32,
+        "closed_supersets_of_seed": 4
+      }
+    },
+    "calibration": {
+      "data_path": "python_training/data/Training_Data_Normalised.csv",
+      "data_sha256": "d0b84c0e372a25f7934953ae8adac8db08b7a3b241892a1aa697834f583acbf7",
+      "physical_row": 1,
+      "input": [
+        "0",
+        "278920987755717/500000000000000",
+        "219006624136887/1000000000000000",
+        "1",
+        "0",
+        "937723896518927/1000000000000000"
+      ],
+      "target": "3/4",
+      "rate": "1/100",
+      "features": [
+        "0",
+        "0",
+        "7372742854876420737318625845299/4503599627370496000000000000000",
+        "0",
+        "1"
+      ],
+      "initial_head": [
+        "-7997113/16777216",
+        "-15367511/134217728",
+        "13762365/33554432",
+        "-11658517/16777216",
+        "8913047/134217728"
+      ],
+      "input_interpretation": "Exact decimal rationals from the published CSV, not binary32 parsing",
+      "loss": "One-half squared error of the pre-final-ReLU affine score",
+      "scope": "One illustrative calibration sample; no held-out accuracy or upstream retraining claim",
+      "before_score": "22300315401387052279175210036287674427/30223145490365729367654400000000000000",
+      "after_score": "45257809176213932120323158461473573754096368840620163167198885606436687238194682600364299472986181773/61299821634635554334333881086012367344749564887344087040000000000000000000000000000000000000000000000",
+      "before_score_approx": 0.7378555421538023,
+      "after_score_approx": 0.7383024610734334,
+      "before_loss": "134721089739360157711783249769202266627248010223488674461455319949778329/1826877046663628647754606040895353774569915678720000000000000000000000000000",
+      "after_loss": "514170812614435453996206953876909359899214369024849665733353619298949078797101113304095666424830202492780516585235834290504819823633195837338164920490861309507074526499317298509383372402201397423529/7515336264876266329246337909725878487602184156506623586263331108903068880366747019083836794831259849702191923200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "input_controls": {
+      "duplicate_coordinate": "REJECTED",
+      "unknown_seed": "REJECTED",
+      "unknown_destination": "REJECTED",
+      "unknown_source": "REJECTED",
+      "float_coefficient": "REJECTED",
+      "zero_denominator": "REJECTED",
+      "nonlinear_expression": "REJECTED"
+    },
+    "generated_audit_roots": [
+      "Contribution.Reduction.UpdateSynthesis.Shifts.computed",
+      "Contribution.Reduction.UpdateSynthesis.Shifts.kept_closed",
+      "Contribution.Reduction.UpdateSynthesis.Shifts.seed_retained",
+      "Contribution.Reduction.UpdateSynthesis.Shifts.packed_commutes",
+      "Contribution.Reduction.UpdateSynthesis.Shifts.packed_sequence",
+      "Contribution.Reduction.UpdateSynthesis.Shifts.minimal",
+      "Contribution.Reduction.UpdateSynthesis.Shifts.stable",
+      "Contribution.Reduction.UpdateSynthesis.Shifts.output_factors",
+      "Contribution.Reduction.UpdateSynthesis.Shifts.network_sequence",
+      "Contribution.Reduction.UpdateSynthesis.Coupling.computed",
+      "Contribution.Reduction.UpdateSynthesis.Coupling.kept_closed",
+      "Contribution.Reduction.UpdateSynthesis.Coupling.seed_retained",
+      "Contribution.Reduction.UpdateSynthesis.Coupling.packed_commutes",
+      "Contribution.Reduction.UpdateSynthesis.Coupling.packed_sequence",
+      "Contribution.Reduction.UpdateSynthesis.Coupling.minimal",
+      "Contribution.Reduction.UpdateSynthesis.Coupling.stable",
+      "Contribution.Reduction.UpdateSynthesis.Coupling.output_factors",
+      "Contribution.Reduction.UpdateSynthesis.Coupling.network_sequence",
+      "Contribution.Reduction.UpdateSynthesis.Chain.computed",
+      "Contribution.Reduction.UpdateSynthesis.Chain.kept_closed",
+      "Contribution.Reduction.UpdateSynthesis.Chain.seed_retained",
+      "Contribution.Reduction.UpdateSynthesis.Chain.packed_commutes",
+      "Contribution.Reduction.UpdateSynthesis.Chain.packed_sequence",
+      "Contribution.Reduction.UpdateSynthesis.Chain.minimal",
+      "Contribution.Reduction.UpdateSynthesis.Chain.stable",
+      "Contribution.Reduction.UpdateSynthesis.Chain.output_factors",
+      "Contribution.Reduction.UpdateSynthesis.Chain.network_sequence",
+      "Contribution.Reduction.UpdateSynthesis.Calibration.computed",
+      "Contribution.Reduction.UpdateSynthesis.Calibration.kept_closed",
+      "Contribution.Reduction.UpdateSynthesis.Calibration.seed_retained",
+      "Contribution.Reduction.UpdateSynthesis.Calibration.packed_commutes",
+      "Contribution.Reduction.UpdateSynthesis.Calibration.packed_sequence",
+      "Contribution.Reduction.UpdateSynthesis.Calibration.minimal",
+      "Contribution.Reduction.UpdateSynthesis.Calibration.stable",
+      "Contribution.Reduction.UpdateSynthesis.Calibration.output_factors",
+      "Contribution.Reduction.UpdateSynthesis.Calibration.network_sequence",
+      "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.sample_in_domain",
+      "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.features_match_checkpoint",
+      "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.features_erased",
+      "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.initial_head_bound",
+      "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.calibration_matrix",
+      "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.calibration_offset",
+      "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.actual_delta_rule",
+      "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.nontrivial_calibration",
+      "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.sample_loss_decreases",
+      "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.generated_state_dimension"
+    ]
+  },
+  "expected_roots": [
+    "Contribution.Reduction.AffineRetention.RR_preserved",
+    "Contribution.Reduction.AffineRetention.algebra_stable",
+    "Contribution.Reduction.AffineRetention.algebra_stable_run",
+    "Contribution.Reduction.AffineRetention.apply_factors",
+    "Contribution.Reduction.AffineRetention.closed_of_factors",
+    "Contribution.Reduction.AffineRetention.closed_of_grow_le",
+    "Contribution.Reduction.AffineRetention.factorization_iff_closed",
+    "Contribution.Reduction.AffineRetention.grow_card_lt",
+    "Contribution.Reduction.AffineRetention.grow_le",
+    "Contribution.Reduction.AffineRetention.project_extend",
+    "Contribution.Reduction.AffineRetention.run_factors",
+    "Contribution.Reduction.AffineRetention.stateSetoid",
+    "Contribution.Reduction.AffineRetention.subset_grow",
+    "Contribution.Reduction.AffineRetention.synthesis_minimal",
+    "Contribution.Reduction.AffineRetention.synthesize_spec",
+    "Contribution.Reduction.NetworkRetention.calibration_closed",
+    "Contribution.Reduction.NetworkRetention.calibration_mask",
+    "Contribution.Reduction.NetworkRetention.calibration_rule",
+    "Contribution.Reduction.NetworkRetention.chain_mask",
+    "Contribution.Reduction.NetworkRetention.chain_rejects_one_round",
+    "Contribution.Reduction.NetworkRetention.coupling_mask",
+    "Contribution.Reduction.NetworkRetention.coupling_no_seed_implementation",
+    "Contribution.Reduction.NetworkRetention.coupling_rejects_seed",
+    "Contribution.Reduction.NetworkRetention.head_certificate",
+    "Contribution.Reduction.NetworkRetention.output_factors",
+    "Contribution.Reduction.NetworkRetention.output_in_algebra",
+    "Contribution.Reduction.NetworkRetention.sequence_agreement",
+    "Contribution.Reduction.NetworkRetention.sequence_certificate",
+    "Contribution.Reduction.NetworkRetention.shifts_mask",
+    "Contribution.Reduction.RationalFeatures.dot_cast",
+    "Contribution.Reduction.RationalFeatures.hidden_cast",
+    "Contribution.Reduction.RationalFeatures.layer_cast",
+    "Contribution.Reduction.UpdateSynthesis.Calibration.computed",
+    "Contribution.Reduction.UpdateSynthesis.Calibration.kept_closed",
+    "Contribution.Reduction.UpdateSynthesis.Calibration.minimal",
+    "Contribution.Reduction.UpdateSynthesis.Calibration.network_sequence",
+    "Contribution.Reduction.UpdateSynthesis.Calibration.output_factors",
+    "Contribution.Reduction.UpdateSynthesis.Calibration.packed_commutes",
+    "Contribution.Reduction.UpdateSynthesis.Calibration.packed_sequence",
+    "Contribution.Reduction.UpdateSynthesis.Calibration.seed_retained",
+    "Contribution.Reduction.UpdateSynthesis.Calibration.stable",
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.actual_delta_rule",
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.calibration_matrix",
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.calibration_offset",
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.features_erased",
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.features_match_checkpoint",
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.generated_state_dimension",
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.initial_head_bound",
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.nontrivial_calibration",
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.sample_in_domain",
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.sample_loss_decreases",
+    "Contribution.Reduction.UpdateSynthesis.Chain.computed",
+    "Contribution.Reduction.UpdateSynthesis.Chain.kept_closed",
+    "Contribution.Reduction.UpdateSynthesis.Chain.minimal",
+    "Contribution.Reduction.UpdateSynthesis.Chain.network_sequence",
+    "Contribution.Reduction.UpdateSynthesis.Chain.output_factors",
+    "Contribution.Reduction.UpdateSynthesis.Chain.packed_commutes",
+    "Contribution.Reduction.UpdateSynthesis.Chain.packed_sequence",
+    "Contribution.Reduction.UpdateSynthesis.Chain.seed_retained",
+    "Contribution.Reduction.UpdateSynthesis.Chain.stable",
+    "Contribution.Reduction.UpdateSynthesis.Coupling.computed",
+    "Contribution.Reduction.UpdateSynthesis.Coupling.kept_closed",
+    "Contribution.Reduction.UpdateSynthesis.Coupling.minimal",
+    "Contribution.Reduction.UpdateSynthesis.Coupling.network_sequence",
+    "Contribution.Reduction.UpdateSynthesis.Coupling.output_factors",
+    "Contribution.Reduction.UpdateSynthesis.Coupling.packed_commutes",
+    "Contribution.Reduction.UpdateSynthesis.Coupling.packed_sequence",
+    "Contribution.Reduction.UpdateSynthesis.Coupling.seed_retained",
+    "Contribution.Reduction.UpdateSynthesis.Coupling.stable",
+    "Contribution.Reduction.UpdateSynthesis.Shifts.computed",
+    "Contribution.Reduction.UpdateSynthesis.Shifts.kept_closed",
+    "Contribution.Reduction.UpdateSynthesis.Shifts.minimal",
+    "Contribution.Reduction.UpdateSynthesis.Shifts.network_sequence",
+    "Contribution.Reduction.UpdateSynthesis.Shifts.output_factors",
+    "Contribution.Reduction.UpdateSynthesis.Shifts.packed_commutes",
+    "Contribution.Reduction.UpdateSynthesis.Shifts.packed_sequence",
+    "Contribution.Reduction.UpdateSynthesis.Shifts.seed_retained",
+    "Contribution.Reduction.UpdateSynthesis.Shifts.stable"
+  ],
+  "generated_sha256": {
+    "contribution/.build/update_synthesis/attempt-001/generated/Audit.lean": "b190d4ea76a34f53e58c845769dab5ca3839782732fca05e4c698768f1328501",
+    "contribution/.build/update_synthesis/attempt-001/generated/BadMask.lean": "5c3a8f3460dd6527950b9c364e6e4cba0e692a13d731a054179c8ab40167bc17",
+    "contribution/.build/update_synthesis/attempt-001/generated/BadPacked.lean": "f3448fce45bfd851c9c7f26ceb1a59a43f318526b2bbf33a3169b12f871394b0",
+    "contribution/.build/update_synthesis/attempt-001/generated/Calibration.json": "6fd767cf992f6e3c70175dfea6ea276cd50150a02232490e75947ed39d2840e7",
+    "contribution/.build/update_synthesis/attempt-001/generated/Calibration.lean": "f1f580d4a2b8a0578fbd6f916dcb3d0dd9f82f5565cf017c6e19e4897d2cd524",
+    "contribution/.build/update_synthesis/attempt-001/generated/Calibration.reduced.json": "8427569e5d08d5da5f7d16cd3cd18d51c97b7c7827c6b44ea3cafc41821a07a0",
+    "contribution/.build/update_synthesis/attempt-001/generated/CalibrationBinding.lean": "7cd104894225f93239e3ae33dde04ea5e5e5204dbcac9704a54f879bf17e4723",
+    "contribution/.build/update_synthesis/attempt-001/generated/Chain.json": "f37a291db2ebe31aa0eb0e08ddbcc253eedf7f79cf887d499fbd14ad1ab0f768",
+    "contribution/.build/update_synthesis/attempt-001/generated/Chain.lean": "c89b4eab52f2c11b5c7ea1459b511c0fc5c7c599487b0167fadc7af886d4809c",
+    "contribution/.build/update_synthesis/attempt-001/generated/Chain.reduced.json": "fd71f31bdb8af99de51b9aea239d73d5e7c6cc6b42518ccc961291120fadf901",
+    "contribution/.build/update_synthesis/attempt-001/generated/Coupling.json": "d091e1c1d48f9e34e6087525851eed40f3603da2ccaeaf9bdcee395615ee3dfc",
+    "contribution/.build/update_synthesis/attempt-001/generated/Coupling.lean": "0eb014aa807e46809515f2ea7815af4fb6ef7593d424da21beccc813d7baa17d",
+    "contribution/.build/update_synthesis/attempt-001/generated/Coupling.reduced.json": "53e6178ed3d02c7577366d3c225426cfa8da7172fe663f0679f60a722f0eec3b",
+    "contribution/.build/update_synthesis/attempt-001/generated/Shifts.json": "a8788a6c1e8eebfbd0f7fe51ae85bb33edbb2b1efe74e90d26f3088f64351501",
+    "contribution/.build/update_synthesis/attempt-001/generated/Shifts.lean": "f8e6960ca771c69f6a179d218c82f296b9077a138e6d73333cda54ed7b0de005",
+    "contribution/.build/update_synthesis/attempt-001/generated/Shifts.reduced.json": "1c0b06c5cda3f2973d4d6522c2479e9f99f02172f20f0a68f4f1137891c1b17c",
+    "contribution/.build/update_synthesis/attempt-001/generated/calibration_witness.json": "1db301900f407c3612e1f97cfebacffbc97a259f670773f3b4c08107bf243896"
+  },
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "axiom_audit": {
+    "Contribution.Reduction.AffineRetention.subset_grow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.AffineRetention.grow_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.AffineRetention.closed_of_grow_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.AffineRetention.grow_card_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.AffineRetention.synthesize_spec": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.AffineRetention.project_extend": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.AffineRetention.apply_factors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.AffineRetention.closed_of_factors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.AffineRetention.factorization_iff_closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.AffineRetention.synthesis_minimal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.AffineRetention.run_factors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.AffineRetention.RR_preserved": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.AffineRetention.algebra_stable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.AffineRetention.algebra_stable_run": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.NetworkRetention.head_certificate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.NetworkRetention.output_factors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.NetworkRetention.output_in_algebra": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.NetworkRetention.sequence_agreement": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.NetworkRetention.sequence_certificate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.NetworkRetention.shifts_mask": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.NetworkRetention.coupling_mask": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.NetworkRetention.chain_mask": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.NetworkRetention.coupling_rejects_seed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.NetworkRetention.chain_rejects_one_round": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.NetworkRetention.coupling_no_seed_implementation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.NetworkRetention.calibration_rule": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.NetworkRetention.calibration_closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.NetworkRetention.calibration_mask": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.RationalFeatures.dot_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.RationalFeatures.layer_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.RationalFeatures.hidden_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.AffineRetention.stateSetoid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Shifts.computed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Shifts.kept_closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Shifts.seed_retained": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Shifts.packed_commutes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Shifts.packed_sequence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Shifts.minimal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Shifts.stable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Shifts.output_factors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Shifts.network_sequence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Coupling.computed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Coupling.kept_closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Coupling.seed_retained": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Coupling.packed_commutes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Coupling.packed_sequence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Coupling.minimal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Coupling.stable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Coupling.output_factors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Coupling.network_sequence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Chain.computed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Chain.kept_closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Chain.seed_retained": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Chain.packed_commutes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Chain.packed_sequence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Chain.minimal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Chain.stable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Chain.output_factors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Chain.network_sequence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Calibration.computed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Calibration.kept_closed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Calibration.seed_retained": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Calibration.packed_commutes": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Calibration.packed_sequence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Calibration.minimal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Calibration.stable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Calibration.output_factors": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.Calibration.network_sequence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.sample_in_domain": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.features_match_checkpoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.features_erased": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.initial_head_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.calibration_matrix": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.calibration_offset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.actual_delta_rule": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.nontrivial_calibration": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.sample_loss_decreases": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.Reduction.UpdateSynthesis.CalibrationBinding.generated_state_dimension": [
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "audited_roots": 78,
+  "inputs_unchanged": true,
+  "seconds": 73.90588112501428,
+  "finished_utc": "2026-11-06T06:48:21.709951+00:00",
+  "export_metadata": {
+    "kind": "Path-normalized copy of an actual completed isolated-checkout replay",
+    "raw_receipt_sha256": "d038dac5569b9a08ce3167dc695a5dab4e6f338a1141ec6228d3fed537ee44c8",
+    "normalized_path_prefixes": [
+      "<CHECKOUT>",
+      "<UPSTREAM>",
+      "<HOME>"
+    ],
+    "unchanged_evidence": "Proof/source/checkpoint/log digests, audit results, exit codes and measured values are unchanged.",
+    "raw_record_location": "Retained with the local replay artifacts; raw machine paths are not included in the shared snapshot.",
+    "predecessor_policy": "Each stage ran after predecessor records had been normalized; its recorded predecessor hashes bind those exact shared bytes."
+  }
+}

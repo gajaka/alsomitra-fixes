@@ -4,6 +4,20 @@ This directory contains exploratory Lean models, executable checkers, and
 verification scripts for Alsomitra properties. The minimal upstream bug fix
 is documented separately at the repository root.
 
+## Certified network reduction
+
+Start with [Can a Smaller Network Keep Its Promise?](network_reduction/NETWORK_REDUCTION.pdf),
+an example-led guide with explicit input/output requirements, concrete states,
+RR and the observable subalgebra. The [source and reproduction guide](network_reduction/README.md)
+links the Lean proofs, checkpoint adapters and recorded checks.
+
+Two published DL2/Gödel checkpoints satisfy the stated robustness implication
+for all permitted real input pairs. Exact reduction preserves that guarantee
+and reduces each model from 2,561 to 2,522 parameters. Separate examples cover
+Baseline/Adversarial reductions and counterexamples, compatible parameter
+updates, momentum-state reduction and an equal-history RMSProp invariant.
+The guide distinguishes these claims from finite float32 execution checks.
+
 ## Specification compilation
 
 The [spec_compiler experiment](spec_compiler/README.md) proves preservation of
