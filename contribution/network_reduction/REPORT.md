@@ -4,6 +4,12 @@
 
 Worked guide • revised 7 November 2026
 
+**Four questions guide this work:**\
+*What exactly is the question?*\
+*What is assumed?*\
+*Which step brings a new insight?*\
+*What has actually been proved?*
+
 Imagine two almost identical measurements arriving at a drone's controller.
 We want the resulting commands to remain close. We begin by proving that
 precise requirement on two published networks, then make the networks
@@ -29,16 +35,19 @@ Keep enough information | Determine which observations support the allowed futur
 Restore a requirement | Compose a fitted core with a proved correction block, then check quality and reduction.
 ```
 
-These questions organize the guide. Lean checks the mathematical arguments
-at each stage. The examples use different saved models: DL2/Gödel for the
-opening robustness result, and Adversarial for the view and repair studies.
-Each transition names what is retained, what changes and which guarantee
-has actually been established. Sections 10–12 bring the repair into the
-main story; Appendix E gives its complete mathematical workflow.
+At each stage, we return to the four opening questions: state the problem,
+name the assumptions, explain the decisive step, then identify what Lean
+actually checks. DL2/Gödel supply the opening robustness result; Adversarial
+supplies the view and repair studies. A successful step also reveals the
+next question. Sections 10–12 develop the repair; Appendix E follows its
+mathematical workflow all the way to the checked statements.
 
 <!-- pagebreak -->
 
 ## 1. The promise, stated explicitly
+
+**What exactly is the question?** Can every sufficiently small change in
+the six inputs be guaranteed to produce a small change in the command?
 
 A **checkpoint** is a saved set of learned network parameters. Here the
 network takes six normalized real numbers and produces one scalar command.
@@ -74,8 +83,9 @@ The theorem guarantees Q for this pair and for every other permitted pair.
 | DL2 | 0.1 | 0.031 |
 | Gödel | 0.1 | 0.026 |
 
-The names identify two archived model files. Their proofs cover all
-permitted input pairs, including pairs absent from the training data.
+**What is assumed?** The weights are those of the two named checkpoints,
+arithmetic is over the reals, and the inputs satisfy P. Within that scope,
+the proofs cover every permitted pair, including pairs absent from training.
 
 <!-- pagebreak -->
 
@@ -99,7 +109,7 @@ different inputs strictly inside the cube satisfy it. Lean checks such a
 witness explicitly. This is called **nonvacuity**. It prevents a statement
 from appearing successful merely because its input condition is impossible.
 
-### Where the bound comes from
+### The key step: bound every possible input difference
 
 A network combines weighted sums with activation functions. A weight
 scales a signal; a bias adds a constant. In these models the hidden
@@ -133,10 +143,11 @@ separate task from bounding sensitivity.
 
 ## 3. Removing a neuron without changing the answer
 
-A hidden neuron first computes a weighted sum plus a bias. Call this
-number its **preactivation**. ReLU then produces the neuron's activation.
-If we prove that the preactivation is never positive on the whole input
-domain, this neuron always contributes zero.
+**The question now is:** can we delete computation and keep the proved
+promise? We keep the checkpoint weights, real arithmetic and unit cube
+fixed. A hidden neuron's weighted sum plus bias is its
+**preactivation**. If that value is never positive on the domain, ReLU
+makes its contribution zero everywhere.
 
 For **both DL2 and Gödel**, the first hidden layer's neuron 58, counting
 from zero, has the following checked upper bound:
@@ -145,8 +156,8 @@ $$
 z_{58}(x)\leq \frac{-9057167}{134217728}<0\qquad (x\in[0,1]^6).
 $$
 
-The upper bound is approximately −0.06748, so its activation is always
-zero. Whether an outgoing weight is 7,
+**The key step** is the domain-wide bound, approximately −0.06748.
+It establishes a zero activation for every permitted input. Whether an outgoing weight is 7,
 −4 or a very small fraction, its contribution is that weight multiplied
 by zero. Removing the neuron and its outgoing terms leaves the later
 weighted sums unchanged.
@@ -177,21 +188,18 @@ Prove exact reduction | The smaller network agrees with the original at every in
 Substitute at both inputs | Replace N(x) and N(y) by the smaller network's equal outputs.
 ```
 
-Therefore the smaller network satisfies the same implication, including
-the stronger 0.031 and 0.026 bounds. There is no new search over input
-pairs at this transfer step: equality transports the existing guarantee.
-
-That answers the question for a fixed checkpoint. To reason about later
-changes, we must separate the evidence for equal outputs from the evidence
-that those outputs meet the requirement.
+**What has actually been proved?** Exact output equality and, by
+substitution, the same implication for the smaller network, including
+the stronger 0.031 and 0.026 bounds. Equality transports the guarantee
+without another search over input pairs.
 
 <!-- pagebreak -->
 
 ## 4. Two certificates answer different questions
 
-The preceding result needs two independent pieces of evidence. One says
-that the original network satisfies the promise. The other says that
-making it smaller preserves its outputs.
+Before allowing changes, ask **which assumptions each proof needs**.
+One certificate establishes the output promise; another establishes that
+deletion preserves outputs. They answer different questions:
 
 | Certificate | What it checks | What it allows us to conclude |
 | --- | --- | --- |
@@ -245,11 +253,11 @@ what happens to information that no longer contributes to evaluation?
 
 ## 5. What are the state, the view and RR?
 
-Removing a zero activation makes some weights irrelevant to the current
-answer. We now ask whether a representation that forgets those weights
-can still support future parameter changes. To keep every step visible,
-this part uses the **Adversarial model's certified hidden layers**, held
-fixed. It is a separate example from the positive DL2/Gödel property above.
+**What exactly is the question?** Can we forget weights irrelevant to
+today's answer and still perform tomorrow's parameter updates?
+**Our assumptions change:** this study uses the **Adversarial model's
+certified hidden layers**, held fixed, with rational output parameters
+and real inputs in the cube. It is separate from the DL2/Gödel result.
 
 Its second hidden layer has activations `(h₀(x), 0, h₂(x), 0)` on the
 cube. Here h₀(x) and h₂(x) are the surviving neurons' values, computed
@@ -324,7 +332,7 @@ impossibility using the same pattern, with even smaller numeric witnesses.
 The hidden neurons still contribute zero, so their pruning certificate
 remains valid. What fails is the ability to update using only the view.
 
-### The condition that makes an update compatible
+### The key step: both routes must give the same view
 
 Let **T** be an update on full states and **T̄** its proposed reduced
 implementation. Compatibility means that these two routes agree:
@@ -414,11 +422,11 @@ changed, but it is still computable from retained information. A
 For any observable H in it, H after an update is still a function of
 the old view, via the reduced update.
 
-That is the connection: **RR groups indistinguishable states; the
-subalgebra describes the quantities they agree on; compatible updates
-preserve our ability to calculate those quantities.** Stability does
-not say that outputs stay constant or that an earlier robustness bound
-automatically remains true.
+**What has actually been proved?** RR groups states with the same view;
+the subalgebra describes what that view determines. Under the specified
+compatible updates, full and reduced execution agree after every finite
+sequence, and the subalgebra stays stable. Outputs may change: preserving
+this correspondence does not establish a new robustness bound.
 
 For a learning rule, the next question is what else belongs in the state.
 The following examples show why the optimizer's memory matters too.
@@ -427,11 +435,11 @@ The following examples show why the optimizer's memory matters too.
 
 ## 8. Learning adds memory to the state
 
-An **optimizer** is a rule for changing parameters to reduce a loss,
-which is a numerical measure of error or another chosen objective.
-A **gradient** describes how the loss changes with each parameter.
-Many optimizers also keep memory of previous steps. A state sufficient
-for inference may therefore be insufficient for continued learning.
+**What must we retain for learning to continue?** An **optimizer** changes
+parameters to reduce a **loss**, a numerical measure of error or another
+objective. A **gradient** describes how the loss changes with each
+parameter. Optimizers can also remember earlier steps, so parameters
+alone may no longer describe the state adequately.
 
 For **momentum**, let a be one parameter and v its stored update memory.
 With current gradient g, momentum factor μ and step size η, our convention is:
@@ -447,10 +455,10 @@ parameter unless the memory is also known.
 
 ### Sometimes a sum is enough
 
-The checked Adversarial-head experiment has five parameters and five
-momentum values: ten scalar coordinates. We specify an update with an
-extra loss term coupling a₀, a₁ and a₃ through their sum. This is a
-chosen experiment, not a reconstruction of the authors' training rule.
+**The assumptions here** are fixed Adversarial hidden features and a
+specified momentum update with a loss term coupling a₀, a₁ and a₃ through
+their sum. Its five parameters and five momentum values form a ten-value
+state. This chosen rule does not reconstruct the authors' training.
 
 Individual coordinates would force us to keep all ten. A **linear
 observation** is a sum or weighted sum of coordinates. Such observations
@@ -465,9 +473,10 @@ sum **18**. Likewise, momentum pairs `(4, 6)` and `(3, 7)` both give
 **10**. With the other coordinates equal, the eight-value view cannot
 distinguish these full states, and the specified updates do not need to.
 
-An exact calculation produces a candidate view and reduced update rule.
-Lean then checks that they agree with full execution. For the concrete
-coupled instance it also proves that eight is minimal among invariant
+**The key step is to retain sums, then derive their updates.** An exact
+calculation proposes the view and rule; Lean checks agreement with full
+execution. **The proved minimum is specific:** for the concrete
+coupled instance, eight is minimal among invariant
 linear observation spaces retaining the required output coordinates.
 Here **invariant** means the space remains sufficient after each allowed
 update: no new independent observation is needed to determine the next view.
@@ -499,7 +508,7 @@ $$
 r_i'=\frac{r_i+g_i^2}{2},\qquad a_i'=a_i-\frac{g_i}{\sqrt{r_i'}+1}.
 $$
 
-Can we keep only the sum of two histories, as we kept sums for momentum?
+**The question:** can we keep only the sum of two histories, as for momentum?
 The full state now contains the five head parameters and five histories.
 The proposed view is `(a₀, a₁+a₃, a₂, b, r₀, r₁+r₃, r₂, r_b)`:
 it keeps the head observations and replaces momentum by history observations.
@@ -515,7 +524,7 @@ The old view is identical, but the new weight sums differ. The separate
 square roots make the distribution of history matter. Lean proves that
 no deterministic update on this view works for **all nonnegative histories**.
 
-### A stronger assumption makes the same view sufficient
+### The key step: justify a stronger assumption
 
 Suppose the paired histories start equal. In this model their gradients
 always agree, so their new histories also agree. This is an **invariant**:
@@ -530,7 +539,7 @@ $$
 R'=\frac{R+2g^2}{2},\qquad u'=u-\frac{2g}{\sqrt{R'/2}+1}.
 $$
 
-Lean proves this rule correct on the invariant equal-history states,
+**What has actually been proved?** This rule is correct on equal-history states,
 including every finite permitted input sequence. RR and the stable
 subalgebra are defined on that restricted state space. The failing
 `(1, 97)` witness cannot occur from equal histories under these rules.
@@ -546,11 +555,11 @@ have preserved needs to change?
 
 ## 10. From preserving an answer to repairing it
 
-Return to the Adversarial checkpoint whose reduction preserved a
-directional failure. The task now is to produce different answers where
-the requirement demands them, while retaining useful predictions. Write
-d(x) for the physical position sum X + Y recovered from the six normalized
-inputs. The selected requirements are:
+**The question changes:** can we meet the directional requirements that
+the Adversarial checkpoint violates while retaining useful predictions?
+We assume real inputs in the unit cube and the exact physical normalization in
+Appendix E. Write d(x) for the resulting position sum X + Y. The two
+requirements for the complete controller F are:
 
 $$
 d(x)\geq2\Rightarrow F(x)\geq\frac{1}{2},\qquad
@@ -562,7 +571,7 @@ robustness requirement proved for DL2/Gödel. At the zero input, for example,
 d is about -41.19898449 and the original Adversarial output is about
 1.36078430. That violates the second implication on the stated cube.
 
-### Let the core propose; let the block enforce the requirement
+### The key step: guarantee the correction for every proposal
 
 For each input, construct an interval of outputs that satisfy the selected
 directional requirement. When d is at least 2, the interval has lower
@@ -593,11 +602,11 @@ F_\theta=R_{64}\circ H_\theta,\qquad
 F_\theta(x)=R_{64}(x,N_\theta(x)).
 $$
 
-The subscript 64 fixes the interval's transition slope. The proof permits
-every real proposal z, so the complete controller satisfies the two
-implications for any core parameters. For a concrete reference row with
-d about 2.070171, the fitted core proposes 0.369787 and the block returns
-0.5. A proposal already inside the interval passes through unchanged.
+The subscript 64 fixes the interval's transition slope. **The proved
+result** covers every real proposal z, so the two implications hold for
+any core parameters. At a reference row with d about 2.070171, the core
+proposes 0.369787 and the block returns 0.5. Proposals inside the interval
+pass unchanged. Prediction quality remains a separate question.
 
 <!-- pagebreak -->
 
@@ -651,9 +660,10 @@ and the reference predictions of the full repaired version. Its core has
 the complete small repaired graph has 13, compared with 17 for the full
 repaired graph and 11 for the old unrepaired network.
 
-The fitted core supplies the predictions, the block enforces the selected
-requirement, and equality justifies the reduction. Appendix E follows
-every formula to its code and checked theorem.
+**What has actually been proved?** The frozen smaller controller meets
+both directional implications everywhere in the cube and passes the exact
+reference-error comparisons on the 360 rows. Equality preserves the full
+repaired controller's predictions. Appendix E identifies each theorem.
 
 <!-- pagebreak -->
 
@@ -693,13 +703,13 @@ asserting a single theorem about all these systems at once.
 
 ### A concrete question for the next collaboration
 
-**Which additional controller requirement should remain true while the
-repaired core is adapted?** With the same proved block, the selected
-directional implications already hold independently of the core weights.
-Preserving useful reference behavior, other output properties and an
-executable reduced update rule would require their own acceptance checks
-or invariants. That is where the repair and stable-view studies could meet
-in a further verified experiment.
+**The question:** which additional requirement should survive adaptation
+of the repaired core? **The assumptions** must specify the allowed inputs
+and updates. **The missing step** is a view that supports both the repair
+and those updates. **The proof to seek** is a correspondence theorem plus
+preservation of the chosen requirements. The existing block already
+enforces the two directional implications; useful reference behavior and
+new properties need their own checks. This is a proposed next experiment.
 
 Before choosing that experiment, we should distinguish the mathematical
 network from its numerical execution and from the physical system it
@@ -764,10 +774,10 @@ themselves promise lower latency on a particular processor. A controller's
 flight behavior also depends on sensing, normalization, actuator dynamics
 and the physical system, which are outside the network theorem.
 
-This separates three kinds of evidence a collaborator can examine:
-**mathematical guarantees**, **finite execution checks**, and **the
-remaining application evaluation**. The appendices locate each artifact
-without requiring the reader to work through every proof file first.
+Returning to **what has actually been proved** separates three kinds of
+evidence: real-arithmetic theorems, finite execution checks, and application
+questions still to evaluate. A collaborator can use the appendices to
+trace each claim to its assumptions, artifact and checked statement.
 
 <!-- pagebreak -->
 
@@ -896,10 +906,10 @@ rational-head evaluation theorem.
 
 ## Appendix C. Where the claims are checked
 
-Lean's **kernel** checks that a proof establishes its stated theorem.
-The theorem's definitions and assumptions still determine its meaning.
-The local checkers reject invalid certificates; the Python programs
-that propose bounds or reductions are not trusted to establish a theorem.
+To answer **what has actually been proved**, follow each claim to its
+theorem and assumptions below. Lean's **kernel** checks the proof against
+that statement. Local checkers reject invalid certificates; Python
+programs that propose bounds or reductions do not establish a theorem.
 
 | Claim in this guide | File and named result |
 | --- | --- |
@@ -999,13 +1009,14 @@ python contribution/network_reduction/build_report.py
 
 ## Appendix E. Mathematical workflow of controller repair
 
-This appendix explains the complete method behind the [worked repair
-example](../model_repair/directed_repair/README.md) introduced in Sections
-10–12. It expands the composition step by step, from allowed outputs to
-the fitted and certified smaller controller. Experiments helped
-select the construction and its parameters. Its universal guarantee comes
-from a proof about the correction operator; its reference-quality claim
-comes from an exact check of the frozen candidate on the supplied data.
+This appendix follows the four questions through the [worked repair
+example](../model_repair/directed_repair/README.md). **The question and
+assumptions** become an exact domain, normalization and contract in E.1–E.2.
+**The decisive step**, E.3–E.5, is a correction that works for every core
+proposal. E.6–E.8 explain fitting, freezing and reduction. **What was
+actually proved** appears in E.9–E.10 as the combined statement and its
+code locations. Experiments select a candidate; proofs establish its
+universal contract and exact checks establish its reference quality.
 
 The starting object is the published **Adversarial** controller. The result
 is a fitted neural core followed by an explicit correction block. The
@@ -1353,8 +1364,10 @@ that the repaired graph is smaller than the original unrepaired network.
 
 ### E.9. The combined result and its scope
 
-Writing F_small for the frozen small core plus block, the final theorem
-establishes all four of these clauses together:
+**What has actually been proved at the end of this workflow?** For
+F_small, the frozen small core plus block, the final theorem establishes
+all four clauses below. The first two cover the whole input domain; the
+last two compare errors on the fixed reference data:
 
 $$
 \forall x\in D,\qquad d(x)\geq2\ \Longrightarrow\ F_{\mathrm{small}}(x)\geq\frac{1}{2}.
