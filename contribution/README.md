@@ -4,6 +4,17 @@ This directory contains exploratory Lean models, executable checkers, and
 verification scripts for Alsomitra properties. The minimal upstream bug fix
 is documented separately at the repository root.
 
+## Verified controller repair
+
+The [repair walkthrough](model_repair/directed_repair/README.md) follows an
+initial violation through fitting, an explicit six-ReLU output correction,
+universal directional proofs and exact reference-quality checks. Initial and
+final ASCII networks and a step-by-step code/definition/check table make the
+construction reviewable. Its 3.73% lower MSE is measured on the 360 fitting
+rows. The directional guarantee applies to the complete core-plus-block
+controller. [Reproduction commands](model_repair/README.md) verify the frozen
+candidate without retraining.
+
 ## Certified network reduction
 
 Start with [Can a Smaller Network Keep Its Promise?](network_reduction/NETWORK_REDUCTION.pdf),

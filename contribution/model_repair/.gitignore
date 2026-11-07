@@ -1,0 +1,8 @@
+# Downloaded upstream material and mutable experiments stay local.
+/upstream/
+/work/
+/.downloads/
+/results/
+/.venv*/
+/INPUTS.local.json
+/inputs/

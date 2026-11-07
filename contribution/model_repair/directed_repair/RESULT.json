@@ -1,0 +1,828 @@
+{
+  "status": "PASS",
+  "timestamp_utc": "2026-11-07T07:15:38.425496+00:00",
+  "attempt": "contribution/.build/directed_repair/attempt-002",
+  "scope": "Expanded core-plus-projection controller: universal Above/Below and exact reference quality",
+  "fresh_proof_run": true,
+  "second_kernel_run": false,
+  "architecture_changed": true,
+  "lean_build": {
+    "Property2": {
+      "returncode": 0,
+      "seconds": 12.628837292,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/Property2.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/Property2.lean"
+      ],
+      "source_sha256": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "8dc4e9bd6d8b3b8efe5c1c227841acb4bf86e0efa9d1806df5d8cadb8f422d0e"
+    },
+    "Float32": {
+      "returncode": 0,
+      "seconds": 4.139745084000001,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/Float32.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/Float32.lean"
+      ],
+      "source_sha256": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "b51207c64e661a1ec742f77b2a7f207e3763fb6b5f5494664c3dfd977dec77c6"
+    },
+    "IntervalNetwork": {
+      "returncode": 0,
+      "seconds": 4.469476958000001,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/universal",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/IntervalNetwork.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/universal/IntervalNetwork.lean"
+      ],
+      "source_sha256": "be336900a150eeffb9feb49992f1a788dedea56a80319b05fc0c27536febd04e",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "54d432269129a847106c29fff29344e328b8398241d32da0a21adff1f958b245"
+    },
+    "Pruning": {
+      "returncode": 0,
+      "seconds": 4.228534,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/Pruning.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction/Pruning.lean"
+      ],
+      "source_sha256": "622185c41b15df39ede096071f85deea4b3099246117665832500bb5e6467364",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "55ef6450ebfaf47891937343f6d338ad673d5e88de7dfee3b995957e88ea5107"
+    },
+    "Baseline": {
+      "returncode": 0,
+      "seconds": 4.310945415999999,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/Baseline.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction/Baseline.lean"
+      ],
+      "source_sha256": "52b014b27ebce87dbb8625a7bbcfc91c66f1ebcb91f94b7079f7be79be9bd501",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "56a9201e900257fba78b26f5f3ad8cc5eaa9135e12dc327670c05bf11431b25c"
+    },
+    "Adversarial": {
+      "returncode": 0,
+      "seconds": 4.285046166999997,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/Adversarial.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction/Adversarial.lean"
+      ],
+      "source_sha256": "1e9a96b5c7245895a11306e0602536299090c308bad347e6068d176c48e3e3a6",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "00705946a02ebebe27f07f54b8f3ca22ac161a6e39585fd285e638e6e3da14ca"
+    },
+    "OutputUpdates": {
+      "returncode": 0,
+      "seconds": 4.195874083999996,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction/output_updates",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/OutputUpdates.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction/output_updates/OutputUpdates.lean"
+      ],
+      "source_sha256": "e3622f975ff63d568933381ffab108181b9149259c78612386e3affcc480ed05",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "2a96316dcd66a5a5d5bf2327e832338f640f700ece2c2d4e32d7fde1479c0480"
+    },
+    "AffineRetention": {
+      "returncode": 0,
+      "seconds": 4.164615999999995,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction/update_synthesis",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/AffineRetention.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction/update_synthesis/AffineRetention.lean"
+      ],
+      "source_sha256": "d79c53e212bd14b12c75438fa123e27d130f8832b53a5753f419dcdd8193e7c7",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "c7157eb6e3b9d8f4182657c0acd6f2c63df4edfb885abce2578843dd3410dbc5"
+    },
+    "NetworkRetention": {
+      "returncode": 0,
+      "seconds": 4.2249706250000045,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction/update_synthesis",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/NetworkRetention.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction/update_synthesis/NetworkRetention.lean"
+      ],
+      "source_sha256": "fc4efc05bd12bc465d6e14736749eb6ccb4f4093d0690758e671493824a97229",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "a1d598b838a6abaa959073c5b755377f2b242c8c99ade6937576ae1b1952b9f9"
+    },
+    "MomentumQuotient": {
+      "returncode": 0,
+      "seconds": 35.867764,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction/linear_observations",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/MomentumQuotient.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction/linear_observations/MomentumQuotient.lean"
+      ],
+      "source_sha256": "669129977abc022669946fda9e35089ee922e8c45d6b3b522abf014fbd192267",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "50a822cce8c6bd30c4d6a08e09d9e2abe440e08f7b742afe206f61d1d881fb8b"
+    },
+    "RationalFeatures": {
+      "returncode": 0,
+      "seconds": 4.189202332999997,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction/update_synthesis",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/RationalFeatures.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction/update_synthesis/RationalFeatures.lean"
+      ],
+      "source_sha256": "3c46b9bf84e6455b00dc2e8b5e59929e2fad80c98fad3ad25889859e1b1acee2",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "e310c052abbba879d6a93b2ff7df40a32a37cd9ed079c7e8b66e33590a54b67f"
+    },
+    "PropertyTransfer": {
+      "returncode": 0,
+      "seconds": 4.209659042000013,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction/property_transfer",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/PropertyTransfer.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction/property_transfer/PropertyTransfer.lean"
+      ],
+      "source_sha256": "964ffb0469e971ba396eb12d365ce342e13a0279420d4a65816d5437e02b31dc",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "9d67ae9eb04fc21ba513a2d6f1cbe8762d930e8e8c925745ea832b6dce317324"
+    },
+    "ExactEvaluation": {
+      "returncode": 0,
+      "seconds": 3.93647029200001,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction/property_decision",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/ExactEvaluation.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/network_reduction/property_decision/ExactEvaluation.lean"
+      ],
+      "source_sha256": "21d95d7f4d5c28809edbf622536bcb234ec2d7563fa5e87dea17d2c8074c203f",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "c6153466552544d8c1fc6f7b73cb55d6d1051acccbd101c306214888adcc99d5"
+    },
+    "ProjectionRepair": {
+      "returncode": 0,
+      "seconds": 4.145105541999996,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/model_repair/directed_repair",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/ProjectionRepair.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/model_repair/directed_repair/ProjectionRepair.lean"
+      ],
+      "source_sha256": "8f1e8b89ff16fe67f4986dfbb6d1dc35176387026dec7917e2ef57ad5f13cc40",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "8cc565e7df43c7c7d1ed09725b6b78b514d29e7fdb03e4bdc79ffd88fda40304"
+    },
+    "RepairedCore": {
+      "returncode": 0,
+      "seconds": 4.079805582999995,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/model_repair/directed_repair",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/RepairedCore.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/model_repair/directed_repair/RepairedCore.lean"
+      ],
+      "source_sha256": "1aa363fe23a5d86a7ad84785be8d39e9284cea1009f7616b32ff9a7d1241e309",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "919178ab3b7370728a154a4f47e916b7151b4f16442e4e9edb3bdf97eb2533e6"
+    },
+    "RepairNetwork": {
+      "returncode": 0,
+      "seconds": 4.081638791000003,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/model_repair/directed_repair",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/RepairNetwork.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/model_repair/directed_repair/RepairNetwork.lean"
+      ],
+      "source_sha256": "0baa77f6f8f94546716ba978c0ca4431b733cd23c51be765dad3daf1be6cdaa0",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "e10de37ed79d8dc3bb3f03ee4edd2afb452ea8b3b8c4a5067cfab5aa8ac18743"
+    },
+    "RepairReference": {
+      "returncode": 0,
+      "seconds": 22.38615829199999,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/model_repair/directed_repair",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/RepairReference.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/model_repair/directed_repair/RepairReference.lean"
+      ],
+      "source_sha256": "4e6d24988fb37365ee187df11738e0e2f7a8789c5c5f36680d05cce225c0bab0",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "330ba24d232fe5ec9713c21e76dd3a70ebe17794d11958e124c23581e097f324"
+    },
+    "RepairResult": {
+      "returncode": 0,
+      "seconds": 4.2238310420000005,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/model_repair/directed_repair",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/RepairResult.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/sources/contribution/model_repair/directed_repair/RepairResult.lean"
+      ],
+      "source_sha256": "81246177e5793a2c016a953ff76565938d7f6454f24efca14132d74589d97d8d",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "olean_sha256": "a3d211608de22228b1055d5f3e449cdf807ec8050ecdef22ea5b7f7fc0ff349e"
+    },
+    "Audit": {
+      "returncode": 0,
+      "seconds": 4.006196500000016,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/generated",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/Audit.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/generated/Audit.lean"
+      ],
+      "source_sha256": "3efd3a9f5a81e48a1fb9a4ea91cc084ee6650cecdb7f24269f2245f2285b1d90",
+      "log_sha256": "0ce7c0979505250734a0e631093ba89c1b642cb3ec96108cd0a2ce8dfe37d9d9",
+      "olean_sha256": "5b7d5008d401ba86485d0ccb9610b020e9e3c3b9cd0291378720ec834d38d378"
+    }
+  },
+  "negative_controls": {
+    "ReversedSlope": {
+      "returncode": 1,
+      "seconds": 3.9765657920000024,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/generated",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/ReversedSlope.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/generated/ReversedSlope.lean"
+      ],
+      "source_sha256": "9ba5124305bcb36baf24400bf009ba98ffe77af884d3ec813962a11838ab34a2",
+      "log_sha256": "210771a3b25f40e58651c1c677fb4aed7c118b2cd6dd5df951c57f7ca0602517",
+      "status": "REJECTED"
+    },
+    "OriginalBelowFailure": {
+      "returncode": 1,
+      "seconds": 3.9782095829999946,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/generated",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/OriginalBelowFailure.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/generated/OriginalBelowFailure.lean"
+      ],
+      "source_sha256": "c423e14276b0dec7b5b7b1397d18b98251ef8b964c06b1abb1928b0946b8878d",
+      "log_sha256": "065a057379489c557f406fdf6cc6f3eea4d2bce4b02d55d396cec6b7d75067c4",
+      "status": "REJECTED"
+    },
+    "ConstantQualityFailure": {
+      "returncode": 1,
+      "seconds": 4.1184346670000025,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/generated",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/ConstantQualityFailure.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/generated/ConstantQualityFailure.lean"
+      ],
+      "source_sha256": "6c655b4d500a52403a0edfcb22701239b1fe58b45fa794713f58e358b3fb3678",
+      "log_sha256": "c0818d2595093ab5630da7194de0a45cd5da95bca7d52a24a24b7efd85e6fdd0",
+      "status": "REJECTED"
+    },
+    "BadPruning": {
+      "returncode": 1,
+      "seconds": 4.127493250000015,
+      "command": [
+        "/Users/gajaka/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lake",
+        "env",
+        "lean",
+        "-j",
+        "1",
+        "-R",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/generated",
+        "-o",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/BadPruning.olean",
+        "/Users/gajaka/projects/alsomitra-fixes/contribution/.build/directed_repair/attempt-002/generated/BadPruning.lean"
+      ],
+      "source_sha256": "75c41474a41f4d279fc942841441409f8d720c24aa1a9bb577c573287fee452a",
+      "log_sha256": "8807f4512d54a019643fe4deacb2d1372046f5366bce1d507beb9214d553a343",
+      "status": "REJECTED"
+    }
+  },
+  "sources_sha256": {
+    "contribution/Float32.lean": "48674559d569710c7c5d69fe386f067512f52b21b42b500615e2165d2001224d",
+    "contribution/Property2.lean": "e4d2af77459331598d05231f7dfe6c2edbb8442d57132f7b7a46755eabf53982",
+    "contribution/model_repair/directed_repair/CANDIDATE.json": "436ef0b3266b76c9ad35e7dd21557e2757743cb9a61877552102afdbdd638288",
+    "contribution/model_repair/directed_repair/FIT.json": "1f7b4a30e25e76b3f96cda9a193be603e144a325995700e360d95034bb0b3704",
+    "contribution/model_repair/directed_repair/ProjectionRepair.lean": "8f1e8b89ff16fe67f4986dfbb6d1dc35176387026dec7917e2ef57ad5f13cc40",
+    "contribution/model_repair/directed_repair/README.md": "a291f9853eb66f0981cf76e891390f13895201b27cc97eff5c503b8a28081d83",
+    "contribution/model_repair/directed_repair/RepairNetwork.lean": "0baa77f6f8f94546716ba978c0ca4431b733cd23c51be765dad3daf1be6cdaa0",
+    "contribution/model_repair/directed_repair/RepairReference.lean": "4e6d24988fb37365ee187df11738e0e2f7a8789c5c5f36680d05cce225c0bab0",
+    "contribution/model_repair/directed_repair/RepairResult.lean": "81246177e5793a2c016a953ff76565938d7f6454f24efca14132d74589d97d8d",
+    "contribution/model_repair/directed_repair/RepairedCore.lean": "1aa363fe23a5d86a7ad84785be8d39e9284cea1009f7616b32ff9a7d1241e309",
+    "contribution/model_repair/directed_repair/TRAINING.md": "f2c777906f74375a02605dd0daa7fdc5d1ff454c612a1cb75a555d5e9e60e4d5",
+    "contribution/model_repair/directed_repair/TRAINING_REPLAY.json": "34601feda2be1e6374b75733c8296f80d3556647821d818c69e9a3f3fd684858",
+    "contribution/model_repair/directed_repair/freeze.py": "45e93d954950cd103084fde809160d3fbc9ed44e77e9997b1bcaf232e5d20a67",
+    "contribution/model_repair/directed_repair/runtime.py": "6cec02072b60040474d56c34c0250a7d5366403fd8d0852894262dea945f1d6a",
+    "contribution/model_repair/directed_repair/train.py": "e2b6cab97e8b466dcda3707dff47b81c7ef6ac028fc780a9c30852192bec074c",
+    "contribution/model_repair/directed_repair/verify.py": "663b97d6b0d2120ded0f5570d60a33cbcace7e64cd419f581dac60cea7a6a0d7",
+    "contribution/model_repair/inputs/Training_Data_Normalised.csv": "d0b84c0e372a25f7934953ae8adac8db08b7a3b241892a1aa697834f583acbf7",
+    "contribution/model_repair/prepare_inputs.py": "e5c5cdc9eab35f7b1ef15d4ac1fc364d8d8921e809e8fbfe888a1f5449f41dc4",
+    "contribution/network_reduction/Adversarial.lean": "1e9a96b5c7245895a11306e0602536299090c308bad347e6068d176c48e3e3a6",
+    "contribution/network_reduction/Baseline.lean": "52b014b27ebce87dbb8625a7bbcfc91c66f1ebcb91f94b7079f7be79be9bd501",
+    "contribution/network_reduction/Pruning.lean": "622185c41b15df39ede096071f85deea4b3099246117665832500bb5e6467364",
+    "contribution/network_reduction/linear_observations/MomentumQuotient.lean": "669129977abc022669946fda9e35089ee922e8c45d6b3b522abf014fbd192267",
+    "contribution/network_reduction/output_updates/OutputUpdates.lean": "e3622f975ff63d568933381ffab108181b9149259c78612386e3affcc480ed05",
+    "contribution/network_reduction/output_updates/verify.py": "f95e854699e770da114beec3c1ecb9c4ab26f06911b767cfdfb24ffea1a6aec2",
+    "contribution/network_reduction/property_decision/ExactEvaluation.lean": "21d95d7f4d5c28809edbf622536bcb234ec2d7563fa5e87dea17d2c8074c203f",
+    "contribution/network_reduction/property_transfer/PropertyTransfer.lean": "964ffb0469e971ba396eb12d365ce342e13a0279420d4a65816d5437e02b31dc",
+    "contribution/network_reduction/update_synthesis/AffineRetention.lean": "d79c53e212bd14b12c75438fa123e27d130f8832b53a5753f419dcdd8193e7c7",
+    "contribution/network_reduction/update_synthesis/NetworkRetention.lean": "fc4efc05bd12bc465d6e14736749eb6ccb4f4093d0690758e671493824a97229",
+    "contribution/network_reduction/update_synthesis/RationalFeatures.lean": "3c46b9bf84e6455b00dc2e8b5e59929e2fad80c98fad3ad25889859e1b1acee2",
+    "contribution/results/network_reduction_verification.json": "8cca1d09fdf019e1a418ef2dffc297cbdea8b4a64fc5de73626d9fb103ccd74a",
+    "contribution/results/output_update_verification.json": "6aa4cba939acaecc2ed19d30eb2d2331c6225c2bba32cf67b4923e21e76f2df7",
+    "contribution/results/property_decision_verification.json": "3cf5f6047cd60c872cc48227eb41860c3a6083f9fd2535ee06e6789a3e4ebb60",
+    "contribution/results/rmsprop_and_property_transfer_verification.json": "a1fea911bf512865bc2f54494cd739cb7dacbeba5451b6238370777e1daaefe8",
+    "contribution/universal/IntervalNetwork.lean": "be336900a150eeffb9feb49992f1a788dedea56a80319b05fc0c27536febd04e",
+    "lean/lake-manifest.json": "0f6a2f189439a5b6ac9653168b0e513c8129ec88af04f771b6a926773bab3420",
+    "lean/lakefile.lean": "d8e1d78b26d3253c33757657aa3c5986113271300a7fa4e34a3b7b08673606f8",
+    "lean/lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+  },
+  "candidate": {
+    "kind": "expanded architecture: fitted core plus six-ReLU repair block",
+    "core_widths": [
+      6,
+      4,
+      2,
+      1
+    ],
+    "slope": "64",
+    "parameter_denominator": 65536,
+    "core_parameters": [
+      "-36813/32768",
+      "-100479/65536",
+      "-20673/65536",
+      "139975/65536",
+      "102069/16384",
+      "453993/65536",
+      "-21349/65536",
+      "31275/32768",
+      "-229925/65536",
+      "-98961/8192",
+      "-18407/1024",
+      "417067/32768",
+      "-210851/65536",
+      "-50277/65536",
+      "-24381/32768",
+      "91531/32768",
+      "-7021/8192",
+      "285773/32768",
+      "82091/32768",
+      "6869/8192",
+      "-277979/32768",
+      "100175/65536",
+      "35199/32768",
+      "9557/32768",
+      "-7415/4096",
+      "-107191/65536",
+      "-203151/65536",
+      "2903/1024",
+      "19183/8192",
+      "1137/1024",
+      "-105545/65536",
+      "259471/65536",
+      "172077/65536",
+      "24105/65536",
+      "-134795/65536",
+      "80911/32768",
+      "-45449/32768",
+      "-30299/32768",
+      "-4799/16384",
+      "65791/65536",
+      "-95417/32768"
+    ],
+    "fit_source_sha256": "1f7b4a30e25e76b3f96cda9a193be603e144a325995700e360d95034bb0b3704",
+    "dataset_sha256": "d0b84c0e372a25f7934953ae8adac8db08b7a3b241892a1aa697834f583acbf7",
+    "mse_exact": "46752100439058107294909462563106479712408100763742821570547163/31691265005705735037417580134400000000000000000000000000000000000",
+    "mse": 0.0014752361709335618,
+    "original_mse_exact": "4921066424248128632131808651059057072087276753404932202076545617887149723598774961086531/3211307308588409732381143431261364056861179904000000000000000000000000000000000000000000000",
+    "original_mse": 0.0015324184051420714,
+    "constant_mse_exact": "490854833854579722753378522035863/4500000000000000000000000000000000",
+    "constant_mse": 0.10907885196768438,
+    "relative_mse_improvement": 0.03731502702958488,
+    "scope": "exact rational reference evaluation; Lean proof separately checked"
+  },
+  "reader_controls": {
+    "scope": "Synthetic reader controls, not compiler mutation experiments",
+    "positive_complete_audit": "ACCEPTED",
+    "positive_multiline_audit": "ACCEPTED",
+    "missing_root": "REJECTED",
+    "duplicate_root": "REJECTED",
+    "unexpected_root": "REJECTED",
+    "foreign_axiom": "REJECTED",
+    "sorry_axiom": "REJECTED",
+    "native_trust_axiom": "REJECTED",
+    "malformed_axiom_list": "REJECTED",
+    "truncated_multiline_list": "REJECTED",
+    "missing_continuation_comma": "REJECTED",
+    "empty_continuation_item": "REJECTED",
+    "embedded_root_in_unclosed_list": "REJECTED",
+    "foreign_multiline_axiom": "REJECTED",
+    "trailing_unchecked_text": "REJECTED",
+    "wrapped_trailing_garbage": "REJECTED",
+    "stray_continuation_after_list": "REJECTED",
+    "leading_unchecked_text": "REJECTED",
+    "warning_diagnostic": "REJECTED",
+    "error_diagnostic": "REJECTED",
+    "compiler_warning_detected": true,
+    "compiler_error_detected": true
+  },
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "expected_roots": [
+    "Contribution.DirectedRepair.above_lower",
+    "Contribution.DirectedRepair.below_upper",
+    "Contribution.DirectedRepair.constant_mse_bound",
+    "Contribution.DirectedRepair.constant_real_mse_bound",
+    "Contribution.DirectedRepair.core_equal",
+    "Contribution.DirectedRepair.displacement_cast",
+    "Contribution.DirectedRepair.displacement_physical",
+    "Contribution.DirectedRepair.half_le_upper",
+    "Contribution.DirectedRepair.interval_valid",
+    "Contribution.DirectedRepair.lower_le_half",
+    "Contribution.DirectedRepair.lower_nonneg",
+    "Contribution.DirectedRepair.mse_cast",
+    "Contribution.DirectedRepair.original_mse_bound",
+    "Contribution.DirectedRepair.original_real_mse_bound",
+    "Contribution.DirectedRepair.project_above",
+    "Contribution.DirectedRepair.project_below",
+    "Contribution.DirectedRepair.project_cast",
+    "Contribution.DirectedRepair.project_idempotent",
+    "Contribution.DirectedRepair.project_in_interval",
+    "Contribution.DirectedRepair.project_in_unit_interval",
+    "Contribution.DirectedRepair.project_unchanged",
+    "Contribution.DirectedRepair.pruning_checked",
+    "Contribution.DirectedRepair.raw_cast",
+    "Contribution.DirectedRepair.reference_count",
+    "Contribution.DirectedRepair.reference_in_cube",
+    "Contribution.DirectedRepair.reference_quality",
+    "Contribution.DirectedRepair.reluBlock_eq_project",
+    "Contribution.DirectedRepair.repaired_above",
+    "Contribution.DirectedRepair.repaired_below",
+    "Contribution.DirectedRepair.repaired_cast",
+    "Contribution.DirectedRepair.repaired_controller_contract",
+    "Contribution.DirectedRepair.repaired_mse_bound",
+    "Contribution.DirectedRepair.repaired_real_mse_bound",
+    "Contribution.DirectedRepair.repaired_relu_program",
+    "Contribution.DirectedRepair.rmax_eq",
+    "Contribution.DirectedRepair.rmin_eq",
+    "Contribution.DirectedRepair.smaller_is_pruned",
+    "Contribution.DirectedRepair.smaller_repair_equal",
+    "Contribution.DirectedRepair.upper_le_one"
+  ],
+  "axiom_audit": {
+    "Contribution.DirectedRepair.lower_nonneg": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.lower_le_half": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.half_le_upper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.upper_le_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.interval_valid": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.project_in_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.project_in_unit_interval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.above_lower": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.below_upper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.project_above": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.project_below": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.project_unchanged": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.project_idempotent": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.rmax_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.rmin_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.reluBlock_eq_project": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.project_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.pruning_checked": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.smaller_is_pruned": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.core_equal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.displacement_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.raw_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.repaired_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.displacement_physical": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.repaired_above": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.repaired_below": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.smaller_repair_equal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.repaired_relu_program": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.mse_cast": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.reference_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.reference_in_cube": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.repaired_mse_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.original_mse_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.constant_mse_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.repaired_real_mse_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.original_real_mse_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.constant_real_mse_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.reference_quality": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Contribution.DirectedRepair.repaired_controller_contract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "audited_roots": 39,
+  "generated_sha256": {
+    "contribution/.build/directed_repair/attempt-002/generated/Audit.lean": "3efd3a9f5a81e48a1fb9a4ea91cc084ee6650cecdb7f24269f2245f2285b1d90",
+    "contribution/.build/directed_repair/attempt-002/generated/ReversedSlope.lean": "9ba5124305bcb36baf24400bf009ba98ffe77af884d3ec813962a11838ab34a2",
+    "contribution/.build/directed_repair/attempt-002/generated/OriginalBelowFailure.lean": "c423e14276b0dec7b5b7b1397d18b98251ef8b964c06b1abb1928b0946b8878d",
+    "contribution/.build/directed_repair/attempt-002/generated/ConstantQualityFailure.lean": "6c655b4d500a52403a0edfcb22701239b1fe58b45fa794713f58e358b3fb3678",
+    "contribution/.build/directed_repair/attempt-002/generated/BadPruning.lean": "75c41474a41f4d279fc942841441409f8d720c24aa1a9bb577c573287fee452a"
+  },
+  "inputs_unchanged": true,
+  "seconds": 154.244317333,
+  "finished_utc": "2026-11-07T07:18:12.670189+00:00"
+}

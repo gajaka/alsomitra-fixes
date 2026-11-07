@@ -1,0 +1,48 @@
+{
+  "scope": "Downloaded artifacts; no training or repair performed",
+  "sources": [
+    {
+      "name": "saiv",
+      "files": 103,
+      "bytes": 28371801,
+      "onnx_files": 18,
+      "python_files": 14,
+      "matlab_files": 11,
+      "csv": [
+        {
+          "path": "python_training/data/Training_Data_Normalised.csv",
+          "rows_in_file": 360,
+          "column_counts": [
+            7
+          ]
+        },
+        {
+          "path": "matlab_simulation/data/Training_Data.csv",
+          "rows_in_file": 360,
+          "column_counts": [
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "name": "property-driven-ml",
+      "files": 1159,
+      "bytes": 27210294,
+      "onnx_files": 185,
+      "python_files": 52,
+      "matlab_files": 0,
+      "csv": [
+        {
+          "path": "data/alsomitra/alsomitra_data_680.csv",
+          "rows_in_file": 680,
+          "column_counts": [
+            8
+          ]
+        }
+      ]
+    }
+  ],
+  "pre_existing_files_unchanged": 230,
+  "download_and_work_bytes": 139919002
+}

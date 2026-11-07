@@ -22,6 +22,14 @@ Additional [formalization experiments](contribution/README.md) include an
 executable exact-rational Property2 contract and proofs. They are separate
 from the minimal upstream patch.
 
+The [verified controller-repair walkthrough](contribution/model_repair/directed_repair/README.md)
+shows the initial and final networks, a concrete violation, the added
+six-ReLU output correction, and the code and Lean checks for each step.
+The complete repaired controller satisfies the selected Above/Below
+requirements on the real input cube and improves reference MSE on the
+360 rows used for fitting. The guide explains the role of the extra block
+and separates that result from held-out, float32 and flight guarantees.
+
 ## 1. The two confirmed implementation bugs
 
 ### Swapped threshold arguments
