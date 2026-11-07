@@ -1,19 +1,42 @@
 # Can a Smaller Network Keep Its Promise?
 
-**A worked guide to certified reduction, robustness and the information needed for updates**
+**A worked path from certified reduction and stable views to controller repair**
 
-Worked guide • revised 6 November 2026
+Worked guide • revised 7 November 2026
 
 Imagine two almost identical measurements arriving at a drone's controller.
-We want the resulting commands to remain close. Now suppose we make the
-controller's neural network smaller. Can we keep that guarantee? And if
-its weights later change, what information must we retain?
+We want the resulting commands to remain close. We begin by proving that
+precise requirement on two published networks, then make the networks
+smaller while preserving every output on the chosen domain. The guarantee
+survives because the answers have not changed.
 
-We can answer the first question on two published Alsomitra networks.
-Lean, a proof assistant that checks mathematical arguments, verifies a
-precise robustness requirement and its preservation by neuron removal.
-The later examples explain why updating a reduced network requires an
-additional argument.
+Once we remove computation, a second question follows: **what information
+can we forget if the parameters will change later?** A parameter that does
+not affect today's output might affect tomorrow's update. This leads to a
+retained view of the state, an equivalence relation called RR, and a stable
+subalgebra describing what remains computable from that view.
+
+Preservation also exposes a limitation: if the original answer violates a
+requirement, an exactly equal smaller network keeps that violation. Our
+next step is therefore **repair by composition**. A fitted neural core
+proposes an output; a proved correction block uses the input and that
+proposal to enforce a directional requirement. We then check reference
+quality and certify reduction of the fitted core again.
+
+```flow
+Keep the answer | Prove a requirement and remove inactive computation without changing outputs.
+Keep enough information | Determine which observations support the allowed future updates.
+Restore a requirement | Compose a fitted core with a proved correction block, then check quality and reduction.
+```
+
+These questions organize the guide. Lean checks the mathematical arguments
+at each stage. The examples use different saved models: DL2/Gödel for the
+opening robustness result, and Adversarial for the view and repair studies.
+Each transition names what is retained, what changes and which guarantee
+has actually been established. Sections 10–12 bring the repair into the
+main story; Appendix E gives its complete mathematical workflow.
+
+<!-- pagebreak -->
 
 ## 1. The promise, stated explicitly
 
@@ -158,6 +181,10 @@ Therefore the smaller network satisfies the same implication, including
 the stronger 0.031 and 0.026 bounds. There is no new search over input
 pairs at this transfer step: equality transports the existing guarantee.
 
+That answers the question for a fixed checkpoint. To reason about later
+changes, we must separate the evidence for equal outputs from the evidence
+that those outputs meet the requirement.
+
 <!-- pagebreak -->
 
 ## 4. Two certificates answer different questions
@@ -209,17 +236,20 @@ approximately 0.399148. Lean checks the exact fractions behind these
 rounded figures. Its reduced network gives the same answer and hence
 the same counterexample. Appendix A gives the complete input.
 
-Exact reduction faithfully preserves the behavior we have. Repairing a
-failed requirement would be a further change requiring its own proof.
+Exact reduction faithfully preserves the behavior we have. Sections 10–11
+return to this limitation and repair the Adversarial controller by changing
+its output function. First we follow the other consequence of reduction:
+what happens to information that no longer contributes to evaluation?
 
 <!-- pagebreak -->
 
 ## 5. What are the state, the view and RR?
 
-We now ask a different question: can a reduced representation support
-future parameter changes? To keep every step visible, this part uses the
-**Adversarial model's certified hidden layers**, held fixed. It is a
-separate example from the positive DL2/Gödel property above.
+Removing a zero activation makes some weights irrelevant to the current
+answer. We now ask whether a representation that forgets those weights
+can still support future parameter changes. To keep every step visible,
+this part uses the **Adversarial model's certified hidden layers**, held
+fixed. It is a separate example from the positive DL2/Gödel property above.
 
 Its second hidden layer has activations `(h₀(x), 0, h₂(x), 0)` on the
 cube. Here h₀(x) and h₂(x) are the surviving neurons' values, computed
@@ -390,6 +420,9 @@ preserve our ability to calculate those quantities.** Stability does
 not say that outputs stay constant or that an earlier robustness bound
 automatically remains true.
 
+For a learning rule, the next question is what else belongs in the state.
+The following examples show why the optimizer's memory matters too.
+
 <!-- pagebreak -->
 
 ## 8. Learning adds memory to the state
@@ -502,68 +535,186 @@ including every finite permitted input sequence. RR and the stable
 subalgebra are defined on that restricted state space. The failing
 `(1, 97)` witness cannot occur from equal histories under these rules.
 
-The negative and positive results fit together: the sum fails on the
-larger state space, but succeeds on a justified smaller one. This real
-RMSProp model has not yet been connected to evaluation of the concrete
+The sum fails on general histories but succeeds on the justified invariant
+states. This real RMSProp model has not yet been connected to the concrete
 rational-head checkpoints; the momentum example has that connection.
+We can now distinguish agreement through updates from satisfaction of a
+requirement. The next step addresses the latter: what if the behavior we
+have preserved needs to change?
 
 <!-- pagebreak -->
 
-## 10. How the pieces support the controller project
+## 10. From preserving an answer to repairing it
 
-The original research connects logical requirements with machine learning.
-Our fixed-checkpoint result adds a concrete chain after training:
+Return to the Adversarial checkpoint whose reduction preserved a
+directional failure. The task now is to produce different answers where
+the requirement demands them, while retaining useful predictions. Write
+d(x) for the physical position sum X + Y recovered from the six normalized
+inputs. The selected requirements are:
 
-```flow
-Published trained network | Bind the saved parameters to a precise mathematical network.
-Proved requirement | Establish P implies Q for all permitted input pairs.
-Certified smaller network | Remove inactive computation and transfer the same requirement.
+$$
+d(x)\geq2\Rightarrow F(x)\geq\frac{1}{2},\qquad
+d(x)\leq-2\Rightarrow F(x)\leq\frac{1}{2}.
+$$
+
+They concern one input at a time. They are different from the nearby-input
+robustness requirement proved for DL2/Gödel. At the zero input, for example,
+d is about -41.19898449 and the original Adversarial output is about
+1.36078430. That violates the second implication on the stated cube.
+
+### Let the core propose; let the block enforce the requirement
+
+For each input, construct an interval of outputs that satisfy the selected
+directional requirement. When d is at least 2, the interval has lower
+endpoint 0.5. When d is at most -2, its upper endpoint is 0.5. Between the
+regions, the endpoints move continuously. Appendix E specifies them exactly.
+
+The neural core proposes a scalar z. The correction operator R keeps z
+when it is inside the interval and otherwise returns the nearest endpoint.
+The complete controller therefore has two sources of information:
+
+```text
+input x ----> fitted neural core ----> proposal z -----+
+   |                                                  |
+   +----> d(x) ----> allowed interval -----------------+
+                                                      |
+                                                      v
+                                                correction R
+                                                      |
+                                                      v
+                                                  output F(x)
 ```
 
-The update examples ask what happens next. They show how to retain enough
-information for a smaller representation to evolve like the full one,
-and how to detect a proposed reduction that forgets too much.
+This is a composition that retains the input alongside the core's output:
 
-These are connected questions, but the proofs apply to different objects:
+$$
+H_\theta(x)=(x,N_\theta(x)),\qquad
+F_\theta=R_{64}\circ H_\theta,\qquad
+F_\theta(x)=R_{64}(x,N_\theta(x)).
+$$
 
-| Demonstration | What is established |
-| --- | --- |
-| DL2 and Gödel checkpoints | A true P ⇒ Q property; exact reduction; the same property for both smaller networks. |
-| Baseline and Adversarial checkpoints | Exact reduction; exact refutations of selected directional requirements, preserved by reduction. |
-| Adversarial hidden layers with specified head/momentum updates | Full and reduced networks agree after every permitted finite update sequence. |
-| Separate real RMSProp model | A failing aggregate on general histories; a correct one on equal-history invariant states. |
-
-In particular, the optimizer results do not yet prove that the DL2/Gödel
-robustness property survives training. Full and reduced networks could
-agree after an update while both violate their former bound, as the
-simple scaling example showed.
-
-### A concrete next question for collaboration
-
-**Can we accept a useful parameter update only when its new checkpoint
-has a checked robustness certificate, while retaining the certified
-reduction?** A candidate workflow would propose an update, check the
-new property, and accept only certified candidates. To develop this into
-a result, we would need an explicit update policy, a proved acceptance
-rule, and evidence that useful updates pass it. This is a proposed next
-experiment, not an existing theorem in the repository.
-
-The present study gives that discussion concrete starting points:
-saved models, explicit requirements, checked reductions, successful
-and failing examples, and commands for replaying the evidence.
-The practical question is which requirements, updates and operating
-domain would make the next example useful for the authors' controller work.
+The subscript 64 fixes the interval's transition slope. The proof permits
+every real proposal z, so the complete controller satisfies the two
+implications for any core parameters. For a concrete reference row with
+d about 2.070171, the fitted core proposes 0.369787 and the block returns
+0.5. A proposal already inside the interval passes through unchanged.
 
 <!-- pagebreak -->
 
-## 11. What the proof says about a running program
+## 11. Fit useful predictions, then certify reduction again
 
-The proofs interpret the saved weights exactly and perform network
-arithmetic over the real numbers. Each finite float32 checkpoint constant
-has an exact rational value; that value is retained in the mathematical
-model. A **rational** is a ratio of integers. The input values themselves
-range over reals, so the theorem is not restricted to finitely many
-representable inputs.
+The block gives the directional guarantee, but those two implications
+alone would also allow a constant output of 0.5. We still need a useful
+fit to the supplied reference commands. Training therefore adjusts the
+core through the fixed block: the loss measures the complete controller's
+output against each original label.
+
+$$
+\mathcal{L}(\theta)=\dfrac{1}{m}\;\sum_{i=1}^{m}
+\left(R_{64}(x^{(i)},N_\theta(x^{(i)}))-y_i\right)^2,
+\qquad m=360.
+$$
+
+Here each x with a parenthesized superscript is one input vector and y_i
+is its stored target. The optimizer proposes parameters; they are then
+frozen as exact rational values. Lean checks the resulting reference
+error and the universal directional guarantees.
+
+| Controller on the original 360 labels | Mean squared error |
+| --- | --- |
+| Published Adversarial checkpoint | 0.001532418405 |
+| Frozen fitted core plus correction | 0.001475236171 |
+| Constant output of 0.5 | 0.109078851968 |
+
+The repaired result has about 3.73% lower error on these rows, all of which
+were also used for fitting. This is a reference-quality check, not a
+held-out result. Labels are not rewritten to make the repair look better:
+the preceding example's label is about 0.373198, so enforcing 0.5 incurs
+error there. Better agreement elsewhere makes the complete fit pass.
+
+### Equality brings reduction back into the construction
+
+The fitted core changes hidden weights as well as the output head. We
+therefore check a new pruning certificate. It proves that the fitted
+full and small cores agree throughout the cube. Composing each with the
+same correction block preserves that equality:
+
+$$
+N_{\mathrm{small}}(x)=N_{\mathrm{full}}(x)
+\quad\Longrightarrow\quad
+R_{64}(x,N_{\mathrm{small}}(x))=R_{64}(x,N_{\mathrm{full}}(x)).
+$$
+
+Thus the smaller repaired controller keeps both the directional guarantee
+and the reference predictions of the full repaired version. Its core has
+41 parameters instead of 75. The added block uses six ReLU operations;
+the complete small repaired graph has 13, compared with 17 for the full
+repaired graph and 11 for the old unrepaired network.
+
+The fitted core supplies the predictions, the block enforces the selected
+requirement, and equality justifies the reduction. Appendix E follows
+every formula to its code and checked theorem.
+
+<!-- pagebreak -->
+
+## 12. How preservation, stable views and repair fit together
+
+The original research connects logical requirements with machine learning.
+The examples here follow three questions that arise when putting that
+connection to work. First, can a checked property survive removal of
+computation? Second, can the retained representation still support future
+updates? Third, can a changed controller satisfy a requirement that its
+predecessor violated?
+
+| Question | Mathematical relation | Checked role |
+| --- | --- | --- |
+| Can we remove computation? | Equal outputs on the domain. | A smaller network inherits the full network's output properties. |
+| Can we forget information? | The next view is determined by the current view. | RR and a stable observable subalgebra justify the specified reduced updates. |
+| Can we restore a requirement? | The corrected output belongs to an allowed interval. | Core plus block satisfies both directional implications; exact computation checks reference quality. |
+
+Composition provides the concrete connection to the repair. If two cores
+give the same proposal at the same input, the common block gives the same
+corrected output. The proof that correction enforces the requirement and
+the proof that reduction preserves the proposal can therefore be used
+together.
+
+There is also a precise information question for any future integration
+with the subalgebra. The correction reads d(x) as well as the proposed
+output. Retaining enough information to determine both is sufficient to
+execute this construction from a view. The earlier view retains x, but its update proofs assumed
+fixed hidden layers. The present fit changes those layers, so that old
+certificate does not automatically cover this model.
+
+The established cases remain identifiable: DL2/Gödel provide the positive
+robustness-and-reduction result; Adversarial supplies the fixed-hidden-layer
+view examples and, separately, the new directional repair. The RMSProp
+example has its own real state space. Their roles fit together without
+asserting a single theorem about all these systems at once.
+
+### A concrete question for the next collaboration
+
+**Which additional controller requirement should remain true while the
+repaired core is adapted?** With the same proved block, the selected
+directional implications already hold independently of the core weights.
+Preserving useful reference behavior, other output properties and an
+executable reduced update rule would require their own acceptance checks
+or invariants. That is where the repair and stable-view studies could meet
+in a further verified experiment.
+
+Before choosing that experiment, we should distinguish the mathematical
+network from its numerical execution and from the physical system it
+would control. The next section makes those boundaries explicit.
+
+<!-- pagebreak -->
+
+## 13. What the proof says about a running program
+
+The fixed-checkpoint proofs interpret saved weights exactly and perform
+network arithmetic over the real numbers. Each finite float32 checkpoint
+constant has an exact rational value; that value is retained in the model.
+The repaired core instead uses its newly frozen rational parameters.
+A **rational** is a ratio of integers. Inputs range over reals, so the
+universal statements are not restricted to finitely many representable inputs.
 
 Actual float32 computation rounds intermediate results. Changing matrix
 shape can change the order of additions and hence the rounding. Exact
@@ -593,14 +744,20 @@ require a further numerical argument.
 
 ### What has and has not been measured
 
-The saved models were not retrained for this study. Their predictions
-are nonconstant. On the 360 published rows, their descriptive mean
+The saved DL2/Gödel models were not retrained for their reduction and
+robustness checks. Their predictions are nonconstant. On the 360 published
+rows, their descriptive mean
 squared errors (the average squared difference from the stored targets)
 were approximately 0.025110 for DL2 and 0.033898 for
 Gödel, compared with 0.081213 for the best constant on those same rows.
 It is unknown which rows were held aside from these checkpoints' training,
 so these figures do not establish performance on unseen data or acceptable
 flight performance.
+
+The separate Adversarial repair does fit a new core, as Section 11 explains.
+Its quality check uses the same 360 rows as fitting. Its exact-real
+directional proof does not establish a universal float32 guarantee or a
+closed-loop flight result.
 
 The parameter counts describe structural savings. They do not by
 themselves promise lower latency on a particular processor. A controller's
@@ -822,7 +979,8 @@ mathematical theorem. The repository README retains the ordered commands.
 - [Neural Network Verification for Gliding Drone Control: A Case Study](https://arxiv.org/abs/2505.00622v1), Colin Kessler et al., 2025: controller requirements and companion experiments, particularly Section 7.2.
 - [Pinned Alsomitra repository](https://github.com/ckessler2/SAIV_2025_Alsomitra/tree/e9f6f1c52e0e5349455d2b4f69c2015567d3037f): the exact model and specification artifacts used here.
 
-The checkpoint-specific training runs are not reproduced. Exact reduction,
+The training runs that produced the original upstream checkpoints are not
+reproduced. Appendix E describes a separate repair fit. Exact reduction,
 linear observation spaces and equality-based property transfer are existing
 mathematical ideas; no priority claim is made for them. The inspectable
 result here is their checked application to the stated artifacts and
@@ -836,3 +994,411 @@ shared renderer, then run:
 ```sh
 python contribution/network_reduction/build_report.py
 ```
+
+<!-- pagebreak -->
+
+## Appendix E. Mathematical workflow of controller repair
+
+This appendix explains the complete method behind the [worked repair
+example](../model_repair/directed_repair/README.md) introduced in Sections
+10–12. It expands the composition step by step, from allowed outputs to
+the fitted and certified smaller controller. Experiments helped
+select the construction and its parameters. Its universal guarantee comes
+from a proof about the correction operator; its reference-quality claim
+comes from an exact check of the frozen candidate on the supplied data.
+
+The starting object is the published **Adversarial** controller. The result
+is a fitted neural core followed by an explicit correction block. The
+architecture changes. The two requirements here are **Above(2)** and
+**Below(2)**; the earlier two-input robustness theorem is not being asserted
+for this repaired controller.
+
+```text
+Specify the domain and requirements
+                 |
+                 v
+Define the allowed outputs for each input
+                 |
+                 v
+Construct and prove a correction operator
+                 |
+                 v
+Fit the neural core through that operator
+                 |
+                 v
+Freeze exact parameters and check reference quality
+                 |
+                 v
+Certify reduction and transfer the output guarantees
+```
+
+### E.1. Inputs, physical coordinates and the contract
+
+Let the six normalized input coordinates be horizontal velocity, vertical
+velocity, angular velocity, angle, horizontal position and vertical
+position, in that order. A neural core maps each permitted input to one
+real output; theta denotes its weights and biases.
+
+$$
+D=[0,1]^6,\qquad x=(x_0,x_1,x_2,x_3,x_4,x_5),\qquad N_\theta:D\longrightarrow\mathbb{R}.
+$$
+
+The physical coordinates and displacement use the existing normalization
+constants. These decimal literals denote exact rational numbers in the
+formal model.
+
+$$
+X(x)=41.232296222734604\,x_4+0.482420778264618.
+$$
+
+$$
+Y(x)=45.878638794593570\,x_5-41.681405266088724,\qquad d(x)=X(x)+Y(x).
+$$
+
+<!-- pagebreak -->
+
+### E.2. From implications to allowed output sets
+
+The input predicates select two regions. The output predicates specify
+the permitted side of one half. The letter z denotes a scalar output.
+
+$$
+P_+(x)\Longleftrightarrow d(x)\geq2,\qquad Q_+(z)\Longleftrightarrow z\geq\frac{1}{2}.
+$$
+
+$$
+P_-(x)\Longleftrightarrow d(x)\leq-2,\qquad Q_-(z)\Longleftrightarrow z\leq\frac{1}{2}.
+$$
+
+The name Correct below means exactly the conjunction of these two
+directional requirements. It does not mean correctness of every aspect
+of the physical controller.
+
+$$
+\mathrm{Correct}(N)\Longleftrightarrow
+\forall x\in D,\quad
+\left(P_+(x)\Rightarrow Q_+(N(x))\right)\wedge
+\left(P_-(x)\Rightarrow Q_-(N(x))\right).
+$$
+
+Equivalently, define the allowed output set separately in each region:
+
+$$
+d(x)\geq2\quad\Longrightarrow\quad A(x)=[\frac{1}{2},+\infty).
+$$
+
+$$
+d(x)\leq-2\quad\Longrightarrow\quad A(x)=(-\infty,\frac{1}{2}].
+$$
+
+$$
+-2<d(x)<2\quad\Longrightarrow\quad A(x)=\mathbb{R}.
+$$
+
+The regions are disjoint and cover the domain, so this defines A uniquely.
+The same contract now reads:
+
+$$
+\mathrm{Correct}(N)\Longleftrightarrow\forall x\in D,\quad N(x)\in A(x).
+$$
+
+A constant output of one half satisfies both implications. A separate
+quality gate will exclude that uninformative solution on the reference
+data. There is no directional requirement in the open gap between -2
+and 2.
+
+<!-- pagebreak -->
+
+### E.3. A nonempty interval inside the allowed set
+
+Choose a fixed nonnegative slope k. The published candidate uses k = 64.
+Define lower and upper bounds, then an input-dependent interval:
+
+$$
+L_k(d)=\min\left(\frac{1}{2},\max\left(0,\frac{1}{2}+k(d-2)\right)\right).
+$$
+
+$$
+U_k(d)=\max\left(\frac{1}{2},\min\left(1,\frac{1}{2}+k(d+2)\right)\right),
+\qquad I_k(x)=[L_k(d(x)),U_k(d(x))].
+$$
+
+The interval bounds and their values in the two required regions give:
+
+$$
+0\leq L_k(d)\leq\frac{1}{2}\leq U_k(d)\leq1.
+$$
+
+$$
+k\geq0:\qquad d\geq2\Rightarrow L_k(d)=\frac{1}{2},
+\qquad d\leq-2\Rightarrow U_k(d)=\frac{1}{2}.
+$$
+
+Consequently the interval is always nonempty and lies inside the allowed
+set. It additionally restricts outputs to [0,1] and narrows part of the
+otherwise unconstrained gap. It describes a sufficient family of solutions,
+not every controller satisfying the original contract.
+
+$$
+\forall x\in D,\qquad I_k(x)\ne\varnothing\quad\wedge\quad I_k(x)\subseteq A(x).
+$$
+
+### E.4. The correction operator and its laws
+
+Project the neural core's proposed output z into that interval:
+
+$$
+R_k(x,z)=\max\left(L_k(d(x)),\min\left(U_k(d(x)),z\right)\right).
+$$
+
+Below the interval, return its lower endpoint; inside it, keep z; above it,
+return its upper endpoint. On reference row 129, for example, d is about
+2.070171 and the fitted core proposes about 0.369787. The corrected output
+is 0.5, as required. The original label is about 0.373198 and remains
+unchanged when quality is evaluated.
+
+<!-- pagebreak -->
+
+The operator has three checked laws: membership, preservation of an
+already admissible proposal, and idempotence. Idempotence means a second
+application at the same input does not change the result again.
+
+$$
+\forall x\in D,\ \forall z\in\mathbb{R},\qquad R_k(x,z)\in I_k(x).
+$$
+
+$$
+z\in I_k(x)\quad\Longrightarrow\quad R_k(x,z)=z.
+$$
+
+$$
+R_k(x,R_k(x,z))=R_k(x,z).
+$$
+
+The central inference is simply membership followed by set inclusion:
+
+$$
+\dfrac{R_k(x,z)\in I_k(x)\qquad I_k(x)\subseteq A(x)}{R_k(x,z)\in A(x)}.
+$$
+
+This mathematical operator has an explicit neural implementation, using:
+
+$$
+\max(a,b)=a+\mathrm{ReLU}(b-a),\qquad
+\min(a,b)=a-\mathrm{ReLU}(a-b).
+$$
+
+Sharing the computed endpoints gives six additional ReLU operations.
+`reluBlock_eq_project` proves that this expression equals the projection.
+The guarantees belong to the complete construction, including this block.
+
+### E.5. Composition gives a family of correct controllers
+
+For fixed k at least zero, put the operator after an arbitrary neural core:
+
+$$
+F_\theta(x)=R_k(x,N_\theta(x)).
+$$
+
+Because the operator's proof allows every real proposal z, it follows that:
+
+$$
+\forall\theta,\ \forall x\in D,\quad F_\theta(x)\in A(x),
+\qquad\text{hence}\quad\forall\theta,\ \mathrm{Correct}(F_\theta).
+$$
+
+These are the stated exact-real directional guarantees. Changing the core
+parameters leaves them intact while the same correct block and input
+interpretation remain in place. Reference quality and pruning obligations
+must still be checked for a changed core. No global sensitivity or flight
+stability result follows from this membership argument.
+
+<!-- pagebreak -->
+
+### E.6. Fitting chooses useful predictions within that family
+
+The reference data form an indexed collection of input-label pairs; all
+360 rows are used for fitting and for the later quality check. A row's
+label is its reference output, not a new constraint on every possible input.
+
+$$
+T=((x^{(i)},y_i))_{i=1}^{m},\qquad m=360.
+$$
+
+The parenthesized superscript distinguishes the i-th input vector from a
+coordinate such as x_4. The fitting objective is mean squared error:
+
+$$
+\mathcal{L}(\theta)=\dfrac{1}{m}\;\sum_{i=1}^{m}\left(F_\theta(x^{(i)})-y_i\right)^2.
+$$
+
+Substituting the composed controller makes the role of the block explicit:
+
+$$
+\mathcal{L}(\theta)=\dfrac{1}{m}\;\sum_{i=1}^{m}
+\left(R_{64}(x^{(i)},N_\theta(x^{(i)}))-y_i\right)^2.
+$$
+
+The optimizer fits through this fixed correction block. It produces a
+candidate parameter vector; there is no proof of a global minimum or a
+minimal change from the original weights. The [training procedure and
+replay](../model_repair/directed_repair/TRAINING.md) describe how this
+particular candidate was found. The operator proof does not depend on the
+optimizer finding it.
+
+### E.7. Freeze the candidate before checking its quality
+
+The floating training result is converted to dyadic rational weights by
+rounding to the nearest multiple of 1/65536, with ties to even. The index j
+selects a weight or bias. The formal result concerns this frozen object:
+
+$$
+\bar\theta_j=\dfrac{\mathrm{round}(65536\,\theta_{\mathrm{candidate},j})}{65536},
+\qquad \bar F(x)=R_{64}(x,N_{\bar\theta}(x)).
+$$
+
+For any output function G, define the finite reference error:
+
+$$
+\mathrm{MSE}_T(G)=\dfrac{1}{m}\;\sum_{i=1}^{m}\left(G(x^{(i)})-y_i\right)^2.
+$$
+
+<!-- pagebreak -->
+
+Let N_old be the original published Adversarial controller, and let C
+always return one half. The quality gate is:
+
+$$
+C(x)=\frac{1}{2},\qquad
+\mathrm{Quality}_T(G)\Longleftrightarrow
+\mathrm{MSE}_T(G)\leq\mathrm{MSE}_T(N_{\mathrm{old}})
+\ \wedge\ \mathrm{MSE}_T(G)<\mathrm{MSE}_T(C).
+$$
+
+Exact kernel-checked computations, transferred to the real evaluation
+semantics, establish the following bounds for the frozen candidate:
+
+$$
+\mathrm{MSE}_T(\bar F)\leq\dfrac{1476}{1000000}=0.001476.
+$$
+
+$$
+\mathrm{MSE}_T(N_{\mathrm{old}})\geq\dfrac{1532}{1000000}=0.001532,
+\qquad \mathrm{MSE}_T(C)\geq\dfrac{109}{1000}=0.109.
+$$
+
+The inequalities have a strict separation, so they prove the gate:
+
+$$
+\mathrm{MSE}_T(\bar F)\leq0.001476<0.001532\leq\mathrm{MSE}_T(N_{\mathrm{old}}).
+$$
+
+$$
+\mathrm{MSE}_T(\bar F)\leq0.001476<0.109\leq\mathrm{MSE}_T(C).
+$$
+
+The measured MSEs are approximately 0.001475236171 for the repair and
+0.001532418405 for the original, a reduction of about 3.73% on these rows.
+The finite quality claim is itself checked mathematically; its scope is
+the reference collection, not an unseen population. It is not a held-out
+evaluation. The original labels remain unchanged, including ten that
+conflict with Above(2).
+
+### E.8. Reduction is justified by functional equality
+
+The fitted small core is embedded into a full core. A new interval
+certificate establishes that the four omitted neurons remain inactive
+throughout D. With the model's dimension and domain conditions, the general
+pruning theorem and that accepted certificate give:
+
+$$
+\forall x\in D,\qquad N_{\mathrm{small}}(x)=N_{\mathrm{full}}(x).
+$$
+
+Here N_small is the frozen fitted core. N_full is its full embedded version;
+neither name denotes the unchanged original checkpoint.
+
+<!-- pagebreak -->
+
+Apply the same correction block to both cores:
+
+$$
+F_{\mathrm{small}}(x)=R_{64}(x,N_{\mathrm{small}}(x)),\qquad
+F_{\mathrm{full}}(x)=R_{64}(x,N_{\mathrm{full}}(x)).
+$$
+
+Equality transfers through this common operation:
+
+$$
+\dfrac{N_{\mathrm{small}}(x)=N_{\mathrm{full}}(x)}
+{R_{64}(x,N_{\mathrm{small}}(x))=R_{64}(x,N_{\mathrm{full}}(x))}.
+$$
+
+Consequently the two repaired versions agree for every input in D and have
+identical error on reference rows in D. Output properties transfer along
+this equality. Repair intentionally changes the original function.
+
+```text
+Fitted full core:   6 -> 6 -> 4 -> 1 --+--> same block --> F_full
+                                     |                    ||
+Certified equality throughout D -----+                    ||
+                                     |                    ||
+Fitted small core:  6 -> 4 -> 2 -> 1 --+--> same block --> F_small
+```
+
+The core parameter count goes from 75 to 41. Including the six added ReLUs,
+the full repaired graph uses 17 ReLU operations and the smaller one 13.
+The original unrepaired graph used 11, so this comparison does not claim
+that the repaired graph is smaller than the original unrepaired network.
+
+### E.9. The combined result and its scope
+
+Writing F_small for the frozen small core plus block, the final theorem
+establishes all four of these clauses together:
+
+$$
+\forall x\in D,\qquad d(x)\geq2\ \Longrightarrow\ F_{\mathrm{small}}(x)\geq\frac{1}{2}.
+$$
+
+$$
+\forall x\in D,\qquad d(x)\leq-2\ \Longrightarrow\ F_{\mathrm{small}}(x)\leq\frac{1}{2}.
+$$
+
+$$
+\mathrm{MSE}_T(F_{\mathrm{small}})\leq\mathrm{MSE}_T(N_{\mathrm{old}})
+\quad\wedge\quad
+\mathrm{MSE}_T(F_{\mathrm{small}})<\mathrm{MSE}_T(C).
+$$
+
+<!-- pagebreak -->
+
+### E.10. Where each step meets code and proof
+
+The set notation A, I and Correct above is explanatory notation for the
+concrete definitions and theorems below. It does not denote additional Lean
+declarations or a newly verified general-purpose repair framework.
+
+| Mathematical step | Implementation and checked statement |
+| --- | --- |
+| Allowed interval and operator laws | [ProjectionRepair.lean](../model_repair/directed_repair/ProjectionRepair.lean): `interval_valid`, `project_in_interval`, `project_above`, `project_below`, `project_unchanged`, `project_idempotent`. |
+| Six-ReLU expression | Same file: `reluBlock_eq_project`; [RepairNetwork.lean](../model_repair/directed_repair/RepairNetwork.lean): `repaired_relu_program`. |
+| Physical inputs and arbitrary-core guarantees | [RepairNetwork.lean](../model_repair/directed_repair/RepairNetwork.lean): `displacement_physical`, `repaired_above`, `repaired_below`. |
+| Candidate selection and freezing | [train.py](../model_repair/directed_repair/train.py), [freeze.py](../model_repair/directed_repair/freeze.py), [CANDIDATE.json](../model_repair/directed_repair/CANDIDATE.json). Training proposes the parameters; freezing fixes the exact object. |
+| Exact reference data and quality | [RepairReference.lean](../model_repair/directed_repair/RepairReference.lean): `reference_count`, `reference_in_cube` and the three MSE bounds; [RepairResult.lean](../model_repair/directed_repair/RepairResult.lean): `reference_quality`. |
+| Rational computation and real semantics | [RepairNetwork.lean](../model_repair/directed_repair/RepairNetwork.lean): `repaired_cast`, `mse_cast`. |
+| Certified reduction of the fitted model | [RepairedCore.lean](../model_repair/directed_repair/RepairedCore.lean): `pruning_checked`, `core_equal`; [RepairNetwork.lean](../model_repair/directed_repair/RepairNetwork.lean): `smaller_repair_equal`. |
+| Combined contract | [RepairResult.lean](../model_repair/directed_repair/RepairResult.lean): `repaired_controller_contract`. |
+
+The [recorded repair verification](../model_repair/directed_repair/RESULT.json)
+audits 39 theorem roots, reports no errors or warnings, and permits only
+the three standard axioms listed in Appendix C. This appendix explains
+those existing results; its addition is not a new proof run. Reproduction
+commands and exact runtime examples are in the
+[repair walkthrough](../model_repair/directed_repair/README.md).
+
+The universal clauses concern real input values and the exact rational
+parameters interpreted over the reals. The MSE clauses concern the fixed
+360-row collection. Float32 execution, physical reachability of every point
+in the cube, and closed-loop flight behavior require separate arguments.
+The earlier observable-subalgebra and update certificates are not
+automatically extended to this changed architecture.
