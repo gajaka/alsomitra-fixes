@@ -1,5 +1,13 @@
 # Alsomitra Property2: reproducing two implementation bugs
 
+**[Open the document as an interactive graph with its PDF](https://gajaka.github.io/alsomitra-fixes/)**
+· [Read the PDF guide](contribution/network_reduction/NETWORK_REDUCTION.pdf)
+· [Viewer controls](contribution/network_reduction/research_graph/README.md)
+
+Follow the document's questions, assumptions, insights, and evidence back to
+highlighted PDF passages. Drag nodes to arrange them; click a node or connection
+to isolate its context, and click it again or press Escape to deselect.
+
 This package reproduces two bugs in the companion code for **A General
 Framework for Property-Driven Machine Learning** and supplies a minimal local
 correction. All upstream reproductions target the unchanged revision
@@ -29,13 +37,6 @@ The complete repaired controller satisfies the selected Above/Below
 requirements on the real input cube and improves reference MSE on the
 360 rows used for fitting. The guide explains the role of the extra block
 and separates that result from held-out, float32 and flight guarantees.
-
-Explore the [interactive research graph with its source PDF](https://gajaka.github.io/alsomitra-fixes/)
-to follow the guide's questions, assumptions, insights, and evidence.
-Drag objects to arrange them, select an object or connection to isolate its
-context, and click it again to deselect. Relevant PDF passages are highlighted.
-The [viewer guide](contribution/network_reduction/research_graph/README.md)
-explains the controls and the scope of the extraction.
 
 ## 1. The two confirmed implementation bugs
 

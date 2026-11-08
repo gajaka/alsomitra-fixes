@@ -1,10 +1,13 @@
 # Certified reduction of trained networks
 
+**[Open the document graph with synchronized PDF](https://gajaka.github.io/alsomitra-fixes/)**
+
 Start with **Can a Smaller Network Keep Its Promise?**, available as
 [PDF](NETWORK_REDUCTION.pdf) and [editable source](REPORT.md).
-The [interactive graph and PDF viewer](https://gajaka.github.io/alsomitra-fixes/)
-lets you trace questions, assumptions, insights, and evidence back to their
-source passages. See the [viewer controls](research_graph/README.md).
+The interactive graph lets you trace questions, assumptions, insights, and
+evidence back to their source passages. Select a node or connection to focus
+on its context; click it again to deselect. See the
+[viewer controls](research_graph/README.md).
 
 The guide begins with explicit `P -> Q` definitions and a pair of nearby
 inputs. It follows the guarantee through actual checkpoint reduction,
