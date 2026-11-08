@@ -75,6 +75,11 @@ reviewing the extraction and its source bindings.
 
 ## Browser verification
 
+The [saved interaction checks](INTERACTION_CHECKS.json) record 12 passing
+scenarios, including selecting and deselecting both nodes and connections
+while preserving the source PDF passage. This is browser behavior validation,
+separate from the mathematical proof receipts.
+
 The interaction checks use Playwright with a local Chrome installation.
 From the repository root:
 

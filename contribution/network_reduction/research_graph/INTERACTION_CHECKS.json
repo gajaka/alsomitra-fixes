@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Initial node isolates its context and highlights the source PDF",
+    "Dragging moves the node and its curves without changing selection or PDF",
+    "Dragging remains accurate under zoom; zoom and labels preserve PDF",
+    "Manual positions survive reload",
+    "Clicking a curve isolates its endpoints; dragging preserves edge/PDF selection",
+    "Mouse and keyboard toggle a selected edge without losing the PDF passage",
+    "Mouse and keyboard node selection work; keyboard focus and movement survive redraw",
+    "Clicking a selected node or the background deselects while keeping its PDF passage",
+    "Joint edge selection retains every premise/evidence/conclusion; Escape preserves PDF",
+    "PDF page navigation and reset positions keep the source selection",
+    "Reset restores automatic layout; empty search and recovery work",
+    "Graph and PDF remain usable at 1000, 600 and 390px viewport widths"
+  ],
+  "browser_errors": []
+}
