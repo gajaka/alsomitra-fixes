@@ -180,12 +180,12 @@
       "source": {
         "document": "report",
         "line_start": 57,
-        "line_end": 73,
+        "line_end": 75,
         "pdf_pages": [
           2
         ],
         "section": "1. The promise, stated explicitly",
-        "passage": "An exact condition that is true or false for given arguments is a\n**predicate**. The input predicate **P** says that both inputs are in the permitted cube\nand that each of their six coordinates differs by at most 0.001:\n\n$$\nP(x,y)\\ \\Longleftrightarrow\\ x,y\\in[0,1]^6\\ \\wedge\\ \\forall i\\in\\{0,\\ldots,5\\},\\ |x_i-y_i|\\leq 0.001.\n$$\n\nThe output requirement **Q** says that the two commands differ by at most 0.1:\n\n$$\nQ_N(x,y)\\ \\Longleftrightarrow\\ |N(x)-N(y)|\\leq 0.1.\n$$\n\n**Lean proves this implication for each original and reduced DL2/Gödel network:**\n\n$$"
+        "passage": "An exact condition that is true or false for given arguments is a\n**predicate**. The input predicate **P** says that both inputs are in the permitted cube\nand that each of their six coordinates differs by at most 0.001:\n\n$$\nP(x,y)\\ \\Longleftrightarrow\\ x,y\\in[0,1]^6\\ \\wedge\\ \\forall i\\in\\{0,\\ldots,5\\},\\ |x_i-y_i|\\leq 0.001.\n$$\n\nThe output requirement **Q** says that the two commands differ by at most 0.1:\n\n$$\nQ_N(x,y)\\ \\Longleftrightarrow\\ |N(x)-N(y)|\\leq 0.1.\n$$\n\n**Lean proves this implication for each original and reduced DL2/Gödel network:**\n\n$$\n\\forall x,y\\in\\mathbb{R}^6,\\qquad P(x,y)\\ \\Longrightarrow\\ Q_N(x,y).\n$$"
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -200,12 +200,12 @@
       "source": {
         "document": "report",
         "line_start": 112,
-        "line_end": 133,
+        "line_end": 134,
         "pdf_pages": [
           3
         ],
         "section": "The key step: bound every possible input difference",
-        "passage": "### The key step: bound every possible input difference\n\nA network combines weighted sums with activation functions. A weight\nscales a signal; a bias adds a constant. In these models the hidden\nactivation is **ReLU**, which replaces a negative number by zero and leaves\na nonnegative number unchanged. ReLU cannot enlarge the distance between\ntwo scalar values.\n\nThe checker follows how input differences can grow through the weight\nmatrices. It uses absolute weights, so positive and negative contributions\ncannot cancel and hide a possible large difference. This gives a\nconservative bound: it may be larger than necessary, but the proof\nestablishes that it is safe to use.\n\nFor DL2, Lean accepts a multiplier of **31**. For Gödel it accepts **26**.\nConsequently, a coordinate perturbation of at most 0.001 gives:\n\n$$\n31\\cdot 0.001=0.031\\leq 0.1,\\qquad 26\\cdot 0.001=0.026\\leq 0.1.\n$$\n\nThe proof is derived from the exact saved weights. It does not assume"
+        "passage": "### The key step: bound every possible input difference\n\nA network combines weighted sums with activation functions. A weight\nscales a signal; a bias adds a constant. In these models the hidden\nactivation is **ReLU**, which replaces a negative number by zero and leaves\na nonnegative number unchanged. ReLU cannot enlarge the distance between\ntwo scalar values.\n\nThe checker follows how input differences can grow through the weight\nmatrices. It uses absolute weights, so positive and negative contributions\ncannot cancel and hide a possible large difference. This gives a\nconservative bound: it may be larger than necessary, but the proof\nestablishes that it is safe to use.\n\nFor DL2, Lean accepts a multiplier of **31**. For Gödel it accepts **26**.\nConsequently, a coordinate perturbation of at most 0.001 gives:\n\n$$\n31\\cdot 0.001=0.031\\leq 0.1,\\qquad 26\\cdot 0.001=0.026\\leq 0.1.\n$$\n\nThe proof is derived from the exact saved weights. It does not assume\nthat training succeeded or infer success from a sample of predictions."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -220,12 +220,12 @@
       "source": {
         "document": "report",
         "line_start": 112,
-        "line_end": 139,
+        "line_end": 140,
         "pdf_pages": [
           3
         ],
         "section": "The key step: bound every possible input difference",
-        "passage": "### The key step: bound every possible input difference\n\nA network combines weighted sums with activation functions. A weight\nscales a signal; a bias adds a constant. In these models the hidden\nactivation is **ReLU**, which replaces a negative number by zero and leaves\na nonnegative number unchanged. ReLU cannot enlarge the distance between\ntwo scalar values.\n\nThe checker follows how input differences can grow through the weight\nmatrices. It uses absolute weights, so positive and negative contributions\ncannot cancel and hide a possible large difference. This gives a\nconservative bound: it may be larger than necessary, but the proof\nestablishes that it is safe to use.\n\nFor DL2, Lean accepts a multiplier of **31**. For Gödel it accepts **26**.\nConsequently, a coordinate perturbation of at most 0.001 gives:\n\n$$\n31\\cdot 0.001=0.031\\leq 0.1,\\qquad 26\\cdot 0.001=0.026\\leq 0.1.\n$$\n\nThe proof is derived from the exact saved weights. It does not assume\nthat training succeeded or infer success from a sample of predictions.\n\nThis is **robustness of the output to nearby inputs**. It does not by\nitself tell us whether the command is the right one for flying the drone.\nA constant network would also be insensitive to perturbations. The saved\nmodels here are nonconstant; evaluating control quality remains a"
+        "passage": "### The key step: bound every possible input difference\n\nA network combines weighted sums with activation functions. A weight\nscales a signal; a bias adds a constant. In these models the hidden\nactivation is **ReLU**, which replaces a negative number by zero and leaves\na nonnegative number unchanged. ReLU cannot enlarge the distance between\ntwo scalar values.\n\nThe checker follows how input differences can grow through the weight\nmatrices. It uses absolute weights, so positive and negative contributions\ncannot cancel and hide a possible large difference. This gives a\nconservative bound: it may be larger than necessary, but the proof\nestablishes that it is safe to use.\n\nFor DL2, Lean accepts a multiplier of **31**. For Gödel it accepts **26**.\nConsequently, a coordinate perturbation of at most 0.001 gives:\n\n$$\n31\\cdot 0.001=0.031\\leq 0.1,\\qquad 26\\cdot 0.001=0.026\\leq 0.1.\n$$\n\nThe proof is derived from the exact saved weights. It does not assume\nthat training succeeded or infer success from a sample of predictions.\n\nThis is **robustness of the output to nearby inputs**. It does not by\nitself tell us whether the command is the right one for flying the drone.\nA constant network would also be insensitive to perturbations. The saved\nmodels here are nonconstant; evaluating control quality remains a\nseparate task from bounding sensitivity."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -355,13 +355,13 @@
       "extraction_origin": "question_reconstructed_from_reported_obligation_or_boundary",
       "source": {
         "document": "report",
-        "line_start": 149,
-        "line_end": 164,
+        "line_start": 146,
+        "line_end": 163,
         "pdf_pages": [
           4
         ],
         "section": "3. Removing a neuron without changing the answer",
-        "passage": "**preactivation**. If that value is never positive on the domain, ReLU\nmakes its contribution zero everywhere.\n\nFor **both DL2 and Gödel**, the first hidden layer's neuron 58, counting\nfrom zero, has the following checked upper bound:\n\n$$\nz_{58}(x)\\leq \\frac{-9057167}{134217728}<0\\qquad (x\\in[0,1]^6).\n$$\n\n**The key step** is the domain-wide bound, approximately −0.06748.\nIt establishes a zero activation for every permitted input. Whether an outgoing weight is 7,\n−4 or a very small fraction, its contribution is that weight multiplied\nby zero. Removing the neuron and its outgoing terms leaves the later\nweighted sums unchanged.\n"
+        "passage": "**The question now is:** can we delete computation and keep the proved\npromise? We keep the checkpoint weights, real arithmetic and unit cube\nfixed. A hidden neuron's weighted sum plus bias is its\n**preactivation**. If that value is never positive on the domain, ReLU\nmakes its contribution zero everywhere.\n\nFor **both DL2 and Gödel**, the first hidden layer's neuron 58, counting\nfrom zero, has the following checked upper bound:\n\n$$\nz_{58}(x)\\leq \\frac{-9057167}{134217728}<0\\qquad (x\\in[0,1]^6).\n$$\n\n**The key step** is the domain-wide bound, approximately −0.06748.\nIt establishes a zero activation for every permitted input. Whether an outgoing weight is 7,\n−4 or a very small fraction, its contribution is that weight multiplied\nby zero. Removing the neuron and its outgoing terms leaves the later\nweighted sums unchanged."
       },
       "novelty": "not_assessed_against_literature",
       "answer_nodes": [
@@ -387,13 +387,13 @@
       "extraction_origin": "question_reconstructed_from_reported_obligation_or_boundary",
       "source": {
         "document": "report",
-        "line_start": 166,
+        "line_start": 165,
         "line_end": 181,
         "pdf_pages": [
           4
         ],
         "section": "3. Removing a neuron without changing the answer",
-        "passage": "upper limit. The **pruning certificate** contains these bounds and a\n**mask**, a keep/delete flag for each neuron. A certificate is data to be checked, rather than a\npromise we accept on trust. Lean proves that if these checks pass, the\ndeletion preserves the network's mathematical output throughout the cube:\n\n$$\n\\forall z\\in[0,1]^6,\\qquad N_{\\mathrm{small}}(z)=N_{\\mathrm{original}}(z).\n$$\n\n| For each of the two checkpoints | Before | After |\n| --- | --- | --- |\n| Layer widths: inputs, hidden layers, output | 6 → 64 → 32 → 1 | 6 → 63 → 32 → 1 |\n| Stored weights and biases | 2,561 | 2,522 |\n\nAll six inputs remain. We remove a hidden computation, not an input\ncoordinate. The saving is modest: 39 parameters, about 1.52%."
+        "passage": "An **interval bound** encloses all possible values between a lower and an\nupper limit. The **pruning certificate** contains these bounds and a\n**mask**, a keep/delete flag for each neuron. A certificate is data to be checked, rather than a\npromise we accept on trust. Lean proves that if these checks pass, the\ndeletion preserves the network's mathematical output throughout the cube:\n\n$$\n\\forall z\\in[0,1]^6,\\qquad N_{\\mathrm{small}}(z)=N_{\\mathrm{original}}(z).\n$$\n\n| For each of the two checkpoints | Before | After |\n| --- | --- | --- |\n| Layer widths: inputs, hidden layers, output | 6 → 64 → 32 → 1 | 6 → 63 → 32 → 1 |\n| Stored weights and biases | 2,561 | 2,522 |\n\nAll six inputs remain. We remove a hidden computation, not an input\ncoordinate. The saving is modest: 39 parameters, about 1.52%."
       },
       "novelty": "not_assessed_against_literature",
       "answer_nodes": [
@@ -451,13 +451,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 166,
-        "line_end": 176,
+        "line_start": 165,
+        "line_end": 173,
         "pdf_pages": [
           4
         ],
         "section": "3. Removing a neuron without changing the answer",
-        "passage": "upper limit. The **pruning certificate** contains these bounds and a\n**mask**, a keep/delete flag for each neuron. A certificate is data to be checked, rather than a\npromise we accept on trust. Lean proves that if these checks pass, the\ndeletion preserves the network's mathematical output throughout the cube:\n\n$$\n\\forall z\\in[0,1]^6,\\qquad N_{\\mathrm{small}}(z)=N_{\\mathrm{original}}(z).\n$$\n\n| For each of the two checkpoints | Before | After |\n| --- | --- | --- |"
+        "passage": "An **interval bound** encloses all possible values between a lower and an\nupper limit. The **pruning certificate** contains these bounds and a\n**mask**, a keep/delete flag for each neuron. A certificate is data to be checked, rather than a\npromise we accept on trust. Lean proves that if these checks pass, the\ndeletion preserves the network's mathematical output throughout the cube:\n\n$$\n\\forall z\\in[0,1]^6,\\qquad N_{\\mathrm{small}}(z)=N_{\\mathrm{original}}(z).\n$$"
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -471,13 +471,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 149,
-        "line_end": 164,
+        "line_start": 146,
+        "line_end": 163,
         "pdf_pages": [
           4
         ],
         "section": "3. Removing a neuron without changing the answer",
-        "passage": "**preactivation**. If that value is never positive on the domain, ReLU\nmakes its contribution zero everywhere.\n\nFor **both DL2 and Gödel**, the first hidden layer's neuron 58, counting\nfrom zero, has the following checked upper bound:\n\n$$\nz_{58}(x)\\leq \\frac{-9057167}{134217728}<0\\qquad (x\\in[0,1]^6).\n$$\n\n**The key step** is the domain-wide bound, approximately −0.06748.\nIt establishes a zero activation for every permitted input. Whether an outgoing weight is 7,\n−4 or a very small fraction, its contribution is that weight multiplied\nby zero. Removing the neuron and its outgoing terms leaves the later\nweighted sums unchanged.\n"
+        "passage": "**The question now is:** can we delete computation and keep the proved\npromise? We keep the checkpoint weights, real arithmetic and unit cube\nfixed. A hidden neuron's weighted sum plus bias is its\n**preactivation**. If that value is never positive on the domain, ReLU\nmakes its contribution zero everywhere.\n\nFor **both DL2 and Gödel**, the first hidden layer's neuron 58, counting\nfrom zero, has the following checked upper bound:\n\n$$\nz_{58}(x)\\leq \\frac{-9057167}{134217728}<0\\qquad (x\\in[0,1]^6).\n$$\n\n**The key step** is the domain-wide bound, approximately −0.06748.\nIt establishes a zero activation for every permitted input. Whether an outgoing weight is 7,\n−4 or a very small fraction, its contribution is that weight multiplied\nby zero. Removing the neuron and its outgoing terms leaves the later\nweighted sums unchanged."
       },
       "novelty": "not_assessed_against_literature",
       "supporting_evidence": [
@@ -495,13 +495,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 172,
+        "line_start": 165,
         "line_end": 195,
         "pdf_pages": [
           4
         ],
         "section": "3. Removing a neuron without changing the answer",
-        "passage": "\\forall z\\in[0,1]^6,\\qquad N_{\\mathrm{small}}(z)=N_{\\mathrm{original}}(z).\n$$\n\n| For each of the two checkpoints | Before | After |\n| --- | --- | --- |\n| Layer widths: inputs, hidden layers, output | 6 → 64 → 32 → 1 | 6 → 63 → 32 → 1 |\n| Stored weights and biases | 2,561 | 2,522 |\n\nAll six inputs remain. We remove a hidden computation, not an input\ncoordinate. The saving is modest: 39 parameters, about 1.52%.\n\n### Why the smaller network inherits P ⇒ Q\n\n```flow\nProve the original promise | Every pair satisfying P has output difference at most 0.1.\nProve exact reduction | The smaller network agrees with the original at every input in the cube.\nSubstitute at both inputs | Replace N(x) and N(y) by the smaller network's equal outputs.\n```\n\n**What has actually been proved?** Exact output equality and, by\nsubstitution, the same implication for the smaller network, including\nthe stronger 0.031 and 0.026 bounds. Equality transports the guarantee\nwithout another search over input pairs.\n"
+        "passage": "An **interval bound** encloses all possible values between a lower and an\nupper limit. The **pruning certificate** contains these bounds and a\n**mask**, a keep/delete flag for each neuron. A certificate is data to be checked, rather than a\npromise we accept on trust. Lean proves that if these checks pass, the\ndeletion preserves the network's mathematical output throughout the cube:\n\n$$\n\\forall z\\in[0,1]^6,\\qquad N_{\\mathrm{small}}(z)=N_{\\mathrm{original}}(z).\n$$\n\n| For each of the two checkpoints | Before | After |\n| --- | --- | --- |\n| Layer widths: inputs, hidden layers, output | 6 → 64 → 32 → 1 | 6 → 63 → 32 → 1 |\n| Stored weights and biases | 2,561 | 2,522 |\n\nAll six inputs remain. We remove a hidden computation, not an input\ncoordinate. The saving is modest: 39 parameters, about 1.52%.\n\n### Why the smaller network inherits P ⇒ Q\n\n```flow\nProve the original promise | Every pair satisfying P has output difference at most 0.1.\nProve exact reduction | The smaller network agrees with the original at every input in the cube.\nSubstitute at both inputs | Replace N(x) and N(y) by the smaller network's equal outputs.\n```\n\n**What has actually been proved?** Exact output equality and, by\nsubstitution, the same implication for the smaller network, including\nthe stronger 0.031 and 0.026 bounds. Equality transports the guarantee\nwithout another search over input pairs.\n"
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -535,13 +535,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 178,
+        "line_start": 175,
         "line_end": 181,
         "pdf_pages": [
           4
         ],
         "section": "3. Removing a neuron without changing the answer",
-        "passage": "| Stored weights and biases | 2,561 | 2,522 |\n\nAll six inputs remain. We remove a hidden computation, not an input\ncoordinate. The saving is modest: 39 parameters, about 1.52%."
+        "passage": "| For each of the two checkpoints | Before | After |\n| --- | --- | --- |\n| Layer widths: inputs, hidden layers, output | 6 → 64 → 32 → 1 | 6 → 63 → 32 → 1 |\n| Stored weights and biases | 2,561 | 2,522 |\n\nAll six inputs remain. We remove a hidden computation, not an input\ncoordinate. The saving is modest: 39 parameters, about 1.52%."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -673,13 +673,13 @@
       "extraction_origin": "question_reconstructed_from_reported_obligation_or_boundary",
       "source": {
         "document": "report",
-        "line_start": 265,
+        "line_start": 262,
         "line_end": 310,
         "pdf_pages": [
           6
         ],
         "section": "5. What are the state, the view and RR?",
-        "passage": "written `(a₀, a₁, a₂, a₃, b)`. Thus its output is:\n\n$$\nN_a(x)=\\operatorname{ReLU}\\left(a_0h_0(x)+a_2h_2(x)+b\\right).\n$$\n\nFor this example a **state s** consists of an input x in the cube and\nthat five-parameter head. The hidden layers are fixed background data.\nThe **view q(s)** keeps x and the three parameters needed for evaluation:\n\n$$\ns=(x,a_0,a_1,a_2,a_3,b),\\qquad q(s)=(x,a_0,a_2,b).\n$$\n\n### Two different states, the same retained information\n\nFix any one input x in the cube. Consider these illustrative heads; the\ngeneral Lean theorem allows every rational head (parameters that are\nratios of integers), including these:\n\n| State | Full head `(a₀, a₁, a₂, a₃, b)` | Retained head `(a₀, a₂, b)` |\n| --- | --- | --- |\n| s | `(2, 7, 3, 11, 1)` | `(2, 3, 1)` |\n| t | `(2, −4, 3, 99, 1)` | `(2, 3, 1)` |\n\nBoth evaluate as `ReLU(2h₀(x) + 3h₂(x) + 1)`. The different values 7\nand −4 multiply zero; so do 11 and 99. The states differ, but the view\ncannot distinguish them.\n\n**RR names precisely this relationship:**\n\n$$\nRR(s,t)\\ \\Longleftrightarrow\\ q(s)=q(t).\n$$\n\nRR is an **equivalence relation**: every state has its own view\n(reflexivity); equal views agree in either order (symmetry); and if two\nequalities share a middle view, the outer views agree (transitivity).\nGrouping states by their common view forms a **quotient**: each group\nretains one description of the information we chose to keep.\n\nRR is stronger than “the outputs happened to match once.” It requires\nequality of the retained input and parameters. It also differs from P:\n**P compares nearby input vectors; RR compares full states with identical\nviews.** This RR is defined on one state space, not between different types.\n"
+        "passage": "Its second hidden layer has activations `(h₀(x), 0, h₂(x), 0)` on the\ncube. Here h₀(x) and h₂(x) are the surviving neurons' values, computed\nfrom x by the fixed hidden layers. The **output head** is the last layer: four weights and a bias,\nwritten `(a₀, a₁, a₂, a₃, b)`. Thus its output is:\n\n$$\nN_a(x)=\\operatorname{ReLU}\\left(a_0h_0(x)+a_2h_2(x)+b\\right).\n$$\n\nFor this example a **state s** consists of an input x in the cube and\nthat five-parameter head. The hidden layers are fixed background data.\nThe **view q(s)** keeps x and the three parameters needed for evaluation:\n\n$$\ns=(x,a_0,a_1,a_2,a_3,b),\\qquad q(s)=(x,a_0,a_2,b).\n$$\n\n### Two different states, the same retained information\n\nFix any one input x in the cube. Consider these illustrative heads; the\ngeneral Lean theorem allows every rational head (parameters that are\nratios of integers), including these:\n\n| State | Full head `(a₀, a₁, a₂, a₃, b)` | Retained head `(a₀, a₂, b)` |\n| --- | --- | --- |\n| s | `(2, 7, 3, 11, 1)` | `(2, 3, 1)` |\n| t | `(2, −4, 3, 99, 1)` | `(2, 3, 1)` |\n\nBoth evaluate as `ReLU(2h₀(x) + 3h₂(x) + 1)`. The different values 7\nand −4 multiply zero; so do 11 and 99. The states differ, but the view\ncannot distinguish them.\n\n**RR names precisely this relationship:**\n\n$$\nRR(s,t)\\ \\Longleftrightarrow\\ q(s)=q(t).\n$$\n\nRR is an **equivalence relation**: every state has its own view\n(reflexivity); equal views agree in either order (symmetry); and if two\nequalities share a middle view, the outer views agree (transitivity).\nGrouping states by their common view forms a **quotient**: each group\nretains one description of the information we chose to keep.\n\nRR is stronger than “the outputs happened to match once.” It requires\nequality of the retained input and parameters. It also differs from P:\n**P compares nearby input vectors; RR compares full states with identical\nviews.** This RR is defined on one state space, not between different types.\n"
       },
       "novelty": "not_assessed_against_literature",
       "answer_nodes": [
@@ -738,13 +738,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 270,
+        "line_start": 271,
         "line_end": 277,
         "pdf_pages": [
           6
         ],
         "section": "5. What are the state, the view and RR?",
-        "passage": "\nFor this example a **state s** consists of an input x in the cube and\nthat five-parameter head. The hidden layers are fixed background data.\nThe **view q(s)** keeps x and the three parameters needed for evaluation:\n\n$$\ns=(x,a_0,a_1,a_2,a_3,b),\\qquad q(s)=(x,a_0,a_2,b).\n$$"
+        "passage": "For this example a **state s** consists of an input x in the cube and\nthat five-parameter head. The hidden layers are fixed background data.\nThe **view q(s)** keeps x and the three parameters needed for evaluation:\n\n$$\ns=(x,a_0,a_1,a_2,a_3,b),\\qquad q(s)=(x,a_0,a_2,b).\n$$"
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -778,13 +778,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 390,
+        "line_start": 388,
         "line_end": 407,
         "pdf_pages": [
           8
         ],
         "section": "7. Why does a subalgebra appear here?",
-        "passage": "we can compute it from the view alone.\n\nIf two observables are determined by q, so are their sum and product,\nany constant multiple, and constant functions. That closure under\narithmetic operations is why these observables form an **algebra**.\nThey form a **subalgebra** of all real-valued functions on full states:\nsome functions, such as the forgotten a₁, are excluded.\n\nFormally, if V is the space of views, the subalgebra is:\n\n$$\n\\operatorname{Obs}(q)=\\{f\\circ q\\mid f:V\\longrightarrow\\mathbb{R}\\}.\n$$\n\nHere composition means “first take the view, then apply f.” The condition\nis dependence only on the view; arbitrary real-valued functions are\nallowed, so this definition does not supply executable code for every\nmember. Lean constructs an actual `Subalgebra` with this meaning."
+        "passage": "A real-valued quantity attached to a state is called an **observable**.\nFor example, F(s) = a₀ + a₂ is an observable. It factors through q because\nwe can compute it from the view alone.\n\nIf two observables are determined by q, so are their sum and product,\nany constant multiple, and constant functions. That closure under\narithmetic operations is why these observables form an **algebra**.\nThey form a **subalgebra** of all real-valued functions on full states:\nsome functions, such as the forgotten a₁, are excluded.\n\nFormally, if V is the space of views, the subalgebra is:\n\n$$\n\\operatorname{Obs}(q)=\\{f\\circ q\\mid f:V\\longrightarrow\\mathbb{R}\\}.\n$$\n\nHere composition means “first take the view, then apply f.” The condition\nis dependence only on the view; arbitrary real-valued functions are\nallowed, so this definition does not supply executable code for every\nmember. Lean constructs an actual `Subalgebra` with this meaning."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -799,12 +799,12 @@
       "source": {
         "document": "report",
         "line_start": 335,
-        "line_end": 362,
+        "line_end": 359,
         "pdf_pages": [
           7
         ],
         "section": "The key step: both routes must give the same view",
-        "passage": "### The key step: both routes must give the same view\n\nLet **T** be an update on full states and **T̄** its proposed reduced\nimplementation. Compatibility means that these two routes agree:\n\n```text\n        full state s  -------- T -------->  updated full state\n             |                                      |\n             q                                      q\n             |                                      |\n             v                                      v\n        retained view ------- Tbar ------>  updated view\n```\n\n$$\nq(T(s))=\\overline{T}(q(s)).\n$$\n\nThis equality is also called **factorization through the view**: the\nretained part of the result can be computed from retained information.\nIf each permitted step has this property, **induction** gives it for every\nfinite sequence: agreement holds before any steps; one compatible step\npreserves it; the argument repeats. Full and reduced execution stay in agreement.\nRR-related full states also remain RR-related under the same sequence.\nChoosing the next operation from the state must also use retained information.\n\nAn automatic dependency analysis can enlarge the view when necessary:\n"
+        "passage": "### The key step: both routes must give the same view\n\nLet **T** be an update on full states and **T̄** its proposed reduced\nimplementation. Compatibility means that these two routes agree:\n\n```text\n        full state s  -------- T -------->  updated full state\n             |                                      |\n             q                                      q\n             |                                      |\n             v                                      v\n        retained view ------- Tbar ------>  updated view\n```\n\n$$\nq(T(s))=\\overline{T}(q(s)).\n$$\n\nThis equality is also called **factorization through the view**: the\nretained part of the result can be computed from retained information.\nIf each permitted step has this property, **induction** gives it for every\nfinite sequence: agreement holds before any steps; one compatible step\npreserves it; the argument repeats. Full and reduced execution stay in agreement.\nRR-related full states also remain RR-related under the same sequence.\nChoosing the next operation from the state must also use retained information."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -839,12 +839,12 @@
       "source": {
         "document": "report",
         "line_start": 335,
-        "line_end": 362,
+        "line_end": 359,
         "pdf_pages": [
           7
         ],
         "section": "The key step: both routes must give the same view",
-        "passage": "### The key step: both routes must give the same view\n\nLet **T** be an update on full states and **T̄** its proposed reduced\nimplementation. Compatibility means that these two routes agree:\n\n```text\n        full state s  -------- T -------->  updated full state\n             |                                      |\n             q                                      q\n             |                                      |\n             v                                      v\n        retained view ------- Tbar ------>  updated view\n```\n\n$$\nq(T(s))=\\overline{T}(q(s)).\n$$\n\nThis equality is also called **factorization through the view**: the\nretained part of the result can be computed from retained information.\nIf each permitted step has this property, **induction** gives it for every\nfinite sequence: agreement holds before any steps; one compatible step\npreserves it; the argument repeats. Full and reduced execution stay in agreement.\nRR-related full states also remain RR-related under the same sequence.\nChoosing the next operation from the state must also use retained information.\n\nAn automatic dependency analysis can enlarge the view when necessary:\n"
+        "passage": "### The key step: both routes must give the same view\n\nLet **T** be an update on full states and **T̄** its proposed reduced\nimplementation. Compatibility means that these two routes agree:\n\n```text\n        full state s  -------- T -------->  updated full state\n             |                                      |\n             q                                      q\n             |                                      |\n             v                                      v\n        retained view ------- Tbar ------>  updated view\n```\n\n$$\nq(T(s))=\\overline{T}(q(s)).\n$$\n\nThis equality is also called **factorization through the view**: the\nretained part of the result can be computed from retained information.\nIf each permitted step has this property, **induction** gives it for every\nfinite sequence: agreement holds before any steps; one compatible step\npreserves it; the argument repeats. Full and reduced execution stay in agreement.\nRR-related full states also remain RR-related under the same sequence.\nChoosing the next operation from the state must also use retained information."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -858,13 +858,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 354,
-        "line_end": 362,
+        "line_start": 353,
+        "line_end": 359,
         "pdf_pages": [
           7
         ],
         "section": "The key step: both routes must give the same view",
-        "passage": "retained part of the result can be computed from retained information.\nIf each permitted step has this property, **induction** gives it for every\nfinite sequence: agreement holds before any steps; one compatible step\npreserves it; the argument repeats. Full and reduced execution stay in agreement.\nRR-related full states also remain RR-related under the same sequence.\nChoosing the next operation from the state must also use retained information.\n\nAn automatic dependency analysis can enlarge the view when necessary:\n"
+        "passage": "This equality is also called **factorization through the view**: the\nretained part of the result can be computed from retained information.\nIf each permitted step has this property, **induction** gives it for every\nfinite sequence: agreement holds before any steps; one compatible step\npreserves it; the argument repeats. Full and reduced execution stay in agreement.\nRR-related full states also remain RR-related under the same sequence.\nChoosing the next operation from the state must also use retained information."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -879,12 +879,12 @@
       "source": {
         "document": "report",
         "line_start": 417,
-        "line_end": 431,
+        "line_end": 429,
         "pdf_pages": [
           8
         ],
         "section": "What “stable” means",
-        "passage": "### What “stable” means\n\nAfter the compatible update a₀ := a₀ + 0.5, F becomes **5.5**. Its value\nchanged, but it is still computable from retained information. A\n**stable subalgebra** keeps dependence on retained information after every allowed update.\nFor any observable H in it, H after an update is still a function of\nthe old view, via the reduced update.\n\n**What has actually been proved?** RR groups states with the same view;\nthe subalgebra describes what that view determines. Under the specified\ncompatible updates, full and reduced execution agree after every finite\nsequence, and the subalgebra stays stable. Outputs may change: preserving\nthis correspondence does not establish a new robustness bound.\n\nFor a learning rule, the next question is what else belongs in the state."
+        "passage": "### What “stable” means\n\nAfter the compatible update a₀ := a₀ + 0.5, F becomes **5.5**. Its value\nchanged, but it is still computable from retained information. A\n**stable subalgebra** keeps dependence on retained information after every allowed update.\nFor any observable H in it, H after an update is still a function of\nthe old view, via the reduced update.\n\n**What has actually been proved?** RR groups states with the same view;\nthe subalgebra describes what that view determines. Under the specified\ncompatible updates, full and reduced execution agree after every finite\nsequence, and the subalgebra stays stable. Outputs may change: preserving\nthis correspondence does not establish a new robustness bound."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -967,13 +967,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 364,
-        "line_end": 373,
+        "line_start": 361,
+        "line_end": 372,
         "pdf_pages": [
           7
         ],
         "section": "The key step: both routes must give the same view",
-        "passage": "| --- | --- |\n| Shared additive shifts | a₀, a₂, b: three coordinates |\n| Also allow a₀ := a₀ + a₁ | Add a₁: four coordinates |\n| Also allow a₁ := a₁ + a₃ | Add a₃: all five coordinates |\n\nKeeping an extra parameter for an update does not require restoring its\nzero hidden neuron. Parameter memory and inference computation serve\ndifferent purposes.\n\n<!-- pagebreak -->"
+        "passage": "An automatic dependency analysis can enlarge the view when necessary:\n\n| Permitted rules | Head coordinates that must be retained |\n| --- | --- |\n| Shared additive shifts | a₀, a₂, b: three coordinates |\n| Also allow a₀ := a₀ + a₁ | Add a₁: four coordinates |\n| Also allow a₁ := a₁ + a₃ | Add a₃: all five coordinates |\n\nKeeping an extra parameter for an update does not require restoring its\nzero hidden neuron. Parameter memory and inference computation serve\ndifferent purposes.\n"
       },
       "novelty": "not_assessed_against_literature",
       "supporting_evidence": [
@@ -1095,12 +1095,12 @@
       "source": {
         "document": "report",
         "line_start": 456,
-        "line_end": 471,
+        "line_end": 474,
         "pdf_pages": [
           9
         ],
         "section": "Sometimes a sum is enough",
-        "passage": "### Sometimes a sum is enough\n\n**The assumptions here** are fixed Adversarial hidden features and a\nspecified momentum update with a loss term coupling a₀, a₁ and a₃ through\ntheir sum. Its five parameters and five momentum values form a ten-value\nstate. This chosen rule does not reconstruct the authors' training.\n\nIndividual coordinates would force us to keep all ten. A **linear\nobservation** is a sum or weighted sum of coordinates. Such observations\ncan instead retain these eight quantities:\n\n$$\nq(s)=(a_0,a_1+a_3,a_2,b,\\ v_0,v_1+v_3,v_2,v_b).\n$$\n\nFor example, `(a₁, a₃) = (7, 11)` and `(8, 10)` both give the retained"
+        "passage": "### Sometimes a sum is enough\n\n**The assumptions here** are fixed Adversarial hidden features and a\nspecified momentum update with a loss term coupling a₀, a₁ and a₃ through\ntheir sum. Its five parameters and five momentum values form a ten-value\nstate. This chosen rule does not reconstruct the authors' training.\n\nIndividual coordinates would force us to keep all ten. A **linear\nobservation** is a sum or weighted sum of coordinates. Such observations\ncan instead retain these eight quantities:\n\n$$\nq(s)=(a_0,a_1+a_3,a_2,b,\\ v_0,v_1+v_3,v_2,v_b).\n$$\n\nFor example, `(a₁, a₃) = (7, 11)` and `(8, 10)` both give the retained\nsum **18**. Likewise, momentum pairs `(4, 6)` and `(3, 7)` both give\n**10**. With the other coordinates equal, the eight-value view cannot\ndistinguish these full states, and the specified updates do not need to."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -1134,13 +1134,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 473,
+        "line_start": 476,
         "line_end": 484,
         "pdf_pages": [
           9
         ],
         "section": "Sometimes a sum is enough",
-        "passage": "**10**. With the other coordinates equal, the eight-value view cannot\ndistinguish these full states, and the specified updates do not need to.\n\n**The key step is to retain sums, then derive their updates.** An exact\ncalculation proposes the view and rule; Lean checks agreement with full\nexecution. **The proved minimum is specific:** for the concrete\ncoupled instance, eight is minimal among invariant\nlinear observation spaces retaining the required output coordinates.\nHere **invariant** means the space remains sufficient after each allowed\nupdate: no new independent observation is needed to determine the next view.\nThis is a precisely delimited minimum, not a claim about every possible\nencoding. With no coupling, the same comparison needs only six values."
+        "passage": "**The key step is to retain sums, then derive their updates.** An exact\ncalculation proposes the view and rule; Lean checks agreement with full\nexecution. **The proved minimum is specific:** for the concrete\ncoupled instance, eight is minimal among invariant\nlinear observation spaces retaining the required output coordinates.\nHere **invariant** means the space remains sufficient after each allowed\nupdate: no new independent observation is needed to determine the next view.\nThis is a precisely delimited minimum, not a claim about every possible\nencoding. With no coupling, the same comparison needs only six values."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -1254,12 +1254,12 @@
       "source": {
         "document": "report",
         "line_start": 496,
-        "line_end": 512,
+        "line_end": 516,
         "pdf_pages": [
           10
         ],
         "section": "9. RMSProp shows why the allowed states matter",
-        "passage": "## 9. RMSProp shows why the allowed states matter\n\n**RMSProp**, short for Root Mean Square Propagation, uses a running\naverage of squared gradients to scale each parameter's step. A parameter\nwith a different history can move differently even when its present\ngradient matches another's.\n\nFor a separate exact-real example, we use the following specified rule.\nThe history r is nonnegative, the decay is 1/2, the step size is 1, and\nthe stabilizing constant 1 is outside the square root:\n\n$$\nr_i'=\\frac{r_i+g_i^2}{2},\\qquad a_i'=a_i-\\frac{g_i}{\\sqrt{r_i'}+1}.\n$$\n\n**The question:** can we keep only the sum of two histories, as for momentum?\nThe full state now contains the five head parameters and five histories."
+        "passage": "## 9. RMSProp shows why the allowed states matter\n\n**RMSProp**, short for Root Mean Square Propagation, uses a running\naverage of squared gradients to scale each parameter's step. A parameter\nwith a different history can move differently even when its present\ngradient matches another's.\n\nFor a separate exact-real example, we use the following specified rule.\nThe history r is nonnegative, the decay is 1/2, the step size is 1, and\nthe stabilizing constant 1 is outside the square root:\n\n$$\nr_i'=\\frac{r_i+g_i^2}{2},\\qquad a_i'=a_i-\\frac{g_i}{\\sqrt{r_i'}+1}.\n$$\n\n**The question:** can we keep only the sum of two histories, as for momentum?\nThe full state now contains the five head parameters and five histories.\nThe proposed view is `(a₀, a₁+a₃, a₂, b, r₀, r₁+r₃, r₂, r_b)`:\nit keeps the head observations and replaces momentum by history observations.\nStart with the head `(1, 0, 0, 0, 0)`. The specified coupled loss gives\ng₁ = g₃ = 1. All other histories are zero. Compare:"
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -1273,13 +1273,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 513,
+        "line_start": 511,
         "line_end": 516,
         "pdf_pages": [
           10
         ],
         "section": "9. RMSProp shows why the allowed states matter",
-        "passage": "The proposed view is `(a₀, a₁+a₃, a₂, b, r₀, r₁+r₃, r₂, r_b)`:\nit keeps the head observations and replaces momentum by history observations.\nStart with the head `(1, 0, 0, 0, 0)`. The specified coupled loss gives\ng₁ = g₃ = 1. All other histories are zero. Compare:"
+        "passage": "**The question:** can we keep only the sum of two histories, as for momentum?\nThe full state now contains the five head parameters and five histories.\nThe proposed view is `(a₀, a₁+a₃, a₂, b, r₀, r₁+r₃, r₂, r_b)`:\nit keeps the head observations and replaces momentum by history observations.\nStart with the head `(1, 0, 0, 0, 0)`. The specified coupled loss gives\ng₁ = g₃ = 1. All other histories are zero. Compare:"
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -1322,13 +1322,13 @@
       "extraction_origin": "candidate_claim_reconstructed_from_document_counterexample",
       "source": {
         "document": "report",
-        "line_start": 513,
+        "line_start": 511,
         "line_end": 525,
         "pdf_pages": [
           10
         ],
         "section": "9. RMSProp shows why the allowed states matter",
-        "passage": "The proposed view is `(a₀, a₁+a₃, a₂, b, r₀, r₁+r₃, r₂, r_b)`:\nit keeps the head observations and replaces momentum by history observations.\nStart with the head `(1, 0, 0, 0, 0)`. The specified coupled loss gives\ng₁ = g₃ = 1. All other histories are zero. Compare:\n\n| Initial histories `(r₁, r₃)` | Retained sum | Histories after the step | New weight sum `a₁′ + a₃′` |\n| --- | --- | --- | --- |\n| `(1, 97)` | 98 | `(1, 49)` | −1/2 − 1/8 = −5/8 |\n| `(49, 49)` | 98 | `(25, 25)` | −1/6 − 1/6 = −1/3 |\n\nThe old view is identical, but the new weight sums differ. The separate\nsquare roots make the distribution of history matter. Lean proves that\nno deterministic update on this view works for **all nonnegative histories**."
+        "passage": "**The question:** can we keep only the sum of two histories, as for momentum?\nThe full state now contains the five head parameters and five histories.\nThe proposed view is `(a₀, a₁+a₃, a₂, b, r₀, r₁+r₃, r₂, r_b)`:\nit keeps the head observations and replaces momentum by history observations.\nStart with the head `(1, 0, 0, 0, 0)`. The specified coupled loss gives\ng₁ = g₃ = 1. All other histories are zero. Compare:\n\n| Initial histories `(r₁, r₃)` | Retained sum | Histories after the step | New weight sum `a₁′ + a₃′` |\n| --- | --- | --- | --- |\n| `(1, 97)` | 98 | `(1, 49)` | −1/2 − 1/8 = −5/8 |\n| `(49, 49)` | 98 | `(25, 25)` | −1/6 − 1/6 = −1/3 |\n\nThe old view is identical, but the new weight sums differ. The separate\nsquare roots make the distribution of history matter. Lean proves that\nno deterministic update on this view works for **all nonnegative histories**."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -1363,12 +1363,12 @@
       "source": {
         "document": "report",
         "line_start": 527,
-        "line_end": 535,
+        "line_end": 532,
         "pdf_pages": [
           10
         ],
         "section": "The key step: justify a stronger assumption",
-        "passage": "### The key step: justify a stronger assumption\n\nSuppose the paired histories start equal. In this model their gradients\nalways agree, so their new histories also agree. This is an **invariant**:\na condition true initially and preserved by every permitted step.\nZero initialization satisfies it.\n\nIf r₁ = r₃ and their stored sum is R, each history must be R/2. Nothing\nneeded by the square roots is missing. With u = a₁ + a₃ and their common"
+        "passage": "### The key step: justify a stronger assumption\n\nSuppose the paired histories start equal. In this model their gradients\nalways agree, so their new histories also agree. This is an **invariant**:\na condition true initially and preserved by every permitted step.\nZero initialization satisfies it."
       },
       "novelty": "not_assessed_against_literature",
       "supporting_evidence": [
@@ -1386,12 +1386,12 @@
       "source": {
         "document": "report",
         "line_start": 527,
-        "line_end": 550,
+        "line_end": 549,
         "pdf_pages": [
           10
         ],
         "section": "The key step: justify a stronger assumption",
-        "passage": "### The key step: justify a stronger assumption\n\nSuppose the paired histories start equal. In this model their gradients\nalways agree, so their new histories also agree. This is an **invariant**:\na condition true initially and preserved by every permitted step.\nZero initialization satisfies it.\n\nIf r₁ = r₃ and their stored sum is R, each history must be R/2. Nothing\nneeded by the square roots is missing. With u = a₁ + a₃ and their common\ngradient g, the exact reduced rule becomes:\n\n$$\nR'=\\frac{R+2g^2}{2},\\qquad u'=u-\\frac{2g}{\\sqrt{R'/2}+1}.\n$$\n\n**What has actually been proved?** This rule is correct on equal-history states,\nincluding every finite permitted input sequence. RR and the stable\nsubalgebra are defined on that restricted state space. The failing\n`(1, 97)` witness cannot occur from equal histories under these rules.\n\nThe sum fails on general histories but succeeds on the justified invariant\nstates. This real RMSProp model has not yet been connected to the concrete\nrational-head checkpoints; the momentum example has that connection.\nWe can now distinguish agreement through updates from satisfaction of a"
+        "passage": "### The key step: justify a stronger assumption\n\nSuppose the paired histories start equal. In this model their gradients\nalways agree, so their new histories also agree. This is an **invariant**:\na condition true initially and preserved by every permitted step.\nZero initialization satisfies it.\n\nIf r₁ = r₃ and their stored sum is R, each history must be R/2. Nothing\nneeded by the square roots is missing. With u = a₁ + a₃ and their common\ngradient g, the exact reduced rule becomes:\n\n$$\nR'=\\frac{R+2g^2}{2},\\qquad u'=u-\\frac{2g}{\\sqrt{R'/2}+1}.\n$$\n\n**What has actually been proved?** This rule is correct on equal-history states,\nincluding every finite permitted input sequence. RR and the stable\nsubalgebra are defined on that restricted state space. The failing\n`(1, 97)` witness cannot occur from equal histories under these rules.\n\nThe sum fails on general histories but succeeds on the justified invariant\nstates. This real RMSProp model has not yet been connected to the concrete\nrational-head checkpoints; the momentum example has that connection."
       },
       "novelty": "not_assessed_against_literature",
       "answer_nodes": [
@@ -1418,13 +1418,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 533,
-        "line_end": 542,
+        "line_start": 534,
+        "line_end": 540,
         "pdf_pages": [
           10
         ],
         "section": "The key step: justify a stronger assumption",
-        "passage": "\nIf r₁ = r₃ and their stored sum is R, each history must be R/2. Nothing\nneeded by the square roots is missing. With u = a₁ + a₃ and their common\ngradient g, the exact reduced rule becomes:\n\n$$\nR'=\\frac{R+2g^2}{2},\\qquad u'=u-\\frac{2g}{\\sqrt{R'/2}+1}.\n$$\n\n**What has actually been proved?** This rule is correct on equal-history states,"
+        "passage": "If r₁ = r₃ and their stored sum is R, each history must be R/2. Nothing\nneeded by the square roots is missing. With u = a₁ + a₃ and their common\ngradient g, the exact reduced rule becomes:\n\n$$\nR'=\\frac{R+2g^2}{2},\\qquad u'=u-\\frac{2g}{\\sqrt{R'/2}+1}.\n$$"
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -1438,13 +1438,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 544,
-        "line_end": 550,
+        "line_start": 542,
+        "line_end": 549,
         "pdf_pages": [
           10
         ],
         "section": "The key step: justify a stronger assumption",
-        "passage": "subalgebra are defined on that restricted state space. The failing\n`(1, 97)` witness cannot occur from equal histories under these rules.\n\nThe sum fails on general histories but succeeds on the justified invariant\nstates. This real RMSProp model has not yet been connected to the concrete\nrational-head checkpoints; the momentum example has that connection.\nWe can now distinguish agreement through updates from satisfaction of a"
+        "passage": "**What has actually been proved?** This rule is correct on equal-history states,\nincluding every finite permitted input sequence. RR and the stable\nsubalgebra are defined on that restricted state space. The failing\n`(1, 97)` witness cannot occur from equal histories under these rules.\n\nThe sum fails on general histories but succeeds on the justified invariant\nstates. This real RMSProp model has not yet been connected to the concrete\nrational-head checkpoints; the momentum example has that connection."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -1458,13 +1458,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 552,
-        "line_end": 554,
+        "line_start": 895,
+        "line_end": 903,
         "pdf_pages": [
-          10
+          16
         ],
-        "section": "The key step: justify a stronger assumption",
-        "passage": "have preserved needs to change?\n\n<!-- pagebreak -->"
+        "section": "The RMSProp invariant",
+        "passage": "### The RMSProp invariant\n\nThe separate real model uses features `(0,0,z₂,0,1)`, target zero and\ncoupled penalty `(a₀+a₁+a₃)²/2`. Its paired gradients always agree.\nConsequently `r₁′ − r₃′ = (r₁ − r₃)/2`; equal nonnegative histories\nremain equal and nonnegative. The reduced rule is proved on this subtype,\nfor finite sequences of real z₂. Square roots can yield irrational\nparameters, so this development does not silently reuse the concrete\nrational-head evaluation theorem."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -1478,13 +1478,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 923,
+        "line_start": 922,
         "line_end": 935,
         "pdf_pages": [
           17
         ],
         "section": "Appendix C. Where the claims are checked",
-        "passage": "| Property and counterexample transfer | [PropertyTransfer](property_transfer/PropertyTransfer.lean), [Witnesses](property_decision/Witnesses.lean). |\n\nThe previously recorded audits cover the following roots. Counts overlap;\nthey should not be added to claim a number of distinct new theorems.\n\n| Recorded development | Audit roots and verification receipt |\n| --- | --- |\n| Checkpoint pruning | [43 roots](../results/network_reduction_verification.json) |\n| Output-head updates | [36 roots](../results/output_update_verification.json) |\n| Coordinate retention | [78 roots](../results/update_synthesis_verification.json) |\n| Linear observations | [82 roots](../results/linear_observations_verification.json) |\n| RMSProp / property transfer | [47 roots](../results/rmsprop_and_property_transfer_verification.json) |\n| Concrete property decisions | [48 roots](../results/property_decision_verification.json) |"
+        "passage": "| RMSProp failure and invariant-based success | [AdaptiveBoundary](linear_observations/AdaptiveBoundary.lean), [SymmetricRMSProp](rmsprop_symmetric/SymmetricRMSProp.lean). |\n| Property and counterexample transfer | [PropertyTransfer](property_transfer/PropertyTransfer.lean), [Witnesses](property_decision/Witnesses.lean). |\n\nThe previously recorded audits cover the following roots. Counts overlap;\nthey should not be added to claim a number of distinct new theorems.\n\n| Recorded development | Audit roots and verification receipt |\n| --- | --- |\n| Checkpoint pruning | [43 roots](../results/network_reduction_verification.json) |\n| Output-head updates | [36 roots](../results/output_update_verification.json) |\n| Coordinate retention | [78 roots](../results/update_synthesis_verification.json) |\n| Linear observations | [82 roots](../results/linear_observations_verification.json) |\n| RMSProp / property transfer | [47 roots](../results/rmsprop_and_property_transfer_verification.json) |\n| Concrete property decisions | [48 roots](../results/property_decision_verification.json) |"
       },
       "novelty": "not_assessed_against_literature",
       "evidence_record": {
@@ -1561,13 +1561,14 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 825,
-        "line_end": 837,
+        "line_start": 1046,
+        "line_end": 1093,
         "pdf_pages": [
-          15
+          19,
+          20
         ],
-        "section": "The directional counterexample from Section 4",
-        "passage": "### The directional counterexample from Section 4\n\nInput order is `[vx, vy, omega, theta, x, y]`. Take the Baseline input\n`[1/4, 1/2, 1/2, 1/4, 1/4, 3/4]`. The physical position conversions are:\n\n```text\nX = 41.232296222734604 * input[4] + 0.482420778264618\nY = 45.878638794593570 * input[5] - 41.681405266088724\n```\n\nLean proves X + Y > 2 and output < 1/2 using exact arithmetic.\nThe [property-decision guide](property_decision/README.md) gives all\nfour original-model witnesses and their transfers. These refutations"
+        "section": "E.1. Inputs, physical coordinates and the contract",
+        "passage": "### E.1. Inputs, physical coordinates and the contract\n\nLet the six normalized input coordinates be horizontal velocity, vertical\nvelocity, angular velocity, angle, horizontal position and vertical\nposition, in that order. A neural core maps each permitted input to one\nreal output; theta denotes its weights and biases.\n\n$$\nD=[0,1]^6,\\qquad x=(x_0,x_1,x_2,x_3,x_4,x_5),\\qquad N_\\theta:D\\longrightarrow\\mathbb{R}.\n$$\n\nThe physical coordinates and displacement use the existing normalization\nconstants. These decimal literals denote exact rational numbers in the\nformal model.\n\n$$\nX(x)=41.232296222734604\\,x_4+0.482420778264618.\n$$\n\n$$\nY(x)=45.878638794593570\\,x_5-41.681405266088724,\\qquad d(x)=X(x)+Y(x).\n$$\n\n<!-- pagebreak -->\n\n### E.2. From implications to allowed output sets\n\nThe input predicates select two regions. The output predicates specify\nthe permitted side of one half. The letter z denotes a scalar output.\n\n$$\nP_+(x)\\Longleftrightarrow d(x)\\geq2,\\qquad Q_+(z)\\Longleftrightarrow z\\geq\\frac{1}{2}.\n$$\n\n$$\nP_-(x)\\Longleftrightarrow d(x)\\leq-2,\\qquad Q_-(z)\\Longleftrightarrow z\\leq\\frac{1}{2}.\n$$\n\nThe name Correct below means exactly the conjunction of these two\ndirectional requirements. It does not mean correctness of every aspect\nof the physical controller.\n\n$$\n\\mathrm{Correct}(N)\\Longleftrightarrow\n\\forall x\\in D,\\quad\n\\left(P_+(x)\\Rightarrow Q_+(N(x))\\right)\\wedge\n\\left(P_-(x)\\Rightarrow Q_-(N(x))\\right).\n$$"
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -1581,13 +1582,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 238,
-        "line_end": 247,
+        "line_start": 234,
+        "line_end": 245,
         "pdf_pages": [
           5
         ],
         "section": "Exact preservation also preserves a failure",
-        "passage": "where the premise holds but the requested output condition fails.\n\nFor example, a Baseline input strictly inside the cube has physical\nposition sum X + Y ≈ 3.518069. The selected requirement says that when\nX + Y ≥ 2 the normalized output must be at least 0.5. Its output is\napproximately 0.399148. Lean checks the exact fractions behind these\nrounded figures. Its reduced network gives the same answer and hence\nthe same counterexample. Appendix A gives the complete input.\n\nExact reduction faithfully preserves the behavior we have. Sections 10–11"
+        "passage": "Our earlier experiment used two other published checkpoints, called\n**Baseline** and **Adversarial**. They have smaller architectures than\nDL2 and Gödel. On these models, Lean establishes counterexamples to two\ndirectional requirements at margin 2. A **refutation** is an exact input\nwhere the premise holds but the requested output condition fails.\n\nFor example, a Baseline input strictly inside the cube has physical\nposition sum X + Y ≈ 3.518069. The selected requirement says that when\nX + Y ≥ 2 the normalized output must be at least 0.5. Its output is\napproximately 0.399148. Lean checks the exact fractions behind these\nrounded figures. Its reduced network gives the same answer and hence\nthe same counterexample. Appendix A gives the complete input."
       },
       "novelty": "not_assessed_against_literature",
       "supporting_evidence": [
@@ -1630,13 +1631,13 @@
       "extraction_origin": "analytical_reconstruction_from_document",
       "source": {
         "document": "report",
-        "line_start": 249,
-        "line_end": 252,
+        "line_start": 247,
+        "line_end": 250,
         "pdf_pages": [
           5
         ],
         "section": "Exact preservation also preserves a failure",
-        "passage": "its output function. First we follow the other consequence of reduction:\nwhat happens to information that no longer contributes to evaluation?\n\n<!-- pagebreak -->"
+        "passage": "Exact reduction faithfully preserves the behavior we have. Sections 10–11\nreturn to this limitation and repair the Adversarial controller by changing\nits output function. First we follow the other consequence of reduction:\nwhat happens to information that no longer contributes to evaluation?"
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -1869,12 +1870,12 @@
       "source": {
         "document": "report",
         "line_start": 1229,
-        "line_end": 1239,
+        "line_end": 1237,
         "pdf_pages": [
           23
         ],
         "section": "E.6. Fitting chooses useful predictions within that family",
-        "passage": "### E.6. Fitting chooses useful predictions within that family\n\nThe reference data form an indexed collection of input-label pairs; all\n360 rows are used for fitting and for the later quality check. A row's\nlabel is its reference output, not a new constraint on every possible input.\n\n$$\nT=((x^{(i)},y_i))_{i=1}^{m},\\qquad m=360.\n$$\n\nThe parenthesized superscript distinguishes the i-th input vector from a"
+        "passage": "### E.6. Fitting chooses useful predictions within that family\n\nThe reference data form an indexed collection of input-label pairs; all\n360 rows are used for fitting and for the later quality check. A row's\nlabel is its reference output, not a new constraint on every possible input.\n\n$$\nT=((x^{(i)},y_i))_{i=1}^{m},\\qquad m=360.\n$$"
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -1889,12 +1890,12 @@
       "source": {
         "document": "report",
         "line_start": 1260,
-        "line_end": 1273,
+        "line_end": 1269,
         "pdf_pages": [
           23
         ],
         "section": "E.7. Freeze the candidate before checking its quality",
-        "passage": "### E.7. Freeze the candidate before checking its quality\n\nThe floating training result is converted to dyadic rational weights by\nrounding to the nearest multiple of 1/65536, with ties to even. The index j\nselects a weight or bias. The formal result concerns this frozen object:\n\n$$\n\\bar\\theta_j=\\dfrac{\\mathrm{round}(65536\\,\\theta_{\\mathrm{candidate},j})}{65536},\n\\qquad \\bar F(x)=R_{64}(x,N_{\\bar\\theta}(x)).\n$$\n\nFor any output function G, define the finite reference error:\n\n$$"
+        "passage": "### E.7. Freeze the candidate before checking its quality\n\nThe floating training result is converted to dyadic rational weights by\nrounding to the nearest multiple of 1/65536, with ties to even. The index j\nselects a weight or bias. The formal result concerns this frozen object:\n\n$$\n\\bar\\theta_j=\\dfrac{\\mathrm{round}(65536\\,\\theta_{\\mathrm{candidate},j})}{65536},\n\\qquad \\bar F(x)=R_{64}(x,N_{\\bar\\theta}(x)).\n$$"
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -1969,13 +1970,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 1176,
+        "line_start": 1173,
         "line_end": 1204,
         "pdf_pages": [
           22
         ],
         "section": "E.4. The correction operator and its laws",
-        "passage": "\n$$\n\\forall x\\in D,\\ \\forall z\\in\\mathbb{R},\\qquad R_k(x,z)\\in I_k(x).\n$$\n\n$$\nz\\in I_k(x)\\quad\\Longrightarrow\\quad R_k(x,z)=z.\n$$\n\n$$\nR_k(x,R_k(x,z))=R_k(x,z).\n$$\n\nThe central inference is simply membership followed by set inclusion:\n\n$$\n\\dfrac{R_k(x,z)\\in I_k(x)\\qquad I_k(x)\\subseteq A(x)}{R_k(x,z)\\in A(x)}.\n$$\n\nThis mathematical operator has an explicit neural implementation, using:\n\n$$\n\\max(a,b)=a+\\mathrm{ReLU}(b-a),\\qquad\n\\min(a,b)=a-\\mathrm{ReLU}(a-b).\n$$\n\nSharing the computed endpoints gives six additional ReLU operations.\n`reluBlock_eq_project` proves that this expression equals the projection.\nThe guarantees belong to the complete construction, including this block."
+        "passage": "The operator has three checked laws: membership, preservation of an\nalready admissible proposal, and idempotence. Idempotence means a second\napplication at the same input does not change the result again.\n\n$$\n\\forall x\\in D,\\ \\forall z\\in\\mathbb{R},\\qquad R_k(x,z)\\in I_k(x).\n$$\n\n$$\nz\\in I_k(x)\\quad\\Longrightarrow\\quad R_k(x,z)=z.\n$$\n\n$$\nR_k(x,R_k(x,z))=R_k(x,z).\n$$\n\nThe central inference is simply membership followed by set inclusion:\n\n$$\n\\dfrac{R_k(x,z)\\in I_k(x)\\qquad I_k(x)\\subseteq A(x)}{R_k(x,z)\\in A(x)}.\n$$\n\nThis mathematical operator has an explicit neural implementation, using:\n\n$$\n\\max(a,b)=a+\\mathrm{ReLU}(b-a),\\qquad\n\\min(a,b)=a-\\mathrm{ReLU}(a-b).\n$$\n\nSharing the computed endpoints gives six additional ReLU operations.\n`reluBlock_eq_project` proves that this expression equals the projection.\nThe guarantees belong to the complete construction, including this block."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -2029,13 +2030,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 1218,
-        "line_end": 1227,
+        "line_start": 1208,
+        "line_end": 1225,
         "pdf_pages": [
           22
         ],
         "section": "E.5. Composition gives a family of correct controllers",
-        "passage": "\\qquad\\text{hence}\\quad\\forall\\theta,\\ \\mathrm{Correct}(F_\\theta).\n$$\n\nThese are the stated exact-real directional guarantees. Changing the core\nparameters leaves them intact while the same correct block and input\ninterpretation remain in place. Reference quality and pruning obligations\nmust still be checked for a changed core. No global sensitivity or flight\nstability result follows from this membership argument.\n\n<!-- pagebreak -->"
+        "passage": "For fixed k at least zero, put the operator after an arbitrary neural core:\n\n$$\nF_\\theta(x)=R_k(x,N_\\theta(x)).\n$$\n\nBecause the operator's proof allows every real proposal z, it follows that:\n\n$$\n\\forall\\theta,\\ \\forall x\\in D,\\quad F_\\theta(x)\\in A(x),\n\\qquad\\text{hence}\\quad\\forall\\theta,\\ \\mathrm{Correct}(F_\\theta).\n$$\n\nThese are the stated exact-real directional guarantees. Changing the core\nparameters leaves them intact while the same correct block and input\ninterpretation remain in place. Reference quality and pruning obligations\nmust still be checked for a changed core. No global sensitivity or flight\nstability result follows from this membership argument."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -2049,13 +2050,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 1117,
+        "line_start": 1116,
         "line_end": 1120,
         "pdf_pages": [
           20
         ],
         "section": "E.2. From implications to allowed output sets",
-        "passage": "quality gate will exclude that uninformative solution on the reference\ndata. There is no directional requirement in the open gap between -2\nand 2.\n"
+        "passage": "A constant output of one half satisfies both implications. A separate\nquality gate will exclude that uninformative solution on the reference\ndata. There is no directional requirement in the open gap between -2\nand 2.\n"
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -2070,12 +2071,12 @@
       "source": {
         "document": "report",
         "line_start": 1229,
-        "line_end": 1273,
+        "line_end": 1269,
         "pdf_pages": [
           23
         ],
         "section": "E.6. Fitting chooses useful predictions within that family",
-        "passage": "### E.6. Fitting chooses useful predictions within that family\n\nThe reference data form an indexed collection of input-label pairs; all\n360 rows are used for fitting and for the later quality check. A row's\nlabel is its reference output, not a new constraint on every possible input.\n\n$$\nT=((x^{(i)},y_i))_{i=1}^{m},\\qquad m=360.\n$$\n\nThe parenthesized superscript distinguishes the i-th input vector from a\ncoordinate such as x_4. The fitting objective is mean squared error:\n\n$$\n\\mathcal{L}(\\theta)=\\dfrac{1}{m}\\;\\sum_{i=1}^{m}\\left(F_\\theta(x^{(i)})-y_i\\right)^2.\n$$\n\nSubstituting the composed controller makes the role of the block explicit:\n\n$$\n\\mathcal{L}(\\theta)=\\dfrac{1}{m}\\;\\sum_{i=1}^{m}\n\\left(R_{64}(x^{(i)},N_\\theta(x^{(i)}))-y_i\\right)^2.\n$$\n\nThe optimizer fits through this fixed correction block. It produces a\ncandidate parameter vector; there is no proof of a global minimum or a\nminimal change from the original weights. The [training procedure and\nreplay](../model_repair/directed_repair/TRAINING.md) describe how this\nparticular candidate was found. The operator proof does not depend on the\noptimizer finding it.\n\n### E.7. Freeze the candidate before checking its quality\n\nThe floating training result is converted to dyadic rational weights by\nrounding to the nearest multiple of 1/65536, with ties to even. The index j\nselects a weight or bias. The formal result concerns this frozen object:\n\n$$\n\\bar\\theta_j=\\dfrac{\\mathrm{round}(65536\\,\\theta_{\\mathrm{candidate},j})}{65536},\n\\qquad \\bar F(x)=R_{64}(x,N_{\\bar\\theta}(x)).\n$$\n\nFor any output function G, define the finite reference error:\n\n$$"
+        "passage": "### E.6. Fitting chooses useful predictions within that family\n\nThe reference data form an indexed collection of input-label pairs; all\n360 rows are used for fitting and for the later quality check. A row's\nlabel is its reference output, not a new constraint on every possible input.\n\n$$\nT=((x^{(i)},y_i))_{i=1}^{m},\\qquad m=360.\n$$\n\nThe parenthesized superscript distinguishes the i-th input vector from a\ncoordinate such as x_4. The fitting objective is mean squared error:\n\n$$\n\\mathcal{L}(\\theta)=\\dfrac{1}{m}\\;\\sum_{i=1}^{m}\\left(F_\\theta(x^{(i)})-y_i\\right)^2.\n$$\n\nSubstituting the composed controller makes the role of the block explicit:\n\n$$\n\\mathcal{L}(\\theta)=\\dfrac{1}{m}\\;\\sum_{i=1}^{m}\n\\left(R_{64}(x^{(i)},N_\\theta(x^{(i)}))-y_i\\right)^2.\n$$\n\nThe optimizer fits through this fixed correction block. It produces a\ncandidate parameter vector; there is no proof of a global minimum or a\nminimal change from the original weights. The [training procedure and\nreplay](../model_repair/directed_repair/TRAINING.md) describe how this\nparticular candidate was found. The operator proof does not depend on the\noptimizer finding it.\n\n### E.7. Freeze the candidate before checking its quality\n\nThe floating training result is converted to dyadic rational weights by\nrounding to the nearest multiple of 1/65536, with ties to even. The index j\nselects a weight or bias. The formal result concerns this frozen object:\n\n$$\n\\bar\\theta_j=\\dfrac{\\mathrm{round}(65536\\,\\theta_{\\mathrm{candidate},j})}{65536},\n\\qquad \\bar F(x)=R_{64}(x,N_{\\bar\\theta}(x)).\n$$"
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -2089,14 +2090,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 1277,
-        "line_end": 1291,
+        "line_start": 1279,
+        "line_end": 1287,
         "pdf_pages": [
-          23,
           24
         ],
         "section": "E.7. Freeze the candidate before checking its quality",
-        "passage": "<!-- pagebreak -->\n\nLet N_old be the original published Adversarial controller, and let C\nalways return one half. The quality gate is:\n\n$$\nC(x)=\\frac{1}{2},\\qquad\n\\mathrm{Quality}_T(G)\\Longleftrightarrow\n\\mathrm{MSE}_T(G)\\leq\\mathrm{MSE}_T(N_{\\mathrm{old}})\n\\ \\wedge\\ \\mathrm{MSE}_T(G)<\\mathrm{MSE}_T(C).\n$$\n\nExact kernel-checked computations, transferred to the real evaluation\nsemantics, establish the following bounds for the frozen candidate:\n"
+        "passage": "Let N_old be the original published Adversarial controller, and let C\nalways return one half. The quality gate is:\n\n$$\nC(x)=\\frac{1}{2},\\qquad\n\\mathrm{Quality}_T(G)\\Longleftrightarrow\n\\mathrm{MSE}_T(G)\\leq\\mathrm{MSE}_T(N_{\\mathrm{old}})\n\\ \\wedge\\ \\mathrm{MSE}_T(G)<\\mathrm{MSE}_T(C).\n$$"
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -2110,13 +2110,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 1293,
+        "line_start": 1289,
         "line_end": 1316,
         "pdf_pages": [
           24
         ],
         "section": "E.7. Freeze the candidate before checking its quality",
-        "passage": "\\mathrm{MSE}_T(\\bar F)\\leq\\dfrac{1476}{1000000}=0.001476.\n$$\n\n$$\n\\mathrm{MSE}_T(N_{\\mathrm{old}})\\geq\\dfrac{1532}{1000000}=0.001532,\n\\qquad \\mathrm{MSE}_T(C)\\geq\\dfrac{109}{1000}=0.109.\n$$\n\nThe inequalities have a strict separation, so they prove the gate:\n\n$$\n\\mathrm{MSE}_T(\\bar F)\\leq0.001476<0.001532\\leq\\mathrm{MSE}_T(N_{\\mathrm{old}}).\n$$\n\n$$\n\\mathrm{MSE}_T(\\bar F)\\leq0.001476<0.109\\leq\\mathrm{MSE}_T(C).\n$$\n\nThe measured MSEs are approximately 0.001475236171 for the repair and\n0.001532418405 for the original, a reduction of about 3.73% on these rows.\nThe finite quality claim is itself checked mathematically; its scope is\nthe reference collection, not an unseen population. It is not a held-out\nevaluation. The original labels remain unchanged, including ten that\nconflict with Above(2)."
+        "passage": "Exact kernel-checked computations, transferred to the real evaluation\nsemantics, establish the following bounds for the frozen candidate:\n\n$$\n\\mathrm{MSE}_T(\\bar F)\\leq\\dfrac{1476}{1000000}=0.001476.\n$$\n\n$$\n\\mathrm{MSE}_T(N_{\\mathrm{old}})\\geq\\dfrac{1532}{1000000}=0.001532,\n\\qquad \\mathrm{MSE}_T(C)\\geq\\dfrac{109}{1000}=0.109.\n$$\n\nThe inequalities have a strict separation, so they prove the gate:\n\n$$\n\\mathrm{MSE}_T(\\bar F)\\leq0.001476<0.001532\\leq\\mathrm{MSE}_T(N_{\\mathrm{old}}).\n$$\n\n$$\n\\mathrm{MSE}_T(\\bar F)\\leq0.001476<0.109\\leq\\mathrm{MSE}_T(C).\n$$\n\nThe measured MSEs are approximately 0.001475236171 for the repair and\n0.001532418405 for the original, a reduction of about 3.73% on these rows.\nThe finite quality claim is itself checked mathematically; its scope is\nthe reference collection, not an unseen population. It is not a held-out\nevaluation. The original labels remain unchanged, including ten that\nconflict with Above(2)."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -2151,13 +2151,13 @@
       "source": {
         "document": "report",
         "line_start": 1318,
-        "line_end": 1348,
+        "line_end": 1350,
         "pdf_pages": [
           24,
           25
         ],
         "section": "E.8. Reduction is justified by functional equality",
-        "passage": "### E.8. Reduction is justified by functional equality\n\nThe fitted small core is embedded into a full core. A new interval\ncertificate establishes that the four omitted neurons remain inactive\nthroughout D. With the model's dimension and domain conditions, the general\npruning theorem and that accepted certificate give:\n\n$$\n\\forall x\\in D,\\qquad N_{\\mathrm{small}}(x)=N_{\\mathrm{full}}(x).\n$$\n\nHere N_small is the frozen fitted core. N_full is its full embedded version;\nneither name denotes the unchanged original checkpoint.\n\n<!-- pagebreak -->\n\nApply the same correction block to both cores:\n\n$$\nF_{\\mathrm{small}}(x)=R_{64}(x,N_{\\mathrm{small}}(x)),\\qquad\nF_{\\mathrm{full}}(x)=R_{64}(x,N_{\\mathrm{full}}(x)).\n$$\n\nEquality transfers through this common operation:\n\n$$\n\\dfrac{N_{\\mathrm{small}}(x)=N_{\\mathrm{full}}(x)}\n{R_{64}(x,N_{\\mathrm{small}}(x))=R_{64}(x,N_{\\mathrm{full}}(x))}.\n$$\n\nConsequently the two repaired versions agree for every input in D and have"
+        "passage": "### E.8. Reduction is justified by functional equality\n\nThe fitted small core is embedded into a full core. A new interval\ncertificate establishes that the four omitted neurons remain inactive\nthroughout D. With the model's dimension and domain conditions, the general\npruning theorem and that accepted certificate give:\n\n$$\n\\forall x\\in D,\\qquad N_{\\mathrm{small}}(x)=N_{\\mathrm{full}}(x).\n$$\n\nHere N_small is the frozen fitted core. N_full is its full embedded version;\nneither name denotes the unchanged original checkpoint.\n\n<!-- pagebreak -->\n\nApply the same correction block to both cores:\n\n$$\nF_{\\mathrm{small}}(x)=R_{64}(x,N_{\\mathrm{small}}(x)),\\qquad\nF_{\\mathrm{full}}(x)=R_{64}(x,N_{\\mathrm{full}}(x)).\n$$\n\nEquality transfers through this common operation:\n\n$$\n\\dfrac{N_{\\mathrm{small}}(x)=N_{\\mathrm{full}}(x)}\n{R_{64}(x,N_{\\mathrm{small}}(x))=R_{64}(x,N_{\\mathrm{full}}(x))}.\n$$\n\nConsequently the two repaired versions agree for every input in D and have\nidentical error on reference rows in D. Output properties transfer along\nthis equality. Repair intentionally changes the original function."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -2245,12 +2245,12 @@
       "source": {
         "document": "report",
         "line_start": 1398,
-        "line_end": 1409,
+        "line_end": 1410,
         "pdf_pages": [
           26
         ],
         "section": "E.10. Where each step meets code and proof",
-        "passage": "| Physical inputs and arbitrary-core guarantees | [RepairNetwork.lean](../model_repair/directed_repair/RepairNetwork.lean): `displacement_physical`, `repaired_above`, `repaired_below`. |\n| Candidate selection and freezing | [train.py](../model_repair/directed_repair/train.py), [freeze.py](../model_repair/directed_repair/freeze.py), [CANDIDATE.json](../model_repair/directed_repair/CANDIDATE.json). Training proposes the parameters; freezing fixes the exact object. |\n| Exact reference data and quality | [RepairReference.lean](../model_repair/directed_repair/RepairReference.lean): `reference_count`, `reference_in_cube` and the three MSE bounds; [RepairResult.lean](../model_repair/directed_repair/RepairResult.lean): `reference_quality`. |\n| Rational computation and real semantics | [RepairNetwork.lean](../model_repair/directed_repair/RepairNetwork.lean): `repaired_cast`, `mse_cast`. |\n| Certified reduction of the fitted model | [RepairedCore.lean](../model_repair/directed_repair/RepairedCore.lean): `pruning_checked`, `core_equal`; [RepairNetwork.lean](../model_repair/directed_repair/RepairNetwork.lean): `smaller_repair_equal`. |\n| Combined contract | [RepairResult.lean](../model_repair/directed_repair/RepairResult.lean): `repaired_controller_contract`. |\n\nThe [recorded repair verification](../model_repair/directed_repair/RESULT.json)\naudits 39 theorem roots, reports no errors or warnings, and permits only\nthe three standard axioms listed in Appendix C. This appendix explains\nthose existing results; its addition is not a new proof run. Reproduction\ncommands and exact runtime examples are in the"
+        "passage": "| Physical inputs and arbitrary-core guarantees | [RepairNetwork.lean](../model_repair/directed_repair/RepairNetwork.lean): `displacement_physical`, `repaired_above`, `repaired_below`. |\n| Candidate selection and freezing | [train.py](../model_repair/directed_repair/train.py), [freeze.py](../model_repair/directed_repair/freeze.py), [CANDIDATE.json](../model_repair/directed_repair/CANDIDATE.json). Training proposes the parameters; freezing fixes the exact object. |\n| Exact reference data and quality | [RepairReference.lean](../model_repair/directed_repair/RepairReference.lean): `reference_count`, `reference_in_cube` and the three MSE bounds; [RepairResult.lean](../model_repair/directed_repair/RepairResult.lean): `reference_quality`. |\n| Rational computation and real semantics | [RepairNetwork.lean](../model_repair/directed_repair/RepairNetwork.lean): `repaired_cast`, `mse_cast`. |\n| Certified reduction of the fitted model | [RepairedCore.lean](../model_repair/directed_repair/RepairedCore.lean): `pruning_checked`, `core_equal`; [RepairNetwork.lean](../model_repair/directed_repair/RepairNetwork.lean): `smaller_repair_equal`. |\n| Combined contract | [RepairResult.lean](../model_repair/directed_repair/RepairResult.lean): `repaired_controller_contract`. |\n\nThe [recorded repair verification](../model_repair/directed_repair/RESULT.json)\naudits 39 theorem roots, reports no errors or warnings, and permits only\nthe three standard axioms listed in Appendix C. This appendix explains\nthose existing results; its addition is not a new proof run. Reproduction\ncommands and exact runtime examples are in the\n[repair walkthrough](../model_repair/directed_repair/README.md)."
       },
       "novelty": "not_assessed_against_literature",
       "evidence_record": {
@@ -2302,13 +2302,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 1150,
+        "line_start": 1148,
         "line_end": 1155,
         "pdf_pages": [
           21
         ],
         "section": "E.3. A nonempty interval inside the allowed set",
-        "passage": "otherwise unconstrained gap. It describes a sufficient family of solutions,\nnot every controller satisfying the original contract.\n\n$$\n\\forall x\\in D,\\qquad I_k(x)\\ne\\varnothing\\quad\\wedge\\quad I_k(x)\\subseteq A(x).\n$$"
+        "passage": "Consequently the interval is always nonempty and lies inside the allowed\nset. It additionally restricts outputs to [0,1] and narrows part of the\notherwise unconstrained gap. It describes a sufficient family of solutions,\nnot every controller satisfying the original contract.\n\n$$\n\\forall x\\in D,\\qquad I_k(x)\\ne\\varnothing\\quad\\wedge\\quad I_k(x)\\subseteq A(x).\n$$"
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -2322,13 +2322,13 @@
       "extraction_origin": "document_grounded",
       "source": {
         "document": "report",
-        "line_start": 1357,
-        "line_end": 1361,
+        "line_start": 1360,
+        "line_end": 1363,
         "pdf_pages": [
           25
         ],
         "section": "E.8. Reduction is justified by functional equality",
-        "passage": "Fitted small core:  6 -> 4 -> 2 -> 1 --+--> same block --> F_small\n```\n\nThe core parameter count goes from 75 to 41. Including the six added ReLUs,\nthe full repaired graph uses 17 ReLU operations and the smaller one 13."
+        "passage": "The core parameter count goes from 75 to 41. Including the six added ReLUs,\nthe full repaired graph uses 17 ReLU operations and the smaller one 13.\nThe original unrepaired graph used 11, so this comparison does not claim\nthat the repaired graph is smaller than the original unrepaired network."
       },
       "novelty": "not_assessed_against_literature"
     },
@@ -2425,12 +2425,12 @@
       "source": {
         "document": "report",
         "line_start": 755,
-        "line_end": 778,
+        "line_end": 780,
         "pdf_pages": [
           14
         ],
         "section": "What has and has not been measured",
-        "passage": "### What has and has not been measured\n\nThe saved DL2/Gödel models were not retrained for their reduction and\nrobustness checks. Their predictions are nonconstant. On the 360 published\nrows, their descriptive mean\nsquared errors (the average squared difference from the stored targets)\nwere approximately 0.025110 for DL2 and 0.033898 for\nGödel, compared with 0.081213 for the best constant on those same rows.\nIt is unknown which rows were held aside from these checkpoints' training,\nso these figures do not establish performance on unseen data or acceptable\nflight performance.\n\nThe separate Adversarial repair does fit a new core, as Section 11 explains.\nIts quality check uses the same 360 rows as fitting. Its exact-real\ndirectional proof does not establish a universal float32 guarantee or a\nclosed-loop flight result.\n\nThe parameter counts describe structural savings. They do not by\nthemselves promise lower latency on a particular processor. A controller's\nflight behavior also depends on sensing, normalization, actuator dynamics\nand the physical system, which are outside the network theorem.\n\nReturning to **what has actually been proved** separates three kinds of\nevidence: real-arithmetic theorems, finite execution checks, and application"
+        "passage": "### What has and has not been measured\n\nThe saved DL2/Gödel models were not retrained for their reduction and\nrobustness checks. Their predictions are nonconstant. On the 360 published\nrows, their descriptive mean\nsquared errors (the average squared difference from the stored targets)\nwere approximately 0.025110 for DL2 and 0.033898 for\nGödel, compared with 0.081213 for the best constant on those same rows.\nIt is unknown which rows were held aside from these checkpoints' training,\nso these figures do not establish performance on unseen data or acceptable\nflight performance.\n\nThe separate Adversarial repair does fit a new core, as Section 11 explains.\nIts quality check uses the same 360 rows as fitting. Its exact-real\ndirectional proof does not establish a universal float32 guarantee or a\nclosed-loop flight result.\n\nThe parameter counts describe structural savings. They do not by\nthemselves promise lower latency on a particular processor. A controller's\nflight behavior also depends on sensing, normalization, actuator dynamics\nand the physical system, which are outside the network theorem.\n\nReturning to **what has actually been proved** separates three kinds of\nevidence: real-arithmetic theorems, finite execution checks, and application\nquestions still to evaluate. A collaborator can use the appendices to\ntrace each claim to its assumptions, artifact and checked statement."
       },
       "novelty": "not_assessed_against_literature",
       "answer_nodes": [],
@@ -2534,12 +2534,12 @@
       "source": {
         "document": "report",
         "line_start": 755,
-        "line_end": 778,
+        "line_end": 780,
         "pdf_pages": [
           14
         ],
         "section": "What has and has not been measured",
-        "passage": "### What has and has not been measured\n\nThe saved DL2/Gödel models were not retrained for their reduction and\nrobustness checks. Their predictions are nonconstant. On the 360 published\nrows, their descriptive mean\nsquared errors (the average squared difference from the stored targets)\nwere approximately 0.025110 for DL2 and 0.033898 for\nGödel, compared with 0.081213 for the best constant on those same rows.\nIt is unknown which rows were held aside from these checkpoints' training,\nso these figures do not establish performance on unseen data or acceptable\nflight performance.\n\nThe separate Adversarial repair does fit a new core, as Section 11 explains.\nIts quality check uses the same 360 rows as fitting. Its exact-real\ndirectional proof does not establish a universal float32 guarantee or a\nclosed-loop flight result.\n\nThe parameter counts describe structural savings. They do not by\nthemselves promise lower latency on a particular processor. A controller's\nflight behavior also depends on sensing, normalization, actuator dynamics\nand the physical system, which are outside the network theorem.\n\nReturning to **what has actually been proved** separates three kinds of\nevidence: real-arithmetic theorems, finite execution checks, and application"
+        "passage": "### What has and has not been measured\n\nThe saved DL2/Gödel models were not retrained for their reduction and\nrobustness checks. Their predictions are nonconstant. On the 360 published\nrows, their descriptive mean\nsquared errors (the average squared difference from the stored targets)\nwere approximately 0.025110 for DL2 and 0.033898 for\nGödel, compared with 0.081213 for the best constant on those same rows.\nIt is unknown which rows were held aside from these checkpoints' training,\nso these figures do not establish performance on unseen data or acceptable\nflight performance.\n\nThe separate Adversarial repair does fit a new core, as Section 11 explains.\nIts quality check uses the same 360 rows as fitting. Its exact-real\ndirectional proof does not establish a universal float32 guarantee or a\nclosed-loop flight result.\n\nThe parameter counts describe structural savings. They do not by\nthemselves promise lower latency on a particular processor. A controller's\nflight behavior also depends on sensing, normalization, actuator dynamics\nand the physical system, which are outside the network theorem.\n\nReturning to **what has actually been proved** separates three kinds of\nevidence: real-arithmetic theorems, finite execution checks, and application\nquestions still to evaluate. A collaborator can use the appendices to\ntrace each claim to its assumptions, artifact and checked statement."
       },
       "novelty": "not_assessed_against_literature"
     },

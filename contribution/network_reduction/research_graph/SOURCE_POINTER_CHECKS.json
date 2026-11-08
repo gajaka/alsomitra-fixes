@@ -1,0 +1,1216 @@
+{
+  "status": "PASS",
+  "timestamp_utc": "2026-11-08T15:46:31.159249+00:00",
+  "graph_sha256": "671d47077b48e020b31c886e5858c1040b1b63b03a9ef759e3b38f4dc1e82162",
+  "pdf_sha256": "41e019f788ff478bd5ba48bf13905559edc8e3e541a467a584f2ef57c4e9478d",
+  "preview_sha256": "703c01de24075e4f105691e7c2e6ea0dc78c2633a488e277b69c1872d76667f6",
+  "nodes_checked": 99,
+  "pdf_equations_checked": 60,
+  "nodes": [
+    {
+      "id": "G0",
+      "lines": [
+        13,
+        44
+      ],
+      "pages": [
+        1
+      ],
+      "text_rectangles": 22,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "Q0",
+      "lines": [
+        13,
+        44
+      ],
+      "pages": [
+        1
+      ],
+      "text_rectangles": 22,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "M0",
+      "lines": [
+        784,
+        801
+      ],
+      "pages": [
+        15
+      ],
+      "text_rectangles": 31,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "A0",
+      "lines": [
+        720,
+        731
+      ],
+      "pages": [
+        14
+      ],
+      "text_rectangles": 7,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "A1",
+      "lines": [
+        1046,
+        1069
+      ],
+      "pages": [
+        19
+      ],
+      "text_rectangles": 6,
+      "equation_rectangles": 3
+    },
+    {
+      "id": "Q1",
+      "lines": [
+        47,
+        89
+      ],
+      "pages": [
+        2
+      ],
+      "text_rectangles": 23,
+      "equation_rectangles": 3
+    },
+    {
+      "id": "A2",
+      "lines": [
+        57,
+        75
+      ],
+      "pages": [
+        2
+      ],
+      "text_rectangles": 4,
+      "equation_rectangles": 3
+    },
+    {
+      "id": "C1",
+      "lines": [
+        112,
+        134
+      ],
+      "pages": [
+        3
+      ],
+      "text_rectangles": 11,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "U1",
+      "lines": [
+        112,
+        140
+      ],
+      "pages": [
+        3
+      ],
+      "text_rectangles": 14,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "U2",
+      "lines": [
+        76,
+        110
+      ],
+      "pages": [
+        2,
+        3
+      ],
+      "text_rectangles": 35,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "E1",
+      "lines": [
+        913,
+        944
+      ],
+      "pages": [
+        17
+      ],
+      "text_rectangles": 34,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "Q2",
+      "lines": [
+        144,
+        195
+      ],
+      "pages": [
+        4
+      ],
+      "text_rectangles": 37,
+      "equation_rectangles": 2
+    },
+    {
+      "id": "Q2a",
+      "lines": [
+        146,
+        163
+      ],
+      "pages": [
+        4
+      ],
+      "text_rectangles": 8,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "Q2b",
+      "lines": [
+        165,
+        181
+      ],
+      "pages": [
+        4
+      ],
+      "text_rectangles": 18,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "Q2c",
+      "lines": [
+        183,
+        195
+      ],
+      "pages": [
+        4
+      ],
+      "text_rectangles": 10,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "C2",
+      "lines": [
+        165,
+        173
+      ],
+      "pages": [
+        4
+      ],
+      "text_rectangles": 4,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "U3",
+      "lines": [
+        146,
+        163
+      ],
+      "pages": [
+        4
+      ],
+      "text_rectangles": 8,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "I1",
+      "lines": [
+        165,
+        195
+      ],
+      "pages": [
+        4
+      ],
+      "text_rectangles": 28,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "U4",
+      "lines": [
+        183,
+        195
+      ],
+      "pages": [
+        4
+      ],
+      "text_rectangles": 10,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "U5",
+      "lines": [
+        175,
+        181
+      ],
+      "pages": [
+        4
+      ],
+      "text_rectangles": 14,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "E2",
+      "lines": [
+        913,
+        921
+      ],
+      "pages": [
+        17
+      ],
+      "text_rectangles": 12,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "U6",
+      "lines": [
+        198,
+        213
+      ],
+      "pages": [
+        5
+      ],
+      "text_rectangles": 16,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "A3",
+      "lines": [
+        254,
+        269
+      ],
+      "pages": [
+        6
+      ],
+      "text_rectangles": 8,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "Q3",
+      "lines": [
+        254,
+        277
+      ],
+      "pages": [
+        6
+      ],
+      "text_rectangles": 10,
+      "equation_rectangles": 2
+    },
+    {
+      "id": "Q3a",
+      "lines": [
+        262,
+        310
+      ],
+      "pages": [
+        6
+      ],
+      "text_rectangles": 26,
+      "equation_rectangles": 3
+    },
+    {
+      "id": "Q3b",
+      "lines": [
+        313,
+        373
+      ],
+      "pages": [
+        7
+      ],
+      "text_rectangles": 51,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "C3",
+      "lines": [
+        271,
+        277
+      ],
+      "pages": [
+        6
+      ],
+      "text_rectangles": 2,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "C4",
+      "lines": [
+        293,
+        310
+      ],
+      "pages": [
+        6
+      ],
+      "text_rectangles": 7,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "C5",
+      "lines": [
+        388,
+        407
+      ],
+      "pages": [
+        8
+      ],
+      "text_rectangles": 9,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "A4",
+      "lines": [
+        335,
+        359
+      ],
+      "pages": [
+        7
+      ],
+      "text_rectangles": 18,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "U7",
+      "lines": [
+        279,
+        310
+      ],
+      "pages": [
+        6
+      ],
+      "text_rectangles": 21,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "U8",
+      "lines": [
+        335,
+        359
+      ],
+      "pages": [
+        7
+      ],
+      "text_rectangles": 18,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "I2",
+      "lines": [
+        353,
+        359
+      ],
+      "pages": [
+        7
+      ],
+      "text_rectangles": 5,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "U9",
+      "lines": [
+        417,
+        429
+      ],
+      "pages": [
+        8
+      ],
+      "text_rectangles": 9,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "X1",
+      "lines": [
+        319,
+        333
+      ],
+      "pages": [
+        7
+      ],
+      "text_rectangles": 18,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "H1",
+      "lines": [
+        319,
+        333
+      ],
+      "pages": [
+        7
+      ],
+      "text_rectangles": 18,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "U10",
+      "lines": [
+        319,
+        373
+      ],
+      "pages": [
+        7
+      ],
+      "text_rectangles": 47,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "U11",
+      "lines": [
+        361,
+        372
+      ],
+      "pages": [
+        7
+      ],
+      "text_rectangles": 11,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "E3",
+      "lines": [
+        919,
+        933
+      ],
+      "pages": [
+        17
+      ],
+      "text_rectangles": 16,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "Q4",
+      "lines": [
+        436,
+        494
+      ],
+      "pages": [
+        9
+      ],
+      "text_rectangles": 30,
+      "equation_rectangles": 2
+    },
+    {
+      "id": "A5",
+      "lines": [
+        456,
+        484
+      ],
+      "pages": [
+        9
+      ],
+      "text_rectangles": 15,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "C6",
+      "lines": [
+        456,
+        474
+      ],
+      "pages": [
+        9
+      ],
+      "text_rectangles": 9,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "U12",
+      "lines": [
+        438,
+        454
+      ],
+      "pages": [
+        9
+      ],
+      "text_rectangles": 9,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "U13",
+      "lines": [
+        476,
+        484
+      ],
+      "pages": [
+        9
+      ],
+      "text_rectangles": 6,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "U14",
+      "lines": [
+        486,
+        494
+      ],
+      "pages": [
+        9
+      ],
+      "text_rectangles": 5,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "E4",
+      "lines": [
+        921,
+        934
+      ],
+      "pages": [
+        17
+      ],
+      "text_rectangles": 13,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "Q5",
+      "lines": [
+        496,
+        525
+      ],
+      "pages": [
+        10
+      ],
+      "text_rectangles": 24,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "A6",
+      "lines": [
+        496,
+        516
+      ],
+      "pages": [
+        10
+      ],
+      "text_rectangles": 10,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "C7",
+      "lines": [
+        511,
+        516
+      ],
+      "pages": [
+        10
+      ],
+      "text_rectangles": 4,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "X2",
+      "lines": [
+        517,
+        525
+      ],
+      "pages": [
+        10
+      ],
+      "text_rectangles": 14,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "H2",
+      "lines": [
+        511,
+        525
+      ],
+      "pages": [
+        10
+      ],
+      "text_rectangles": 18,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "U15",
+      "lines": [
+        517,
+        525
+      ],
+      "pages": [
+        10
+      ],
+      "text_rectangles": 14,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "I3",
+      "lines": [
+        527,
+        532
+      ],
+      "pages": [
+        10
+      ],
+      "text_rectangles": 4,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "Q6",
+      "lines": [
+        527,
+        549
+      ],
+      "pages": [
+        10
+      ],
+      "text_rectangles": 12,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "C8",
+      "lines": [
+        534,
+        540
+      ],
+      "pages": [
+        10
+      ],
+      "text_rectangles": 2,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "U16",
+      "lines": [
+        542,
+        549
+      ],
+      "pages": [
+        10
+      ],
+      "text_rectangles": 6,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "L1",
+      "lines": [
+        895,
+        903
+      ],
+      "pages": [
+        16
+      ],
+      "text_rectangles": 6,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "E5",
+      "lines": [
+        922,
+        935
+      ],
+      "pages": [
+        17
+      ],
+      "text_rectangles": 15,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "Q7",
+      "lines": [
+        232,
+        251
+      ],
+      "pages": [
+        5
+      ],
+      "text_rectangles": 12,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "A7",
+      "lines": [
+        1046,
+        1093
+      ],
+      "pages": [
+        19,
+        20
+      ],
+      "text_rectangles": 11,
+      "equation_rectangles": 6
+    },
+    {
+      "id": "X3",
+      "lines": [
+        234,
+        245
+      ],
+      "pages": [
+        5
+      ],
+      "text_rectangles": 8,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "U17",
+      "lines": [
+        232,
+        251
+      ],
+      "pages": [
+        5
+      ],
+      "text_rectangles": 12,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "U18",
+      "lines": [
+        247,
+        250
+      ],
+      "pages": [
+        5
+      ],
+      "text_rectangles": 3,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "E6",
+      "lines": [
+        923,
+        936
+      ],
+      "pages": [
+        17
+      ],
+      "text_rectangles": 16,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "Q8",
+      "lines": [
+        556,
+        611
+      ],
+      "pages": [
+        11
+      ],
+      "text_rectangles": 28,
+      "equation_rectangles": 2
+    },
+    {
+      "id": "Q8a",
+      "lines": [
+        574,
+        611
+      ],
+      "pages": [
+        11
+      ],
+      "text_rectangles": 20,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "Q8b",
+      "lines": [
+        613,
+        642
+      ],
+      "pages": [
+        12
+      ],
+      "text_rectangles": 19,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "Q8c",
+      "lines": [
+        644,
+        666
+      ],
+      "pages": [
+        12
+      ],
+      "text_rectangles": 11,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "A8",
+      "lines": [
+        1046,
+        1120
+      ],
+      "pages": [
+        19,
+        20
+      ],
+      "text_rectangles": 16,
+      "equation_rectangles": 10
+    },
+    {
+      "id": "A9",
+      "lines": [
+        1123,
+        1136
+      ],
+      "pages": [
+        21
+      ],
+      "text_rectangles": 3,
+      "equation_rectangles": 2
+    },
+    {
+      "id": "A10",
+      "lines": [
+        1229,
+        1237
+      ],
+      "pages": [
+        23
+      ],
+      "text_rectangles": 3,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "A11",
+      "lines": [
+        1260,
+        1269
+      ],
+      "pages": [
+        23
+      ],
+      "text_rectangles": 3,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "C9",
+      "lines": [
+        1071,
+        1120
+      ],
+      "pages": [
+        20
+      ],
+      "text_rectangles": 10,
+      "equation_rectangles": 7
+    },
+    {
+      "id": "C10",
+      "lines": [
+        1123,
+        1155
+      ],
+      "pages": [
+        21
+      ],
+      "text_rectangles": 7,
+      "equation_rectangles": 5
+    },
+    {
+      "id": "C11",
+      "lines": [
+        1157,
+        1204
+      ],
+      "pages": [
+        21,
+        22
+      ],
+      "text_rectangles": 11,
+      "equation_rectangles": 6
+    },
+    {
+      "id": "U19",
+      "lines": [
+        1173,
+        1204
+      ],
+      "pages": [
+        22
+      ],
+      "text_rectangles": 6,
+      "equation_rectangles": 5
+    },
+    {
+      "id": "C12",
+      "lines": [
+        1206,
+        1227
+      ],
+      "pages": [
+        22
+      ],
+      "text_rectangles": 7,
+      "equation_rectangles": 2
+    },
+    {
+      "id": "U20",
+      "lines": [
+        1206,
+        1227
+      ],
+      "pages": [
+        22
+      ],
+      "text_rectangles": 7,
+      "equation_rectangles": 2
+    },
+    {
+      "id": "I4",
+      "lines": [
+        1208,
+        1225
+      ],
+      "pages": [
+        22
+      ],
+      "text_rectangles": 6,
+      "equation_rectangles": 2
+    },
+    {
+      "id": "X4",
+      "lines": [
+        1116,
+        1120
+      ],
+      "pages": [
+        20
+      ],
+      "text_rectangles": 3,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "C13",
+      "lines": [
+        1229,
+        1269
+      ],
+      "pages": [
+        23
+      ],
+      "text_rectangles": 13,
+      "equation_rectangles": 4
+    },
+    {
+      "id": "C14",
+      "lines": [
+        1279,
+        1287
+      ],
+      "pages": [
+        24
+      ],
+      "text_rectangles": 1,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "U21",
+      "lines": [
+        1289,
+        1316
+      ],
+      "pages": [
+        24
+      ],
+      "text_rectangles": 7,
+      "equation_rectangles": 4
+    },
+    {
+      "id": "C15",
+      "lines": [
+        1318,
+        1331
+      ],
+      "pages": [
+        24
+      ],
+      "text_rectangles": 6,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "U22",
+      "lines": [
+        1318,
+        1350
+      ],
+      "pages": [
+        24,
+        25
+      ],
+      "text_rectangles": 10,
+      "equation_rectangles": 3
+    },
+    {
+      "id": "U23",
+      "lines": [
+        1365,
+        1386
+      ],
+      "pages": [
+        25
+      ],
+      "text_rectangles": 4,
+      "equation_rectangles": 3
+    },
+    {
+      "id": "E7",
+      "lines": [
+        1388,
+        1403
+      ],
+      "pages": [
+        26
+      ],
+      "text_rectangles": 28,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "E8",
+      "lines": [
+        1398,
+        1410
+      ],
+      "pages": [
+        26
+      ],
+      "text_rectangles": 19,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "L2",
+      "lines": [
+        1148,
+        1155
+      ],
+      "pages": [
+        21
+      ],
+      "text_rectangles": 3,
+      "equation_rectangles": 1
+    },
+    {
+      "id": "L3",
+      "lines": [
+        1360,
+        1363
+      ],
+      "pages": [
+        25
+      ],
+      "text_rectangles": 3,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "L4",
+      "lines": [
+        690,
+        702
+      ],
+      "pages": [
+        13
+      ],
+      "text_rectangles": 8,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "Q9",
+      "lines": [
+        704,
+        717
+      ],
+      "pages": [
+        13
+      ],
+      "text_rectangles": 8,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "Q10",
+      "lines": [
+        720,
+        753
+      ],
+      "pages": [
+        14
+      ],
+      "text_rectangles": 19,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "Q11",
+      "lines": [
+        755,
+        780
+      ],
+      "pages": [
+        14
+      ],
+      "text_rectangles": 16,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "U24",
+      "lines": [
+        733,
+        753
+      ],
+      "pages": [
+        14
+      ],
+      "text_rectangles": 12,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "E9",
+      "lines": [
+        733,
+        753
+      ],
+      "pages": [
+        14
+      ],
+      "text_rectangles": 12,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "L5",
+      "lines": [
+        720,
+        731
+      ],
+      "pages": [
+        14
+      ],
+      "text_rectangles": 7,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "L6",
+      "lines": [
+        755,
+        780
+      ],
+      "pages": [
+        14
+      ],
+      "text_rectangles": 16,
+      "equation_rectangles": 0
+    },
+    {
+      "id": "L7",
+      "lines": [
+        986,
+        998
+      ],
+      "pages": [
+        18
+      ],
+      "text_rectangles": 11,
+      "equation_rectangles": 0
+    }
+  ],
+  "negative_controls": [
+    "partial equation rejected",
+    "unrelated equation rejected",
+    "equation on wrong page rejected"
+  ],
+  "corrected_examples": {
+    "C14": "Quality gate now opens on page 24.",
+    "L1": "Points to the actual irrational-parameter boundary on page 16.",
+    "U19": "Includes the complete paragraph introducing all three operator laws.",
+    "L3": "Includes the comparison with 11 original ReLUs, not a truncated paragraph."
+  },
+  "scope": "Source and location checks. Prose uses matched token runs; equations use exact embedded ActualText and checked panel geometry. Not a semantic proof of extraction or a new Lean run."
+}

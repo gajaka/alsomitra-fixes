@@ -62,7 +62,7 @@ function branchScope() {
       edges.filter(e => e.joint === j.id).forEach(e => edgeIds.add(e.id));
     }
   }
-  return {nodeIds, edgeIds};
+  return {nodeIds, edgeIds, coreIds:core};
 }
 
 function sourceMarkup(n) {
@@ -118,6 +118,33 @@ function focusEdge(id) {
   drawnEdges.find(edge => edge.id === id)?.group.focus({preventScroll:true});
 }
 function clearFocus() { selection = null; render(); fit(); }
+function showBranchOverview() {
+  clearFocus();
+  const branch=DATA.four_principles.find(b=>b.id===$('branch').value);
+  const title=branch?.title || 'Whole document', query=$('search').value.trim();
+  const ids=[...branchScope().coreIds];
+  let body=`<span class="tag">Branch overview</span><h2>${esc(title)}</h2>`;
+  if(query) body+=`<p>Search: <b>${esc(query)}</b></p>`;
+  body+=ids.length
+    ? '<p>The PDF highlights source passages of the matching branch objects. Select an object or connection to inspect a specific passage.</p>'
+    : '<p>No objects match this search. Clear the search to restore the branch.</p>';
+  const questions=ids.filter(id=>byId.get(id).kind==='question');
+  if(questions.length) body+=`<h3>Questions</h3><p>${questions.map(ref).join(' ')}</p>`;
+  if(branch && ids.length) {
+    for(const kind of ['assumptions','insights','justification']) {
+      const members=branch[kind].filter(id=>ids.includes(id));
+      if(members.length) body+=`<h3>${esc(kind[0].toUpperCase()+kind.slice(1))}</h3><p>${members.map(ref).join(' ')}</p>`;
+    }
+  }
+  $('inspector').innerHTML=body; $('inspector').scrollTop=0; bindRefs();
+  showSources(ids);
+}
+function resetPositions() {
+  manualPositions={};
+  try { localStorage.removeItem(layoutKey); } catch (_) {}
+  render(); fit();
+  $('selection-status').textContent+=' · Positions reset to automatic layout';
+}
 function toggleSelection(type, id) {
   if (selection?.type === type && selection.id === id) {
     clearFocus();
@@ -291,13 +318,23 @@ function fit() {
 }
 
 function showSources(ids) {
+  ++pdfGeneration; // Invalidate an older image callback, including for an empty result.
   sourceIds=[...new Set(ids)].filter(id=>byId.get(id)?.source);
   sourcePages=[...new Set(sourceIds.flatMap(id=>byId.get(id).source.pdf_pages))].sort((a,b)=>a-b);
   $('pdf-panel').dataset.sourceIds=sourceIds.join(',');
-  $('pdf-sources').textContent='Source: '+sourceIds.join(', ');
+  $('pdf-sources').textContent=sourceIds.length?'Source: '+sourceIds.join(', '):'No source selected';
   $('pdf-pages').innerHTML=sourcePages.map(page=>`<option value="${page}">Page ${page} / ${PDF_DATA.pages.length}</option>`).join('');
-  if (!sourcePages.length) { $('pdf-scroll').textContent='No source page is recorded for this selection.'; return; }
-  pdfPage=byId.get(sourceIds[0]).source.pdf_pages[0]; renderPdf();
+  if (!sourcePages.length) {
+    $('pdf-scroll').textContent='No source page is recorded for this selection.';
+    $('pdf-match').textContent='';
+    $('pdf-prev').disabled=true; $('pdf-next').disabled=true;
+    $('pdf-original').href='../NETWORK_REDUCTION.pdf';
+    return;
+  }
+  const first=sourceIds[0], pages=byId.get(first).source.pdf_pages;
+  pdfPage=pages.find(p=>(PDF_DATA.highlights[first]?.[String(p)]?.length ||
+    PDF_DATA.equation_highlights?.[first]?.[String(p)]?.length)) || pages[0];
+  renderPdf();
 }
 function renderPdf() {
   const generation=++pdfGeneration, page=PDF_DATA.pages.find(p=>p.number===pdfPage);
@@ -306,9 +343,13 @@ function renderPdf() {
   const index=sourcePages.indexOf(pdfPage);
   $('pdf-prev').disabled=index<=0; $('pdf-next').disabled=index>=sourcePages.length-1;
   const marks=[];
-  for (const id of sourceIds) for (const rect of PDF_DATA.highlights[id]?.[String(pdfPage)]||[]) marks.push({id,rect});
-  $('pdf-scroll').innerHTML=`<div class="pdf-sheet"><img id="pdf-image" src="${esc(page.image)}" alt="Source PDF page ${pdfPage}"><svg class="pdf-highlights" viewBox="0 0 ${page.width} ${page.height}" aria-label="Highlighted source passages">${marks.map(m=>`<rect data-source-node="${esc(m.id)}" x="${m.rect[0]}" y="${m.rect[1]}" width="${m.rect[2]-m.rect[0]}" height="${m.rect[3]-m.rect[1]}"/>`).join('')}</svg></div>`;
-  $('pdf-match').textContent=marks.length?'Matching source text is highlighted.':'Source page shown; no exact text run matched this passage.';
+  for (const id of sourceIds) {
+    for (const rect of PDF_DATA.highlights[id]?.[String(pdfPage)]||[]) marks.push({id,rect,kind:'text'});
+    for (const rect of PDF_DATA.equation_highlights?.[id]?.[String(pdfPage)]||[]) marks.push({id,rect,kind:'equation'});
+  }
+  $('pdf-scroll').innerHTML=`<div class="pdf-sheet"><img id="pdf-image" src="${esc(page.image)}" alt="Source PDF page ${pdfPage}"><svg class="pdf-highlights" viewBox="0 0 ${page.width} ${page.height}" aria-label="Highlighted source passages">${marks.map(m=>`<rect data-source-node="${esc(m.id)}" data-source-kind="${m.kind}" x="${m.rect[0]}" y="${m.rect[1]}" width="${m.rect[2]-m.rect[0]}" height="${m.rect[3]-m.rect[1]}"/>`).join('')}</svg></div>`;
+  const kind=marks.some(m=>m.kind==='equation')?'text and equations':'text';
+  $('pdf-match').textContent=marks.length?`Matching source ${kind} is highlighted.`:'Source page shown; no exact text or equation match was found.';
   const position=()=>{
     if(generation!==pdfGeneration) return;
     const image=$('pdf-image'), top=marks.length?Math.min(...marks.map(m=>m.rect[1])):0;
@@ -319,17 +360,17 @@ function renderPdf() {
 
 $('counts').textContent=`${DATA.nodes.length} objects · ${DATA.edges.length} typed relations · ${DATA.joint_inferences.length} joint inference records`;
 $('branch').innerHTML='<option value="all">Whole document</option>'+DATA.four_principles.map(b=>`<option value="${b.id}">${esc(b.title)}</option>`).join('');
-$('branch').value='rmsprop';
+$('branch').value='all';
 $('legend').innerHTML=Object.entries(colors).map(([k,v])=>`<span><b style="background:${v}"></b>${esc(k.replaceAll('_',' '))}</span>`).join('');
-$('branch').onchange=clearFocus;
-$('search').oninput=clearFocus;
+$('branch').onchange=showBranchOverview;
+$('search').oninput=showBranchOverview;
 $('labels').onchange=()=>{for(const e of drawnEdges) e.text.style.display=($('labels').checked||(selection?.type==='edge'&&selection.id===e.id))?'':'none';};
 $('fit').onclick=fit;
 $('plus').onclick=()=>{scale=Math.min(2.5,scale*1.25);zoom();};
 $('minus').onclick=()=>{scale=Math.max(.2,scale/1.25);zoom();};
-$('reset').onclick=()=>{$('search').value='';clearFocus();};
+$('reset').onclick=()=>{$('search').value='';showBranchOverview();};
 $('show-all').onclick=clearFocus;
-$('reset-layout').onclick=()=>{manualPositions={};savePositions();render();fit();};
+$('reset-layout').onclick=resetPositions;
 $('pdf-pages').onchange=()=>{pdfPage=Number($('pdf-pages').value);renderPdf();};
 $('pdf-prev').onclick=()=>{const i=sourcePages.indexOf(pdfPage);if(i>0){pdfPage=sourcePages[i-1];renderPdf();}};
 $('pdf-next').onclick=()=>{const i=sourcePages.indexOf(pdfPage);if(i<sourcePages.length-1){pdfPage=sourcePages[i+1];renderPdf();}};
@@ -343,4 +384,4 @@ $('canvas').addEventListener('pointerdown',event=>{
 $('canvas').addEventListener('click',event=>{
   if(backgroundPress && !drag && !event.target.closest('[data-node],[data-edge]')) clearFocus();
 });
-focusNode('Q5');
+showBranchOverview();

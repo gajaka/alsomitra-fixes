@@ -93,13 +93,13 @@ Q1 [question; answered_yes] Does every permitted input pair satisfy the robustne
   PDF page(s) [2]; REPORT.md:47-89
 A2 [assumption; declared_contract] The exact nearby-input contract
   P(x,y): x,y in D and every abs(x_i-y_i)<=0.001. Q_N(x,y): abs(N(x)-N(y))<=0.1. This contract concerns two inputs.
-  PDF page(s) [2]; REPORT.md:57-73
+  PDF page(s) [2]; REPORT.md:57-75
 C1 [construction; defined] Absolute-weight sensitivity bound
   Propagate unit coordinate-difference bounds through elementwise absolute weight matrices and ReLU nonexpansiveness.
-  PDF page(s) [3]; REPORT.md:112-133
+  PDF page(s) [3]; REPORT.md:112-134
 U1 [insight; reported_proved] Checked bounds cover every permitted pair
   DL2 admits multiplier 31 and Godel 26, hence output differences at most 0.031 and 0.026 under P. These are conservative bounds, not optimal constants.
-  PDF page(s) [3]; REPORT.md:112-139
+  PDF page(s) [3]; REPORT.md:112-140
 U2 [insight; reported_proved] The input premise is nonvacuous
   Distinct in-domain vectors with all coordinates 0.5 and 0.5005 satisfy the premise.
   PDF page(s) [2, 3]; REPORT.md:76-110
@@ -111,28 +111,28 @@ Q2 [question; answered_yes] Can computation be deleted while keeping the promise
   PDF page(s) [4]; REPORT.md:144-195
 Q2a [question; answered_yes] Is the selected neuron inactive throughout D?
   For both positive checkpoints, hidden neuron 58 has an exact strictly negative upper bound throughout D.
-  PDF page(s) [4]; REPORT.md:149-164
+  PDF page(s) [4]; REPORT.md:146-163
 Q2b [question; answered_yes] Does certified deletion preserve every output on D?
   Use the checked interval mask and a pruning theorem matching the network's output activation.
-  PDF page(s) [4]; REPORT.md:166-181
+  PDF page(s) [4]; REPORT.md:165-181
 Q2c [question; answered_yes] Does the reduced network inherit the proved promise?
   Substitute equal outputs at both inputs of the already established robustness implication.
   PDF page(s) [4]; REPORT.md:183-195
 C2 [construction; defined] Pruning certificate and keep mask
   A certificate supplies interval bounds and Boolean keep/delete masks. Acceptance is checked; certificate data alone is not proof.
-  PDF page(s) [4]; REPORT.md:166-176
+  PDF page(s) [4]; REPORT.md:165-173
 U3 [insight; reported_proved] Neuron 58 is always inactive
   Its preactivation is at most -9057167/134217728, so its ReLU activation is zero on D for both DL2 and Godel.
-  PDF page(s) [4]; REPORT.md:149-164
+  PDF page(s) [4]; REPORT.md:146-163
 I1 [invariant; reported_proved] Output equality under certified deletion
   For all x in D, N_small(x)=N_original(x), for the specified fixed checkpoints and accepted pruning transformation.
-  PDF page(s) [4]; REPORT.md:172-195
+  PDF page(s) [4]; REPORT.md:165-195
 U4 [insight; reported_proved] Robustness transfers to the smaller network
   The reduced DL2 and Godel networks satisfy the same promise, including the stronger 0.031 and 0.026 bounds.
   PDF page(s) [4]; REPORT.md:183-195
 U5 [insight; reported_structural_count] Each positive checkpoint loses 39 parameters
   Widths change from 6-64-32-1 to 6-63-32-1; parameter count changes from 2561 to 2522. This is not a measured hardware speedup.
-  PDF page(s) [4]; REPORT.md:178-181
+  PDF page(s) [4]; REPORT.md:175-181
 E2 [evidence; recorded_lean_audit] Linear-output pruning and equality proofs
   LinearPruning.certified_linear_prune and the checkpoint same_output / reduced_property5 results.
   PDF page(s) [17]; REPORT.md:913-921
@@ -147,34 +147,34 @@ Q3 [question; answered_conditionally] Can irrelevant head weights be forgotten w
   PDF page(s) [6]; REPORT.md:254-277
 Q3a [question; answered_yes] Can the current output be computed from the view?
   The last hidden activations are (h0,0,h2,0); only a0,a2,b affect the output.
-  PDF page(s) [6]; REPORT.md:265-310
+  PDF page(s) [6]; REPORT.md:262-310
 Q3b [question; answered_conditionally] Can the next view be computed from the current view?
   It can for compatible operations; an operation reading forgotten a1 to change retained a0 supplies a counterexample.
   PDF page(s) [7]; REPORT.md:313-373
 C3 [construction; defined] Retained head view
   s=(x,a0,a1,a2,a3,b); q(s)=(x,a0,a2,b).
-  PDF page(s) [6]; REPORT.md:270-277
+  PDF page(s) [6]; REPORT.md:271-277
 C4 [construction; defined] RR is equality of views
   RR(s,t) iff q(s)=q(t). This is an equivalence relation on the specified common state space.
   PDF page(s) [6]; REPORT.md:293-310
 C5 [construction; defined] Observable subalgebra Obs(q)
   All real-valued functions f composed with q. Closed under the algebra operations; this mathematical definition does not make every member executable.
-  PDF page(s) [8]; REPORT.md:390-407
+  PDF page(s) [8]; REPORT.md:388-407
 A4 [assumption; declared_transition_contract] Allowed updates factor through the retained view
   For every permitted T, supply Tbar such that q(T(s))=Tbar(q(s)). Any state-based operation selection must also use retained information.
-  PDF page(s) [7]; REPORT.md:335-362
+  PDF page(s) [7]; REPORT.md:335-359
 U7 [insight; reported_proved] Different full states have the same view and output
   For the two displayed heads, forgotten values differ while the retained head is (2,3,1). RR is stronger than accidental equality of one output.
   PDF page(s) [6]; REPORT.md:279-310
 U8 [insight; reported_proved] Compatibility composes through finite update sequences
   A compatible step preserves view correspondence. Induction gives full/reduced agreement for every finite sequence of the specified operations.
-  PDF page(s) [7]; REPORT.md:335-362
+  PDF page(s) [7]; REPORT.md:335-359
 I2 [invariant; reported_proved] RR is preserved by compatible update sequences
   RR-related states remain RR-related under the same permitted sequence. Output values themselves may change.
-  PDF page(s) [7]; REPORT.md:354-362
+  PDF page(s) [7]; REPORT.md:353-359
 U9 [insight; reported_proved] Stable observables remain computable after updates
   Stability preserves dependence on the view, not the numeric value of every observable and not a robustness bound.
-  PDF page(s) [8]; REPORT.md:417-431
+  PDF page(s) [8]; REPORT.md:417-429
 X1 [counterexample; reported_proved] Forgotten a1 changes retained a0
   Heads with a1=7 and a1=-4 have the same old view, but a0:=a0+a1 yields 9 and -2. The Lean witnesses use the same pattern with smaller values.
   PDF page(s) [7]; REPORT.md:319-333
@@ -186,7 +186,7 @@ U10 [insight; reported_proved] A proposed view can be insufficient for an update
   PDF page(s) [7]; REPORT.md:319-373
 U11 [insight; reported_proved] Permitting more updates may require a larger view
   The displayed coordinate-retention cases require three, then four, then five head coordinates. Remembering a weight does not require restoring its zero neuron.
-  PDF page(s) [7]; REPORT.md:364-373
+  PDF page(s) [7]; REPORT.md:361-372
 E3 [evidence; recorded_lean_audit] Head-update and coordinate-retention evidence
   OutputUpdates supplies RR, factorization, stable algebra and the bad-update obstruction. The coordinate-retention development checks the enlarged views.
   PDF page(s) [17]; REPORT.md:919-933
@@ -198,13 +198,13 @@ A5 [assumption; declared_model_scope] Specified rational coupled momentum model
   PDF page(s) [9]; REPORT.md:456-484
 C6 [construction; defined] Eight-observation momentum view
   Keep a0,a1+a3,a2,b and v0,v1+v3,v2,vb from the ten-dimensional full state.
-  PDF page(s) [9]; REPORT.md:456-471
+  PDF page(s) [9]; REPORT.md:456-474
 U12 [insight; reported_mathematical_example] Optimizer memory affects the next state
   Equal current parameters and gradients can have different next parameters when the stored momentum differs.
   PDF page(s) [9]; REPORT.md:438-454
 U13 [insight; reported_proved] Eight linear observations suffice and meet a scoped minimum
   For the concrete coupled instance, eight is minimal among invariant linear observation spaces retaining the required output coordinates. This is not a minimum among arbitrary encodings.
-  PDF page(s) [9]; REPORT.md:473-484
+  PDF page(s) [9]; REPORT.md:476-484
 U14 [insight; reported_proved] Aggregation changes the reduced update rule
   If each of two coordinates decreases by one, their retained sum decreases by two. The transport rule includes this factor.
   PDF page(s) [9]; REPORT.md:486-494
@@ -216,52 +216,52 @@ Q5 [question; answered_no] Does the summed-history view work for every valid RMS
   PDF page(s) [10]; REPORT.md:496-525
 A6 [assumption; declared_model_scope] Specified real RMSProp rule
   Decay 1/2, step size 1, stabilizer 1 outside the square root, specified coupled gradient, nonnegative histories. This is a separate real-valued model.
-  PDF page(s) [10]; REPORT.md:496-512
+  PDF page(s) [10]; REPORT.md:496-516
 C7 [construction; defined] Summed-history candidate view
   Retain head observations and r0,r1+r3,r2,rb. Only the sum of the paired histories is retained.
-  PDF page(s) [10]; REPORT.md:513-516
+  PDF page(s) [10]; REPORT.md:511-516
 X2 [counterexample; reported_proved] Equal history sums yield different next weight sums
   Histories (1,97) and (49,49) both sum to 98, but the next retained weight sums are -5/8 and -1/3.
   PDF page(s) [10]; REPORT.md:517-525
 H2 [hypothesis; refuted_candidate_reconstruction] Summed histories determine the next retained state for all valid histories
   This is the candidate positive answer to Q5, refuted by X2. It is kept separate from the invariant-restricted answer to Q6.
-  PDF page(s) [10]; REPORT.md:513-525
+  PDF page(s) [10]; REPORT.md:511-525
 U15 [insight; reported_proved] No reduced step exists on the proposed view for all valid histories
   A formal impossibility for this view and this full-state class, not a claim that every RMSProp reduction is impossible.
   PDF page(s) [10]; REPORT.md:517-525
 I3 [invariant; reported_proved] Equal paired histories are initialized and preserved
   r1=r3 holds under zero initialization. Equal paired gradients preserve it through every permitted step.
-  PDF page(s) [10]; REPORT.md:527-535
+  PDF page(s) [10]; REPORT.md:527-532
 Q6 [question; answered_yes] Does the view work on equal-history states?
   A new, explicitly restricted question. Its positive answer leaves the all-state obstruction intact.
-  PDF page(s) [10]; REPORT.md:527-550
+  PDF page(s) [10]; REPORT.md:527-549
 C8 [construction; defined] Restricted state and corrected reduced rule
   On r1=r3, each history equals half their retained sum; the reduced update uses that half inside the square root.
-  PDF page(s) [10]; REPORT.md:533-542
+  PDF page(s) [10]; REPORT.md:534-540
 U16 [insight; reported_proved] Exact reduced execution holds on the invariant state space
   Finite-sequence correspondence, RR preservation and stable observables hold on valid equal-history states. The asymmetric witness is unreachable from the stated initialization.
-  PDF page(s) [10]; REPORT.md:544-550
+  PDF page(s) [10]; REPORT.md:542-549
 L1 [limitation; not_established] The real RMSProp example is not connected to the rational checkpoints
   Square-root updates may produce irrational parameters; the guide does not assert this bridge.
-  PDF page(s) [10]; REPORT.md:552-554
+  PDF page(s) [16]; REPORT.md:895-903
 E5 [evidence; recorded_lean_audit] RMSProp obstruction and invariant-restriction evidence
   AdaptiveBoundary.no_reduced_step and SymmetricRMSProp.initialized_run_factors / algebra_stable.
-  PDF page(s) [17]; REPORT.md:923-935
+  PDF page(s) [17]; REPORT.md:922-935
 Q7 [question; answered_no] Do the original Baseline and Adversarial models satisfy both directional requirements at margin 2?
   Each selected universal requirement is refuted for each named original model, and the witnesses transfer to their exact reductions.
   PDF page(s) [5]; REPORT.md:232-251
 A7 [assumption; declared_contract] Physical normalization and margin-2 directional contract
   Use the exact position conversions and the source definitions Above(2), Below(2). A directional property concerns one input, unlike robustness.
-  PDF page(s) [15]; REPORT.md:825-837
+  PDF page(s) [19, 20]; REPORT.md:1046-1093
 X3 [counterexample; reported_proved] Baseline Above(2) interior witness
   Input [1/4,1/2,1/2,1/4,1/4,3/4] has physical X+Y about 3.518069 and output about 0.399148, below the required 0.5.
-  PDF page(s) [5]; REPORT.md:238-247
+  PDF page(s) [5]; REPORT.md:234-245
 U17 [insight; reported_proved] Exact reduction preserves an existing failure
   Equal outputs at the same violating input transfer the counterexample. The underlying refutation remains a valid mathematical result.
   PDF page(s) [5]; REPORT.md:232-251
 U18 [insight; logical_consequence_extracted] Repairing that output failure requires changing the output behavior
   Exact equality to the violating original cannot remove that same output violation under unchanged predicates and domain.
-  PDF page(s) [5]; REPORT.md:249-252
+  PDF page(s) [5]; REPORT.md:247-250
 E6 [evidence; recorded_lean_audit] Original and reduced directional refutation evidence
   Witnesses.lean verifies the four exact original-model violations and the corresponding reduced-model refutations.
   PDF page(s) [17]; REPORT.md:923-936
@@ -285,10 +285,10 @@ A9 [assumption; declared_model_scope] Nonnegative correction slope; selected val
   PDF page(s) [21]; REPORT.md:1123-1136
 A10 [assumption; declared_data_scope] All 360 reference rows are also fitting rows
   Quality is evaluated on the unchanged supplied labels. This is not held-out generalization evidence.
-  PDF page(s) [23]; REPORT.md:1229-1239
+  PDF page(s) [23]; REPORT.md:1229-1237
 A11 [assumption; declared_artifact_scope] Frozen dyadic candidate
   The selected fitted parameters are rounded to multiples of 1/65536, ties to even. Proofs and exact reference checks concern this frozen object.
-  PDF page(s) [23]; REPORT.md:1260-1273
+  PDF page(s) [23]; REPORT.md:1260-1269
 C9 [construction; defined] Allowed output set A(x)
   For d>=2 require z>=1/2; for d<=-2 require z<=1/2; in the open gap all real outputs satisfy these directional implications.
   PDF page(s) [20]; REPORT.md:1071-1120
@@ -300,7 +300,7 @@ C11 [construction; defined] Projection R_k(x,z) and six-ReLU implementation
   PDF page(s) [21, 22]; REPORT.md:1157-1204
 U19 [insight; reported_proved] Correction has membership, identity-on-interval and idempotence laws
   For k>=0 it produces an admissible directional output. Identity applies to proposals already in I_k, not every member of the larger A(x).
-  PDF page(s) [22]; REPORT.md:1176-1204
+  PDF page(s) [22]; REPORT.md:1173-1204
 C12 [construction; defined] Composed controller F_theta(x)=R_k(x,N_theta(x))
   The block uses the input displacement as well as the core proposal; the core's scalar output alone is not the full interface.
   PDF page(s) [22]; REPORT.md:1206-1227
@@ -309,25 +309,25 @@ U20 [insight; reported_proved] Every core yields a directionally compliant compo
   PDF page(s) [22]; REPORT.md:1206-1227
 I4 [invariant; reported_proved] Directional requirements survive core-parameter changes
   This preservation is for the stated exact-real composed controller. It does not preserve reference quality, pruning validity or a global sensitivity bound.
-  PDF page(s) [22]; REPORT.md:1218-1227
+  PDF page(s) [22]; REPORT.md:1208-1225
 X4 [counterexample; documented_trivial_solution] Constant 0.5 satisfies the directional clauses
   This is a witness that the two clauses alone do not enforce useful reference behavior; it is not a violation of those clauses.
-  PDF page(s) [20]; REPORT.md:1117-1120
+  PDF page(s) [20]; REPORT.md:1116-1120
 C13 [construction; defined] Fit through the fixed block, then freeze
   Training proposes a core using complete-controller MSE; freezing fixes exact parameters before the formal quality check.
-  PDF page(s) [23]; REPORT.md:1229-1273
+  PDF page(s) [23]; REPORT.md:1229-1269
 C14 [construction; defined] Reference-quality gate
   MSE_T(F)<=MSE_T(original) and MSE_T(F)<MSE_T(constant 0.5), on the named reference collection.
-  PDF page(s) [23, 24]; REPORT.md:1277-1291
+  PDF page(s) [24]; REPORT.md:1279-1287
 U21 [insight; reported_exact_finite_proof] The frozen candidate passes both reference comparisons
   Exact bounds separate repaired MSE<=0.001476 from original MSE>=0.001532 and constant MSE>=0.109. The approximate 3.73 percent improvement concerns these fitting rows.
-  PDF page(s) [24]; REPORT.md:1293-1316
+  PDF page(s) [24]; REPORT.md:1289-1316
 C15 [construction; defined] New pruning certificate for the fitted core
   The small fitted core is embedded into a full fitted core and four inactive neurons are recertified. Neither core is the unchanged original checkpoint.
   PDF page(s) [24]; REPORT.md:1318-1331
 U22 [insight; reported_proved] Full and small repaired controllers agree throughout D
   New core equality is preserved by composition with the same input-dependent correction block.
-  PDF page(s) [24, 25]; REPORT.md:1318-1348
+  PDF page(s) [24, 25]; REPORT.md:1318-1350
 U23 [insight; reported_proved] The final frozen small controller meets the combined contract
   Both universal directional clauses and both finite reference-MSE comparisons hold, with their different quantifier scopes preserved.
   PDF page(s) [25]; REPORT.md:1365-1386
@@ -336,13 +336,13 @@ E7 [evidence; recorded_lean_audit] Projection and arbitrary-core contract eviden
   PDF page(s) [26]; REPORT.md:1388-1403
 E8 [evidence; recorded_lean_audit] Frozen quality, recertification and final-contract evidence
   RepairReference, RepairedCore, RepairNetwork and RepairResult; recorded 39-root repair audit. Current source hashes can be checked without re-running Lean.
-  PDF page(s) [26]; REPORT.md:1398-1409
+  PDF page(s) [26]; REPORT.md:1398-1410
 L2 [limitation; documented_boundary] Projection adds restrictions beyond the original two clauses
   The chosen interval also enforces [0,1] and narrows part of the otherwise unconstrained gap.
-  PDF page(s) [21]; REPORT.md:1150-1155
+  PDF page(s) [21]; REPORT.md:1148-1155
 L3 [limitation; documented_boundary] Repair changes architecture and is not smaller than the old graph
   The full repaired graph uses 17 ReLUs, reduced repaired graph 13, old unrepaired graph 11. Core parameters decrease from 75 to 41 only in the stated full/small fitted comparison.
-  PDF page(s) [25]; REPORT.md:1357-1361
+  PDF page(s) [25]; REPORT.md:1360-1363
 L4 [limitation; not_established] Old view certificates do not automatically cover the repaired core
   Earlier update proofs fixed hidden layers. The repair fit changes them; no combined theorem for that adaptation has been established here.
   PDF page(s) [13]; REPORT.md:690-702
@@ -354,7 +354,7 @@ Q10 [question; open] What universal guarantee holds for floating-point execution
   PDF page(s) [14]; REPORT.md:720-753
 Q11 [question; open] Does the controller provide acceptable physical flight behavior?
   Flight, sensing, normalization, actuators, reachability and unseen-data performance require separate arguments and evaluation.
-  PDF page(s) [14]; REPORT.md:755-778
+  PDF page(s) [14]; REPORT.md:755-780
 U24 [insight; reported_finite_observation] Runtime observations distinguish the semantics
   Baseline batch-one differs on 337 of 8616 tested inputs, max about 4.77e-7. DL2/Godel are bit-identical on 4520 inputs per model in the two tested layouts. Neither observation is a universal theorem.
   PDF page(s) [14]; REPORT.md:733-753
@@ -366,7 +366,7 @@ L5 [limitation; documented_boundary] Exact-real equality does not guarantee equa
   PDF page(s) [14]; REPORT.md:720-731
 L6 [limitation; not_established] Reference fit and parameter counts do not establish deployment quality
   No held-out repair evaluation, universal float32 guarantee, processor latency improvement or closed-loop flight result is claimed.
-  PDF page(s) [14]; REPORT.md:755-778
+  PDF page(s) [14]; REPORT.md:755-780
 L7 [limitation; documented_boundary] Application evidence is distinct from priority or novelty
   The guide calls equality transfer, exact reduction and linear observation spaces existing mathematical ideas and makes no priority claim.
   PDF page(s) [18]; REPORT.md:986-998

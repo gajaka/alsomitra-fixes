@@ -9,7 +9,9 @@ filesystem; no server or network connection is needed. Keep the
 
 The viewer connects the structured reading of the network-reduction guide
 to its source PDF. The exported graph contains 99 objects, 102 typed
-relations, and 17 joint inferences. The initial selection is question Q5.
+relations, and 17 joint inferences. The initial view is **Whole document**, with
+all objects visible and no object or relation selected. The inspector and PDF
+show the document overview.
 
 ## Explore and arrange
 
@@ -30,8 +32,15 @@ relations, and 17 joint inferences. The initial selection is question Q5.
   background, or use **Show branch** / **Escape** to deselect and restore the
   current branch overview while
   keeping the PDF selection. Choose **Whole document** to browse the full graph.
-- **Reset positions** restores the automatic layout. **Fit graph**, **+**, and
-  **−** control the view. Search and branch filters change the visible graph.
+- **Reset positions** restores the automatic layout and clears saved positions
+  across every branch. A status message confirms the reset; the selected object
+  or relation and PDF passage stay selected. **Fit graph**, **+**, and **−**
+  control the view.
+- Changing **Branch** updates the graph, inspector and PDF highlights together.
+  The overview highlights source passages of the matching branch objects;
+  selecting an object or relation narrows the source selection. Search also
+  refreshes the source context. An empty search result clears old highlights
+  and page controls instead of retaining an unrelated passage.
 - Use **Tab** to focus objects and connections and **Enter** or **Space** to
   select or deselect them. **Alt + arrow** moves a focused object; add **Shift** for a
   larger step.
@@ -42,17 +51,30 @@ discovery order.
 
 ## PDF source selection
 
-The embedded preview uses images rendered from the original PDF. Highlights
-are located by matching normalized runs of at least five tokens from the
-recorded source passage, restricted to its recorded PDF pages. The preview
-scrolls to the first match. Its page selector visits the source pages for the
-current selection.
+The embedded preview uses images rendered from the original PDF. Prose
+highlights match normalized runs of at least five tokens from the recorded
+source passage, restricted to its recorded PDF pages. Display equations use
+their exact embedded LaTeX `ActualText` and the bounds of their vector panels,
+cross-checked against PDF drawing extraction. This mapping recognizes the
+pinned document renderer's format and rejects unsupported formats or missing
+equations; it is not a general PDF equation recognizer. The preview scrolls to
+the first match. Its page selector visits the current selection's source pages.
 
 These highlights are a reading aid. A relation reconstructed during extraction
 may not appear as one sentence in the PDF; selecting it shows the connected
 objects' passages. If no exact token run is found, the viewer shows the
-recorded page and explicitly reports that no text match was found.
+recorded page and explicitly reports that no text or equation match was found.
 **Open original PDF** opens the source document at the displayed page.
+
+The [source-pointer audit](SOURCE_POINTER_CHECKS.json) checks all 99 records
+against the exact Markdown and PDF, including all 60 display equations in the
+document. It also records corrections to incomplete or misplaced source spans.
+This verifies source identity and locations; it does not prove every graph
+interpretation. To repeat it in the document-tools environment:
+
+```sh
+contribution/.build/document-tools/bin/python contribution/network_reduction/research_graph/audit_sources.py
+```
 
 ## Source files and rebuilding
 
@@ -75,9 +97,12 @@ reviewing the extraction and its source bindings.
 
 ## Browser verification
 
-The [saved interaction checks](INTERACTION_CHECKS.json) record 12 passing
+The [saved interaction checks](INTERACTION_CHECKS.json) record 18 passing
 scenarios, including selecting and deselecting both nodes and connections
-while preserving the source PDF passage. This is browser behavior validation,
+while preserving the source PDF passage, synchronizing all branches with their
+sources, and resetting saved positions across branches and reloads.
+Every node's source pages and displayed text/equation marks are exercised.
+The record includes the tested HTML hash. This is browser behavior validation,
 separate from the mathematical proof receipts.
 
 The interaction checks use Playwright with a local Chrome installation.
