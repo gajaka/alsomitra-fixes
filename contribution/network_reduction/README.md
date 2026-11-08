@@ -2,6 +2,10 @@
 
 Start with **Can a Smaller Network Keep Its Promise?**, available as
 [PDF](NETWORK_REDUCTION.pdf) and [editable source](REPORT.md).
+The [interactive graph and PDF viewer](https://gajaka.github.io/alsomitra-fixes/)
+lets you trace questions, assumptions, insights, and evidence back to their
+source passages. See the [viewer controls](research_graph/README.md).
+
 The guide begins with explicit `P -> Q` definitions and a pair of nearby
 inputs. It follows the guarantee through actual checkpoint reduction,
 then uses two concrete states to explain RR, compatible updates and the

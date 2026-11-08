@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Research graph — controller reduction and repair</title>
+<style>
+:root{font-family:system-ui,-apple-system,sans-serif;color:#172637;background:#f4f6f8;font-size:14px}
+*{box-sizing:border-box}body{margin:0}header{background:#112b39;color:#fff;padding:20px 24px}h1{font-size:23px;line-height:1.3;margin:0 0 8px}header p{color:#d0e2e9;margin:4px 0;max-width:1100px;line-height:1.5}
+.toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:12px 20px;background:white;border-bottom:1px solid #d3dce4}select,input,button{font:inherit;border:1px solid #b4c4d1;border-radius:5px;background:white;padding:7px 9px;color:#172637}button{cursor:pointer}button:hover{background:#eaf2f7}button:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:3px solid #eea529;outline-offset:3px}input[type=search]{min-width:220px}a{color:#075c89}.layout{display:grid;grid-template-columns:minmax(500px,1fr) 390px;min-height:70vh}.canvas{padding:12px;overflow:auto;height:73vh;background:linear-gradient(90deg,#f1f5f8 1px,transparent 1px),linear-gradient(#f1f5f8 1px,transparent 1px);background-size:24px 24px}.inspector{padding:20px;background:#fff;border-left:1px solid #d3dce4;overflow:auto;max-height:73vh}.inspector h2{font-size:20px;margin:8px 0 12px}.inspector h3{font-size:14px;margin:18px 0 8px}.inspector p,.inspector li{line-height:1.55}.muted{color:#5b6b7a}.tag{display:inline-block;padding:3px 7px;background:#eef3f7;border-radius:4px;font-size:12px;margin:2px 4px 2px 0}.ref{border:0;background:#e8f2f6;margin:2px;padding:4px 7px;font-size:12px}.source{white-space:pre-wrap;font:12px/1.6 ui-monospace,monospace;background:#f5f7f9;padding:12px;border-radius:6px;max-height:330px;overflow:auto}.legend{padding:8px 20px;background:#fff;font-size:12px;display:flex;gap:16px;flex-wrap:wrap;border-bottom:1px solid #d3dce4}.legend b{display:inline-block;width:10px;height:10px;margin-right:5px;border-radius:2px}.principles{padding:12px 20px;background:#eaf1f5;display:flex;gap:18px;flex-wrap:wrap}.principles span{font-size:12px}.node{cursor:pointer}.node:hover rect,.node:hover polygon{stroke-width:3}.edge{fill:none;stroke:#9baebb;stroke-width:1.3}.edge.evidence{stroke:#977629;stroke-dasharray:5 3}.edge.answer{stroke:#267752}.edge.active{stroke:#172637;stroke-width:2.5}.edge-label{font-size:10px;fill:#566b7a;paint-order:stroke;stroke:#f4f6f8;stroke-width:4px}.node-label{font-size:12px;fill:#172637;pointer-events:none}.node-id{font-size:11px;font-weight:700;pointer-events:none}.column-label{font-size:12px;fill:#5b6b7a}.footer{padding:16px 24px;font-size:12px;line-height:1.6;color:#566572}.footer a{margin-right:16px}.warning{border-left:3px solid #b87810;padding-left:10px}ul{padding-left:19px}svg{display:block}.controls-label{font-size:12px}.empty{padding:30px}@media(max-width:1000px){.layout{grid-template-columns:1fr}.inspector{max-height:none;border-left:0;border-top:1px solid #d3dce4}.canvas{height:60vh}h1{font-size:19px}}
+.layout{grid-template-columns:minmax(500px,1.45fr) minmax(390px,1fr);height:calc(100vh - 265px);min-height:650px}
+.graph-panel{display:flex;flex-direction:column;min-width:0;min-height:0}.canvas{height:auto;flex:1;min-height:0}.sidebar{display:grid;grid-template-rows:minmax(160px,.65fr) minmax(300px,1.35fr);min-height:0;border-left:1px solid #d3dce4}.inspector{max-height:none;border:0;padding:16px 20px}.inspector h2{font-size:18px}.inspector h3{margin:12px 0 5px}.inspector p{margin:6px 0}
+.graph-status{padding:10px 16px;background:#e8eff4;border-top:1px solid #c8d6df;font-size:12px}.interaction-help{padding:8px 20px;background:#fff;color:#526879;font-size:12px}button:disabled{cursor:default;opacity:.45}.node{cursor:grab;touch-action:none;user-select:none}.node.dragging{cursor:grabbing}.node-shape{stroke-width:1.6}.selected-node .node-shape{stroke:#ad6100;stroke-width:3.8}.node:focus-visible .node-shape{stroke-width:4}.edge-hit{fill:none;stroke:transparent;stroke-width:20;pointer-events:stroke;cursor:pointer}.edge{pointer-events:none}.edge.active{stroke:#397e9d;stroke-width:2.4}.edge-group{cursor:pointer}.edge-group:hover .edge,.edge-group:focus-visible .edge{stroke:#b56b10;stroke-width:3.5}.selected-edge .edge{stroke:#bd6a09;stroke-width:4}.edge-label{cursor:pointer;stroke:#f4f6f8;stroke-width:5px}.node-label{font-size:13px}.node-id{font-size:12px}
+.pdf-panel{display:flex;flex-direction:column;min-height:0;border-top:1px solid #cad7df;background:#fff}.pdf-toolbar{padding:8px 12px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}.pdf-toolbar select,.pdf-toolbar button{padding:5px 7px;font-size:12px}.pdf-toolbar a{margin-left:auto;font-size:12px}.pdf-sources,.pdf-match{padding:0 12px 7px;font-size:12px;color:#526879}.pdf-scroll{overflow:auto;min-height:0;flex:1;padding:12px;background:#dbe4ea;scroll-behavior:auto}.pdf-sheet{position:relative;width:100%;max-width:1000px;margin:auto;background:white;box-shadow:0 2px 7px #0002}.pdf-sheet img{display:block;width:100%;height:auto}.pdf-highlights{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.pdf-highlights rect{fill:#ffcc44;fill-opacity:.32;stroke:#c88a00;stroke-width:.45;mix-blend-mode:multiply}
+@media(max-width:1050px){.layout{grid-template-columns:1fr;height:auto;min-height:0}.graph-panel{height:62vh;min-height:400px}.sidebar{grid-template-rows:minmax(160px,260px) 65vh;border-left:0}.canvas{height:auto}.inspector{border-top:1px solid #d3dce4}.pdf-scroll{padding:8px}}
+.node:focus,.edge-group:focus{outline:none}
+</style>
+<header>
+<h1>From document to research graph</h1>
+<p>Can a Smaller Network Keep Its Promise? — questions, assumptions, insights, constructions, evidence and boundaries extracted from the 26-page guide.</p>
+<p id="counts"></p>
+</header>
+<div class="toolbar">
+ <label>Branch <select id="branch"></select></label>
+ <label>Find <input id="search" type="search" placeholder="ID, phrase, theorem, assumption…"></label>
+ <label class="controls-label"><input id="labels" type="checkbox"> Relation labels</label>
+ <button id="fit">Fit graph</button><button id="minus" aria-label="Zoom out">−</button><button id="plus" aria-label="Zoom in">+</button>
+ <button id="reset">Clear search</button><button id="show-all">Show branch</button><button id="reset-layout">Reset positions</button>
+</div>
+<div class="interaction-help" id="interaction-help">Drag objects to move them. Click an object or connection to isolate it and highlight its PDF source. Click it again, click the empty background, or press Escape to deselect. Keyboard: Enter toggles selection; Alt + arrows moves an object.</div>
+<div class="legend" id="legend"></div>
+<div class="principles" id="principles"></div>
+<main class="layout">
+ <section class="graph-panel" aria-label="Interactive research graph">
+  <div class="canvas" id="canvas"><svg id="graph" role="group" aria-label="Research dependency graph"></svg></div>
+  <div class="graph-status" id="selection-status" aria-live="polite"></div>
+ </section>
+ <aside class="sidebar">
+  <div class="inspector" id="inspector" aria-live="polite"></div>
+  <section class="pdf-panel" id="pdf-panel" aria-label="Selected PDF source">
+   <div class="pdf-toolbar"><b>Source PDF</b><button id="pdf-prev" aria-label="Previous source page">←</button><select id="pdf-pages" aria-label="Source PDF page"></select><button id="pdf-next" aria-label="Next source page">→</button><a id="pdf-original" href="../NETWORK_REDUCTION.pdf" target="_blank" rel="noopener">Open original PDF ↗</a></div>
+   <div class="pdf-sources" id="pdf-sources"></div><div class="pdf-match" id="pdf-match"></div>
+   <div class="pdf-scroll" id="pdf-scroll"></div>
+  </section>
+ </aside>
+</main>
+<div class="footer">
+ <a href="GRAPH.json">Complete structured graph (JSON)</a><a href="GRAPH.txt">ASCII graph and full inventory</a><a href="VALIDATION.json">Structural validation</a><a href="../NETWORK_REDUCTION.pdf">Source PDF</a>
+ <p>This is a document-specific structured extraction. Diamond nodes preserve joint premises. Layout columns group object types; they are not a discovery timeline. Display filters do not remove records from the exported graph. Existing Lean results are attributed to saved evidence; the graph itself is not a newly checked Lean proof or an evaluated general PDF extractor.</p>
+</div>
+<script>
+const DATA=/*GRAPH_DATA*/;
+const PDF_DATA=/*PDF_DATA*/;
+/*VIEWER_CODE*/
+</script>
+</html>

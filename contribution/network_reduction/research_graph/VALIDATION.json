@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "nodes": 99,
+  "relations": 102,
+  "joint_inferences": 17,
+  "document_pages": 26,
+  "matched_lean_artifacts": 14,
+  "checks": [
+    "Unique IDs",
+    "Source passages",
+    "Question answer references",
+    "Joint-premise integrity",
+    "Linked theorem declarations",
+    "Lean source hashes against saved receipts",
+    "Separate negative/restricted-positive question statuses"
+  ],
+  "scope": "Structural and evidence-binding checks, not a semantic proof of the extracted graph.",
+  "negative_controls": [
+    {
+      "control": "dangling relation",
+      "result": "REJECTED"
+    },
+    {
+      "control": "joint premises changed to alternatives",
+      "result": "REJECTED"
+    },
+    {
+      "control": "positive answer without an answer artifact",
+      "result": "REJECTED"
+    }
+  ]
+}
